@@ -1,0 +1,12 @@
+{
+  "title": {{ page.title | jsonify }},
+  "notes": {{ page.notes | jsonify }},
+  "organization": {{ page.organization | jsonify }},
+  "maintainer": {{ page.maintainer | jsonify }},
+  "maintainer_email": {{ page.maintainer_email | jsonify }},
+  "resources": [
+    {% for resource in page.resources %}{
+      "name": {{ resource.name | jsonify }}
+    }{% endfor %}
+  ]
+}

@@ -1,0 +1,40 @@
+---
+layout: default
+---
+{% include breadcrumbs.html parent="Datasets" %}
+
+{% assign organization = site.organizations | where:"title",page.organization | first %}
+<div class="row">
+  <div class="col-sm-3">
+    <a href="{{ organization.logo }}" class="thumbnail"><img src="{{ organization.logo }}"></a>
+    <h3><a href="{{ organization.url }}">{{ organization.title }}</a></h3>
+    <p>{{ organization.description }}</p>
+  </div>
+  <div class="col-sm-9">
+    <h1>{{ page.title }}</h1>
+    <p>{{ page.notes }}</p>
+
+    <h2>Resources</h2>
+    <ul>
+      {% for resource in page.resources %}
+      <li>
+        <a href="{{ resource.url }}">{{ resource.name }}</a>
+        {% if resource.format %}({{ resource.format}}){% endif %}
+      </li>
+      {% endfor %}
+    </ul>
+
+    <h2>Additional Info</h2>
+    <dl>
+      {% if page.maintainer %}
+      <dt>Maintainer</dt>
+      <dd>{{ page.maintainer }}</dd>
+      {% endif %}
+      
+      {% if page.maintainer_email %}
+      <dt>Maintainer Email</dt>
+      <dd>{{ page.maintainer_email }}</dd>
+      {% endif %}
+    </dl>
+  </div>
+</div>

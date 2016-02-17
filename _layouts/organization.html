@@ -1,0 +1,15 @@
+---
+layout: default
+---
+{% include breadcrumbs.html parent="Organizations" %}
+
+<div class="row">
+  <div class="col-sm-3">
+    <a href="{{ page.logo }}" class="thumbnail"><img src="{{ page.logo }}"></a>
+    <h3>{{ page.title }}</h3>
+    <p>{{ page.description }}</p>
+  </div>
+  <div class="col-sm-9">
+    {% include datasets.html organization=page.title %}
+  </div>
+</div>

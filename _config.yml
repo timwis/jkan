@@ -1,0 +1,30 @@
+title: JKAN
+description: A lightweight, backend-free open data portal, powered by Jekyll
+
+collections:
+  datasets:
+    output: true
+  organizations:
+    output: true
+
+defaults:
+  - scope:
+      path: ""
+      type: datasets
+    values:
+      layout: dataset
+  - scope:
+      path: ""
+      type: organizations
+    values:
+      layout: organization
+
+gems:
+  - jekyll-paginate
+
+paginate: 2
+
+# Build settings
+markdown: kramdown
+kramdown:
+  input: GFM

@@ -1,0 +1,13 @@
+{% assign datasets = site.datasets %}
+
+{% if include.organization %}
+  {% assign datasets = site.datasets | where:"organization",include.organization %}
+{% endif %}
+
+{% for dataset in datasets %}
+<dataset data-category="{{ dataset.category | slugify }}">
+  <h1><a href="{{ dataset.url }}">{{ dataset.title }}</a></h1>
+  {{ dataset.notes }}
+  <hr>
+</dataset>
+{% endfor %}

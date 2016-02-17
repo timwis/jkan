@@ -1,0 +1,21 @@
+---
+title: Datasets
+layout: default
+permalink: /datasets/
+---
+{% include breadcrumbs.html %}
+
+<div class="row">
+  <div class="col-sm-3">
+    <h1>Categories</h1>
+    {% assign categories = site.datasets | group_by:"category" %}
+    <ul>
+      {% for category in categories %}
+      <li><a href="{{ page.url }}?category={{ category.name | slugify }}">{{ category.name }}</a> ({{ category.items.size }})</li>
+      {% endfor %}
+    </ul>
+  </div>
+  <div class="col-sm-9">
+    {% include datasets.html %}
+  </div>
+</div>
