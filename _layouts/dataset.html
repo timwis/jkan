@@ -7,7 +7,7 @@ layout: default
 <div class="row">
   <div class="col-sm-3">
     <a href="{{ organization.logo }}" class="thumbnail"><img src="{{ organization.logo }}"></a>
-    <h3><a href="{{ organization.url }}">{{ organization.title }}</a></h3>
+    <h3><a href="{{ site.baseurl }}{{ organization.url }}">{{ organization.title }}</a></h3>
     <p>{{ organization.description }}</p>
   </div>
   <div class="col-sm-9">
