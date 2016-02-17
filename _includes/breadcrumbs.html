@@ -6,7 +6,7 @@
     {% if include.parent %}
       {% assign parent = site.pages | where:"title",include.parent | first %}
       {% if parent %}
-        <li><a href="{{ parent.url }}">{{ parent.title }}</a></li>
+        <li><a href="{{ site.baseurl }}{{ parent.url }}">{{ parent.title }}</a></li>
       {% endif %}
     {% endif %}
     <li class="active">{{ page.title }}</li>
