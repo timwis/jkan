@@ -2,9 +2,9 @@ language: ruby
 rvm:
 - 2.1
 
-script: ls -la
+script: jekyll build
 
-before_script:
+before_deploy:
   - chmod +x deploy.sh
 
 deploy:
