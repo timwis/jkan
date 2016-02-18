@@ -10,11 +10,19 @@ paginate:
 
 <div class="row">
   <div class="col-sm-3">
-    <h1>Categories</h1>
+    <h3>Categories</h3>
     {% assign categories = site.datasets | group_by:"category" %}
     <ul>
       {% for category in categories %}
-      <li><a href="{{ site.baseurl }}{{ page.url }}?category={{ category.name | slugify }}">{{ category.name }}</a> ({{ category.items.size }})</li>
+      <li><a href="{{ site.baseurl }}/categories/{{ category.name | slugify }}">{{ category.name }}</a> ({{ category.items.size }})</li>
+      {% endfor %}
+    </ul>
+
+    <h3>Organizations</h3>
+    {% assign organizations = site.datasets | group_by:"organization" %}
+    <ul>
+      {% for organization in organizations %}
+      <li><a href="{{ site.baseurl }}/organizations/{{ organization.name | slugify }}">{{ organization.name }}</a> ({{ organization.items.size }})</li>
       {% endfor %}
     </ul>
   </div>
