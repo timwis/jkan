@@ -5,6 +5,7 @@ baseurl: "/jkan"
 collections:
   datasets:
     output: true
+    permalink: /datasets/:path/
   organizations:
     output: true
 
@@ -21,9 +22,10 @@ defaults:
       layout: organization
 
 gems:
-  - jekyll-paginate
+  - octopress-paginate
 
-paginate: 2
+pagination:
+  permalink: /page-:num/
 
 # Build settings
 markdown: kramdown

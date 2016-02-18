@@ -2,6 +2,9 @@
 title: Datasets
 layout: default
 permalink: /datasets/
+paginate:
+  collection: datasets
+  per_page: 2
 ---
 {% include breadcrumbs.html %}
 
@@ -16,6 +19,8 @@ permalink: /datasets/
     </ul>
   </div>
   <div class="col-sm-9">
-    {% include datasets.html %}
+    {% include datasets.html datasets=paginator.datasets %}
+    
+    {% include pagination.html paginator=paginator %}
   </div>
 </div>
