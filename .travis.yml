@@ -9,7 +9,7 @@ script: echo Testing
 
 deploy:
   provider: script
-  script: jekyll build && sh ./deploy.sh
+  script: jekyll build && ./deploy.sh
   skip_cleanup: true
 
 env:
