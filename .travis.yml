@@ -2,7 +2,7 @@ language: ruby
 rvm:
 - 2.1
 
-script: jekyll build
+script: bundle exec jekyll build
 
 before_deploy:
   - chmod +x deploy.sh
