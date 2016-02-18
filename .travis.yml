@@ -1,17 +1,10 @@
-language: ruby
-rvm:
-- 2.1
+language: node_js
+node_js:
+  - "4.0"
 
 script: ls -la
-
-before_script:
-  - chmod +x test-deploy.sh
 
 deploy:
   provider: script
   script: test-deploy.sh
   skip_cleanup: true
-
-env:
-  global:
-    secure: mD8Q6VAKlh+066+j0/GVIS3tEFjNoyExgQFFUYyG+0ZLDSFF19fjGnnSCKghABaeh8Ho/hcUSAOKCuxbopDnxKMqKgdlo02rDkTazFuq5pPuEmAzq0aUdPxP51r8Igb6p2o1xZKhr4Y3+PgS/04G1SSBPJI28QOmRoWcFiJhYbMjVVioDdc0WYOORiuwyywzmmvU1N7Zf+S5gHGsXBrI5H9dHcMc67l9JluyO7OE3zO8tCONHZkGSYVo7WLXC9aFDD+3fI/OFhUW3+9C8z/NyVHQW3PPZ2UlEvpHQAfwUpV5saY86z3mLziO3znq09RGqb4nYPqnmfjrzmkcS09s/Yh+umftrdGrTkvdCHZFaWT1WbsEKMznywsjQrxJHwnsZDisYfbMt2O2iOb/tu9XosDH1rHLo0JsigPhidNRW5YW6BeRJfRiC4CzD7tEFcClpRd02YPBHKx7jQJ1UHX/yh1UkuTu0q5YHVljzdHFGoOqhKfO7ZJwh+Zdz2ECeyUvC/6SGCWoyTmdoZigywyBa4sVA6o3+UmgRUmUr4+gUv1hSYl6ARM22WTMiwS/XauzBNx5RM/YPWQ/nCTWoBrWNYYqJfUDSbYvGr6EUseG0EByEq5S34JUZZ7p3BjBieg/FnS/7wbKdKAUQAfzJykfeSF+m7IDPh0F2LBJRDZdFoY=
