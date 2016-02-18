@@ -2,9 +2,6 @@ language: ruby
 rvm:
 - 2.1
 
-before_script:
-  - chmod u+x ./deploy.sh
-
 script: echo Testing
 
 deploy:
