@@ -6,7 +6,7 @@ script: file deploy.sh
 
 deploy:
   provider: script
-  script: deploy.sh
+  script: "deploy.sh"
   skip_cleanup: true
 
 env:
