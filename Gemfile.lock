@@ -20,6 +20,8 @@ GEM
       mercenary (~> 0.3.3)
       rouge (~> 1.7)
       safe_yaml (~> 1.0)
+    jekyll-archives (2.1.0)
+      jekyll (>= 2.4)
     jekyll-sass-converter (1.4.0)
       sass (~> 3.4)
     jekyll-watch (1.3.1)
@@ -42,6 +44,7 @@ PLATFORMS
 
 DEPENDENCIES
   jekyll
+  jekyll-archives
   octopress-paginate!
 
 BUNDLED WITH

@@ -23,6 +23,7 @@ defaults:
 
 gems:
   - octopress-paginate
+  - jekyll-archives
 
 pagination:
   permalink: /page-:num/
