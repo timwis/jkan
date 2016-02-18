@@ -30,7 +30,6 @@ GEM
       rb-fsevent (>= 0.9.3)
       rb-inotify (>= 0.9.7)
     mercenary (0.3.5)
-    rake (0.9.6)
     rb-fsevent (0.9.7)
     rb-inotify (0.9.7)
       ffi (>= 0.5.0)
@@ -43,7 +42,6 @@ PLATFORMS
 
 DEPENDENCIES
   octopress-paginate!
-  rake
 
 BUNDLED WITH
    1.11.2
