@@ -1,4 +1,6 @@
 language: ruby
+rvm:
+- 2.1
 
 before_script:
   - chmod +x ./deploy.sh
