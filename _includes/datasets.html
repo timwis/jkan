@@ -1,6 +1,6 @@
 {% for dataset in include.datasets %}
-<dataset data-category="{{ dataset.category | slugify }}">
-  <h1><a href="{{ site.baseurl }}{{ dataset.url }}">{{ dataset.title }}</a></h1>
+<dataset>
+  <h3><a href="{{ site.baseurl }}{{ dataset.url }}">{{ dataset.title }}</a></h3>
   {{ dataset.notes }}
   <hr>
 </dataset>

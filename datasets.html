@@ -4,29 +4,24 @@ layout: default
 permalink: /datasets/
 paginate:
   collection: datasets
-  per_page: 2
+  per_page: 50
 ---
 {% include breadcrumbs.html %}
 
 <div class="row">
-  <div class="col-sm-3">
-    <h3>Categories</h3>
-    {% assign categories = site.datasets | group_by:"category" %}
-    <ul>
-      {% for category in categories %}
-      <li><a href="{{ site.baseurl }}/categories/{{ category.name | slugify }}">{{ category.name }}</a> ({{ category.items.size }})</li>
-      {% endfor %}
-    </ul>
-
+  <div class="col-sm-4">
     <h3>Organizations</h3>
     {% assign organizations = site.datasets | group_by:"organization" %}
-    <ul>
+    <div class="list-group">
       {% for organization in organizations %}
-      <li><a href="{{ site.baseurl }}/organizations/{{ organization.name | slugify }}">{{ organization.name }}</a> ({{ organization.items.size }})</li>
+      <a href="{{ site.baseurl }}/organizations/{{ organization.name | slugify }}" class="list-group-item">
+        {{ organization.name }}
+        <span class="badge">{{ organization.items.size }}</span>
+      </a>
       {% endfor %}
-    </ul>
+    </div>
   </div>
-  <div class="col-sm-9">
+  <div class="col-sm-8">
     <h3>{{ paginator.total_datasets }} datasets</h3>
     {% include datasets.html datasets=paginator.datasets %}
     

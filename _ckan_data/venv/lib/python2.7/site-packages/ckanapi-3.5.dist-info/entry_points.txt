@@ -1,0 +1,7 @@
+
+        [console_scripts]
+        ckanapi=ckanapi.cli.main:main
+
+        [paste.paster_command]
+        ckanapi=ckanapi.cli.paster:CKANAPICommand
+        

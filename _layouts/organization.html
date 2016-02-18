@@ -5,7 +5,9 @@ layout: default
 
 <div class="row">
   <div class="col-sm-3">
-    <a href="{{ page.logo }}" class="thumbnail"><img src="{{ page.logo }}"></a>
+    {% if page.logo %}
+      <a href="{{ page.logo }}" class="thumbnail"><img src="{{ page.logo }}"></a>
+    {% endif %}
     <h3>{{ page.title }}</h3>
     <p>{{ page.description }}</p>
   </div>
