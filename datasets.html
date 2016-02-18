@@ -14,7 +14,7 @@ paginate:
     {% assign categories = site.datasets | group_by:"category" %}
     <ul>
       {% for category in categories %}
-      <li><a href="{{ page.url }}?category={{ category.name | slugify }}">{{ category.name }}</a> ({{ category.items.size }})</li>
+      <li><a href="{{ site.baseurl }}{{ page.url }}?category={{ category.name | slugify }}">{{ category.name }}</a> ({{ category.items.size }})</li>
       {% endfor %}
     </ul>
   </div>
