@@ -1,6 +1,6 @@
 #!/usr/bin/env sh
 echo Hello, World! && \
-set -e && \
+set -ev && \
 jekyll build && \
 cd ./_site && \
 remote_repo=${GITHUB_URL:-`git config remote.origin.url`} && \
