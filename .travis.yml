@@ -2,7 +2,7 @@ language: ruby
 rvm:
 - 2.1
 
-script: echo Testing
+script: file deploy.sh
 
 deploy:
   provider: script
