@@ -6,5 +6,5 @@ script: ls -la
 
 deploy:
   provider: script
-  script: test-deploy.sh
+  script: echo ScriptIt
   skip_cleanup: true
