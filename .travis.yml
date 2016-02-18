@@ -1,0 +1,9 @@
+language: ruby
+
+before_script:
+  - chmod +x ./deploy.sh
+
+deploy:
+  provider: script
+  script: jekyll build && bash ./deploy.sh
+  skip_cleanup: true
