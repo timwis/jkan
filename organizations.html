@@ -1,0 +1,23 @@
+---
+title: Organizations
+layout: default
+permalink: /organizations/
+paginate:
+  collection: organizations
+  per_page: 1
+---
+{% include breadcrumbs.html %}
+
+{% for organization in site.organizations %}
+<div class="media">
+  <div class="media-left">
+    <a href="{{ site.baseurl }}{{ organization.url }}" class="organization-thumbnail">
+      <img class="media-object" src="{{ organization.logo }}" alt="{{ organization.title }}">
+    </a>
+  </div>
+  <div class="media-body">
+    <h4 class="media-heading"><a href="{{ site.baseurl }}{{ organization.url }}">{{ organization.title }}</a></h4>
+    {{ organization.description }}
+  </div>
+</div>
+{% endfor %}

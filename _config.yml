@@ -2,6 +2,12 @@ title: JKAN
 description: A lightweight, backend-free open data portal, powered by Jekyll
 baseurl: "/jkan"
 
+navigation:
+  - title: Datasets
+    url: /datasets/
+  - title: Organizations
+    url: /organizations/
+
 collections:
   datasets:
     output: true

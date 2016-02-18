@@ -12,8 +12,13 @@
 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li><a href="{{ site.baseurl }}/">Home <span class="sr-only">(current)</span></a></li>
-        <li><a href="{{ site.baseurl }}/datasets">Datasets <span class="sr-only">(current)</span></a></li>
+        {% for link in site.navigation %}
+          {% if page.url contains link.url %}
+            <li class="active"><a href="{{ site.baseurl }}{{ link.url }}">{{ link.title }} <span class="sr-only">(current)</span></a></li>
+          {% else %}
+            <li><a href="{{ site.baseurl }}{{ link.url }}">{{ link.title }}</a></li>
+          {% endif %}
+        {% endfor %}
       </ul>
     </div>
   </div>
