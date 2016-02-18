@@ -1,5 +1,6 @@
 #!/bin/bash
 set -e && \
+jekyll build && \
 cd ./_site && \
 remote_repo=${GITHUB_URL:-`git config remote.origin.url`} && \
 remote_branch="gh-pages" && \
