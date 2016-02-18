@@ -1,0 +1,26 @@
+---
+title: Categories
+layout: default
+permalink: /categories/
+paginate:
+  collection: categories
+---
+{% include breadcrumbs.html %}
+<div class="row">
+{% for category in paginator.categories %}
+  {% assign dataset_count = site.datasets | where:"category",category.title | size %}
+  <div class="col-sm-4">
+    <div class="thumbnail">
+      <a href="{{ site.baseurl }}{{ category.url }}">
+        <img src="{{ category.logo }}" alt="{{ category.title }}">
+      </a>
+      <div class="caption">
+        <h3><a href="{{ site.baseurl }}{{ category.url }}">{{ category.title }}</a></h3>
+        <p>{{ dataset_count }} datasets</p>
+      </div>
+    </div>
+  </div>
+{% endfor %}
+</div>
+
+{% include pagination.html paginator=paginator %}

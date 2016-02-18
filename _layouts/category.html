@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-{% include breadcrumbs.html parent="Organizations" %}
+{% include breadcrumbs.html parent="Categories" %}
 
 <div class="row">
   <div class="col-sm-3">
@@ -10,7 +10,7 @@ layout: default
     <p>{{ page.description }}</p>
   </div>
   <div class="col-sm-9">
-    {% assign datasets = site.datasets | where:"organization",page.title %}
+    {% assign datasets = site.datasets | where:"category",page.title %}
     <h3>{{ datasets.size }} datasets</h3>
     {% include datasets.html datasets=datasets %}
   </div>

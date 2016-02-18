@@ -7,6 +7,8 @@ navigation:
     url: /datasets/
   - title: Organizations
     url: /organizations/
+  - title: Categories
+    url: /categories/
 
 collections:
   datasets:
@@ -14,6 +16,10 @@ collections:
     permalink: /datasets/:path/
   organizations:
     output: true
+    permalink: /organizations/:path/
+  categories:
+    output: true
+    permalink: /categories/:path/
 
 defaults:
   - scope:
@@ -21,15 +27,20 @@ defaults:
       type: datasets
     values:
       layout: dataset
+      category: Uncategorized
   - scope:
       path: ""
       type: organizations
     values:
       layout: organization
+  - scope:
+      path: ""
+      type: categories
+    values:
+      layout: category
 
 gems:
   - octopress-paginate
-  - jekyll-archives
 
 pagination:
   permalink: /page-:num/

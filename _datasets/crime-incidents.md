@@ -3,7 +3,7 @@ title: Crime Incidents
 notes: Crime incidents from the Philadelphia Police Department. Part I crimes include violent offenses such as aggravated assault, rape, arson, among others. Part II crimes include simple assault, prostitution, gambling, fraud, and other non-violent offenses.
 organization: Police Department
 maintainer_email: publicsafetygis@phila.gov
-category: Foo
+category: Food
 resources:
   - name: 2012-2014 Part I & II Crime Incidents CSV
     url: https://data.phila.gov/api/views/7ret-xhtc/rows.csv?accessType=DOWNLOAD

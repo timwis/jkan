@@ -4,7 +4,7 @@ notes: These layers illustrate 10 correctional facilities in the City, administe
 organization: Prisons
 maintainer: Lynne Gaines
 maintainer_email: lynn.gaines@phila.gov
-category: Bar
+category: Food
 resources:
   - name: CSV Download
     url: http://data.phl.opendata.arcgis.com/datasets/f2ed9ba05302412991176013eda47007_0.csv

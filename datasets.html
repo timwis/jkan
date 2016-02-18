@@ -19,6 +19,7 @@ paginate:
     </ul>
   </div>
   <div class="col-sm-9">
+    <h3>{{ paginator.total_datasets }} datasets</h3>
     {% include datasets.html datasets=paginator.datasets %}
     
     {% include pagination.html paginator=paginator %}

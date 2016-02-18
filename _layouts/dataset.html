@@ -6,7 +6,7 @@ layout: default
 {% assign organization = site.organizations | where:"title",page.organization | first %}
 <div class="row">
   <div class="col-sm-3">
-    <a href="{{ organization.logo }}" class="thumbnail"><img src="{{ organization.logo }}"></a>
+    <a href="{{ site.baseurl }}{{ organization.url }}" class="thumbnail"><img src="{{ organization.logo }}"></a>
     <h3><a href="{{ site.baseurl }}{{ organization.url }}">{{ organization.title }}</a></h3>
     <p>{{ organization.description }}</p>
   </div>
@@ -26,6 +26,11 @@ layout: default
 
     <h2>Additional Info</h2>
     <dl>
+      {% if page.category %}
+      <dt>Category</dt>
+      <dd><a href="{{ site.baseurl }}/categories/{{ page.category }}">{{ page.category }}</a></dd>
+      {% endif %}
+
       {% if page.maintainer %}
       <dt>Maintainer</dt>
       <dd>{{ page.maintainer }}</dd>
