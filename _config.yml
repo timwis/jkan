@@ -31,3 +31,9 @@ pagination:
 markdown: kramdown
 kramdown:
   input: GFM
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - .travis.yml
