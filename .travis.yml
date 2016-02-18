@@ -5,11 +5,11 @@ rvm:
 script: ls -la
 
 before_script:
-  - chmod +x test-deploy.sh
+  - chmod +x deploy.sh
 
 deploy:
   provider: script
-  script: ./test-deploy.sh
+  script: ./deploy.sh
   skip_cleanup: true
 
 env:
