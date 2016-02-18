@@ -1,4 +1,4 @@
-# JKAN
+# JKAN [![Build Status](https://travis-ci.org/timwis/jkan.svg?branch=master)](https://travis-ci.org/timwis/jkan)
 A lightweight, backend-free open data portal, powered by Jekyll
 
 ## Installation
