@@ -2,7 +2,10 @@ language: ruby
 rvm:
 - 2.1
 
-script: file deploy.sh
+script: ls -la
+
+before_deploy:
+  - chmod +x ./deploy.sh
 
 deploy:
   provider: script
