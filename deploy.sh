@@ -1,5 +1,5 @@
 #!/bin/bash
-echo Hello, World!
+echo Hello, World! && \
 set -e && \
 jekyll build && \
 cd ./_site && \
