@@ -11,9 +11,9 @@ paginate:
 <div class="row">
   <div class="col-sm-4">
     <h3>Organizations</h3>
-    {% assign organizations = site.datasets | group_by:"organization" %}
+    {% assign organizations = site.datasets | group_by_with_size:"organization" | sort:"size" %}
     <div class="list-group">
-      {% for organization in organizations %}
+      {% for organization in organizations reversed %}
       <a href="{{ site.baseurl }}/organizations/{{ organization.name | slugify }}" class="list-group-item">
         {{ organization.name }}
         <span class="badge">{{ organization.items.size }}</span>
