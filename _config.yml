@@ -28,6 +28,7 @@ defaults:
     values:
       layout: dataset
       category: Uncategorized
+      organization: N/A
   - scope:
       path: ""
       type: organizations
