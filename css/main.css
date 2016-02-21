@@ -1,3 +1,9 @@
 .organization-thumbnail img {
   width: 64px;
 }
+
+dataset {
+  display: block;
+  border-bottom: 1px #d6d6d6 solid;
+  padding-bottom: 20px;
+}
