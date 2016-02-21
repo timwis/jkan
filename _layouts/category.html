@@ -10,7 +10,7 @@ layout: default
     <p>{{ page.description }}</p>
   </div>
   <div class="col-sm-9">
-    {% assign datasets = site.datasets | where:"category",page.title %}
+    {% assign datasets = site.datasets | where_contains:"category",page.title %}
     <h3>{{ datasets.size }} datasets</h3>
     {% include datasets.html datasets=datasets %}
   </div>
