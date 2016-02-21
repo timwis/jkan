@@ -3,7 +3,7 @@ title: Airport Terminal Buildings
 notes: ''
 maintainer: Jamal Stovall
 maintainer_email: jamal.stovall@phl.org
-organization: Airport
+organization: Philadelphia Airport
 resources:
   - url: 'http://metadata.phila.gov/#home/datasetdetails/556f4f0a509ea3d329264728/representationdetails/556f506d131782d56ff91a26/'
     name: Airport Terminal Buildings Metadata
