@@ -2,3 +2,5 @@ _site
 .sass-cache
 .jekyll-metadata
 _ckan_data
+_plugins/debug.rb
+_plugins/generate_categories.rb
