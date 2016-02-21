@@ -7,9 +7,11 @@ paginate:
   per_page: 25
 ---
 {% include breadcrumbs.html %}
+
 <div class="row">
 {% for category in paginator.categories %}
-  {% assign dataset_count = site.datasets | where:"category",category.title | size %}
+
+  {% assign dataset_count = site.datasets | where_contains:"category",category.title | size %}
   <div class="col-sm-4">
     <div class="thumbnail">
       <a href="{{ site.baseurl }}{{ category.url }}">
