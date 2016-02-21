@@ -28,7 +28,7 @@ layout: default
 
     <h2>Additional Info</h2>
     <dl>
-      {% if page.category %}
+      {% if page.category != "" %}
       <dt>Category</dt>
       <dd>
         {% if page.category.size %}
@@ -41,12 +41,12 @@ layout: default
       </dd>
       {% endif %}
 
-      {% if page.maintainer %}
+      {% if page.maintainer != "" %}
       <dt>Maintainer</dt>
       <dd>{{ page.maintainer }}</dd>
       {% endif %}
       
-      {% if page.maintainer_email %}
+      {% if page.maintainer_email != "" %}
       <dt>Maintainer Email</dt>
       <dd>{{ page.maintainer_email }}</dd>
       {% endif %}
