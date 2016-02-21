@@ -23,6 +23,13 @@ paginate:
       </div>
     </div>
   </div>
+
+  {% assign divisible_by_3 = forloop.index | modulo:3 %}
+  {% if forloop.rindex and divisible_by_3 == 0 %}
+    </div>
+    <div class="row">
+  {% endif %}
+
 {% endfor %}
 </div>
 
