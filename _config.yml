@@ -48,6 +48,10 @@ prose:
         field:
           element: text
           label: Title
+      - name: organization
+        field:
+          element: text
+          label: Organization
       - name: notes
         field:
           element: textarea
@@ -55,6 +59,7 @@ prose:
       - name: maintainer
         field:
           element: text
+          label: Maintainer
       - name: maintainer_email
         field:
           element: text
