@@ -37,8 +37,14 @@ paginate:
   </div>
   <div class="col-sm-8">
     <h3>{{ paginator.total_datasets }} datasets</h3>
-    {% include datasets.html datasets=paginator.datasets %}
+    <input type="text" id="search-input" placeholder="Search..." class="form-control">
+    <div id="results-container">
+      {% include datasets.html datasets=paginator.datasets %}
     
-    {% include pagination.html paginator=paginator %}
+      {% include pagination.html paginator=paginator %}
+    </div>
   </div>
 </div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/simple-jekyll-search/1.1.1/jekyll-search.js"></script>
+<script src="{{ site.baseurl }}/scripts/datasets.js"></script>
