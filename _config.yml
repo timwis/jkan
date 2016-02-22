@@ -40,6 +40,34 @@ defaults:
     values:
       layout: category
 
+prose:
+  siteurl: 'http://timwis.com/jkan'
+  metadata:
+    _datasets:
+      - name: title
+        field:
+          element: text
+          label: Title
+      - name: notes
+        field:
+          element: textarea
+          label: Description
+      - name: maintainer
+        field:
+          element: text
+      - name: maintainer_email
+        field:
+          element: text
+          type: email
+          label: Maintainer Email
+  ignore:
+    - .gitignore
+    - .travis.yml
+    - deploy.sh
+    - Gemfile
+    - Gemfile.lock
+    - LICENSE
+
 gems:
   - octopress-paginate
 
