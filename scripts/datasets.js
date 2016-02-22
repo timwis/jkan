@@ -17,6 +17,6 @@ $('.list-group[data-show]').each(function (listGroup) {
 SimpleJekyllSearch({
   searchInput: document.getElementById('search-input'),
   resultsContainer: document.getElementById('results-container'),
-  json: '/search.json',
+  json: '../search.json',
   searchResultTemplate: '<dataset><h3><a href="{url}">{title}</a></h3>{notes}</dataset>'
 })
