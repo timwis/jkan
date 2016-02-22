@@ -66,11 +66,6 @@ prose:
           type: email
           label: Maintainer Email
   ignore:
-    - _includes
-    - _layouts
-    - _plugins
-    - css
-    - scripts
     - search.json
     - .gitignore
     - .travis.yml
