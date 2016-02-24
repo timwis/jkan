@@ -12,39 +12,32 @@ paginate:
   <div class="col-sm-4">
 
     <h3>Categories</h3>
-    <div class="list-group" data-show="5">
-    {% for category in site.categories %}
-
-      {% assign dataset_count = site.datasets | where_contains:"category",category.title | size %}
-      <a href="{{ site.baseurl }}{{ category.url }}" class="list-group-item">
-        {{ category.title }}
-        <span class="badge">{{ dataset_count }}</span>
-      </a>
-
-    {% endfor %}
-    </div>
+    <div class="list-group" data-hook="categories-items" data-show="5"></div>
 
     <h3>Organizations</h3>
-    {% assign organizations = site.datasets | group_by_with_size:"organization" | sort:"size" %}
-    <div class="list-group" data-show="15">
-      {% for organization in organizations reversed %}
-      <a href="{{ site.baseurl }}/organizations/{{ organization.name | slugify }}" class="list-group-item">
-        {{ organization.name }}
-        <span class="badge">{{ organization.items.size }}</span>
-      </a>
-      {% endfor %}
-    </div>
+    <div class="list-group" data-hook="organizations-items" data-show="15"></div>
   </div>
   <div class="col-sm-8">
-    <h3>{{ paginator.total_datasets }} datasets</h3>
-    <input type="text" id="search-input" placeholder="Search..." class="form-control">
-    <div id="results-container">
-      {% include datasets.html datasets=paginator.datasets %}
-    
-      {% include pagination.html paginator=paginator %}
-    </div>
+    <h3 data-hook="datasets-count"></h3>
+    <input type="text" data-hook="search-query" placeholder="Search..." class="form-control">
+    <div data-hook="datasets-items"></div>
   </div>
 </div>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/simple-jekyll-search/1.1.1/jekyll-search.js"></script>
+<script type="text/template" data-hook="tmpl-list-group-item">
+  <a href="<%= data.url %>" class="list-group-item">
+    <%= data.title %>
+    <span class="badge"><%= data.count %></span>
+  </a>
+</script>
+  
+<script type="text/template" data-hook="tmpl-dataset-item">
+  <dataset>
+    <h3><a href="<%= data.url %>"><%= data.title %></a></h3>
+    <%= data.notes %>
+  </dataset>
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.5.1/lodash.min.js"></script>
+<script src="{{ site.baseurl }}/scripts/deparam.js"></script>
 <script src="{{ site.baseurl }}/scripts/datasets.js"></script>
