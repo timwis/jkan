@@ -137,7 +137,7 @@ $.getJSON(datasetsPath).done(function (datasets) {
   var datasetsMarkup = filteredDatasets.map(templates.datasetItem)
   setContent(containers.datasetsItems, datasetsMarkup)
 
-  var datasetsCountMarkup = datasets.length + ' datasets'
+  var datasetsCountMarkup = filteredDatasets.length + ' datasets'
   setContent(containers.datasetsCount, datasetsCountMarkup)
 }).fail(function () {
   console.error('Error fetching', datasetsPath)
