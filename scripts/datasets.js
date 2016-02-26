@@ -2,6 +2,19 @@
 
 var params = deparam(window.location.search.substr(1))
 
+function createParamsFilters (filters) {
+  return function (dataset) {
+    var conditions = []
+    if (filters.organization) {
+      conditions.push(dataset.organization && slugify(dataset.organization) === filters.organization)
+    }
+    if (filters.category) {
+      conditions.push(dataset.category && slugify(dataset.category).indexOf(filters.category) !== -1)
+    }
+    return conditions.every(function (value) { return !!value })
+  }
+}
+
 _.templateSettings.variable = 'data'
 
 var templates = {
@@ -28,38 +41,56 @@ function organizationsWithCount (datasets) {
   return _.chain(datasets)
     .groupBy('organization')
     .map(function (datasetsInOrg, organization) {
-      var itemParams = _.defaults({organization: slugify(organization)}, params)
+      var filters = createParamsFilters(_.pick(params, ['category']))
+      var filteredDatasets = _.filter(datasetsInOrg, filters)
+      var slug = slugify(organization)
+      var itemParams = _.defaults({organization: slug}, params)
       return {
         title: organization,
         url: '?' + $.param(itemParams),
-        count: datasetsInOrg.length
+        count: filteredDatasets.length,
+        unfilteredCount: datasetsInOrg.length,
+        selected: params.organization === slug
       }
     })
-    .orderBy('count', 'desc')
+    .orderBy('unfilteredCount', 'desc')
     .value()
 }
 
 function categoriesWithCount (datasets) {
   return _.chain(datasets)
     .filter('category')
-    .map('category')
-    .flatten() // category can be a string or an array of strings
-    .groupBy()
-    .map(function (instances, category) {
-      var itemParams = _.defaults({category: slugify(category)}, params)
+    .flatMap(function (value, index, collection) {
+      // Explode objects where category is an array into one object per category
+      if (typeof value.category === 'string') return value
+      var duplicates = []
+      value.category.forEach(function (category) {
+        duplicates.push(_.defaults({category: category}, value))
+      })
+      return duplicates
+    })
+    .groupBy('category')
+    .map(function (datasetsInCat, category) {
+      var filters = createParamsFilters(_.pick(params, ['organization']))
+      var filteredDatasets = _.filter(datasetsInCat, filters)
+      var slug = slugify(category)
+      var itemParams = _.defaults({category: slug}, params)
       return {
         title: category,
         url: '?' + $.param(itemParams),
-        count: instances.length
+        count: filteredDatasets.length,
+        unfilteredCount: datasetsInCat.length,
+        selected: params.category === slug
       }
     })
+    .orderBy('unfilteredCount', 'desc')
     .value()
 }
 
 function collapseListGroup (container, show) {
   if (!show) show = container.data('show') || 5
 
-  var itemsToHide = $('.list-group-item:gt(' + (show - 1) + ')', container)
+  var itemsToHide = $('.list-group-item:gt(' + (show - 1) + '):not(.active)', container)
   if (itemsToHide) {
     itemsToHide.hide()
 
@@ -99,7 +130,10 @@ $.getJSON(datasetsPath).done(function (datasets) {
   collapseListGroup(containers.categoriesItems)
 
   // Datasets
-  var datasetsMarkup = datasets.map(templates.datasetItem)
+  var filters = createParamsFilters(_.pick(params, ['organization', 'category']))
+  var filteredDatasets = _.filter(datasets, filters)
+  console.log(filteredDatasets)
+  var datasetsMarkup = filteredDatasets.map(templates.datasetItem)
   setContent(containers.datasetsItems, datasetsMarkup)
 
   var datasetsCountMarkup = datasets.length + ' datasets'

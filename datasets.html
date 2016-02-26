@@ -25,7 +25,7 @@ paginate:
 </div>
 
 <script type="text/template" data-hook="tmpl-list-group-item">
-  <a href="<%= data.url %>" class="list-group-item">
+  <a href="<%= data.url %>" class="list-group-item<% if (data.selected) { %> active <% } %>">
     <%= data.title %>
     <span class="badge"><%= data.count %></span>
   </a>
