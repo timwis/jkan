@@ -28,6 +28,7 @@ paginate:
   <a href="<%= data.url %>" class="list-group-item<% if (data.selected) { %> active <% } %>">
     <%= data.title %>
     <span class="badge"><%= data.count %></span>
+    <% if (data.selected) { %><span class="badge"><i class="fa fa-times"></i></span><% } %>
   </a>
 </script>
   

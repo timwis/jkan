@@ -44,13 +44,14 @@ function organizationsWithCount (datasets) {
       var filters = createParamsFilters(_.pick(params, ['category']))
       var filteredDatasets = _.filter(datasetsInOrg, filters)
       var slug = slugify(organization)
-      var itemParams = _.defaults({organization: slug}, params)
+      var selected = params.organization && params.organization === slug
+      var itemParams = selected ? _.omit(params, 'organization') : _.defaults({organization: slug}, params)
       return {
         title: organization,
         url: '?' + $.param(itemParams),
         count: filteredDatasets.length,
         unfilteredCount: datasetsInOrg.length,
-        selected: params.organization === slug
+        selected: selected
       }
     })
     .orderBy('unfilteredCount', 'desc')
@@ -74,13 +75,14 @@ function categoriesWithCount (datasets) {
       var filters = createParamsFilters(_.pick(params, ['organization']))
       var filteredDatasets = _.filter(datasetsInCat, filters)
       var slug = slugify(category)
-      var itemParams = _.defaults({category: slug}, params)
+      var selected = params.category && params.category === slug
+      var itemParams = selected ? _.omit(params, 'category') : _.defaults({category: slug}, params)
       return {
         title: category,
         url: '?' + $.param(itemParams),
         count: filteredDatasets.length,
         unfilteredCount: datasetsInCat.length,
-        selected: params.category === slug
+        selected: selected
       }
     })
     .orderBy('unfilteredCount', 'desc')
@@ -132,7 +134,6 @@ $.getJSON(datasetsPath).done(function (datasets) {
   // Datasets
   var filters = createParamsFilters(_.pick(params, ['organization', 'category']))
   var filteredDatasets = _.filter(datasets, filters)
-  console.log(filteredDatasets)
   var datasetsMarkup = filteredDatasets.map(templates.datasetItem)
   setContent(containers.datasetsItems, datasetsMarkup)
 
