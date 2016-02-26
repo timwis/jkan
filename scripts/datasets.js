@@ -21,10 +21,10 @@ var containers = {
 }
 
 function setContent (container, content) {
-  container.empty().append(content)
+  return container.empty().append(content)
 }
 
-function organizationsList (datasets) {
+function organizationsWithCount (datasets) {
   return _.chain(datasets)
     .groupBy('organization')
     .map(function (datasetsInOrg, organization) {
@@ -39,7 +39,7 @@ function organizationsList (datasets) {
     .value()
 }
 
-function categoriesList (datasets) {
+function categoriesWithCount (datasets) {
   return _.chain(datasets)
     .filter('category')
     .map('category')
@@ -56,6 +56,24 @@ function categoriesList (datasets) {
     .value()
 }
 
+function collapseListGroup (container, show) {
+  if (!show) show = container.data('show') || 5
+
+  var itemsToHide = $('.list-group-item:gt(' + (show - 1) + ')', container)
+  if (itemsToHide) {
+    itemsToHide.hide()
+
+    var showMoreButton = $('<a href="#" class="list-group-item">Show ' + itemsToHide.length + ' more...</a>')
+    showMoreButton.on('click', function (e) {
+      itemsToHide.show()
+      $(this).off('click')
+      $(this).remove()
+      e.preventDefault()
+    })
+    container.append(showMoreButton)
+  }
+}
+
 function slugify (text) {
   return text.toString().toLowerCase().trim()
     .replace(/\s+/g, '-')           // Replace spaces with -
@@ -69,14 +87,16 @@ function slugify (text) {
 var datasetsPath = '../datasets.json'
 $.getJSON(datasetsPath).done(function (datasets) {
   // Organizations
-  var organizations = organizationsList(datasets)
+  var organizations = organizationsWithCount(datasets)
   var organizationsMarkup = organizations.map(templates.listGroupItem)
   setContent(containers.organizationsItems, organizationsMarkup)
+  collapseListGroup(containers.organizationsItems)
 
   // Categories
-  var categories = categoriesList(datasets)
+  var categories = categoriesWithCount(datasets)
   var categoriesMarkup = categories.map(templates.listGroupItem)
   setContent(containers.categoriesItems, categoriesMarkup)
+  collapseListGroup(containers.categoriesItems)
 
   // Datasets
   var datasetsMarkup = datasets.map(templates.datasetItem)
