@@ -72,12 +72,6 @@ prose:
     - Gemfile.lock
     - LICENSE
 
-gems:
-  - octopress-paginate
-
-pagination:
-  permalink: /page-:num/
-
 # Build settings
 markdown: kramdown
 kramdown:
