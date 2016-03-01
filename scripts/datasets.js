@@ -1,19 +1,6 @@
-/* global $, _, deparam */
+/* global $, _, deparam, Fuse */
 
 var params = deparam(window.location.search.substr(1))
-
-function createParamsFilters (filters) {
-  return function (dataset) {
-    var conditions = []
-    if (filters.organization) {
-      conditions.push(dataset.organization && slugify(dataset.organization) === filters.organization)
-    }
-    if (filters.category) {
-      conditions.push(dataset.category && slugify(dataset.category).indexOf(filters.category) !== -1)
-    }
-    return conditions.every(function (value) { return !!value })
-  }
-}
 
 _.templateSettings.variable = 'data'
 
@@ -22,21 +9,61 @@ var templates = {
   datasetItem: _.template($('[data-hook=tmpl-dataset-item]').html())
 }
 
+var elements = {
+  categoriesItems: queryByHook('categories-items'),
+  organizationsItems: queryByHook('organizations-items'),
+  datasetsItems: queryByHook('datasets-items'),
+  datasetsCount: queryByHook('datasets-count'),
+  searchQuery: queryByHook('search-query')
+}
+
+var datasetsPath = '../datasets.json'
+$.getJSON(datasetsPath).done(function (datasets) {
+  // Organizations
+  var organizations = organizationsWithCount(datasets)
+  var organizationsMarkup = organizations.map(templates.listGroupItem)
+  setContent(elements.organizationsItems, organizationsMarkup)
+  collapseListGroup(elements.organizationsItems)
+
+  // Categories
+  var categories = categoriesWithCount(datasets)
+  var categoriesMarkup = categories.map(templates.listGroupItem)
+  setContent(elements.categoriesItems, categoriesMarkup)
+  collapseListGroup(elements.categoriesItems)
+
+  // Datasets
+  var filters = createParamsFilters(_.pick(params, ['organization', 'category']))
+  var filteredDatasets = _.filter(datasets, filters)
+  var datasetsMarkup = filteredDatasets.map(templates.datasetItem)
+  setContent(elements.datasetsItems, datasetsMarkup)
+
+  // Dataset count
+  var datasetsCountMarkup = filteredDatasets.length + ' datasets'
+  setContent(elements.datasetsCount, datasetsCountMarkup)
+
+  // Search datasets listener
+  var searchFunction = createSearchFunction(filteredDatasets, datasetsMarkup)
+  elements.searchQuery.on('keyup', function (e) {
+    var query = e.currentTarget.value
+
+    // Datasets
+    var results = searchFunction(query)
+    var resultsMarkup = results.map(templates.datasetItem)
+    setContent(elements.datasetsItems, resultsMarkup)
+
+    // Dataset count
+    var resultsCountMarkup = results.length + ' datasets'
+    setContent(elements.datasetsCount, resultsCountMarkup)
+  })
+}).fail(function () {
+  console.error('Error fetching', datasetsPath)
+})
+
 function queryByHook (hook) {
   return $('[data-hook~=' + hook + ']')
 }
 
-var containers = {
-  categoriesItems: queryByHook('categories-items'),
-  organizationsItems: queryByHook('organizations-items'),
-  datasetsItems: queryByHook('datasets-items'),
-  datasetsCount: queryByHook('datasets-count')
-}
-
-function setContent (container, content) {
-  return container.empty().append(content)
-}
-
+// Given an array of datasets, returns an array of their organizations with counts
 function organizationsWithCount (datasets) {
   return _.chain(datasets)
     .groupBy('organization')
@@ -58,6 +85,7 @@ function organizationsWithCount (datasets) {
     .value()
 }
 
+// Given an array of datasets, returns an array of their categories with counts
 function categoriesWithCount (datasets) {
   return _.chain(datasets)
     .filter('category')
@@ -89,6 +117,12 @@ function categoriesWithCount (datasets) {
     .value()
 }
 
+function setContent (container, content) {
+  return container.empty().append(content)
+}
+
+// Collapses a bootstrap list-group to only show a few items by default
+// Number of items to show can be specified in [data-show] attribute or passed as param
 function collapseListGroup (container, show) {
   if (!show) show = container.data('show') || 5
 
@@ -107,6 +141,20 @@ function collapseListGroup (container, show) {
   }
 }
 
+// Given an object of filters to use, returns a function to be used by _.filter()
+function createParamsFilters (filters) {
+  return function (dataset) {
+    var conditions = []
+    if (filters.organization) {
+      conditions.push(dataset.organization && slugify(dataset.organization) === filters.organization)
+    }
+    if (filters.category) {
+      conditions.push(dataset.category && slugify(dataset.category).indexOf(filters.category) !== -1)
+    }
+    return conditions.every(function (value) { return !!value })
+  }
+}
+
 function slugify (text) {
   return text.toString().toLowerCase().trim()
     .replace(/\s+/g, '-')           // Replace spaces with -
@@ -117,28 +165,12 @@ function slugify (text) {
     .replace(/-+$/, '')             // Trim - from end of text
 }
 
-var datasetsPath = '../datasets.json'
-$.getJSON(datasetsPath).done(function (datasets) {
-  // Organizations
-  var organizations = organizationsWithCount(datasets)
-  var organizationsMarkup = organizations.map(templates.listGroupItem)
-  setContent(containers.organizationsItems, organizationsMarkup)
-  collapseListGroup(containers.organizationsItems)
-
-  // Categories
-  var categories = categoriesWithCount(datasets)
-  var categoriesMarkup = categories.map(templates.listGroupItem)
-  setContent(containers.categoriesItems, categoriesMarkup)
-  collapseListGroup(containers.categoriesItems)
-
-  // Datasets
-  var filters = createParamsFilters(_.pick(params, ['organization', 'category']))
-  var filteredDatasets = _.filter(datasets, filters)
-  var datasetsMarkup = filteredDatasets.map(templates.datasetItem)
-  setContent(containers.datasetsItems, datasetsMarkup)
-
-  var datasetsCountMarkup = filteredDatasets.length + ' datasets'
-  setContent(containers.datasetsCount, datasetsCountMarkup)
-}).fail(function () {
-  console.error('Error fetching', datasetsPath)
-})
+// Returns a function that can be used to fuzzy search an array of datasets
+// The function returns the filtered array of datasets
+function createSearchFunction (datasets) {
+  var searchOptions = {threshold: 0.2, keys: ['title', 'description']}
+  var fuse = new Fuse(datasets, searchOptions)
+  return function (query) {
+    return query ? fuse.search(query) : datasets
+  }
+}
