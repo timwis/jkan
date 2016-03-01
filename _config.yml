@@ -15,11 +15,9 @@ collections:
     output: true
     permalink: /datasets/:path/
   organizations:
-    output: true
-    permalink: /organizations/:path/
+    output: false
   categories:
-    output: true
-    permalink: /categories/:path/
+    output: false
 
 defaults:
   - scope:
