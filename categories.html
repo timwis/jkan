@@ -11,11 +11,11 @@ permalink: /categories/
   {% assign dataset_count = site.datasets | where_contains:"category",category.title | size %}
   <div class="col-sm-4">
     <div class="thumbnail">
-      <a href="{{ site.baseurl }}/datasets/?category={{ category.slug }}">
+      <a href="{{ site.baseurl }}/datasets/?category={{ category.title | slugify }}">
         <img src="{{ category.logo }}" alt="{{ category.title }}">
       </a>
       <div class="caption">
-        <h3><a href="{{ site.baseurl }}/datasets/?category={{ category.slug }}">{{ category.title }}</a></h3>
+        <h3><a href="{{ site.baseurl }}/datasets/?category={{ category.title | slugify }}">{{ category.title }}</a></h3>
         <p>{{ dataset_count }} datasets</p>
       </div>
     </div>

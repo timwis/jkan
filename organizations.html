@@ -13,13 +13,13 @@ paginate:
   <div class="media">
     <div class="media-left">
       {% if organization.logo %}
-        <a href="{{ site.baseurl }}/datasets/?organization={{ organization.slug }}" class="organization-thumbnail">
+        <a href="{{ site.baseurl }}/datasets/?organization={{ organization.title | slugify }}" class="organization-thumbnail">
           <img class="media-object" src="{{ organization.logo }}" alt="{{ organization.title }}">
         </a>
       {% endif %}
     </div>
     <div class="media-body">
-      <h4 class="media-heading"><a href="{{ site.baseurl }}/datasets/?organization={{ organization.slug }}">{{ organization.title }}</a></h4>
+      <h4 class="media-heading"><a href="{{ site.baseurl }}/datasets/?organization={{ organization.title | slugify }}">{{ organization.title }}</a></h4>
       <p>{{ organization.description }} ({{ dataset_count }} datasets)</p>
     </div>
   </div>
