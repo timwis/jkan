@@ -2,23 +2,20 @@
 title: Categories
 layout: default
 permalink: /categories/
-paginate:
-  collection: categories
-  per_page: 25
 ---
 {% include breadcrumbs.html %}
 
 <div class="row">
-{% for category in paginator.categories %}
+{% for category in site.categories %}
 
   {% assign dataset_count = site.datasets | where_contains:"category",category.title | size %}
   <div class="col-sm-4">
     <div class="thumbnail">
-      <a href="{{ site.baseurl }}{{ category.url }}">
+      <a href="{{ site.baseurl }}/datasets/?category={{ category.slug }}">
         <img src="{{ category.logo }}" alt="{{ category.title }}">
       </a>
       <div class="caption">
-        <h3><a href="{{ site.baseurl }}{{ category.url }}">{{ category.title }}</a></h3>
+        <h3><a href="{{ site.baseurl }}/datasets/?category={{ category.slug }}">{{ category.title }}</a></h3>
         <p>{{ dataset_count }} datasets</p>
       </div>
     </div>
@@ -32,5 +29,3 @@ paginate:
 
 {% endfor %}
 </div>
-
-{% include pagination.html paginator=paginator %}
