@@ -5,6 +5,7 @@ layout: default
 
 {% assign organization = site.organizations | where:"title",page.organization | first %}
 <div class="row">
+  {% if organization %}
   <div class="col-sm-3">
     {% if organization.logo %}
       <a href="{{ site.baseurl }}/datasets/?organization={{ organization.title | slugify }}" class="thumbnail"><img src="{{ organization.logo }}"></a>
@@ -13,6 +14,9 @@ layout: default
     <p>{{ organization.description }}</p>
   </div>
   <div class="col-sm-9">
+  {% else %}
+  <div class="col-sm-12">
+  {% endif %}
     <h1>
       {{ page.title }}
       <a href="{{ site.github.repository_url }}/edit/gh-pages/{{ page.path }}" class="pull-right btn btn-default" role="button">Edit</a>
