@@ -5,10 +5,6 @@ baseurl: "/jkan"
 navigation:
   - title: Datasets
     url: /datasets/
-  - title: Organizations
-    url: /organizations/
-  - title: Categories
-    url: /categories/
 
 collections:
   datasets:
@@ -27,16 +23,6 @@ defaults:
       layout: dataset
       category: Uncategorized
       organization: N/A
-  - scope:
-      path: ""
-      type: organizations
-    values:
-      layout: organization
-  - scope:
-      path: ""
-      type: categories
-    values:
-      layout: category
 
 prose:
   siteurl: 'http://timwis.com/jkan'
