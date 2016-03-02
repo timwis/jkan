@@ -7,9 +7,9 @@ layout: default
 <div class="row">
   <div class="col-sm-3">
     {% if organization.logo %}
-      <a href="{{ site.baseurl }}{{ organization.url }}" class="thumbnail"><img src="{{ organization.logo }}"></a>
+      <a href="{{ site.baseurl }}/datasets/?organization={{ organization.title | slugify }}" class="thumbnail"><img src="{{ organization.logo }}"></a>
     {% endif %}
-    <h3><a href="{{ site.baseurl }}{{ organization.url }}">{{ organization.title }}</a></h3>
+    <h3><a href="{{ site.baseurl }}/datasets/?organization={{ organization.title | slugify }}">{{ organization.title }}</a></h3>
     <p>{{ organization.description }}</p>
   </div>
   <div class="col-sm-9">
@@ -33,10 +33,10 @@ layout: default
       <dd>
         {% if page.category.size %}
           {% for category in page.category %}
-            <a href="{{ site.baseurl }}/categories/{{ category | slugify }}">{{ category }}</a><br>
+            <a href="{{ site.baseurl }}/datasets/?category={{ category | slugify }}">{{ category }}</a><br>
           {% endfor %}
         {% else %}
-          <a href="{{ site.baseurl }}/categories/{{ page.category | slugify }}">{{ page.category }}</a>
+          <a href="{{ site.baseurl }}/datasets/?category={{ page.category | slugify }}">{{ page.category }}</a>
         {% endif %}
       </dd>
       {% endif %}
