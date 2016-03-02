@@ -19,7 +19,7 @@ layout: default
   {% endif %}
     <h1>
       {{ page.title }}
-      <a href="{{ site.github.repository_url }}/edit/gh-pages/{{ page.path }}" class="pull-right btn btn-default" role="button">Edit</a>
+      <a href="{{ site.github.repository_url | default: site.repository_url }}/edit/gh-pages/{{ page.path }}" class="pull-right btn btn-default" role="button">Edit</a>
     </h1>
     <p>{{ page.notes }}</p>
 
