@@ -42,7 +42,7 @@ $.getJSON(datasetsPath).done(function (datasets) {
   setContent(elements.datasetsCount, datasetsCountMarkup)
 
   // Search datasets listener
-  var searchFunction = createSearchFunction(filteredDatasets, datasetsMarkup)
+  var searchFunction = createSearchFunction(filteredDatasets)
   elements.searchQuery.on('keyup', function (e) {
     var query = e.currentTarget.value
 
@@ -165,12 +165,16 @@ function slugify (text) {
     .replace(/-+$/, '')             // Trim - from end of text
 }
 
-// Returns a function that can be used to fuzzy search an array of datasets
+// Returns a function that can be used to search an array of datasets
 // The function returns the filtered array of datasets
 function createSearchFunction (datasets) {
-  var searchOptions = {threshold: 0.2, keys: ['title', 'description']}
-  var fuse = new Fuse(datasets, searchOptions)
+  var keys = ['title', 'notes']
   return function (query) {
-    return query ? fuse.search(query) : datasets
+    var lowerCaseQuery = query.toLowerCase()
+    return _.filter(datasets, function (dataset) {
+      return keys.reduce(function (previousValue, key) {
+        return previousValue || (dataset[key] && dataset[key].toLowerCase().indexOf(lowerCaseQuery) !== -1)
+      }, false)
+    })
   }
 }
