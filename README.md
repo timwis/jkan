@@ -8,9 +8,11 @@ that allows a small, resource-strapped government agency to stand-up an open dat
 [clicking the fork button](https://help.github.com/articles/fork-a-repo/).
 
 ## Installation
-Just click "Fork" at the top-right of this page
+Just click "Fork" at the top-right of this page.
+
+You can change the name and description of your site by changing the name and tagline of your forked repo.
 
 ## Usage
-Using the [built-in edit button](https://help.github.com/articles/editing-files-in-your-repository/) on github
-or [prose.io](http://prose.io), add datasets to the [`_datasets`](_datasets) directory and organizations to 
-the [`_organizations`](_organizations) directory.
+Using the [built-in edit button](https://help.github.com/articles/editing-files-in-your-repository/) on github,
+add datasets to the [`_datasets`](_datasets) directory and organizations to the 
+[`_organizations`](_organizations) directory.
