@@ -2,7 +2,7 @@ language: ruby
 rvm:
 - 2.1
 
-script: bundle exec jekyll build && bundle exec htmlproof ./_site --disable-external
+script: bundle exec jekyll build --baseurl "" && bundle exec htmlproof ./_site --disable-external
 
 branches:
   only:
