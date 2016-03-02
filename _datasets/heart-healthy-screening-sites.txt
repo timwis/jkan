@@ -6,7 +6,7 @@ maintainer_email: amory.hillengas@phila.gov
 organization: Public Health
 category: Health / Human Services
 resources:
-  - url: 'http://data.phl.opendata.arcgis.com/datasets/c6346164a22345c4867be0cf59902821_0.csv'
+  - url: /files/heart-healthy-screening-sites.csv
     name: Heart Healthy Screening Sites CSV
     format: CSV
     description: 'Update frequency: Monthly'
