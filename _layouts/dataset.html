@@ -40,6 +40,7 @@ scripts:
       <li>
         <a href="{{ resource.url }}">{{ resource.name }}</a>
         {% if resource.format %}({{ resource.format}}){% endif %}
+        {% if resource.description %}<div class="resource-description">{{ resource.description }}</div>{% endif %}
       </li>
       {% endfor %}
     </ul>
