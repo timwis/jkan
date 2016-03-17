@@ -14,7 +14,7 @@
   <script src="{% unless script contains "http" %}{{ site.baseurl }}{% endunless %}{{ script }}"></script>
 {% endfor %}
 {% for script in page.scripts %}
-  <script src="{% unless script contains "http" %}{{ site.baseurl }}{% endunless %}{{ site.baseurl }}{{ script }}"></script>
+  <script src="{% unless script contains "http" %}{{ site.baseurl }}{% endunless %}{{ script }}"></script>
 {% endfor %}
 
 <footer></footer>
