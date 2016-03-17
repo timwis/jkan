@@ -1,20 +1,22 @@
 ---
 title: 311 Service Requests
-notes: This api represents service requests submit via the 311 web and mobile applications.  It does not include requests phoned in or entered manually by departments.
-maintainer: Mary Anne Longacre
-maintainer_email: maryanne.longacre@phila.gov
 organization: "Managing Director's Office"
+notes: This api represents service requests submit via the 311 web and mobile applications.  It does not include requests phoned in or entered manually by departments. Testing
 resources:
-  - url: 'http://www.publicstuff.com/api/open311/discovery.xml'
-    name: 311 Service Requests (Partial) Production API
+  - name: 311 Service Requests (Partial) Production API
+    url: 'http://www.publicstuff.com/api/open311/discovery.xml'
     format: api
-    description: ''
-  - url: 'http://test.publicstuff.com/api/open311/discovery.xml'
-    name: 311 Service Requests (Partial) Test API
+  - name: 311 Service Requests (Partial) Test API
+    url: 'http://test.publicstuff.com/api/open311/discovery.xml'
     format: api
-    description: ''
-  - url: 'http://phlapi.com/open311.html'
-    name: 311 Service Requests (Partial) API Documentation
-    format: HTML
-    description: ''
+  - name: 311 Service Requests (Partial) API Documentation
+    url: 'http://phlapi.com/open311.html'
+    format: html
+  - name: Test resource
+    url: 'http://google.com'
+    format: html
+category:
+  - Uncategorized
+maintainer: Miguel Santana
+maintainer_email: miguel.santana@phila.gov
 ---
