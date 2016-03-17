@@ -16,3 +16,11 @@ dataset {
   white-space: nowrap;
   text-overflow: ellipsis;
 }
+
+.resource-description {
+  font-size: 90%;
+}
+
+.select2 {
+  margin-bottom: 10px;
+}

@@ -5,6 +5,10 @@ permalink: /datasets/
 paginate:
   collection: datasets
   per_page: 50
+scripts:
+  - https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.5.1/lodash.min.js
+  - /scripts/deparam.js
+  - /scripts/datasets.js
 ---
 {% include breadcrumbs.html %}
 
@@ -38,8 +42,3 @@ paginate:
     <%= data.notes %>
   </dataset>
 </script>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.5.1/lodash.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/2.0.2/fuse.min.js"></script>
-<script src="{{ site.baseurl }}/scripts/deparam.js"></script>
-<script src="{{ site.baseurl }}/scripts/datasets.js"></script>
