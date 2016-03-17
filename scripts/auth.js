@@ -12,7 +12,7 @@ var configuration = {
     GATEKEEPER_HOST: 'http://jkan-gatekeeper.herokuapp.com'
   }
 }
-var config = configuration.development
+var config = configuration.production
 var currentURL = window.location.href
 var oauthToken = Cookies.get('oauth-token')
 var authCodeMatch = window.location.href.match(/\?code=([a-z0-9]*)/)
