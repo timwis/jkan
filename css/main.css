@@ -16,3 +16,7 @@ dataset {
   white-space: nowrap;
   text-overflow: ellipsis;
 }
+
+.resource-description {
+  font-size: 90%;
+}
