@@ -1,9 +1,11 @@
 /* global $, jsyaml, github, settings */
+var resourceRowTemplate = $('[data-hook~=tmpl-resource-row]').html()
+var resourceRowsEl = $('[data-hook~=resource-rows]')
 
 // On form submit (main logic)
 $('[data-hook~=edit-dataset]').on('submit', function (e) {
   e.preventDefault()
-  var formData = getFormData(e.currentTarget)
+  var formData = $(e.currentTarget).serializeJSON({useIntKeysAsArrayIndex: true})
   var yaml = formatData(formData)
   saveFile(yaml, function (err, response) {
     if (err) {
@@ -22,16 +24,21 @@ $('[data-hook~=edit-button], [data-hook~=cancel-button]').on('click', function (
   e.preventDefault()
 })
 
-// Returns a form element's data as an object
-function getFormData (formEl) {
-  var elements = Array.apply(null, formEl.elements) // convert to array
-  var formData = {}
-  for (var i = 0; i < elements.length; i++) {
-    var id = elements[i].id
-    if (id) formData[id] = elements[i].value
+// Remove resource buttons
+$(resourceRowsEl).on('click', '[data-hook~=remove-resource]', function (e) {
+  if (window.confirm('Delete this resource?')) {
+    $(e.currentTarget).closest('[data-hook~=resource-row]').remove()
   }
-  return formData
-}
+})
+
+// Add resource button
+$('[data-hook~=add-resource]').on('click', function (e) {
+  resourceRowsEl.append(resourceRowTemplate)
+})
+
+// Initialize plugins
+$('.select2').select2({theme: 'bootstrap'})
+$('[data-toggle=tooltip]').tooltip()
 
 // Format data object into YAML front-matter
 function formatData (formData) {

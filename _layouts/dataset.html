@@ -74,31 +74,134 @@ scripts:
 </div>
 
 <div class="row" data-hook="edit" style="display: none;">
-  <div class="col-sm-6 col-sm-offset-3">
+  <div class="col-sm-8 col-sm-offset-2">
     <form data-hook="edit-dataset">
-      <div class="form-group">
-        <label for="title">Title</label>
-        <input type="text" class="form-control" id="title" placeholder="Title" value="{{ page.title }}">
-      </div>
-      <div class="form-group">
-        <label for="organization">Organization</label>
-        <select class="form-control" id="organization">
-          {% for organization in site.organizations %}
-            <option{% if page.organization == organization.title %} selected="selected"{% endif %}>{{ organization.title }}</option>
-          {% endfor %}
-        </select>
-      </div>
-      <div class="form-group">
-        <label for="notes">Description</label>
-        <textarea class="form-control" id="notes" placeholder="Description">{{ page.notes }}</textarea>
-      </div>
-      <button type="submit" class="btn btn-default">Submit</button>
+
+      <fieldset>
+        <div class="form-group">
+          <label for="title">Title</label>
+          <input type="text" class="form-control" id="title" name="title" placeholder="Title" value="{{ page.title }}">
+        </div>
+        <div class="form-group">
+          <label for="organization">Organization</label>
+          <select class="form-control" id="organization" name="organization">
+            <option value="">Select...</option>
+            {% for organization in site.organizations %}
+              <option{% if page.organization == organization.title %} selected="selected"{% endif %}>{{ organization.title }}</option>
+            {% endfor %}
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="notes">Description</label>
+          <textarea class="form-control" id="notes" placeholder="Description" name="notes">{{ page.notes }}</textarea>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <h2>Resources</h2>
+        <div data-hook="resource-rows">
+        {% for resource in page.resources %}
+          <div class="row" data-hook="resource-row">
+            <div class="col-xs-6">
+              <label for="resources[][name]">Resource Name</label>
+              <div class="input-group">
+                <span class="input-group-btn">
+                  <button type="button" class="btn btn-danger" data-hook="remove-resource" title="Remove resource" data-toggle="tooltip"><i class="fa fa-minus"></i></button>
+                </span>
+                <input type="text" class="form-control" id="resources[][name]" name="resources[][name]" placeholder="Resource Name" value="{{ resource.name }}">
+              </div>
+            </div>
+            <div class="col-xs-4">
+              <div class="form-group">
+                <label for="resources[][url]">URL</label>
+                <input type="text" class="form-control" id="resources[][url]" name="resources[][url]" placeholder="http://....." value="{{ resource.url }}">
+              </div>
+            </div>
+            <div class="col-xs-2">
+              <div class="form-group">
+                <label for="resources[][format]">Format</label>
+                <select class="form-control" id="resources[][format]" name="resources[][format]">
+                  <option value="">Select...</option>
+                  {% assign formats = "api|csv|json|geojson|html|kml|kmz|shp|xml" | split: "|" %}
+                  {% for format in formats %}
+                    {% assign lower_format = resource.format | downcase %}
+                    <option{% if lower_format == format %} selected="selected"{% endif %}>{{ format }}</option>
+                  {% endfor %}
+                </select>
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+        </div>
+        <button type="button" class="btn btn-default" data-hook="add-resource" title="Add resource"><i class="fa fa-plus"></i> Resource</button>
+      </fieldset>
+
+      <fieldset>
+        <h2>Additional Info</h2>
+        
+        <div class="form-group">
+          <label for="category[]">Category</label>
+          <select class="form-control select2" id="category[]" name="category[]" multiple="multiple" style="width: 100%">
+            <option value="">Select...</option>
+            {% for category in site.categories %}
+              <option{% if page.category == category.title %} selected="selected"{% endif %}>{{ category.title }}</option>
+            {% endfor %}
+          </select>
+        
+        <div class="row">
+          <div class="col-xs-6">
+            <div class="form-group">
+              <label for="maintainer">Maintainer</label>
+              <input type="text" class="form-control" id="maintainer" name="maintainer" placeholder="Maintainer" value="{{ page.maintainer }}">
+            </div>
+          </div>
+          <div class="col-xs-6">
+            <div class="form-group">
+              <label for="maintainer_email">Email</label>
+              <input type="text" class="form-control" id="maintainer_email" name="maintainer_email" placeholder="Maintainer Email" value="{{ page.maintainer_email }}">
+            </div>
+          </div>
+        </div>
+      </fieldset>
+
+      <button type="submit" class="btn btn-primary">Submit</button>
     </form>
   </div>
-  <div class="col-sm-3">
+  <div class="col-sm-2">
     <button class="btn btn-default pull-right" data-hook="cancel-button">Cancel</button>
   </div>
 </div>
+
+<script type="text/template" data-hook="tmpl-resource-row">
+  <div class="row" data-hook="resource-row">
+    <div class="col-xs-6">
+      <label for="resources[][name]">Resource Name</label>
+      <div class="input-group">
+        <span class="input-group-btn">
+          <button type="button" class="btn btn-danger" data-hook="remove-resource" title="Remove resource" data-toggle="tooltip"><i class="fa fa-minus"></i></button>
+        </span>
+        <input type="text" class="form-control" id="resources[][name]" name="resources[][name]" placeholder="Resource Name">
+      </div>
+    </div>
+    <div class="col-xs-4">
+      <div class="form-group">
+        <label for="resources[][url]">URL</label>
+        <input type="text" class="form-control" id="resources[][url]" name="resources[][url]" placeholder="http://.....">
+      </div>
+    </div>
+    <div class="col-xs-2">
+      <div class="form-group">
+        <label for="resources[][format]">Format</label>
+        <select class="form-control" id="resources[][format]" name="resources[][format]">
+          <option value="">Select...</option>
+          {% for format in formats %}
+            <option>{{ format }}</option>
+          {% endfor %}
+        </select>
+      </div>
+    </div>
+  </div>
+</script>
 
 <script>
   var settings = {
