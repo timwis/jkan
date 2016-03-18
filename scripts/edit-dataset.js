@@ -37,7 +37,7 @@ $('[data-hook~=add-resource]').on('click', function (e) {
 })
 
 // Initialize plugins
-$('.select2').select2({theme: 'bootstrap'})
+$('.select2').select2()
 $('[data-toggle=tooltip]').tooltip()
 
 // Format data object into YAML front-matter
