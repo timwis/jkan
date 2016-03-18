@@ -7,7 +7,7 @@ scripts:
 {% include breadcrumbs.html parent="Datasets" %}
 
 <div class="alert alert-success" role="alert" data-hook="alert-success" style="display: none;">
-  This dataset has been <a data-hook="commit-url">saved</a> and the page is currently regenerating.
+  This dataset has been <a href="#" data-hook="commit-url">saved</a> and the page is currently regenerating.
 </div>
 
 <div class="alert alert-danger" role="alert" data-hook="alert-error" style="display: none;">
@@ -19,7 +19,7 @@ scripts:
   {% if organization %}
   <div class="col-sm-3">
     {% if organization.logo %}
-      <a href="{{ site.baseurl }}/datasets/?organization={{ organization.title | slugify }}" class="thumbnail"><img src="{{ organization.logo }}"></a>
+      <a href="{{ site.baseurl }}/datasets/?organization={{ organization.title | slugify }}" class="thumbnail"><img src="{{ organization.logo }}" alt="{{ organization.title }} logo"></a>
     {% endif %}
     <h3><a href="{{ site.baseurl }}/datasets/?organization={{ organization.title | slugify }}">{{ organization.title }}</a></h3>
     <p>{{ organization.description }}</p>

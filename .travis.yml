@@ -2,7 +2,7 @@ language: ruby
 rvm:
 - 2.1
 
-script: bundle exec jekyll build --destination _site/JKAN && bundle exec htmlproof ./_site --disable-external
+script: bundle exec jekyll build --destination _site/JKAN && bundle exec htmlproof ./_site --disable-external --allow-hash-href
 
 branches:
   only:
