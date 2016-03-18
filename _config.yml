@@ -1,13 +1,21 @@
 title: JKAN
 description: A lightweight, backend-free open data portal, powered by Jekyll
 baseurl: "/JKAN"
-repository_url: https://github.com/timwis/jkan
-owner_name: timwis
 
+# GitHub Repo Info
+repository_owner: timwis
+repository_name: JKAN
+
+# Authentication
+github_client_id: 777ae16009a6f9e6d451
+gatekeeper_host: http://jkan-gatekeeper.herokuapp.com
+
+# Nav bar
 navigation:
   - title: Datasets
     url: /datasets/
 
+# Collections
 collections:
   datasets:
     output: true
@@ -17,6 +25,7 @@ collections:
   categories:
     output: false
 
+# Collections (cont'd)
 defaults:
   - scope:
       path: ""
@@ -26,6 +35,7 @@ defaults:
       category: Uncategorized
       organization: N/A
 
+# Metadata editor for prose.io
 prose:
   siteurl: 'http://timwis.com/jkan'
   metadata:
@@ -60,11 +70,12 @@ prose:
     - Gemfile.lock
     - LICENSE
 
-# Build settings
+# Markdown settings
 markdown: kramdown
 kramdown:
   input: GFM
 
+# Exclude these files from the build
 exclude:
   - Gemfile
   - Gemfile.lock
