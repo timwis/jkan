@@ -1,0 +1,83 @@
+title: JKAN (dev)
+description: A lightweight, backend-free open data portal, powered by Jekyll.
+baseurl: 
+
+# GitHub Repo Info
+repository_owner: timwis
+repository_name: JKAN
+
+# Authentication
+github_client_id: f8b5db18eb2794a70bc5
+gatekeeper_host: http://localhost:9999
+
+# Nav bar
+navigation:
+  - title: Datasets
+    url: /datasets/
+
+# Collections
+collections:
+  datasets:
+    output: true
+    permalink: /datasets/:path/
+  organizations:
+    output: false
+  categories:
+    output: false
+
+# Collections (cont'd)
+defaults:
+  - scope:
+      path: ""
+      type: datasets
+    values:
+      layout: dataset
+      category: Uncategorized
+      organization: N/A
+
+# Metadata editor for prose.io
+prose:
+  siteurl: 'http://timwis.com/jkan'
+  metadata:
+    _datasets:
+      - name: title
+        field:
+          element: text
+          label: Title
+      - name: organization
+        field:
+          element: text
+          label: Organization
+      - name: notes
+        field:
+          element: textarea
+          label: Description
+      - name: maintainer
+        field:
+          element: text
+          label: Maintainer
+      - name: maintainer_email
+        field:
+          element: text
+          type: email
+          label: Maintainer Email
+  ignore:
+    - search.json
+    - .gitignore
+    - .travis.yml
+    - deploy.sh
+    - Gemfile
+    - Gemfile.lock
+    - LICENSE
+
+# Markdown settings
+markdown: kramdown
+kramdown:
+  input: GFM
+
+# Exclude these files from the build
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - .travis.yml
