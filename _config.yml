@@ -1,6 +1,6 @@
 title: JKAN
-description: A lightweight, backend-free open data portal, powered by Jekyll
-baseurl: "/JKAN"
+description: A lightweight, backend-free open data portal, powered by Jekyll.
+baseurl: /JKAN
 
 # GitHub Repo Info
 repository_owner: timwis
