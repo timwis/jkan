@@ -1,4 +1,4 @@
-/* global $, _, deparam, Fuse */
+/* global $, _, deparam */
 
 var params = deparam(window.location.search.substr(1))
 
