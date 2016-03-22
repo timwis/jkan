@@ -10,7 +10,7 @@ $('[data-hook~=edit-dataset]').on('submit', function (e) {
   saveFile(yaml, function (err, response) {
     if (err) {
       alert('error')
-      console.err(err)
+      console.error(err)
     } else {
       toggleView()
       alert('success', response.commit.html_url)
