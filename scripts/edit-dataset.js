@@ -1,4 +1,4 @@
-/* global $, jsyaml, github, settings */
+/* global $, jsyaml, settings, repo */
 var resourceRowTemplate = $('[data-hook~=tmpl-resource-row]').html()
 var resourceRowsEl = $('[data-hook~=resource-rows]')
 
@@ -47,7 +47,6 @@ function formatData (formData) {
 
 // Saves a file to github
 function saveFile (contents, callback) {
-  var repo = github.getRepo(settings.REPO_OWNER, settings.REPO_NAME)
   var fileName = settings.FILE_PATH.split('/').pop()
   var commitMsg = 'Updated ' + fileName
   return repo.write(settings.BRANCH, settings.FILE_PATH, contents, commitMsg, {}, callback)

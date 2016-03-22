@@ -1,8 +1,9 @@
-/* global $, Cookies, Github, settings */
+/* global $, _, Cookies, Github, settings */
 var currentURL = window.location.href
 var oauthToken = Cookies.get('oauth-token')
 var authCodeMatch = window.location.href.match(/\?code=([a-z0-9]*)/)
 var github = new Github()
+var repo
 
 // If user has oauth token stored in a cookie, show their username
 if (oauthToken) {
@@ -15,6 +16,13 @@ if (oauthToken) {
   user.show(null, function (err, userData) {
     if (err) console.error(err)
     setUserInfo(userData)
+
+    // If user has collaborator access on repo, show edit button
+    repo = github.getRepo(settings.REPO_OWNER, settings.REPO_NAME)
+    repo.isCollaborator(userData.login, function (err) {
+      if (err) $('[data-hook~=edit-button]').hide()
+      else $('[data-hook~=edit-button]').show()
+    })
   })
 // If URL has ?code=XXXX in it, use it to fetch oauth token
 } else if (authCodeMatch) {
