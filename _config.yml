@@ -3,7 +3,7 @@ description: A lightweight, backend-free open data portal, powered by Jekyll.
 baseurl: /jkan
 
 # GitHub Repo Info
-repository_owner: timwis
+repository_owner: jjediny
 repository_name: jkan
 
 # Authentication
