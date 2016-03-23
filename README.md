@@ -1,4 +1,4 @@
-# JKAN [![Build Status](https://travis-ci.org/timwis/JKAN.svg?branch=gh-pages)](https://travis-ci.org/timwis/JKAN)
+# JKAN [![Build Status](https://travis-ci.org/timwis/jkan.svg?branch=gh-pages)](https://travis-ci.org/timwis/JKAN)
 A lightweight, backend-free open data portal, powered by Jekyll
 
 Open-source data portals can be [really](https://twitter.com/waldojaquith/status/282599673569619969).
