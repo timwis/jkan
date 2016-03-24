@@ -1,11 +1,12 @@
-/* global $, Cookies, Github, settings */
-var currentURL = window.location.href
+/* global $, _, deparam, Cookies, Github, settings */
+var GITHUB_LOGIN_URL = 'https://github.com/login/oauth/authorize'
 var oauthToken = Cookies.get('oauth-token')
-var authCodeMatch = window.location.href.match(/\?code=([a-z0-9]*)/)
+var params = deparam(window.location.search.substr(1))
 var github = new Github()
+window.currentURL = window.location.href
 
 // If user has oauth token stored in a cookie, show their username
-if (oauthToken) {
+if (oauthToken && oauthToken !== 'undefined') {
   console.log('OAuth Token', oauthToken)
   github = new Github({
     token: oauthToken,
@@ -17,25 +18,24 @@ if (oauthToken) {
     setUserInfo(userData)
   })
 // If URL has ?code=XXXX in it, use it to fetch oauth token
-} else if (authCodeMatch) {
-  var authCode = authCodeMatch[1]
-  var authURL = settings.GATEKEEPER_HOST + '/authenticate/' + authCode
+} else if (params.code) {
+  var authHost = params.gatekeeper_host || settings.GATEKEEPER_HOST
+  var authURL = authHost + '/authenticate/' + params.code
   $.getJSON(authURL, function (data) {
     console.log('auth response', data)
     Cookies.set('oauth-token', data.token)
-    removeFromURL('?code=' + authCode)
+    removeFromURL('code')
   })
 }
 
 // When user clicks login
 $('[data-hook~=login-link]').on('click', function (e) {
-  var redirectUrl = 'https://github.com/login/oauth/authorize'
   var redirectParams = {
     client_id: settings.GITHUB_CLIENT_ID,
-    redirect_uri: currentURL,
+    redirect_uri: window.currentURL,
     scope: 'public_repo'
   }
-  window.location.href = redirectUrl + '?' + $.param(redirectParams)
+  window.location.href = GITHUB_LOGIN_URL + '?' + $.param(redirectParams)
   e.preventDefault()
 })
 
@@ -46,8 +46,10 @@ $('[data-hook~=logout-link]').on('click', function (e) {
   e.preventDefault()
 })
 
-function removeFromURL (search) {
-  window.location.href = window.location.href.replace(search, '')
+function removeFromURL (property) {
+  delete params[property]
+  var newParamString = $.param(params)
+  window.location.search = newParamString ? ('?' + newParamString) : ''
 }
 
 function setUserInfo (userData) {
