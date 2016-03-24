@@ -22,7 +22,7 @@ your site.
 
 Alternatively, you can use JKAN's user-friendly editing pages.
 
-![Screenshot of user-friendly editing page](http://i.imgur.com/jT6xMkD.png)
+![Screenshot of user-friendly editing page](http://i.imgur.com/e12N0oQ.png)
 
 But doing so requires one more installation step: setting up authentication.
 
