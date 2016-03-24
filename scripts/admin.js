@@ -1,9 +1,20 @@
 /* global $, settings, github */
 // var configFileContents
 
-$('form').on('submit', function (e) {
+$('[data-hook~=admin-form]').on('submit', function (e) {
   var formData = $(e.currentTarget).serializeJSON()
+  updateConfig(formData, function (err, response) {
+    if (err) {
+      alert('error')
+      console.error(err)
+    } else {
+      alert('success', response.commit.html_url)
+    }
+  })
+  e.preventDefault()
+})
 
+function updateConfig (formData, callback) {
   var repo = github.getRepo(settings.REPO_OWNER, settings.REPO_NAME)
   repo.read(settings.BRANCH, '_config.yml', function (err, fileContents) {
     if (err) console.error(err)
@@ -14,18 +25,9 @@ $('form').on('submit', function (e) {
       newFileContents = newFileContents.replace(regex, newValue)
     }
     var commitMsg = 'Updated _config.yml'
-    return repo.write(settings.BRANCH, '_config.yml', newFileContents, commitMsg, {}, function (err, response) {
-      if (err) {
-        alert('error')
-        console.error(err)
-      } else {
-        alert('success', response.commit.html_url)
-      }
-    })
+    return repo.write(settings.BRANCH, '_config.yml', newFileContents, commitMsg, {}, callback)
   })
-
-  e.preventDefault()
-})
+}
 
 // Show alert box on page
 function alert (type, commitUrl) {
