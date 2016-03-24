@@ -1,7 +1,7 @@
 ---
 title: 311 Service Requests
 organization: "Managing Director's Office"
-notes: This api represents service requests submit via the 311 web and mobile applications.  It does not include requests phoned in or entered manually by departments. hello world
+notes: This api represents service requests submit via the 311 web and mobile applications.  It does not include requests phoned in or entered manually by departments.
 resources:
   - name: 311 Service Requests (Partial) Production API
     url: 'http://www.publicstuff.com/api/open311/discovery.xml'
