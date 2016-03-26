@@ -35,41 +35,6 @@ defaults:
       category: Uncategorized
       organization: N/A
 
-# Metadata editor for prose.io
-prose:
-  siteurl: 'http://timwis.com/jkan'
-  metadata:
-    _datasets:
-      - name: title
-        field:
-          element: text
-          label: Title
-      - name: organization
-        field:
-          element: text
-          label: Organization
-      - name: notes
-        field:
-          element: textarea
-          label: Description
-      - name: maintainer
-        field:
-          element: text
-          label: Maintainer
-      - name: maintainer_email
-        field:
-          element: text
-          type: email
-          label: Maintainer Email
-  ignore:
-    - search.json
-    - .gitignore
-    - .travis.yml
-    - deploy.sh
-    - Gemfile
-    - Gemfile.lock
-    - LICENSE
-
 # Markdown settings
 markdown: kramdown
 kramdown:
