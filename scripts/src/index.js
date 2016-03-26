@@ -35,9 +35,6 @@ NavView({el: elements.nav, user})
 
 const router = {
   routes: {
-    '/datasets/': function () {
-      DatasetsView({el: elements.main})
-    },
     '/datasets/(.+)/': function () {
       const file = new FileModel({
         oauthToken: user.oauthToken,
@@ -47,6 +44,9 @@ const router = {
         filePath: settings.FILE_PATH
       })
       DatasetView({el: elements.main, file})
+    },
+    '/datasets/': function () {
+      DatasetsView({el: elements.main})
     },
     '/admin/': function () {
       const file = new FileModel({
