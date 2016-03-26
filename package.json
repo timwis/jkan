@@ -28,6 +28,7 @@
   },
   "dependencies": {
     "ampersand-state": "^5.0.0",
+    "bootstrap": "^3.3.6",
     "github-api": "^0.11.2",
     "jquery-deparam": "^0.5.2",
     "jquery-serializejson": "^2.6.2",

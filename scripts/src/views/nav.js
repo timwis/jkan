@@ -1,3 +1,5 @@
+import 'bootstrap/js/dropdown'
+
 import {queryByHook} from '../util'
 
 export default function (opts) {
