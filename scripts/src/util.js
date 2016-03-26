@@ -13,12 +13,11 @@ export function setParams (params) {
   window.history.replaceState(null, null, newUrl)
 }
 
+// Meant to mimic Jekyll's slugify function
+// https://github.com/jekyll/jekyll/blob/master/lib/jekyll/utils.rb#L142
 export function slugify (text) {
   return text.toString().toLowerCase().trim()
-    .replace(/\s+/g, '-')           // Replace spaces with -
-    .replace(/&/g, '-and-')         // Replace & with 'and'
-    .replace(/[^\w\-]+/g, '')       // Remove all non-word chars
+    .replace(/[^a-zA-Z0-9]/g, '-')  // Replace non-alphanumeric chars with -
     .replace(/\-\-+/g, '-')         // Replace multiple - with single -
-    .replace(/^-+/, '')             // Trim - from start of text
-    .replace(/-+$/, '')             // Trim - from end of text
+    .replace(/^\-|\-$/i, '')        // Remove leading/trailing hyphen
 }
