@@ -48,3 +48,7 @@ exclude:
   - .travis.yml
   - node_modules
   - scripts/src
+  - package.json
+  - webpack.config.js
+  - README.md
+  - LICENSE

@@ -2,7 +2,7 @@
   "name": "es6-boilerplate",
   "version": "1.0.0",
   "description": "Front-end project boilerplate with es6 build tools. Includes babel, webpack, and npm scripts.",
-  "main": "index.js",
+  "main": "scripts/src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack-dev-server --progress --colors",
@@ -29,13 +29,11 @@
   "dependencies": {
     "ampersand-state": "^5.0.0",
     "github-api": "^0.11.2",
-    "hellojs": "^1.12.0",
     "jquery-deparam": "^0.5.2",
     "jquery-serializejson": "^2.6.2",
     "js-cookie": "^2.1.0",
     "js-yaml": "^3.5.5",
     "lodash": "^4.6.1",
-    "select2": "^4.0.2",
-    "slug": "^0.9.1"
+    "select2": "^4.0.2"
   }
 }

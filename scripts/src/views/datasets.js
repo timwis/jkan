@@ -1,10 +1,9 @@
 /* global settings */
 import $ from 'jquery'
-import slug from 'slug'
 import {filter, pick, omit, chain, defaults} from 'lodash'
 import 'jquery-deparam'
 
-import {queryByHook, setContent} from '../util'
+import {queryByHook, setContent, slugify} from '../util'
 import TmplListGroupItem from '../templates/list-group-item'
 import TmplDatasetItem from '../templates/dataset-item'
 
@@ -69,7 +68,7 @@ function organizationsWithCount (datasets) {
     .map(function (datasetsInOrg, organization) {
       const filters = createParamsFilters(pick(params, ['category']))
       const filteredDatasets = filter(datasetsInOrg, filters)
-      const orgSlug = slug(organization)
+      const orgSlug = slugify(organization)
       const selected = params.organization && params.organization === orgSlug
       const itemParams = selected ? omit(params, 'organization') : defaults({organization: orgSlug}, params)
       return {
@@ -101,7 +100,7 @@ function categoriesWithCount (datasets) {
     .map(function (datasetsInCat, category) {
       const filters = createParamsFilters(pick(params, ['organization']))
       const filteredDatasets = filter(datasetsInCat, filters)
-      const categorySlug = slug(category)
+      const categorySlug = slugify(category)
       const selected = params.category && params.category === categorySlug
       const itemParams = selected ? omit(params, 'category') : defaults({category: categorySlug}, params)
       return {
@@ -141,10 +140,10 @@ function createParamsFilters (filters) {
   return function (dataset) {
     const conditions = []
     if (filters.organization) {
-      conditions.push(dataset.organization && slug(dataset.organization) === filters.organization)
+      conditions.push(dataset.organization && slugify(dataset.organization) === filters.organization)
     }
     if (filters.category) {
-      conditions.push(dataset.category && slug(dataset.category).indexOf(filters.category) !== -1)
+      conditions.push(dataset.category && slugify(dataset.category).indexOf(filters.category) !== -1)
     }
     return conditions.every(function (value) { return !!value })
   }
