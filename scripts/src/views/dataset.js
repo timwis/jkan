@@ -7,15 +7,15 @@ import {queryByHook} from '../util'
 export default function (opts) {
   opts || (opts = {})
   const elements = {
-    editForm: queryByHook('edit-dataset', opts.el),
+    editForm: queryByHook('edit-form', opts.el),
     editButton: queryByHook('edit-button', opts.el),
     cancelButton: queryByHook('cancel-button', opts.el),
     resourceRows: queryByHook('resource-rows', opts.el),
     addResourceButton: queryByHook('add-resource', opts.el),
     alert: queryByHook('alert', opts.el),
     commitUrl: queryByHook('commit-url', opts.el),
-    readView: queryByHook('view', opts.el),
-    editView: queryByHook('edit', opts.el),
+    readView: queryByHook('read-view', opts.el),
+    editView: queryByHook('edit-view', opts.el),
     tooltip: $('[data-toggle=tooltip]', opts.el),
     select2: $('.select2', opts.el)
   }

@@ -12,7 +12,7 @@ layout: default
 </div>
 
 {% assign organization = site.organizations | where:"title",page.organization | first %}
-<div class="row" data-hook="view">
+<div class="row" data-hook="read-view">
   {% if organization %}
   <div class="col-sm-3">
     {% if organization.logo %}
@@ -27,7 +27,7 @@ layout: default
   {% endif %}
     <h1>
       {{ page.title }}
-      <a href="https://github.com/{{ site.repository_owner }}/{{ site.repository_title }}/edit/gh-pages/{{ page.path }}" class="pull-right btn btn-default" role="button" data-hook="edit-button">Edit</a>
+      <a href="https://github.com/{{ site.repository_owner }}/{{ site.repository_name }}/edit/gh-pages/{{ page.path }}" class="pull-right btn btn-default" role="button" data-hook="edit-button">Edit</a>
     </h1>
     <p>{{ page.notes }}</p>
 
@@ -70,9 +70,9 @@ layout: default
   </div>
 </div>
 
-<div class="row" data-hook="edit" style="display: none;">
+<div class="row" data-hook="edit-view" style="display: none;">
   <div class="col-sm-8 col-sm-offset-2">
-    <form data-hook="edit-dataset">
+    <form data-hook="edit-form">
 
       <fieldset>
         <div class="form-group">
