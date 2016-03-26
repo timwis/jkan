@@ -12,6 +12,8 @@ resources:
   - name: 311 Service Requests (Partial) API Documentation
     url: 'http://phlapi.com/open311.html'
     format: html
+category:
+  - Uncategorized
 maintainer: Miguel Santana
 maintainer_email: miguel.santana@phila.gov
 ---
