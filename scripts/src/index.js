@@ -26,7 +26,7 @@ const user = new UserModel({
 
 // If user is mid-login, finish the login process
 if (params.code) {
-  setParams(omit(params, 'code'))
+  setParams(omit(params, ['code', 'clientId', 'proxyHost']))
   user.finishLogin(params.code)
 }
 
