@@ -2,9 +2,6 @@
 title: Setup
 permalink: /setup/
 layout: default
-scripts:
-  - /scripts/setup.js
-  - /scripts/admin.js
 ---
 {% include breadcrumbs.html %}
 
@@ -59,4 +56,4 @@ Login to this site via GitHub to save these settings.
 ## Step 4
 Save these settings to `_config.yml`.
 
-<a href="#" class="btn btn-primary" data-hook="save"><i class="fa fa-save"></i> Save</a>
+<a href="#" class="btn btn-primary disabled" data-hook="save"><i class="fa fa-save"></i> Save</a>

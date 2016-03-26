@@ -81,3 +81,5 @@ exclude:
   - Gemfile.lock
   - vendor
   - .travis.yml
+  - node_modules
+  - scripts/src

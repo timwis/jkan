@@ -5,3 +5,4 @@ _ckan_data
 _plugins/debug.rb
 _plugins/generate_categories.rb
 _config.dev.yml
+node_modules
