@@ -37,7 +37,7 @@ const router = {
   routes: {
     '/datasets/(.+)/': function () {
       const file = new FileModel({
-        oauthToken: user.oauthToken,
+        user,
         repoOwner: settings.REPO_OWNER,
         repoName: settings.REPO_NAME,
         repoBranch: settings.BRANCH,
@@ -50,7 +50,7 @@ const router = {
     },
     '/admin/': function () {
       const file = new FileModel({
-        oauthToken: user.oauthToken,
+        user,
         repoOwner: settings.REPO_OWNER,
         repoName: settings.REPO_NAME,
         repoBranch: settings.BRANCH,
@@ -60,7 +60,7 @@ const router = {
     },
     '/setup/': function () {
       const file = new FileModel({
-        oauthToken: user.oauthToken,
+        user,
         repoOwner: settings.REPO_OWNER,
         repoName: settings.REPO_NAME,
         repoBranch: settings.BRANCH,

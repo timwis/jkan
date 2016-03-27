@@ -4,14 +4,13 @@ import jsyaml from 'js-yaml'
 
 export default State.extend({
   props: {
-    oauthToken: 'string',
     repoOwner: 'string',
     repoName: 'string',
     repoBranch: 'string',
     filePath: 'string'
   },
   session: {
-    repo: 'object'
+    user: 'state'
   },
   derived: {
     fileName: {
@@ -19,14 +18,17 @@ export default State.extend({
       fn: function () {
         return this.filePath.split('/').pop()
       }
+    },
+    repo: {
+      deps: ['user.oauthToken', 'repoOwner', 'repoName'],
+      fn: function () {
+        const github = new Github({
+          token: this.user.oauthToken,
+          auth: 'oauth'
+        })
+        return github.getRepo(this.repoOwner, this.repoName)
+      }
     }
-  },
-  initialize: function () {
-    const github = new Github({
-      token: this.oauthToken,
-      auth: 'oauth'
-    })
-    this.repo = github.getRepo(this.repoOwner, this.repoName)
   },
   read: function () {
     return new Promise((resolve, reject) => {

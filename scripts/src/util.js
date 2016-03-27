@@ -12,7 +12,6 @@ export function setContent (container, content) {
 export function setParams (params) {
   let newUrl = window.location.href.split('?')[0]
   if (!isEmpty(params)) newUrl += '?' + $.param(params)
-  else console.log('empty', params)
   window.history.replaceState(null, null, newUrl)
 }
 
