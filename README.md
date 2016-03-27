@@ -10,7 +10,7 @@ that allows a small, resource-strapped government agency to stand-up an open dat
 Please note this is still a work in progress! Check out the [issues](https://github.com/timwis/jkan/issues) to help
 out or give feedback.
 
-[Demo site](http://timwis.com/jkan)
+[Demo site](https://demo.jkan.io)
 
 ## Installation
 Just click "Fork" at the top-right of this page. (You'll need a [GitHub account](https://github.com/join?return_to=%2Ftimwis%2Fjkan&source=login)).
