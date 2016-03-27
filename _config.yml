@@ -7,8 +7,8 @@ repository_owner: timwis
 repository_name: jkan
 
 # Authentication
-github_client_id: 777ae16009a6f9e6d451
-gatekeeper_host: http://jkan-gatekeeper.herokuapp.com
+github_client_id: 
+gatekeeper_host: 
 
 # Categories
 category_list:
