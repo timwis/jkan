@@ -8,6 +8,7 @@ import FileModel from './models/file'
 import NavView from './views/nav'
 import DatasetsView from './views/datasets'
 import DatasetView from './views/dataset'
+import AddDatasetView from './views/add-dataset'
 import AdminView from './views/admin'
 import SetupView from './views/setup'
 import {queryByHook, setParams} from './util'
@@ -47,6 +48,16 @@ const router = {
     },
     '/datasets/': function () {
       DatasetsView({el: elements.main})
+    },
+    '/add-dataset/': function () {
+      const file = new FileModel({
+        user,
+        repoOwner: settings.REPO_OWNER,
+        repoName: settings.REPO_NAME,
+        repoBranch: settings.BRANCH,
+        defaultDir: settings.DATASETS_DIR
+      })
+      AddDatasetView({el: elements.main, file})
     },
     '/admin/': function () {
       const file = new FileModel({

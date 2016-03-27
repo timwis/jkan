@@ -2,20 +2,17 @@ import $ from 'jquery'
 import 'select2'
 import 'jquery-serializejson'
 
-import {queryByHook} from '../util'
+import {queryByHook, slugify} from '../util'
 
 export default function (opts) {
   opts || (opts = {})
   const elements = {
     form: queryByHook('dataset-form', opts.el),
-    editButton: queryByHook('edit-button', opts.el),
-    cancelButton: queryByHook('cancel-button', opts.el),
     resourceRows: queryByHook('resource-rows', opts.el),
     addResourceButton: queryByHook('add-resource', opts.el),
     alert: queryByHook('alert', opts.el),
     commitUrl: queryByHook('commit-url', opts.el),
-    readView: queryByHook('read-view', opts.el),
-    editView: queryByHook('edit-view', opts.el),
+    datasetUrl: queryByHook('dataset-url', opts.el),
     select2: $('.select2', opts.el)
   }
 
@@ -23,12 +20,6 @@ export default function (opts) {
 
   // Initialize select2 plugin
   elements.select2.select2()
-
-  // Edit/Cancel buttons toggle read/edit views
-  elements.editButton.add(elements.cancelButton).on('click', (e) => {
-    switchView()
-    e.preventDefault()
-  })
 
   // "Remove resource" buttons
   elements.resourceRows.on('click', '[data-hook~=remove-resource]', (e) => {
@@ -45,29 +36,32 @@ export default function (opts) {
 
   // Edit form submission
   elements.form.on('submit', function (e) {
+    e.preventDefault()
     const formData = elements.form.serializeJSON({useIntKeysAsArrayIndex: true})
+    if (!formData.title) {
+      alert('error')
+      return
+    }
     const yaml = opts.file.formatFrontMatter(formData)
-    opts.file.save(yaml)
+    const fileSlug = slugify(formData.title)
+
+    opts.file.create(`${fileSlug}.md`, yaml)
     .then((response) => {
-      switchView()
-      alert('success', response.commit.html_url)
+      alert('success', {commitUrl: response.commit.html_url, fileSlug: fileSlug})
     }).catch((msg) => {
       alert('error')
       console.error(msg)
     })
-    e.preventDefault()
   })
 
-  function switchView () {
-    elements.readView.add(elements.editView).toggle()
-  }
-
   // Show alert box on page
-  function alert (type, commitUrl) {
+  function alert (type, {commitUrl, fileSlug} = {}) {
     elements.alert.hide()
     $('[data-hook~=alert-' + type +']').show()
     if (type === 'success' && commitUrl) {
       elements.commitUrl.attr('href', commitUrl)
+      const pagePath = `/datasets/${fileSlug}/`
+      elements.datasetUrl.attr('href', pagePath).text(pagePath)
     }
   }
 }
