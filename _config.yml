@@ -10,6 +10,23 @@ repository_name: jkan
 github_client_id: 777ae16009a6f9e6d451
 gatekeeper_host: http://jkan-gatekeeper.herokuapp.com
 
+# Categories
+category_list:
+  - Arts / Culture / History
+  - Budget / Finance
+  - Economy
+  - Education
+  - Elections / Politics
+  - Environment
+  - Food
+  - Health / Human Services
+  - Parks / Recreation
+  - Planning / Zoning
+  - Public Safety
+  - Real Estate / Land Records
+  - Transportation
+  - Uncategorized
+
 # Nav bar
 navigation:
   - title: Datasets
@@ -21,8 +38,6 @@ collections:
     output: true
     permalink: /datasets/:path/
   organizations:
-    output: false
-  categories:
     output: false
 
 # Collections (cont'd)

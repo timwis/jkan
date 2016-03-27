@@ -139,9 +139,8 @@ layout: default
         <div class="form-group">
           <label for="category[]">Category</label>
           <select class="form-control select2" id="category[]" name="category[]" multiple="multiple" style="width: 100%">
-            <option value="">Select...</option>
-            {% for category in site.categories %}
-              <option{% if page.category == category.title %} selected="selected"{% endif %}>{{ category.title }}</option>
+            {% for category in site.category_list %}
+              <option{% if page.category == category or page.category contains category %} selected="selected"{% endif %}>{{ category }}</option>
             {% endfor %}
           </select>
         
