@@ -1,3 +1,4 @@
+/* global settings */
 import $ from 'jquery'
 import 'select2'
 import 'jquery-serializejson'
@@ -60,7 +61,7 @@ export default function (opts) {
     $('[data-hook~=alert-' + type +']').show()
     if (type === 'success' && commitUrl) {
       elements.commitUrl.attr('href', commitUrl)
-      const pagePath = `/datasets/${fileSlug}/`
+      const pagePath = `${settings.BASE_URL}/datasets/${fileSlug}/`
       elements.datasetUrl.attr('href', pagePath).text(pagePath)
     }
   }
