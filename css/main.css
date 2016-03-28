@@ -24,3 +24,11 @@ dataset {
 .select2 {
   margin-bottom: 10px;
 }
+
+.datasets-count {
+  display: inline-block;
+}
+
+.add-dataset-btn {
+  margin-top: 15px;
+}
