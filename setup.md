@@ -3,7 +3,7 @@ title: Setup
 permalink: /setup/
 layout: default
 ---
-{% include breadcrumbs.html %}
+{% include breadcrumbs.html parent="Administration" %}
 
 <div class="alert alert-success" role="alert" data-hook="alert-success" style="display: none;">
   These settings have been <a href="#" data-hook="commit-url">saved</a> and the site is currently regenerating.
