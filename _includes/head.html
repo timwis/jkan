@@ -12,12 +12,16 @@
   <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
 
+  {% assign datasets = site.collections | where:"label","datasets" | first %}
   <script>
   var settings = {
+    BASE_URL: {{ site.baseurl | jsonify }},
+    PAGE_URL: {{ page.url | jsonify }},
     FILE_PATH: {{ page.path | jsonify }},
+    DATASETS_DIR: {{ datasets.relative_directory | jsonify }},
     BRANCH: {% if site.github.is_user_page %}"master"{% else %}"gh-pages"{% endif %},
-    REPO_OWNER: {{ site.github.owner_name | default: site.repository_owner | jsonify }},
-    REPO_NAME: {{ site.github.project_title | default: site.repository_name | jsonify }},
+    REPO_OWNER: {{ site.github.owner_name | jsonify }},
+    REPO_NAME: {{ site.github.project_title | jsonify }},
     GITHUB_CLIENT_ID: {{ site.github_client_id | jsonify }},
     GATEKEEPER_HOST: {{ site.gatekeeper_host | jsonify }}
   }

@@ -7,8 +7,28 @@ repository_owner: jjediny
 repository_name: jkan
 
 # Authentication
-github_client_id: 777ae16009a6f9e6d451
-gatekeeper_host: http://jkan-gatekeeper.herokuapp.com
+github_client_id:
+gatekeeper_host:
+
+# Categories
+category_list:
+  - Arts / Culture / History
+  - Budget / Finance
+  - Economy
+  - Education
+  - Elections / Politics
+  - Environment
+  - Food
+  - Health / Human Services
+  - Parks / Recreation
+  - Planning / Zoning
+  - Public Safety
+  - Real Estate / Land Records
+  - Transportation
+  - Uncategorized
+
+# Link for the "fork me on github" banner. Remove this line to suppress banner.
+fork_me_url: https://github.com/timwis/jkan
 
 # Nav bar
 navigation:
@@ -22,8 +42,6 @@ collections:
     permalink: /datasets/:path/
   organizations:
     output: false
-  categories:
-    output: false
 
 # Collections (cont'd)
 defaults:
@@ -34,41 +52,6 @@ defaults:
       layout: dataset
       category: Uncategorized
       organization: N/A
-
-# Metadata editor for prose.io
-prose:
-  siteurl: 'http://timwis.com/jkan'
-  metadata:
-    _datasets:
-      - name: title
-        field:
-          element: text
-          label: Title
-      - name: organization
-        field:
-          element: text
-          label: Organization
-      - name: notes
-        field:
-          element: textarea
-          label: Description
-      - name: maintainer
-        field:
-          element: text
-          label: Maintainer
-      - name: maintainer_email
-        field:
-          element: text
-          type: email
-          label: Maintainer Email
-  ignore:
-    - search.json
-    - .gitignore
-    - .travis.yml
-    - deploy.sh
-    - Gemfile
-    - Gemfile.lock
-    - LICENSE
 
 # Markdown settings
 markdown: kramdown
@@ -81,3 +64,9 @@ exclude:
   - Gemfile.lock
   - vendor
   - .travis.yml
+  - node_modules
+  - scripts/src
+  - package.json
+  - webpack.config.js
+  - README.md
+  - LICENSE

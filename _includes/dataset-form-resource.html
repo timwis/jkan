@@ -1,0 +1,30 @@
+<div class="row" data-hook="resource-row">
+  <div class="col-xs-6">
+    <label for="resources[][name]">Resource Name</label>
+    <div class="input-group">
+      <span class="input-group-btn">
+        <button type="button" class="btn btn-danger" data-hook="remove-resource" title="Remove resource" data-toggle="tooltip"><i class="fa fa-minus"></i></button>
+      </span>
+      <input type="text" class="form-control" id="resources[][name]" name="resources[][name]" placeholder="Resource Name" value="{{ include.resource.name }}">
+    </div>
+  </div>
+  <div class="col-xs-4">
+    <div class="form-group">
+      <label for="resources[][url]">URL</label>
+      <input type="text" class="form-control" id="resources[][url]" name="resources[][url]" placeholder="http://....." value="{{ include.resource.url }}">
+    </div>
+  </div>
+  <div class="col-xs-2">
+    <div class="form-group">
+      <label for="resources[][format]">Format</label>
+      <select class="form-control" id="resources[][format]" name="resources[][format]">
+        <option value="">Select...</option>
+        {% assign formats = "api|csv|json|geojson|html|kml|kmz|shp|xml" | split: "|" %}
+        {% for format in formats %}
+          {% assign lower_format = include.resource.format | downcase %}
+          <option{% if lower_format == format %} selected="selected"{% endif %}>{{ format }}</option>
+        {% endfor %}
+      </select>
+    </div>
+  </div>
+</div>

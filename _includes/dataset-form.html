@@ -1,0 +1,68 @@
+<form data-hook="dataset-form">
+
+  <fieldset>
+    <div class="form-group">
+      <label for="title">Title</label>
+      <input type="text" class="form-control" id="title" name="title" placeholder="Title" value="{{ include.dataset.title }}">
+    </div>
+    <div class="form-group">
+      <label for="organization">Organization</label>
+      <select class="form-control" id="organization" name="organization">
+        <option value="">Select...</option>
+        {% for organization in site.organizations %}
+          <option{% if include.dataset.organization == organization.title %} selected="selected"{% endif %}>{{ organization.title }}</option>
+        {% endfor %}
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="notes">Description</label>
+      <textarea class="form-control" id="notes" placeholder="Description" name="notes">{{ include.dataset.notes }}</textarea>
+    </div>
+  </fieldset>
+
+  <fieldset>
+    <h2>Resources</h2>
+    <div data-hook="resource-rows">
+    {% for resource in include.dataset.resources %}
+      {% include dataset-form-resource.html resource=resource %}
+    {% endfor %}
+    </div>
+    <button type="button" class="btn btn-default" data-hook="add-resource" title="Add resource"><i class="fa fa-plus"></i> Resource</button>
+  </fieldset>
+
+  <fieldset>
+    <h2>Additional Info</h2>
+    
+    <div class="form-group">
+      <label for="category[]">Category</label>
+      <select class="form-control select2" id="category[]" name="category[]" multiple="multiple" style="width: 100%">
+        {% for category in site.category_list %}
+          <option{% if include.dataset.category == category or include.dataset.category contains category %} selected="selected"{% endif %}>{{ category }}</option>
+        {% endfor %}
+      </select>
+    
+    <div class="row">
+      <div class="col-xs-6">
+        <div class="form-group">
+          <label for="maintainer">Maintainer</label>
+          <input type="text" class="form-control" id="maintainer" name="maintainer" placeholder="Maintainer" value="{{ include.dataset.maintainer }}">
+        </div>
+      </div>
+      <div class="col-xs-6">
+        <div class="form-group">
+          <label for="maintainer_email">Email</label>
+          <input type="text" class="form-control" id="maintainer_email" name="maintainer_email" placeholder="Maintainer Email" value="{{ include.dataset.maintainer_email }}">
+        </div>
+      </div>
+    </div>
+  </fieldset>
+
+  <button type="submit" class="btn btn-primary">Submit</button>
+  {% if include.dataset %}
+    <button class="btn btn-danger" data-hook="delete-button"><i class="fa fa-trash"></i> Delete dataset</button>
+  {% endif %}
+</form>
+
+<script type="text/template" data-hook="tmpl-resource-row">
+{% include dataset-form-resource.html %}
+</script>

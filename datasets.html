@@ -2,13 +2,6 @@
 title: Datasets
 layout: default
 permalink: /datasets/
-paginate:
-  collection: datasets
-  per_page: 50
-scripts:
-  - https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.5.1/lodash.min.js
-  - /scripts/deparam.js
-  - /scripts/datasets.js
 ---
 {% include breadcrumbs.html %}
 
@@ -22,7 +15,8 @@ scripts:
     <div class="list-group" data-hook="organizations-items" data-show="15"></div>
   </div>
   <div class="col-sm-8">
-    <h3 data-hook="datasets-count"></h3>
+    <h3 class="datasets-count" data-hook="datasets-count"></h3>
+    <a href="{{ site.baseurl }}/add-dataset/" class="btn btn-default pull-right add-dataset-btn"><i class="fa fa-plus"></i> Add Dataset</a>
     <input type="text" data-hook="search-query" placeholder="Search..." class="form-control">
     <div data-hook="datasets-items"></div>
   </div>
