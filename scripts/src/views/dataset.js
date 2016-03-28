@@ -10,6 +10,7 @@ export default function (opts) {
     form: queryByHook('dataset-form', opts.el),
     editButton: queryByHook('edit-button', opts.el),
     cancelButton: queryByHook('cancel-button', opts.el),
+    deleteButton: queryByHook('delete-button', opts.el),
     resourceRows: queryByHook('resource-rows', opts.el),
     addResourceButton: queryByHook('add-resource', opts.el),
     alert: queryByHook('alert', opts.el),
@@ -55,6 +56,20 @@ export default function (opts) {
       alert('error')
       console.error(msg)
     })
+    e.preventDefault()
+  })
+
+  // Delete dataset button
+  elements.deleteButton.on('click', function (e) {
+    if (window.confirm('Delete this dataset?')) {
+      opts.file.remove()
+      .then((response) => {
+        alert('success', response.commit.html_url)
+      }).catch((msg) => {
+        alert('error')
+        console.error(msg)
+      })
+    }
     e.preventDefault()
   })
 
