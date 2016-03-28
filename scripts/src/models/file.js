@@ -52,6 +52,14 @@ export default State.extend({
       })
     })
   },
+  remove: function () {
+    return new Promise((resolve, reject) => {
+      this.repo.remove(this.repoBranch, this.filePath, (err, data) => {
+        if (err) reject(err)
+        else resolve(data)
+      })
+    })
+  },
   formatYaml: function (data) {
     return jsyaml.safeDump(data)
   },
