@@ -30,6 +30,10 @@ fork_me_url: https://github.com/timwis/jkan
 navigation:
   - title: Dati
     url: /datasets/
+  - title: Cosa è?
+    url: /cosa/
+  - title: Fallo anche tu
+    url: /fallo/
 
 # Collections
 collections:
