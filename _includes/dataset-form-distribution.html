@@ -1,0 +1,30 @@
+<div class="row" data-hook="distribution-row">
+  <div class="col-xs-6">
+    <label for="distribution[][title]">Resource Name</label>
+    <div class="input-group">
+      <span class="input-group-btn">
+        <button type="button" class="btn btn-danger" data-hook="remove-distribution" title="Remove resource" data-toggle="tooltip"><i class="fa fa-minus"></i></button>
+      </span>
+      <input type="text" class="form-control" id="distribution[][title]" name="distribution[][title]" placeholder="Resource Name" value="{{ include.distribution.title }}">
+    </div>
+  </div>
+  <div class="col-xs-4">
+    <div class="form-group">
+      <label for="distribution[][downloadURL]">URL</label>
+      <input type="text" class="form-control" id="distribution[][downloadURL]" name="distribution[][downloadURL]" placeholder="http://....." value="{{ include.distribution.downloadURL }}">
+    </div>
+  </div>
+  <div class="col-xs-2">
+    <div class="form-group">
+      <label for="distribution[][format]">Format</label>
+      <select class="form-control" id="distribution[][format]" name="distribution[][format]">
+        <option value="">Select...</option>
+        {% assign formats = "api|csv|json|geojson|html|kml|kmz|shp|xml" | split: "|" %}
+        {% for format in formats %}
+          {% assign lower_format = include.distribution.format | downcase %}
+          <option{% if lower_format == format %} selected="selected"{% endif %}>{{ format }}</option>
+        {% endfor %}
+      </select>
+    </div>
+  </div>
+</div>

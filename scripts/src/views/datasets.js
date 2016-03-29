@@ -64,7 +64,8 @@ export default function (opts) {
 // Given an array of datasets, returns an array of their organizations with counts
 function organizationsWithCount (datasets) {
   return chain(datasets)
-    .groupBy('organization')
+    .filter('publisher.name')
+    .groupBy('publisher.name')
     .map(function (datasetsInOrg, organization) {
       const filters = createParamsFilters(pick(params, ['category']))
       const filteredDatasets = filter(datasetsInOrg, filters)

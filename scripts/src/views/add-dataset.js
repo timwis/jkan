@@ -9,30 +9,30 @@ export default function (opts) {
   opts || (opts = {})
   const elements = {
     form: queryByHook('dataset-form', opts.el),
-    resourceRows: queryByHook('resource-rows', opts.el),
-    addResourceButton: queryByHook('add-resource', opts.el),
+    distributionRows: queryByHook('distribution-rows', opts.el),
+    adddistributionButton: queryByHook('add-distribution', opts.el),
     alert: queryByHook('alert', opts.el),
     commitUrl: queryByHook('commit-url', opts.el),
     datasetUrl: queryByHook('dataset-url', opts.el),
     select2: $('.select2', opts.el)
   }
 
-  const TmplResourceRow = queryByHook('tmpl-resource-row').html()
+  const TmplDistributionRow = queryByHook('tmpl-distribution-row').html()
 
   // Initialize select2 plugin
   elements.select2.select2()
 
-  // "Remove resource" buttons
-  elements.resourceRows.on('click', '[data-hook~=remove-resource]', (e) => {
+  // "Remove distribution" buttons
+  elements.distributionRows.on('click', '[data-hook~=remove-distribution]', (e) => {
     if (window.confirm('Delete this resource?')) {
-      $(e.currentTarget).closest('[data-hook~=resource-row]').remove()
+      $(e.currentTarget).closest('[data-hook~=distribution-row]').remove()
     }
     e.preventDefault()
   })
 
-  // Add resource button
-  elements.addResourceButton.on('click', function (e) {
-    elements.resourceRows.append(TmplResourceRow)
+  // Add distribution button
+  elements.adddistributionButton.on('click', function (e) {
+    elements.distributionRows.append(TmplDistributionRow)
   })
 
   // Edit form submission

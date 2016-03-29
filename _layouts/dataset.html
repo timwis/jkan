@@ -11,14 +11,14 @@ layout: default
   There was an error saving this page
 </div>
 
-{% assign organization = site.organizations | where:"title",page.organization | first %}
+{% assign organization = site.organizations | where:"title",page.publisher.name | first %}
 <div class="row" data-hook="read-view">
   {% if organization %}
   <div class="col-sm-3">
     {% if organization.logo %}
-      <a href="{{ site.baseurl }}/datasets/?organization={{ organization.title | slugify }}" class="thumbnail"><img src="{{ organization.logo }}" alt="{{ organization.title }} logo"></a>
+      <a href="{{ site.baseurl }}/datasets/?organization={{ organization.name | slugify }}" class="thumbnail"><img src="{{ organization.logo }}" alt="{{ organization.name }} logo"></a>
     {% endif %}
-    <h3><a href="{{ site.baseurl }}/datasets/?organization={{ organization.title | slugify }}">{{ organization.title }}</a></h3>
+    <h3><a href="{{ site.baseurl }}/datasets/?organization={{ organization.name | slugify }}">{{ organization.name }}</a></h3>
     <p>{{ organization.description }}</p>
   </div>
   <div class="col-sm-9">
@@ -29,15 +29,15 @@ layout: default
       {{ page.title }}
       <a href="https://github.com/{{ site.github.owner_name }}/{{ site.github.project_title }}/edit/gh-pages/{{ page.path }}" class="pull-right btn btn-default" role="button" data-hook="edit-button">Edit</a>
     </h1>
-    <p>{{ page.notes }}</p>
+    <p>{{ page.description }}</p>
 
     <h2>Resources</h2>
     <ul>
-      {% for resource in page.resources %}
+      {% for distribution in page.distribution %}
       <li>
-        <a href="{{ resource.url }}">{{ resource.name }}</a>
-        {% if resource.format %}({{ resource.format}}){% endif %}
-        {% if resource.description %}<div class="resource-description">{{ resource.description }}</div>{% endif %}
+        <a href="{{ distribution.downloadURL }}">{{ distribution.title }}</a>
+        {% if distribution.format %}({{ distribution.format}}){% endif %}
+        {% if distribution.description %}<div class="resource-description">{{ distribution.description }}</div>{% endif %}
       </li>
       {% endfor %}
     </ul>
@@ -57,14 +57,14 @@ layout: default
       </dd>
       {% endif %}
 
-      {% if page.maintainer != "" %}
+      {% if page.contactPoint.fn != "" %}
       <dt>Maintainer</dt>
-      <dd>{{ page.maintainer }}</dd>
+      <dd>{{ page.contactPoint.fn }}</dd>
       {% endif %}
       
-      {% if page.maintainer_email != "" %}
+      {% if page.contactPoint.hasEmail != "" %}
       <dt>Maintainer Email</dt>
-      <dd>{{ page.maintainer_email }}</dd>
+      <dd>{{ page.contactPoint.hasEmail }}</dd>
       {% endif %}
     </dl>
   </div>
