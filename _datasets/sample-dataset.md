@@ -1,10 +1,10 @@
 ---
 title: Esempio di dataset
-notes: questo è solo un esempio di dataset
-maintainer: Pippo
-maintainer_email: pippo@pippo.com
+notes: questo è solo un esempio di dataset. Serve per farti capire cosa può contenere un archivio dati.
+maintainer: Paperino
+maintainer_email: paperino@paperino.com
 Organization: Sample Department
-Categoria: Educazione
+Category: Educazione
 resources:
   - url: http://data.phl.opendata.arcgis.com/datasets/1839b35258604422b0b520cbb668df0d_0.csv
     name: Stazioni di Monitoraggio Aria CSV

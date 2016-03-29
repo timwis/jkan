@@ -10,6 +10,7 @@ layout: default
 <div class="alert alert-danger" role="alert" data-hook="alert-error" style="display: none;">
   There was an error saving this page
 </div>
+<div class="jumbotron">
 
 {% assign organization = site.organizations | where:"title",page.organization | first %}
 <div class="row" data-hook="read-view">
@@ -77,5 +78,6 @@ layout: default
   <div class="col-sm-2">
     <button class="btn btn-default pull-right" data-hook="cancel-button">Cancel</button>
   </div>
+</div>
 </div>
 
