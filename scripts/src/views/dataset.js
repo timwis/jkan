@@ -11,8 +11,8 @@ export default function (opts) {
     editButton: queryByHook('edit-button', opts.el),
     cancelButton: queryByHook('cancel-button', opts.el),
     deleteButton: queryByHook('delete-button', opts.el),
-    resourceRows: queryByHook('resource-rows', opts.el),
-    addResourceButton: queryByHook('add-resource', opts.el),
+    distributionRows: queryByHook('distribution-rows', opts.el),
+    addDistributionButton: queryByHook('add-distribution', opts.el),
     alert: queryByHook('alert', opts.el),
     commitUrl: queryByHook('commit-url', opts.el),
     readView: queryByHook('read-view', opts.el),
@@ -20,7 +20,7 @@ export default function (opts) {
     select2: $('.select2', opts.el)
   }
 
-  const TmplResourceRow = queryByHook('tmpl-resource-row').html()
+  const TmplDistributionRow = queryByHook('tmpl-distribution-row').html()
 
   // Initialize select2 plugin
   elements.select2.select2()
@@ -31,17 +31,17 @@ export default function (opts) {
     e.preventDefault()
   })
 
-  // "Remove resource" buttons
-  elements.resourceRows.on('click', '[data-hook~=remove-resource]', (e) => {
+  // "Remove distribution" buttons
+  elements.distributionRows.on('click', '[data-hook~=remove-distribution]', (e) => {
     if (window.confirm('Delete this resource?')) {
-      $(e.currentTarget).closest('[data-hook~=resource-row]').remove()
+      $(e.currentTarget).closest('[data-hook~=distribution-row]').remove()
     }
     e.preventDefault()
   })
 
-  // Add resource button
-  elements.addResourceButton.on('click', function (e) {
-    elements.resourceRows.append(TmplResourceRow)
+  // Add distribution button
+  elements.addDistributionButton.on('click', function (e) {
+    elements.distributionRows.append(TmplDistributionRow)
   })
 
   // Edit form submission

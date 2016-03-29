@@ -22,12 +22,12 @@
 
   <fieldset>
     <h2>Resources</h2>
-    <div data-hook="resource-rows">
+    <div data-hook="distribution-rows">
     {% for distribution in include.dataset.distribution %}
       {% include dataset-form-distribution.html distribution=distribution %}
     {% endfor %}
     </div>
-    <button type="button" class="btn btn-default" data-hook="add-resource" title="Add resource"><i class="fa fa-plus"></i> Resource</button>
+    <button type="button" class="btn btn-default" data-hook="add-distribution" title="Add resource"><i class="fa fa-plus"></i> Resource</button>
   </fieldset>
 
   <fieldset>
@@ -63,6 +63,6 @@
   {% endif %}
 </form>
 
-<script type="text/template" data-hook="tmpl-resource-row">
+<script type="text/template" data-hook="tmpl-distribution-row">
 {% include dataset-form-distribution.html %}
 </script>
