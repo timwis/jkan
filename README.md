@@ -13,7 +13,7 @@ out or give feedback.
 [Demo site](https://demo.jkan.io)
 
 ## Installation
-See [Getting Started](https://jkan.io/#getting-started) on [jkan.io](https://jkan.io)
+See [Get Started](https://jkan.io/#get-started) on [jkan.io](https://jkan.io)
 
 ## Development
 * Requires [Jekyll](http://jekyllrb.com), a ruby thing
