@@ -1,6 +1,6 @@
 ---
 title: Esempio di Dataset
-notes: This is an example dataset that comes with a new installation of JKAN
+notes: questo è il secondo esempio di dataset
 maintainer: Tim Wisniewski
 maintainer_email: tim@timwis.com
 organization: Sample Department
