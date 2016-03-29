@@ -3,7 +3,7 @@
   <fieldset>
     <div class="form-group">
       <label for="title">Titolo</label>
-      <input type="text" class="form-control" id="title" name="title" placeholder="Title" value="{{ include.dataset.title }}">
+      <input type="text" class="form-control" id="title" name="title" placeholder="Titolo" value="{{ include.dataset.title }}">
     </div>
     <div class="form-group">
       <label for="organization">Organizzazione</label>
@@ -16,7 +16,7 @@
     </div>
     <div class="form-group">
       <label for="notes">Descrizione</label>
-      <textarea class="form-control" id="notes" placeholder="Description" name="notes">{{ include.dataset.notes }}</textarea>
+      <textarea class="form-control" id="notes" placeholder="Descrizione" name="notes">{{ include.dataset.notes }}</textarea>
     </div>
   </fieldset>
 
@@ -27,7 +27,7 @@
       {% include dataset-form-resource.html resource=resource %}
     {% endfor %}
     </div>
-    <button type="button" class="btn btn-default" data-hook="add-resource" title="Add resource"><i class="fa fa-plus"></i> Resource</button>
+    <button type="button" class="btn btn-default" data-hook="add-resource" title="Add resource"><i class="fa fa-plus"></i> Risorsa</button>
   </fieldset>
 
   <fieldset>
@@ -45,13 +45,13 @@
       <div class="col-xs-6">
         <div class="form-group">
           <label for="maintainer">Manutentore</label>
-          <input type="text" class="form-control" id="maintainer" name="maintainer" placeholder="Maintainer" value="{{ include.dataset.maintainer }}">
+          <input type="text" class="form-control" id="maintainer" name="maintainer" placeholder="Manutentore" value="{{ include.dataset.maintainer }}">
         </div>
       </div>
       <div class="col-xs-6">
         <div class="form-group">
           <label for="maintainer_email">Email</label>
-          <input type="text" class="form-control" id="maintainer_email" name="maintainer_email" placeholder="Maintainer Email" value="{{ include.dataset.maintainer_email }}">
+          <input type="text" class="form-control" id="maintainer_email" name="maintainer_email" placeholder="Email del Manutentore" value="{{ include.dataset.maintainer_email }}">
         </div>
       </div>
     </div>
