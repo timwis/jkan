@@ -16,5 +16,5 @@ resources:
   - url: https://services.arcgis.com/fLeGjb7u4uXqeF9q/arcgis/rest/services/Air_Monitoring_Stations/FeatureServer/0/query
     name: Stazioni di Monitoraggio Aria GeoService
     format: api
-    description: Esri Geoservice to interact programmatically with the data
+    description: Esri Geoservice per interagire programmaticamente con i dati
 ---
