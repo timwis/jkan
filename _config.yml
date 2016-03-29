@@ -28,7 +28,7 @@ fork_me_url: https://github.com/timwis/jkan
 
 # Nav bar
 navigation:
-  - title: OpendataGentediPrato
+  - title: opendatagentediprato
     url: /datasets/
 
 # Collections
