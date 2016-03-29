@@ -2,11 +2,11 @@
 
   <fieldset>
     <div class="form-group">
-      <label for="title">Title</label>
+      <label for="title">Titolo</label>
       <input type="text" class="form-control" id="title" name="title" placeholder="Title" value="{{ include.dataset.title }}">
     </div>
     <div class="form-group">
-      <label for="organization">Organization</label>
+      <label for="organization">Organizzazione</label>
       <select class="form-control" id="organization" name="organization">
         <option value="">Select...</option>
         {% for organization in site.organizations %}
@@ -15,13 +15,13 @@
       </select>
     </div>
     <div class="form-group">
-      <label for="notes">Description</label>
+      <label for="notes">Descrizione</label>
       <textarea class="form-control" id="notes" placeholder="Description" name="notes">{{ include.dataset.notes }}</textarea>
     </div>
   </fieldset>
 
   <fieldset>
-    <h2>Resources</h2>
+    <h2>Risorse</h2>
     <div data-hook="resource-rows">
     {% for resource in include.dataset.resources %}
       {% include dataset-form-resource.html resource=resource %}
@@ -31,10 +31,10 @@
   </fieldset>
 
   <fieldset>
-    <h2>Additional Info</h2>
+    <h2>Informazioni Addizionali</h2>
     
     <div class="form-group">
-      <label for="category[]">Category</label>
+      <label for="category[]">Categoria</label>
       <select class="form-control select2" id="category[]" name="category[]" multiple="multiple" style="width: 100%">
         {% for category in site.category_list %}
           <option{% if include.dataset.category == category or include.dataset.category contains category %} selected="selected"{% endif %}>{{ category }}</option>
@@ -44,7 +44,7 @@
     <div class="row">
       <div class="col-xs-6">
         <div class="form-group">
-          <label for="maintainer">Maintainer</label>
+          <label for="maintainer">Manutentore</label>
           <input type="text" class="form-control" id="maintainer" name="maintainer" placeholder="Maintainer" value="{{ include.dataset.maintainer }}">
         </div>
       </div>
@@ -57,9 +57,9 @@
     </div>
   </fieldset>
 
-  <button type="submit" class="btn btn-primary">Submit</button>
+  <button type="submit" class="btn btn-primary">Sottometti</button>
   {% if include.dataset %}
-    <button class="btn btn-danger" data-hook="delete-button"><i class="fa fa-trash"></i> Delete dataset</button>
+    <button class="btn btn-danger" data-hook="delete-button"><i class="fa fa-trash"></i> Cancella Dataset</button>
   {% endif %}
 </form>
 
