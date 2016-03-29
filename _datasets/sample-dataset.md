@@ -1,9 +1,9 @@
 ---
 title: Esempio di dataset
 notes: questo è solo un esempio di dataset
-maintainer: Tim Wisniewski
-maintainer_email: tim@timwis.com
-organization: Sample Department
+maintainer: Pippo
+maintainer_email: pippo@pippo.com
+organization: Esempio di Dipartimento
 category: Educazione
 resources:
   - url: http://data.phl.opendata.arcgis.com/datasets/1839b35258604422b0b520cbb668df0d_0.csv
