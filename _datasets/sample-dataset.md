@@ -1,10 +1,10 @@
 ---
-title: Sample dataset
-notes: This is an example dataset that comes with a new installation of JKAN
+title: Esempio di dataset
+notes: questo è solo un esempio di dataset
 maintainer: Tim Wisniewski
 maintainer_email: tim@timwis.com
 organization: Sample Department
-category: Education
+category: Educazione
 resources:
   - url: http://data.phl.opendata.arcgis.com/datasets/1839b35258604422b0b520cbb668df0d_0.csv
     name: Air Monitoring Stations CSV

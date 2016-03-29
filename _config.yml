@@ -8,27 +8,27 @@ gatekeeper_host: opendatagentediprato
 
 # Categories
 category_list:
-  - Arts / Culture / History
-  - Budget / Finance
-  - Economy
-  - Education
-  - Elections / Politics
-  - Environment
-  - Food
-  - Health / Human Services
-  - Parks / Recreation
-  - Planning / Zoning
-  - Public Safety
-  - Real Estate / Land Records
-  - Transportation
-  - Uncategorized
+  - Arte / Cultura / Storia
+  - Finanza / Budget
+  - Economia
+  - Educazione
+  - Elezioni / Politica
+  - Ambiente
+  - Cibo
+  - Salute / Servizi Umanitari
+  - Parchi / Svago
+  - Pianificazione / Territorio
+  - Sicurezza Pubblica
+  - Immobili / Terreni
+  - Trasporti
+  - Senza categoria
 
 # Link for the "fork me on github" banner. Remove this line to suppress banner.
 fork_me_url: https://github.com/timwis/jkan
 
 # Nav bar
 navigation:
-  - title: opendatagentediprato
+  - title: Dati
     url: /datasets/
 
 # Collections
