@@ -2,9 +2,11 @@
 ---
 [{% for dataset in site.datasets %}
   {
-    "title": {{ dataset.title | jsonify }},
-    "organization": {{ dataset.publisher.name | jsonify }}{% if dataset.description != "" %},
-    "notes": {{ dataset.description | jsonify }}{% endif %}{% if dataset.category != "" %},
+    "title": {{ dataset.title | jsonify }}{% if dataset.publisher.name %},
+    "publisher": {
+      "name": {{ dataset.publisher.name | jsonify }}
+    }{% endif %}{% if dataset.description != "" %},
+    "description": {{ dataset.description | jsonify }}{% endif %}{% if dataset.category != "" %},
     "category": {{ dataset.category | jsonify }}{% endif %},
     "url": "{{ site.baseurl }}{{ dataset.url }}"
   }{% unless forloop.last %},{% endunless %}{% endfor %}
