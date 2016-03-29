@@ -31,7 +31,7 @@ layout: default
     </h1>
     <p>{{ page.notes }}</p>
 
-    <h2>Resources</h2>
+    <h2>Risorse</h2>
     <ul>
       {% for resource in page.resources %}
       <li>
@@ -42,10 +42,10 @@ layout: default
       {% endfor %}
     </ul>
 
-    <h2>Additional Info</h2>
+    <h2>Informazioni Addizionali</h2>
     <dl>
       {% if page.category != "" %}
-      <dt>Category</dt>
+      <dt>Categoria</dt>
       <dd>
         {% if page.category.size %}
           {% for category in page.category %}
@@ -58,12 +58,12 @@ layout: default
       {% endif %}
 
       {% if page.maintainer != "" %}
-      <dt>Maintainer</dt>
+      <dt>Manutentore</dt>
       <dd>{{ page.maintainer }}</dd>
       {% endif %}
       
       {% if page.maintainer_email != "" %}
-      <dt>Maintainer Email</dt>
+      <dt>Email del Manutentore</dt>
       <dd>{{ page.maintainer_email }}</dd>
       {% endif %}
     </dl>
