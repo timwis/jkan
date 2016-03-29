@@ -1,5 +1,5 @@
-title: JKAN
-description: A lightweight, backend-free open data portal, powered by Jekyll.
+title: OpendataGentediPrato
+description: Un semplice portale di dati dalla gente di Prato per la gente di Prato.
 baseurl: /jkan
 
 # Authentication
@@ -28,7 +28,7 @@ fork_me_url: https://github.com/timwis/jkan
 
 # Nav bar
 navigation:
-  - title: Datasets
+  - title: OpendataGentediPrato
     url: /datasets/
 
 # Collections
