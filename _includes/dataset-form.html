@@ -6,25 +6,25 @@
       <input type="text" class="form-control" id="title" name="title" placeholder="Title" value="{{ include.dataset.title }}">
     </div>
     <div class="form-group">
-      <label for="organization">Organization</label>
-      <select class="form-control" id="organization" name="organization">
+      <label for="publisher[name]">Organization</label>
+      <select class="form-control" id="publisher[name]" name="publisher[name]">
         <option value="">Select...</option>
         {% for organization in site.organizations %}
-          <option{% if include.dataset.organization == organization.title %} selected="selected"{% endif %}>{{ organization.title }}</option>
+          <option{% if include.dataset.publisher[name] == organization.title %} selected="selected"{% endif %}>{{ organization.title }}</option>
         {% endfor %}
       </select>
     </div>
     <div class="form-group">
-      <label for="notes">Description</label>
-      <textarea class="form-control" id="notes" placeholder="Description" name="notes">{{ include.dataset.notes }}</textarea>
+      <label for="description">Description</label>
+      <textarea class="form-control" id="description" placeholder="Description" name="description">{{ include.dataset.description }}</textarea>
     </div>
   </fieldset>
 
   <fieldset>
     <h2>Resources</h2>
     <div data-hook="resource-rows">
-    {% for resource in include.dataset.resources %}
-      {% include dataset-form-resource.html resource=resource %}
+    {% for distribution in include.dataset.distribution %}
+      {% include dataset-form-distribution.html distribution=distribution %}
     {% endfor %}
     </div>
     <button type="button" class="btn btn-default" data-hook="add-resource" title="Add resource"><i class="fa fa-plus"></i> Resource</button>
@@ -34,24 +34,24 @@
     <h2>Additional Info</h2>
     
     <div class="form-group">
-      <label for="category[]">Category</label>
-      <select class="form-control select2" id="category[]" name="category[]" multiple="multiple" style="width: 100%">
+      <label for="theme[]">Category</label>
+      <select class="form-control select2" id="theme[]" name="theme[]" multiple="multiple" style="width: 100%">
         {% for category in site.category_list %}
-          <option{% if include.dataset.category == category or include.dataset.category contains category %} selected="selected"{% endif %}>{{ category }}</option>
+          <option{% if include.dataset.theme == category or include.dataset.theme contains category %} selected="selected"{% endif %}>{{ category }}</option>
         {% endfor %}
       </select>
     
     <div class="row">
       <div class="col-xs-6">
         <div class="form-group">
-          <label for="maintainer">Maintainer</label>
-          <input type="text" class="form-control" id="maintainer" name="maintainer" placeholder="Maintainer" value="{{ include.dataset.maintainer }}">
+          <label for="contactPoint[fn]">Maintainer</label>
+          <input type="text" class="form-control" id="contactPoint[fn]" name="contactPoint[fn]" placeholder="Maintainer" value="{{ include.dataset.contactPoint.fn }}">
         </div>
       </div>
       <div class="col-xs-6">
         <div class="form-group">
-          <label for="maintainer_email">Email</label>
-          <input type="text" class="form-control" id="maintainer_email" name="maintainer_email" placeholder="Maintainer Email" value="{{ include.dataset.maintainer_email }}">
+          <label for="contactPoint[hasEmail]">Email</label>
+          <input type="text" class="form-control" id="contactPoint[hasEmail]" name="contactPoint[hasEmail]" placeholder="Maintainer Email" value="{{ include.dataset.contactPoint.hasEmail }}">
         </div>
       </div>
     </div>
@@ -64,5 +64,5 @@
 </form>
 
 <script type="text/template" data-hook="tmpl-resource-row">
-{% include dataset-form-resource.html %}
+{% include dataset-form-distribution.html %}
 </script>
