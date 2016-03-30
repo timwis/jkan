@@ -1,4 +1,5 @@
 ---
+schema: default
 title: Sample dataset
 notes: This is an example dataset that comes with a new installation of JKAN
 maintainer: Tim Wisniewski
