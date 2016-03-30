@@ -1,10 +1,10 @@
 title: JKAN
 description: A lightweight, backend-free open data portal, powered by Jekyll.
-baseurl: /jkan
+#baseurl: /jkan
 
 # Authentication
-github_client_id: 
-gatekeeper_host: 
+github_client_id:
+gatekeeper_host:
 
 # Categories
 category_list:
@@ -24,7 +24,7 @@ category_list:
   - Uncategorized
 
 # Link for the "fork me on github" banner. Remove this line to suppress banner.
-fork_me_url: https://github.com/timwis/jkan
+fork_me_url: https://github.com/odijkan/odijkan.github.io
 
 # Nav bar
 navigation:
