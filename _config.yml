@@ -14,6 +14,9 @@ category_list:
   - Educazione
   - Elezioni / Politica
   - Ambiente
+  - Aria
+  - Acqua
+  - Terra
   - Cibo
   - Salute / Servizi Umanitari
   - Parchi / Svago
@@ -21,6 +24,9 @@ category_list:
   - Sicurezza Pubblica
   - Immobili / Terreni
   - Trasporti
+  - Autobus
+  - Biciclette
+  - Car Sharing
   - Senza categoria
 
 # Link for the "fork me on github" banner. Remove this line to suppress banner.
