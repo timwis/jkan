@@ -8,6 +8,7 @@ resources:
     format: xml
 category:
   - Ambiente
+  - Meteo
 maintainer: iltempe
 maintainer_email: mtempestini@gmail.com
 ---
