@@ -39,6 +39,8 @@ navigation:
     url: /datasets/
   - title: Cosa è?
     url: /cosa/
+  - title: Come aggiungo dati?
+    url: /come/
   - title: Fallo anche tu
     url: /fallo/
 
