@@ -2,6 +2,21 @@
 layout: default
 ---
 {% include breadcrumbs.html parent="Datasets" %}
+{% assign schema = page.schema | defualt site.schema %}
+{% assign fields = site.data.schemas[schema].fields %}
+{% assign special_fields = "title|organization|notes" | split: "|" %}
+
+{% assign org_field = fields | where: "system_field", "organization" | first %}
+{% include functions/deep-value.html object=page field_name=org_field.field_name %}
+{% assign organization = value %}
+
+{% assign title_field = fields | where: "system_field", "title" | first %}
+{% include functions/deep-value.html object=page field_name=title_field.field_name %}
+{% assign title = value %}
+
+{% assign notes_field = fields | where: "system_field", "notes" | first %}
+{% include functions/deep-value.html object=page field_name=notes_field.field_name %}
+{% assign notes = value %}
 
 <div class="alert alert-success" role="alert" data-hook="alert-success" style="display: none;">
   This dataset has been <a href="#" data-hook="commit-url">saved</a> and the page is currently regenerating.
@@ -11,25 +26,26 @@ layout: default
   There was an error saving this page
 </div>
 
-{% assign organization = site.organizations | where:"title",page.organization | first %}
+
+{% assign org_hash = site.organizations | where: "title", organization | first %}
 <div class="row" data-hook="read-view">
-  {% if organization %}
+  {% if org_hash %}
   <div class="col-sm-3">
-    {% if organization.logo %}
-      <a href="{{ site.baseurl }}/datasets/?organization={{ organization.title | slugify }}" class="thumbnail"><img src="{{ organization.logo }}" alt="{{ organization.title }} logo"></a>
+    {% if org_hash.logo %}
+      <a href="{{ site.baseurl }}/datasets/?organization={{ org_hash.title | slugify }}" class="thumbnail"><img src="{{ org_hash.logo }}" alt="{{ org_hash.title }} logo"></a>
     {% endif %}
-    <h3><a href="{{ site.baseurl }}/datasets/?organization={{ organization.title | slugify }}">{{ organization.title }}</a></h3>
-    <p>{{ organization.description }}</p>
+    <h3><a href="{{ site.baseurl }}/datasets/?organization={{ org_hash.title | slugify }}">{{ org_hash.title }}</a></h3>
+    <p>{{ org_hash.description }}</p>
   </div>
   <div class="col-sm-9">
   {% else %}
   <div class="col-sm-12">
   {% endif %}
     <h1>
-      {{ page.title }}
+      {{ title }}
       <a href="https://github.com/{{ site.github.owner_name }}/{{ site.github.project_title }}/edit/gh-pages/{{ page.path }}" class="pull-right btn btn-default" role="button" data-hook="edit-button">Edit</a>
     </h1>
-    <p>{{ page.notes }}</p>
+    <p>{{ notes }}</p>
 
     <h2>Resources</h2>
     <ul>
@@ -44,28 +60,19 @@ layout: default
 
     <h2>Additional Info</h2>
     <dl>
-      {% if page.category != "" %}
-      <dt>Category</dt>
-      <dd>
-        {% if page.category.size %}
-          {% for category in page.category %}
-            <a href="{{ site.baseurl }}/datasets/?category={{ category | slugify }}">{{ category }}</a><br>
-          {% endfor %}
-        {% else %}
-          <a href="{{ site.baseurl }}/datasets/?category={{ page.category | slugify }}">{{ page.category }}</a>
-        {% endif %}
-      </dd>
-      {% endif %}
 
-      {% if page.maintainer != "" %}
-      <dt>Maintainer</dt>
-      <dd>{{ page.maintainer }}</dd>
-      {% endif %}
-      
-      {% if page.maintainer_email != "" %}
-      <dt>Maintainer Email</dt>
-      <dd>{{ page.maintainer_email }}</dd>
-      {% endif %}
+      {% for field in fields %}
+        {% unless special_fields contains field.system_field %}
+          {% include functions/deep-value.html object=page field_name=field.field_name %}
+          {% if field.display_template %}
+            {% include {{ field.display_template }} field=field value=value %}
+          {% else %}
+            <dt>{{ field.label }}</dt>
+            <dd>{{ value }}</dd>
+          {% endif %}
+        {% endunless %}
+      {% endfor %}
+
     </dl>
   </div>
 </div>

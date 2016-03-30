@@ -1,0 +1,21 @@
+fields:
+  - field_name: title
+    system_field: title
+    label: Title
+  - field_name: organization
+    system_field: organization
+    label: Organization
+    form_template: form/organization.html
+  - field_name: notes
+    system_field: notes
+    label: Description
+    form_template: form/textarea.html
+  - field_name: category[]
+    system_field: category
+    label: Category
+    form_template: form/category.html
+    display_template: display/category.html
+  - field_name: maintainer
+    label: Maintainer
+  - field_name: maintainer_email
+    label: Maintainer Email
