@@ -2,7 +2,7 @@
 layout: default
 ---
 {% include breadcrumbs.html parent="Datasets" %}
-{% assign schema = page.schema | defualt site.schema %}
+{% assign schema = page.schema | default: site.schema %}
 {% assign fields = site.data.schemas[schema].fields %}
 {% assign special_fields = "title|organization|notes" | split: "|" %}
 

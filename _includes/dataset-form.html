@@ -1,7 +1,8 @@
-{% assign fields = site.data.schemas[site.schema].fields %}
+{% assign schema = include.dataset.schema | default: site.schema %}
+{% assign fields = site.data.schemas[schema].fields %}
 {% assign special_fields = "title|organization|notes" | split: "|" %}
 <form data-hook="dataset-form">
-  <input type="hidden" id="schema" name="schema" value="{{ site.schema }}">
+  <input type="hidden" id="schema" name="schema" value="{{ schema }}">
 
   <fieldset>
     {% for field in fields %}
