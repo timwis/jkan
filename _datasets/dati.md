@@ -1,5 +1,5 @@
 ---
-title: Esempio di Dataset
+title: Esempio di Dataset 3
 organization: Sample Department
 notes: questo è il terzo esempio di dataset
 resources:
@@ -13,6 +13,7 @@ resources:
     url: 'https://services.arcgis.com/fLeGjb7u4uXqeF9q/arcgis/rest/services/Air_Monitoring_Stations/FeatureServer/0/query'
     format: api
 category:
+  - Economia
   - Educazione
 maintainer: Iltempe
 maintainer_email: teosoft80@gmail.com
