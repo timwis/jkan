@@ -12,6 +12,11 @@
   <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
 
+ <meta property="og:image" content="https://github.com/iltempe/opendatagentediprato/blob/gh-pages/assets/logo.jpg" />
+  <meta property="og:title" content="OpendataGentediPrato, un semplice portale di dati dalla gente di Prato per la gente di Prato." />
+    <meta property="og:url" content="http://iltempe.github.io/opendatagentediprato/" />
+   <meta property="og:description" content="un semplice portale di dati aperti" />
+
   {% assign datasets = site.collections | where:"label","datasets" | first %}
   <script>
   var settings = {
