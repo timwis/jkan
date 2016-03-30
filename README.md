@@ -1,3 +1,15 @@
+Questo portale è stato creato a partire dal framework JKAN Registrandoti su Github puoi farne uno anche tu procedendo in questo modo. Ti consiglio di riusare il codice di questo progetto che si basa su JKAN ma è stato già tradotto in lingua italiana ed in parte adattato. Procedi in questo modo:
+
+Iscriviti a Github
+Crea un repository e chiamalo come vuoi. Sarebbe auspicabile che il nome fosse "OpendataGentedi+NomedeltuoComune"
+Effettua un fork di questo repository nel tuo repository
+Apri il file _config.yml puoi usare direttamente il pulsante edit su Github ed impostare il titolo del tuo sito e la descrizione, quindi fai click su "Commit changes" in basso.
+Tu puoi quindi accedere al tuo sito al link your_github_username.github.io/nomerepository
+A questo punto tu puoi aggiungere o editare gli archivi dei dati direttamente nella cartella _dataset. In alternativa puoi editare i dati dal portale tramite la schermata di EDIT, ma per fare questo devi creare una procedura di LOGIN del portale in modo che sia possibile autenticarsi. Fortunatamente esiste una pagina che ti guiderà in questo, ti basta recarti all'indirizzo .github.io/nomerepository/setup e seguire la procedura. Se non riesci a salvare il codice e il nome della APP memorizzali e inseriscili nel file _config.yml sui tag github_client_id e gatekeeper_host
+
+
+Istruzioni originali di JKAN
+
 # JKAN [![Build Status](https://travis-ci.org/timwis/jkan.svg?branch=gh-pages)](https://travis-ci.org/timwis/jkan) [![Join the chat at https://gitter.im/timwis/jkan](https://badges.gitter.im/timwis/jkan.svg)](https://gitter.im/timwis/jkan?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 A lightweight, backend-free open data portal, powered by Jekyll
 
