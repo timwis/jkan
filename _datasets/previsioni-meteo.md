@@ -1,6 +1,6 @@
 ---
 title: Previsioni Meteo
-organization: 'opentoscana'
+organization: 'OpenToscana'
 notes: 'Previsioni metereologiche di Prato rilasciate da OpenToscana, fonte Lamma.'
 resources:
   - name: dato
