@@ -1,0 +1,21 @@
+fields:
+  - field_name: title
+    system_field: title
+    label: Title
+  - field_name: publisher[name]
+    system_field: organization
+    label: Publisher
+    form_template: form/organization.html
+  - field_name: description
+    system_field: notes
+    label: Description
+    form_template: form/textarea.html
+  - field_name: category[]
+    system_field: category
+    label: Category
+    form_template: form/category.html
+    display_template: display/category.html
+  - field_name: contactPoint[fn]
+    label: Contact Name
+  - field_name: contactPoint[hasEmail]
+    label: Contact Email

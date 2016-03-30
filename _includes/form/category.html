@@ -1,0 +1,8 @@
+<div class="form-group">
+  <label for="{{ include.field.field_name }}">{{ include.field.label }}</label>
+  <select class="form-control select2" id="{{ include.field.field_name }}" name="{{ include.field.field_name }}" multiple="multiple" style="width: 100%">
+    {% for category in site.category_list %}
+      <option{% if include.value == category or include.value contains category %} selected="selected"{% endif %}>{{ category }}</option>
+    {% endfor %}
+  </select>
+</div>

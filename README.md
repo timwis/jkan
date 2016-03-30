@@ -13,21 +13,7 @@ out or give feedback.
 [Demo site](https://demo.jkan.io)
 
 ## Installation
-Just click "Fork" at the top-right of this page. (You'll need a [GitHub account](https://github.com/join?return_to=%2Ftimwis%2Fjkan&source=login)).
-You can then access it at `<your_github_username>.github.io/jkan`.
-
-From there, you can use the [built-in edit button](https://help.github.com/articles/editing-files-in-your-repository/) 
-on github to edit [`_config.yml`](_config.yml) and the datasets in the [`_datasets`](_datasets) directory to manage
-your site.
-
-Alternatively, you can use JKAN's user-friendly editing pages.
-
-![Screenshot of user-friendly editing page](http://i.imgur.com/e12N0oQ.png)
-
-But doing so requires one more installation step: setting up authentication. Fortunately there's a user-friendly page
-for doing that too. Just go to your setup page (ie. `<your_github_username>.github.io/jkan/setup`)
-
-![Screenshot of setup page](http://i.imgur.com/PARLkvU.png)
+See [Get Started](https://jkan.io/#get-started) on [jkan.io](https://jkan.io)
 
 ## Development
 * Requires [Jekyll](http://jekyllrb.com), a ruby thing
