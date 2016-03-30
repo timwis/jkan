@@ -1,6 +1,7 @@
 title: JKAN
 description: A lightweight, backend-free open data portal, powered by Jekyll.
 baseurl: /jkan
+logo:
 
 # GitHub Repo Info
 repository_owner: jjediny
@@ -9,6 +10,9 @@ repository_name: jkan
 # Authentication
 github_client_id:
 gatekeeper_host:
+
+# Dataset schema
+schema: default
 
 # Categories
 category_list:
@@ -80,7 +84,7 @@ twittercard:
 
 # Open Graph
 opengraph:
-  enabled: true  
+  enabled: true
 
 # Exclude these files from the build
 exclude:
