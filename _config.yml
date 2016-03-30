@@ -58,6 +58,30 @@ markdown: kramdown
 kramdown:
   input: GFM
 
+# Google Analytics
+google-analytics:
+  enabled: false
+  code: "UA-XXXXXX-1"
+
+# US Digital Analytics Program - https://analytics.usa.gov
+digital-analytics-program:
+  enabled: false
+  agency: ""
+  subagency: ""
+
+# Hypothesis.io - Annotator
+hypothesis:
+  enabled: true
+
+# Twitter
+twittercard:
+  enabled: false
+  site: ""
+
+# Open Graph
+opengraph:
+  enabled: true  
+
 # Exclude these files from the build
 exclude:
   - Gemfile
