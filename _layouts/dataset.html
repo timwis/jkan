@@ -15,15 +15,15 @@ layout: default
 </div>
 
 
-{% assign org_hash = site.organizations | where: "title", page.organization | first %}
+{% assign organization = site.organizations | where: "title", page.organization | first %}
 <div class="row" data-hook="read-view">
-  {% if org_hash %}
+  {% if organization %}
   <div class="col-sm-3">
-    {% if org_hash.logo %}
-      <a href="{{ site.baseurl }}/datasets/?organization={{ org_hash.title | slugify }}" class="thumbnail"><img src="{{ org_hash.logo }}" alt="{{ org_hash.title }} logo"></a>
+    {% if organization.logo %}
+      <a href="{{ site.baseurl }}/datasets/?organization={{ organization.title | slugify }}" class="thumbnail"><img src="{{ organization.logo }}" alt="{{ organization.title }} logo"></a>
     {% endif %}
-    <h3><a href="{{ site.baseurl }}/datasets/?organization={{ org_hash.title | slugify }}">{{ org_hash.title }}</a></h3>
-    <p>{{ org_hash.description }}</p>
+    <h3><a href="{{ site.baseurl }}/datasets/?organization={{ organization.title | slugify }}">{{ organization.title }}</a></h3>
+    <p>{{ organization.description }}</p>
   </div>
   <div class="col-sm-9">
   {% else %}
