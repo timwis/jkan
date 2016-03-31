@@ -15,11 +15,14 @@ layout: default
 <div class="row" data-hook="read-view">
   {% if organization %}
   <div class="col-sm-3">
+    <div class="panel panel-default">
     {% if organization.logo %}
       <a href="{{ site.baseurl }}/datasets/?organization={{ organization.title | slugify }}" class="thumbnail"><img src="{{ organization.logo }}" alt="{{ organization.title }} logo"></a>
     {% endif %}
-    <h3><a href="{{ site.baseurl }}/datasets/?organization={{ organization.title | slugify }}">{{ organization.title }}</a></h3>
-    <p>{{ organization.description }}</p>
+      <div class="panel-heading"><h3><a href="{{ site.baseurl }}/datasets/?organization={{ organization.title | slugify }}">{{ organization.title }}</a></h3>
+        <div class="panel-body">{{ organization.description }}</p></div>
+      </div>
+    </div>
   </div>
   <div class="col-sm-9">
   {% else %}
@@ -34,11 +37,11 @@ layout: default
     <h2>Resources</h2>
     <ul>
       {% for resource in page.resources %}
-      <li>
-        <a href="{{ resource.url }}">{{ resource.name }}</a>
-        {% if resource.format %}({{ resource.format}}){% endif %}
-        {% if resource.description %}<div class="resource-description">{{ resource.description }}</div>{% endif %}
-      </li>
+        <li>
+          <a href="{{ resource.url }}">{{ resource.name }}</a>
+          {% if resource.format %}<span class="label label-pill label-default">{{ resource.format }}</span>{% endif %}<br>
+          {% if resource.description %}<div class="resource-description"><code>{{ resource.description }}</code></div>{% endif %}
+        </li>
       {% endfor %}
     </ul>
 
@@ -49,7 +52,7 @@ layout: default
       <dd>
         {% if page.category.size %}
           {% for category in page.category %}
-            <a href="{{ site.baseurl }}/datasets/?category={{ category | slugify }}">{{ category }}</a><br>
+            <a href="{{ site.baseurl }}/datasets/?category={{ category | slugify }}"><h4><span class="label label-danger">{{ category }}</span></a></h4><br>
           {% endfor %}
         {% else %}
           <a href="{{ site.baseurl }}/datasets/?category={{ page.category | slugify }}">{{ page.category }}</a>
@@ -61,7 +64,7 @@ layout: default
       <dt>Maintainer</dt>
       <dd>{{ page.maintainer }}</dd>
       {% endif %}
-      
+
       {% if page.maintainer_email != "" %}
       <dt>Maintainer Email</dt>
       <dd>{{ page.maintainer_email }}</dd>
@@ -78,4 +81,3 @@ layout: default
     <button class="btn btn-default pull-right" data-hook="cancel-button">Cancel</button>
   </div>
 </div>
-
