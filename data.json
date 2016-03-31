@@ -1,0 +1,24 @@
+---
+---
+[{% for dataset in site.datasets %}
+{% assign schema = dataset.schema | default: site.schema %}
+{% assign fields = site.data.schemas[schema].fields %}
+{% assign f_title = fields | where: "datajson", "title" | first %}
+{% assign f_publisherName = fields | where: "datajson", "publisher.name" | first %}
+{% assign f_description = fields | where: "datajson", "description" | first %}
+{% assign f_category = fields | where: "datajson", "category" | first %}
+{% assign f_contactPointFn = fields | where: "datajson", "contactPoint.fn" | first %}
+{% assign f_contactPointHasEmail = fields | where: "datajson", "contactPoint.hasEmail" | first %}
+  {
+    "title": {{ dataset[f_title[field_name]] | jsonify }},
+    "publisher": {
+      "name": {{ dataset[f_publisherName[field_name]] | jsonify }}
+    }{% if dataset[f_description[field_name]] != "" %},
+    "description": {{ dataset[f_description[field_name] | jsonify }}{% endif %}{% if dataset[f_category[field_name]] %},
+    "category": {{ dataset[f_category[field_name]] | jsonify }}{% endif %}{% if dataset[f_contactPointFn[field_name]] %},
+    "contactPoint": {
+      "fn": {{ dataset[f_contactPointFn[field_name]] | jsonify }}{% if dataset[f_contactPointHasEmail[field_name]] %},
+      "hasEmail": {{ dataset[f_contactPointHasEmail[field_name]] | jsonify }}{% endif %}
+    }{% endif %}
+  }{% unless forloop.last %},{% endunless %}{% endfor %}
+]

@@ -4,19 +4,7 @@ layout: default
 {% include breadcrumbs.html parent="Datasets" %}
 {% assign schema = page.schema | default: site.schema %}
 {% assign fields = site.data.schemas[schema].fields %}
-{% assign special_fields = "title|organization|notes" | split: "|" %}
-
-{% assign org_field = fields | where: "system_field", "organization" | first %}
-{% include functions/deep-value.html object=page field_name=org_field.field_name %}
-{% assign organization = value %}
-
-{% assign title_field = fields | where: "system_field", "title" | first %}
-{% include functions/deep-value.html object=page field_name=title_field.field_name %}
-{% assign title = value %}
-
-{% assign notes_field = fields | where: "system_field", "notes" | first %}
-{% include functions/deep-value.html object=page field_name=notes_field.field_name %}
-{% assign notes = value %}
+{% assign system_fields = "title|organization|notes" | split: "|" %}
 
 <div class="alert alert-success" role="alert" data-hook="alert-success" style="display: none;">
   This dataset has been <a href="#" data-hook="commit-url">saved</a> and the page is currently regenerating.
@@ -27,7 +15,7 @@ layout: default
 </div>
 
 
-{% assign org_hash = site.organizations | where: "title", organization | first %}
+{% assign org_hash = site.organizations | where: "title", page.organization | first %}
 <div class="row" data-hook="read-view">
   {% if org_hash %}
   <div class="col-sm-3">
@@ -42,10 +30,10 @@ layout: default
   <div class="col-sm-12">
   {% endif %}
     <h1>
-      {{ title }}
+      {{ page.title }}
       <a href="https://github.com/{{ site.github.owner_name }}/{{ site.github.project_title }}/edit/gh-pages/{{ page.path }}" class="pull-right btn btn-default" role="button" data-hook="edit-button">Edit</a>
     </h1>
-    <p>{{ notes }}</p>
+    <p>{{ page.notes }}</p>
 
     <h2>Resources</h2>
     <ul>
@@ -62,8 +50,8 @@ layout: default
     <dl>
 
       {% for field in fields %}
-        {% unless special_fields contains field.system_field %}
-          {% include functions/deep-value.html object=page field_name=field.field_name %}
+        {% unless system_fields contains field.field_name %}
+          {% assign value = page[field[field_name]] %}
           {% if field.display_template %}
             {% include {{ field.display_template }} field=field value=value %}
           {% else %}

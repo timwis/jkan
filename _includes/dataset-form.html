@@ -1,16 +1,14 @@
 {% assign schema = include.dataset.schema | default: site.schema %}
 {% assign fields = site.data.schemas[schema].fields %}
-{% assign special_fields = "title|organization|notes" | split: "|" %}
+{% assign system_fields = "title|organization|notes" | split: "|" %}
 <form data-hook="dataset-form">
   <input type="hidden" id="schema" name="schema" value="{{ schema }}">
 
   <fieldset>
     {% for field in fields %}
-      {% if special_fields contains field.system_field %}
+      {% if system_fields contains field.field_name %}
         {% assign template = field.template | default: "form/text.html" %}
-
-        {% include functions/deep-value.html object=include.dataset field_name=field.field_name %}
-
+        {% assign value = include.dataset[field[field_name]] %}
         {% include {{template}} field=field value=value %}
       {% endif %}
     {% endfor %}
@@ -30,11 +28,9 @@
     <h2>Additional Info</h2>
 
     {% for field in fields %}
-      {% unless special_fields contains field.system_field %}
+      {% unless system_fields contains field.field_name %}
         {% assign template = field.form_template | default: "form/text.html" %}
-
-        {% include functions/deep-value.html object=include.dataset field_name=field.field_name %}
-
+        {% assign value = include.dataset[field[field_name]] %}
         {% include {{ template }} field=field value=value %}
       {% endunless %}
     {% endfor %}
