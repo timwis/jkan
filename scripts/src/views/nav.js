@@ -1,4 +1,6 @@
 import 'bootstrap/js/dropdown'
+import 'bootstrap/js/tooltip'
+import 'bootstrap/js/popover'
 
 import {queryByHook} from '../util'
 
@@ -8,7 +10,8 @@ export default function (opts) {
     loginLink: queryByHook('login-link', opts.el),
     logoutLink: queryByHook('logout-link', opts.el),
     userName: queryByHook('user-name', opts.el),
-    userDropdown: queryByHook('user-dropdown', opts.el)
+    userDropdown: queryByHook('user-dropdown', opts.el),
+    userIssue: queryByHook('user-issue', opts.el)
   }
 
   elements.loginLink.on('click', function (e) {
@@ -23,11 +26,12 @@ export default function (opts) {
   })
 
   if (opts.user.username) setUserInfo(opts.user)
-  opts.user.on('change:username', setUserInfo)
+  opts.user.on('change', setUserInfo)
 
   function setUserInfo (user) {
     elements.loginLink.hide()
     elements.userName.text(user.username)
     elements.userDropdown.removeClass('hidden')
+    if (!user.isCollaborator) elements.userIssue.removeClass('hidden').popover('show')
   }
 }
