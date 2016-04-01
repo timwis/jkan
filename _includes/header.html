@@ -25,7 +25,14 @@
       <ul class="nav navbar-nav navbar-right">
         <li><a href="#" data-hook="login-link">Login</a></li>
         <li class="dropdown hidden" data-hook="user-dropdown">
-          <a href="#" class="dropdown-toggle" data-hook="user-name" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">User <span class="caret"></span></a>
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+            <span class="user-issue hidden" data-hook="user-issue" data-toggle="popover" data-placement="bottom" data-trigger="hover"
+              data-content="You do not have collaborator access to this repository, so you will not be able to make any changes.">
+              <i class="fa fa-exclamation-circle"></i>
+            </span>
+            <span data-hook="user-name">User</span>
+            <span class="caret"></span>
+          </a>
           <ul class="dropdown-menu">
             <li><a href="{{ site.baseurl }}/admin/">Administration</a></li>
             <li><a href="#" data-hook="logout-link">Logout</a></li>

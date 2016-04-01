@@ -32,3 +32,7 @@ dataset {
 .add-dataset-btn {
   margin-top: 15px;
 }
+
+.user-issue {
+  color: red;
+}
