@@ -1,10 +1,10 @@
 ---
 title: Previsioni Meteo
 organization: OpenToscana
-notes: 'Previsioni metereologiche di Prato rilasciate da OpenToscana, fonte Lamma.'
+notes: Previsioni metereologiche di Prato rilasciate da OpenToscana, fonte Lamma.Licenza CC BY 4.0. Aggiornati quotidianamente alle 8 e alle 16.
 resources:
   - name: Previsioni Meteo
-    url: 'http://www.lamma.rete.toscana.it/previ/ita/xml/comuni_web/dati/prato.xml'
+    url: 'https://raw.githubusercontent.com/iltempe/opendataprato/master/previsioni-meteo.xml'
     format: xml
 category:
   - Ambiente
