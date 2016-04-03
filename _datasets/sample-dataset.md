@@ -1,4 +1,5 @@
 ---
+schema: default
 title: Sample dataset
 notes: This is an example dataset that comes with a new installation of JKAN
 maintainer: Tim Wisniewski
@@ -8,7 +9,7 @@ category: Education
 resources:
   - url: http://data.phl.opendata.arcgis.com/datasets/1839b35258604422b0b520cbb668df0d_0.csv
     name: Air Monitoring Stations CSV
-    format: CSV
+    format: csv
     description: Compatible with Excel
   - url: http://data.phl.opendata.arcgis.com/datasets/1839b35258604422b0b520cbb668df0d_0.zip
     name: Air Monitoring Stations Shapefile
