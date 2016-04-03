@@ -6,6 +6,10 @@ baseurl: /opendatagentediprato
 github_client_id: 94d5c2c76b1847f79b29
 gatekeeper_host: https://opendatagentediprato.herokuapp.com
 
+#Social Links
+facebook-page: https://www.facebook.com/Opendata-Gente-di-Prato-996274160459781/
+twitter: https://twitter.com/odgentediprato
+
 # Categories
 category_list:
   - Arte / Cultura / Storia
