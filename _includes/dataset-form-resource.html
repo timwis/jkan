@@ -2,7 +2,7 @@
   <fieldset class="resource-fieldset">
   {% for field in resource_fields %}
     {% assign template = field.form_template | default: "form/text.html" %}
-    {% capture field_name %}resource[][{{ field.field_name }}]{% endcapture %}
+    {% capture field_name %}resources[][{{ field.field_name }}]{% endcapture %}
     {% assign value = resource[field[field_name]] %}
     {% include {{ template }} field=field field_name=field_name value=value %}
   {% endfor %}
