@@ -7,6 +7,7 @@ import {queryByHook} from '../util'
 export default function (opts) {
   opts || (opts = {})
   const elements = {
+    resourceItem: queryByHook('resource-item', opts.el),
     form: queryByHook('dataset-form', opts.el),
     editButton: queryByHook('edit-button', opts.el),
     cancelButton: queryByHook('cancel-button', opts.el),
@@ -24,6 +25,17 @@ export default function (opts) {
 
   // Initialize select2 plugin
   elements.select2.select2()
+
+  // Resource details links
+  elements.resourceItem.each((index, item) => {
+    if ($('table tr', item).length) {
+      queryByHook('show-resource-details', item).show()
+    }
+  })
+  elements.resourceItem.on('click', '[data-hook~=show-resource-details]', (e) => {
+    $(e.currentTarget).closest('[data-hook~=resource-item]').children('[data-hook~=resource-details]').toggle()
+    e.preventDefault()
+  })
 
   // Edit/Cancel buttons toggle read/edit views
   elements.editButton.add(elements.cancelButton).on('click', (e) => {

@@ -1,10 +1,11 @@
-<dt>{{ include.field.label }}</dt>
-<dd>
-  {% if include.value.size %}
-    {% for category in include.value %}
-      <a href="{{ site.baseurl }}/datasets/?category={{ category | slugify }}">{{ category }}</a><br>
-    {% endfor %}
-  {% else %}
-    <a href="{{ site.baseurl }}/datasets/?category={{ include.value | slugify }}">{{ include.value }}</a>
-  {% endif %}
-</dd>
+<tr>
+  <th>{{ include.field.label }}</th>
+  <td>
+    {% if include.value.size %}
+      {% for category in include.value %}
+        <a href="{{ site.baseurl }}/datasets/?category={{ category | slugify }}">{{ category }}</a>{% unless forloop.last %}, {% endunless %}
+      {% endfor %}
+    {% else %}
+      <a href="{{ site.baseurl }}/datasets/?category={{ include.value | slugify }}">{{ include.value }}</a>
+    {% endif %}
+  </td>

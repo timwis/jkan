@@ -1,37 +1,38 @@
 {% assign schema = include.dataset.schema | default: site.schema %}
-{% assign fields = site.data.schemas[schema].fields %}
-{% assign system_fields = "title|organization|notes" | split: "|" %}
+{% assign dataset_fields = site.data.schemas[schema].dataset_fields %}
+{% assign resource_fields = site.data.schemas[schema].resource_fields %}
+{% assign dataset_system_fields = "title|organization|notes" | split: "|" %}
 <form data-hook="dataset-form">
   <input type="hidden" id="schema" name="schema" value="{{ schema }}">
 
   <fieldset>
-    {% for field in fields %}
-      {% if system_fields contains field.field_name %}
-        {% assign template = field.template | default: "form/text.html" %}
-        {% assign value = include.dataset[field[field_name]] %}
-        {% include {{template}} field=field value=value %}
+    {% for field in dataset_fields %}
+      {% if dataset_system_fields contains field.field_name %}
+        {% assign template = field.form_template | default: "form/text.html" %}
+        {% assign field_name = field.field_name %}
+        {% assign value = include.dataset[field_name] %}
+        {% include {{ template }} field=field field_name=field_name value=value %}
       {% endif %}
     {% endfor %}
   </fieldset>
 
-  <fieldset>
-    <h2>Resources</h2>
-    <div data-hook="resource-rows">
-    {% for resource in include.dataset.resources %}
-      {% include dataset-form-resource.html resource=resource %}
-    {% endfor %}
-    </div>
-    <button type="button" class="btn btn-default" data-hook="add-resource" title="Add resource"><i class="fa fa-plus"></i> Resource</button>
-  </fieldset>
+  <h2>Resources</h2>
+  <div data-hook="resource-rows">
+  {% for resource in include.dataset.resources %}
+    {% include dataset-form-resource.html %}
+  {% endfor %}
+  </div>
+  <button type="button" class="btn btn-default" data-hook="add-resource" title="Add resource"><i class="fa fa-plus"></i> Add Resource</button>
 
   <fieldset>
     <h2>Additional Info</h2>
 
-    {% for field in fields %}
-      {% unless system_fields contains field.field_name %}
+    {% for field in dataset_fields %}
+      {% unless dataset_system_fields contains field.field_name %}
         {% assign template = field.form_template | default: "form/text.html" %}
-        {% assign value = include.dataset[field[field_name]] %}
-        {% include {{ template }} field=field value=value %}
+        {% assign field_name = field.field_name %}
+        {% assign value = include.dataset[field_name] %}
+        {% include {{ template }} field=field field_name=field_name value=value %}
       {% endunless %}
     {% endfor %}
 
