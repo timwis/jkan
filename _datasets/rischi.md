@@ -1,10 +1,10 @@
 ---
-title: Previsioni Meteo
-organization: OpenToscana
-notes: Previsioni metereologiche di Prato rilasciate da OpenToscana, fonte Lamma.Licenza CC BY 4.0. Aggiornati quotidianamente alle 8 e alle 16.
+title: Bollettino di Sintesi delle Criticità Regionali
+organization: Servizio Idrologico - Centro Funzionale della Regione Toscana
+notes: Rischi della regione toscana rilasciate da CFR Toscana. La area relativa al comune di Prato è la B. Licenza CC BY 4.0. Aggiornati quotidianamente alle 10.30 e alle 14.30.
 resources:
-  - name: Previsioni Meteo
-    url: 'https://raw.githubusercontent.com/iltempe/opendataprato/master/previsioni-meteo.xml'
+  - name: Rischi
+    url: 'https://raw.githubusercontent.com/iltempe/opendataprato/master/rischi.xml'
     format: xml
 category:
   - Ambiente
