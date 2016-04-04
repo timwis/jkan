@@ -1,5 +1,5 @@
 ---
 title: Servizio Idrologico - Centro Funzionale della Regione Toscana
 description: CFR Regione Toscana
-logo: http://www.cfr.toscana.it/supports/images/sir/logo_reg.jpg
+logo: http://open.toscana.it/OpToscana-single-theme/images/OpToscana/logo_toscana_medium.jpg
 ---
