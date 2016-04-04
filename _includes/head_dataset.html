@@ -12,11 +12,10 @@
   <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
 
-{% assign organization = site.organizations | where:"title",page.organization | first %}
+{% assign organization = site.organizations | where:"title",page.organization,"logo" | first %}
   <meta property="og:title" content="{{ page.title }}"/>
   <meta property="og:description" content="Dataset {{ page.title }} da {{ organization.title }}"/>
-{% assign organization1 = site.organizations | where:"logo",page.organization.logo | first %}
-  <meta property="og:image" content="{{ organization1.logo }}"/>
+  <meta property="og:image" content="{{ organization.logo }}"/>
 
 
   {% assign datasets = site.collections | where:"label","datasets" | first %}
