@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
 
+{% assign organization = site.organizations | where:"title",page.organization | first %}
 <meta property="og:image" content="{{ organization.logo }}"/>
 <meta property="og:title" content="{{ page.title }}"/>
 <meta property="og:description" content="Dataset {{ page.title }} da {{ organization.title }}"/>
