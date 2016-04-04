@@ -37,6 +37,12 @@ export default function (opts) {
     e.preventDefault()
   })
 
+  // If user is logged in and a collaborator, show the Edit Dataset button
+  if (opts.user.username && opts.user.isCollaborator) elements.editButton.show()
+  opts.user.on('change', (user) => {
+    if (user.username && user.isCollaborator) elements.editButton.show()
+  })
+
   // Edit/Cancel buttons toggle read/edit views
   elements.editButton.add(elements.cancelButton).on('click', (e) => {
     switchView()

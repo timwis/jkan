@@ -33,6 +33,14 @@ dataset {
   margin-top: 15px;
 }
 
+/* Hidden from guests */
+.add-dataset-btn,
+.edit-dataset-btn,
+.admin-link-list-item,
+.user-issue {
+  display: none;
+}
+
 .resource-row {
   padding: 19px;
   margin-bottom: 20px;
@@ -50,4 +58,8 @@ dataset {
 
 .show-resource-details {
   font-size: 80%;
+}
+
+.user-issue {
+  color: red;
 }
