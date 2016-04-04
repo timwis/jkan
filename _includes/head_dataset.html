@@ -15,7 +15,7 @@
 {% assign organization = site.organizations | where:"title", page.organization  | first %}
   <meta property="og:title" content="{{ page.title }}"/>
   <meta property="og:description" content="Dataset {{ page.title }} da {{ organization.title }}"/>
-  <!--<meta property="og:image" content="{{ organization.logo }}"/>-->
+  <meta property="og:image" content="{{ organization.logo }}"/>
 
 
   {% assign datasets = site.collections | where:"label","datasets" | first %}
