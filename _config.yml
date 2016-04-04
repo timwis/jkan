@@ -1,7 +1,7 @@
 title: JKAN
 description: A lightweight, backend-free open data portal, powered by Jekyll.
 baseurl: /jkan
-logo:
+logo: /img/jkan.png
 
 # Authentication
 github_client_id:
@@ -76,7 +76,7 @@ hypothesis:
 # Twitter
 twittercard:
   enabled: false
-  site: ""
+  username: "@"
 
 # Open Graph
 opengraph:

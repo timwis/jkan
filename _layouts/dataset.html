@@ -12,18 +12,22 @@ layout: default
 </div>
 
 {% assign organization = site.organizations | where:"title",page.organization | first %}
-<div class="row" data-hook="read-view">
+<div data-hook="read-view">
   {% if organization %}
-  <div class="col-sm-3">
-    <div class="panel panel-default">
-    {% if organization.logo %}
-      <a href="{{ site.baseurl }}/datasets/?organization={{ organization.title | slugify }}" class="thumbnail"><img src="{{ organization.logo }}" alt="{{ organization.title }} logo"></a>
-    {% endif %}
-      <div class="panel-heading"><h3><a href="{{ site.baseurl }}/datasets/?organization={{ organization.title | slugify }}">{{ organization.title }}</a></h3>
-        <div class="panel-body">{{ organization.description }}</p></div>
+    <div class="col-sm-3">
+      <div class="panel panel-default">
+          <div class="panel-heading">
+            {% if organization.logo %}
+            <a href="{{ site.baseurl }}/datasets/?organization={{ organization.title | slugify }}" class="thumbnail"><img src="{{ organization.logo }}" alt="{{ organization.title }} logo"></a>
+            {% endif %}
+          </div>
+          <div class="panel-body">
+            <h3><a href="{{ site.baseurl }}/datasets/?organization={{ organization.title | slugify }}">{{ organization.title }}</a></h3>
+            {{ organization.description }}
+          </div>
+        </div>
       </div>
     </div>
-  </div>
   <div class="col-sm-9">
   {% else %}
   <div class="col-sm-12">
@@ -52,10 +56,12 @@ layout: default
       <dd>
         {% if page.category.size %}
           {% for category in page.category %}
-            <a href="{{ site.baseurl }}/datasets/?category={{ category | slugify }}"><h4><span class="label label-danger">{{ category }}</span></a></h4><br>
+            <div class="btn-group" role="group" aria-label="...">
+              <a href="{{ site.baseurl }}/datasets/?category={{ category | slugify }}" class="btn btn-primary">{{ category }}</a>
+            </div>
           {% endfor %}
         {% else %}
-          <a href="{{ site.baseurl }}/datasets/?category={{ page.category | slugify }}">{{ page.category }}</a>
+          <a href="{{ site.baseurl }}/datasets/?category={{ page.category | slugify }}" class="btn btn-primary">{{ page.category }}</a>
         {% endif %}
       </dd>
       {% endif %}
