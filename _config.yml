@@ -6,6 +6,9 @@ baseurl: /jkan
 github_client_id: 
 gatekeeper_host: 
 
+# Dataset schema
+schema: default
+
 # Categories
 category_list:
   - Arts / Culture / History
