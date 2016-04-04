@@ -38,7 +38,7 @@ export default function (opts) {
     elements.userDropdown.removeClass('hidden')
     if (user.isCollaborator) {
       elements.adminLinkListItem.show()
-    } else {
+    } else if (user.isCollaborator === false) { // don't catch undefined
       elements.userIssue.show()
       elements.userDropdownLink.popover({
         content: 'You do not have collaborator access to this repository, so you will not be able to make any changes.',
