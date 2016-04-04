@@ -128,7 +128,7 @@ function collapseListGroup (container, show) {
   if (!show) show = container.data('show') || 5
 
   const itemsToHide = $('.list-group-item:gt(' + (show - 1) + '):not(.active)', container)
-  if (itemsToHide) {
+  if (itemsToHide.length) {
     itemsToHide.hide()
 
     const showMoreButton = $('<a href="#" class="list-group-item">Show ' + itemsToHide.length + ' more...</a>')
