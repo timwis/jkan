@@ -45,7 +45,10 @@ export default State.extend({
         .then(() => {
           this.set('isCollaborator', true)
           Cookies.set('jkan', this.serialize())
-        }).catch(() => this.set('isCollaborator', false))
+        }).catch(() => {
+          this.set('isCollaborator', false)
+          Cookies.set('jkan', this.serialize())
+        })
       }).catch(() => console.error('Error fetching user info'))
     }).catch(() => console.error('Error verifying auth code'))
   },
