@@ -3,9 +3,11 @@ layout: default
 ---
 {% include breadcrumbs.html parent="Datasets" %}
 
+<head>
 <meta property="og:image" content="{{ organization.title }} logo" />
 <meta property="og:title" content="{{ page.title }}"/>
- <meta property="og:description" content="Dataset {{ page.title }} da {{ organization.description }}" />
+<meta property="og:description" content="Dataset {{ page.title }} da {{ organization.description }}" />
+</head>
 
 <div class="alert alert-success" role="alert" data-hook="alert-success" style="display: none;">
   This dataset has been <a href="#" data-hook="commit-url">saved</a> and the page is currently regenerating.
