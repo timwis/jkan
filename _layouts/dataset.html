@@ -46,11 +46,6 @@ layout: default
     <h2>Resources</h2>
     <ul>
       {% for resource in page.resources %}
-        <li>
-          <a href="{{ resource.url }}">{{ resource.name }}</a>
-          {% if resource.format %}<span class="label label-pill label-default">{{ resource.format }}</span>{% endif %}<br>
-          {% if resource.description %}<div class="resource-description"><code>{{ resource.description }}</code></div>{% endif %}
-        </li>
       <li data-hook="resource-item">
         <a href="{{ resource.url }}">{{ resource.name }}</a>
         {% if resource.format %}<span class="label label-default">{{ resource.format}}</span>{% endif %}
