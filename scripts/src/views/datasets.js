@@ -16,7 +16,8 @@ export default function (opts) {
     organizationsItems: queryByHook('organizations-items', opts.el),
     datasetsItems: queryByHook('datasets-items', opts.el),
     datasetsCount: queryByHook('datasets-count', opts.el),
-    searchQuery: queryByHook('search-query', opts.el)
+    searchQuery: queryByHook('search-query', opts.el),
+    addDatasetBtn: queryByHook('add-dataset-btn', opts.el)
   }
 
   $.getJSON(datasetsPath).done(function (datasets) {
@@ -58,6 +59,12 @@ export default function (opts) {
     })
   }).fail(function () {
     console.error('Error fetching', datasetsPath)
+  })
+
+  // If user is logged in and a collaborator, show the Add Dataset button
+  if (opts.user.username && opts.user.isCollaborator) elements.addDatasetBtn.show()
+  opts.user.on('change', (user) => {
+    if (user.username && user.isCollaborator) elements.addDatasetBtn.show()
   })
 }
 

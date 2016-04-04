@@ -46,10 +46,10 @@ const router = {
         repoBranch: settings.BRANCH,
         filePath: settings.FILE_PATH
       })
-      DatasetView({el: elements.main, file})
+      DatasetView({el: elements.main, user, file})
     },
     '/datasets/': function () {
-      DatasetsView({el: elements.main})
+      DatasetsView({el: elements.main, user})
     },
     '/add-dataset/': function () {
       const file = new FileModel({

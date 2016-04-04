@@ -46,7 +46,7 @@ export default State.extend({
           this.set('isCollaborator', true)
           Cookies.set('jkan', this.serialize())
         }).catch(() => this.set('isCollaborator', false))
-      }).catch(() => console.error('Error fetching user infoxx'))
+      }).catch(() => console.error('Error fetching user info'))
     }).catch(() => console.error('Error verifying auth code'))
   },
   // Use authCode from step 1 to fetch auth token
