@@ -5,7 +5,7 @@ logo: /img/jkan.png
 
 # Authentication
 github_client_id: 95187e426b25c012a339
-gatekeeper_host: jkan-oauth.apps.cloud.gov
+gatekeeper_host: https://jkan-oauth.apps.cloud.gov
 
 # Dataset schema
 schema: default
