@@ -25,9 +25,13 @@
       <ul class="nav navbar-nav navbar-right">
         <li><a href="#" data-hook="login-link">Login</a></li>
         <li class="dropdown hidden" data-hook="user-dropdown">
-          <a href="#" class="dropdown-toggle" data-hook="user-name" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">User <span class="caret"></span></a>
+          <a href="#" class="dropdown-toggle" data-hook="user-dropdown-link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+            <span class="user-issue" data-hook="user-issue"><i class="fa fa-exclamation-circle"></i></span>
+            <span data-hook="user-name">User</span>
+            <span class="caret"></span>
+          </a>
           <ul class="dropdown-menu">
-            <li><a href="{{ site.baseurl }}/admin/">Administration</a></li>
+            <li class="admin-link-list-item" data-hook="admin-link-list-item"><a href="{{ site.baseurl }}/admin/">Administration</a></li>
             <li><a href="#" data-hook="logout-link">Logout</a></li>
           </ul>
         </li>

@@ -22,7 +22,9 @@ const elements = {
 
 const user = new UserModel({
   clientId: params.clientId || settings.GITHUB_CLIENT_ID,
-  proxyHost: params.proxyHost || settings.GATEKEEPER_HOST
+  proxyHost: params.proxyHost || settings.GATEKEEPER_HOST,
+  repoOwner: settings.REPO_OWNER,
+  repoName: settings.REPO_NAME
 })
 
 // If user is mid-login, finish the login process
@@ -44,10 +46,10 @@ const router = {
         repoBranch: settings.BRANCH,
         filePath: settings.FILE_PATH
       })
-      DatasetView({el: elements.main, file})
+      DatasetView({el: elements.main, user, file})
     },
     '/datasets/': function () {
-      DatasetsView({el: elements.main})
+      DatasetsView({el: elements.main, user})
     },
     '/add-dataset/': function () {
       const file = new FileModel({

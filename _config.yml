@@ -10,6 +10,9 @@ gatekeeper_host:
 # Dataset schema
 schema: default
 
+# Dataset schema
+schema: default
+
 # Categories
 category_list:
   - Arts / Culture / History
