@@ -52,7 +52,7 @@ layout: default
     <ul>
       {% for resource in page.resources %}
       <li data-hook="resource-item" property='dcat:distribution' typeof='dcat:Distribution'>
-        <a href="{{ resource.url }}" property='dcat:accessURL'>><span property="dct:title">{{ resource.name }}</span></a>
+        <a href="{{ resource.url }}" property='dcat:accessURL'><span property="dct:title">{{ resource.name }}</span></a>
         {% if resource.format %}<span class="label label-default" property='dcat:mediaType'>{{ resource.format}}</span>{% endif %}
         <a href="#" class="show-resource-details" data-hook="show-resource-details">(Details)</a>
         {% if resource.description %}<div class="resource-description">{{ resource.description }}</div>{% endif %}
