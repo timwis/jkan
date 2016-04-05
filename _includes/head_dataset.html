@@ -17,6 +17,11 @@
   <meta property="og:description" content="Dataset {{ page.title }} da {{ organization.title }}"/>
   <meta property="og:image" content="{{ organization.logo }}"/>
 
+  <meta property="twitter:card" content="summary"/>
+  <meta property="twitter:title" content="{{ page.title }}"/>
+  <meta property="twitter:description" content="Dataset {{ page.title }} da {{ organization.title }}"/>
+  <meta property="twitter:url" content="{{ page.url }}"/>
+  <meta property="twitter:image" content="{{ organization.logo }}"/>
 
   {% assign datasets = site.collections | where:"label","datasets" | first %}
   <script>
