@@ -6,7 +6,7 @@ resources:
   - name: 'Luoghi di Prato con tag [name:zh]'
     url: 'https://raw.githubusercontent.com/iltempe/opendataprato/master/ChinesePlaces.geojson'
     format: geojson
-  - name: 'Luoghi di Prato con tag [name:zh]'
+  - name: 'Luoghi di Prato con tag [name:zh] mappa'
     url: 'https://github.com/iltempe/opendataprato/blob/master/ChinesePlaces.geojson'
     format: other
 category:
