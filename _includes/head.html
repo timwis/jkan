@@ -12,6 +12,31 @@
   <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
 
+  {% if site.digital_analytics_program.enabled == true %}
+    <!-- US Digital Analytics Program - see https://analytics.usa.gov for data-->
+    <script id="_fed_an_ua_tag" src="https://dap.digitalgov.gov/Universal-Federated-Analytics-Min.js?agency={{ site.digital_analytics_program.agency }}&subagency={{ site.digital_analytics_program.subagency }}"></script>
+  {% endif %}
+
+  {% if site.google_analytics.enabled == true %}
+    <!-- Google Analytics -->
+    {% include addons/google-analytics.html %}
+  {% endif %}
+
+  {% if site.hypothesis.enabled == true %}
+    <!-- Hypothesis.io -->
+    <script async defer src="//hypothes.is/embed.js"></script>
+  {% endif %}
+
+  {% if site.opengraph.enabled == true %}
+    <!-- Open Graph -->
+    {% include addons/opengraph.html %}
+  {% endif %}
+
+  {% if site.twittercard.enabled == true %}
+    <!-- Twittercard -->
+    {% include addons/twittercard.html %}
+  {% endif %}
+
   {% assign datasets = site.collections | where:"label","datasets" | first %}
   <script>
   var settings = {

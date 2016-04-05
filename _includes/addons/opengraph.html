@@ -1,0 +1,7 @@
+<meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}" />
+<meta property="og:site_name" content="{{ site.title }}" />
+{% assign description = page.notes | default: site.description %}
+<meta property="og:description" content="{{ description | truncate: 200 }}" />
+<meta name="og:image" content="{{ site.baseurl }}{{ site.logo }}" />
+<meta name="og:image:width" content="150" />
+<meta name="og:image:height" content="150" />

@@ -1,0 +1,56 @@
+---
+---
+{
+  "conformsTo": "https://project-open-data.cio.gov/v1.1/schema",
+  "dataset": [{% for dataset in site.datasets %}{% capture temp %}
+    {% assign schema = dataset.schema | default: site.schema %}
+    {% assign dataset_fields = site.data.schemas[schema].dataset_fields %}
+    {% assign resource_fields = site.data.schemas[schema].resource_fields %}
+
+    {% assign f_title = dataset_fields | where: "datajson", "title" | first %}
+    {% assign title = dataset[f_title[field_name]] %}
+
+    {% assign f_publisher_name = dataset_fields | where: "datajson", "publisher.name" | first %}
+    {% assign publisher_name = dataset[f_publisherName[field_name]] %}
+
+    {% assign f_description = dataset_fields | where: "datajson", "description" | first %}
+    {% assign description = dataset[f_description[field_name]] %}
+
+    {% assign f_category = dataset_fields | where: "datajson", "category" | first %}
+    {% assign category = dataset[f_category[field_name]] %}
+
+    {% assign f_contact_point_fn = dataset_fields | where: "datajson", "contactPoint.fn" | first %}
+    {% assign contact_point_fn = dataset[f_contact_point_fn[field_name]] %}
+
+    {% assign f_contact_point_has_email = dataset_fields | where: "datajson", "contactPoint.hasEmail" | first %}
+    {% assign contact_point_has_email = dataset[f_contact_point_has_email[field_name]] %}
+
+    {% assign f_dist_title = resource_fields | where: "datajson", "distribution.title" | first %}
+    {% assign f_dist_download_url = resource_fields | where: "datajson", "distribution.downloadURL" | first %}
+    {% assign f_dist_format = resource_fields | where: "datajson", "distribution.format" | first %}
+
+    {% endcapture %}{% if title %}
+    {
+      "title": {{ title | jsonify }}{% if publisher_name %},
+      "publisher": {
+        "name": {{ publisher_name | jsonify }}
+      }{% endif %}{% if description %},
+      "description": {{ description | jsonify }}{% endif %}{% if category %},
+      "category": {{ category | jsonify }}{% endif %}{% if contact_point_fn or contact_point_has_email %},
+      "contactPoint": {
+        "fn": {{ contact_point_fn | jsonify }}{% if contact_point_has_email %},
+        "hasEmail": {{ contact_point_has_email | jsonify }}{% endif %}
+      }{% endif %}{% if dataset.resources %},
+      "distribution": [{% for distribution in dataset.resources %}{% capture temp %}
+        {% assign dist_title = distribution[f_dist_title[field_name]] %}
+        {% assign dist_download_url = distribution[f_dist_download_url[field_name]] %}
+        {% assign dist_format = distribution[f_dist_format[field_name]] %}{% endcapture %}
+        {
+          "title": {{ dist_title | jsonify }},
+          "downloadURL": {{ dist_download_url | jsonify }}{% if dist_format %},
+          "format": {{ dist_format | jsonify }}{% endif %}
+        }{% unless forloop.last %},{% endunless %}{% endfor %}
+      ]{% endif %}
+    }{% unless forloop.last %},{% endunless %}{% endif %}{% endfor %}
+  ]
+}
