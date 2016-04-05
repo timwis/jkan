@@ -15,6 +15,8 @@ out or give feedback.
 ## Installation
 See [Get Started](https://jkan.io/#get-started) on [jkan.io](https://jkan.io)
 
+For configuration details, see the [wiki](https://github.com/timwis/jkan/wiki)
+
 ## Development
 * Requires [Jekyll](http://jekyllrb.com), a ruby thing
 * Run a web server that recompiles on changes using `jekyll serve --baseurl ""`. Add the experimental `--incremental`
