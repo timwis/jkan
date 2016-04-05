@@ -1,7 +1,7 @@
 ---
 title: Bollettino di Sintesi delle Criticità Regionali
 organization: Servizio Idrologico - Centro Funzionale della Regione Toscana
-notes: Rischi della regione toscana rilasciate da CFR Toscana. La area relativa al comune di Prato è la B. Licenza CC BY 4.0. Aggiornati quotidianamente alle 10.30 e alle 14.30.
+notes: Rischi della regione toscana rilasciate da CFR Toscana. La area relativa al comune di Prato è la B. Licenza CC BY 4.0. Aggiornati quotidianamente.
 resources:
   - name: Rischi
     url: 'https://raw.githubusercontent.com/iltempe/opendataprato/master/rischi.xml'
