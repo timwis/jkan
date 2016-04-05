@@ -1,6 +1,6 @@
 title: JKAN
 description: A lightweight, backend-free open data portal, powered by Jekyll.
-baseurl: /jkan
+#baseurl: /jkan
 logo: /img/jkan.png
 #baseurl: /jkan
 
