@@ -19,7 +19,7 @@
       <label for="resources[][format]">Formato</label>
       <select class="form-control" id="resources[][format]" name="resources[][format]">
         <option value="">Seleziona...</option>
-        {% assign formats = "api|csv|json|geojson|html|kml|kmz|shp|xml" | split: "|" %}
+        {% assign formats = "api|csv|json|geojson|html|kml|kmz|shp|xml|other" | split: "|" %}
         {% for format in formats %}
           {% assign lower_format = include.resource.format | downcase %}
           <option{% if lower_format == format %} selected="selected"{% endif %}>{{ format }}</option>
