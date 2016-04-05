@@ -6,12 +6,16 @@ resources:
   - name: 'Luoghi di Prato con tag [name:zh]'
     url: 'https://raw.githubusercontent.com/iltempe/opendataprato/master/ChinesePlaces.geojson'
     format: geojson
-  - name: 'Luoghi di Prato con tag [name:zh] mappa'
+  - name: 'Luoghi di Prato con tag [name:zh]'
     url: 'https://github.com/iltempe/opendataprato/blob/master/ChinesePlaces.geojson'
     format: other
 category:
+<<<<<<< HEAD
   - Cultura
   - Inclusione
+=======
+  - Arte / Cultura / Storia
+>>>>>>> origin/gh-pages
 maintainer: iltempe
 maintainer_email: mtempestini@gmail.com
 ---
