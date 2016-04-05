@@ -10,12 +10,8 @@ resources:
     url: 'https://github.com/iltempe/opendataprato/blob/master/ChinesePlaces.geojson'
     format: other
 category:
-<<<<<<< HEAD
   - Cultura
   - Inclusione
-=======
-  - Arte / Cultura / Storia
->>>>>>> origin/gh-pages
 maintainer: iltempe
 maintainer_email: mtempestini@gmail.com
 ---
