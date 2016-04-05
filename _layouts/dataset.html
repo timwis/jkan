@@ -12,13 +12,18 @@ layout: default
 </div>
 
 {% assign organization = site.organizations | where:"title",page.organization | first %}
-<div class="row" data-hook="read-view">
+{% capture organization_url %}{{ site.baseurl }}/datasets/?organization={{ organization.title | slugify }}{% endcapture %}
+<div class="row" data-hook="read-view" typeof="dcat:Dataset" resource="{{ page.url }}">
   {% if organization %}
-  <div class="col-sm-3">
+  <div class="col-sm-3" property="dct:publisher" resource="{{ organization_url }}">
     {% if organization.logo %}
       <a href="{{ site.baseurl }}/datasets/?organization={{ organization.title | slugify }}" class="thumbnail"><img src="{{ organization.logo }}" alt="{{ organization.title }} logo"></a>
     {% endif %}
-    <h3><a href="{{ site.baseurl }}/datasets/?organization={{ organization.title | slugify }}">{{ organization.title }}</a></h3>
+    <h3>
+      <a href="{{ organization_url }}" about="{{ organization_url }}" property="foaf:homepage">
+        <span property="foaf:name">{{ organization.title }}</span>
+      </a>
+    </h3>
     <p>{{ organization.description }}</p>
   </div>
   <div class="col-sm-9">
@@ -26,17 +31,17 @@ layout: default
   <div class="col-sm-12">
   {% endif %}
     <h1>
-      {{ page.title }}
+      <span property="dct:title">{{ page.title }}</span>
       <a href="https://github.com/{{ site.github.owner_name }}/{{ site.github.project_title }}/edit/gh-pages/{{ page.path }}" class="pull-right btn btn-default" role="button" data-hook="edit-button">Edit</a>
     </h1>
-    <p>{{ page.notes }}</p>
+    <p property="dct:description">{{ page.notes }}</p>
 
     <h2>Resources</h2>
     <ul>
       {% for resource in page.resources %}
-      <li>
-        <a href="{{ resource.url }}">{{ resource.name }}</a>
-        {% if resource.format %}({{ resource.format}}){% endif %}
+      <li property='dcat:distribution' typeof='dcat:Distribution'>
+        <a href="{{ resource.url }}" property='dcat:accessURL'><span property="dct:title">{{ resource.name }}</span></a>
+        {% if resource.format %}(<span property='dcat:mediaType'>{{ resource.format}})</span>{% endif %}
         {% if resource.description %}<div class="resource-description">{{ resource.description }}</div>{% endif %}
       </li>
       {% endfor %}
@@ -49,10 +54,10 @@ layout: default
       <dd>
         {% if page.category.size %}
           {% for category in page.category %}
-            <a href="{{ site.baseurl }}/datasets/?category={{ category | slugify }}">{{ category }}</a><br>
+            <a href="{{ site.baseurl }}/datasets/?category={{ category | slugify }}"><span property="dcat:keyword">{{ category }}</span></a><br>
           {% endfor %}
         {% else %}
-          <a href="{{ site.baseurl }}/datasets/?category={{ page.category | slugify }}">{{ page.category }}</a>
+          <a href="{{ site.baseurl }}/datasets/?category={{ page.category | slugify }}"><span property="dcat:keyword">{{ page.category }}</span></a>
         {% endif %}
       </dd>
       {% endif %}
@@ -61,7 +66,7 @@ layout: default
       <dt>Maintainer</dt>
       <dd>{{ page.maintainer }}</dd>
       {% endif %}
-      
+
       {% if page.maintainer_email != "" %}
       <dt>Maintainer Email</dt>
       <dd>{{ page.maintainer_email }}</dd>
@@ -78,4 +83,3 @@ layout: default
     <button class="btn btn-default pull-right" data-hook="cancel-button">Cancel</button>
   </div>
 </div>
-
