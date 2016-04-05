@@ -45,3 +45,11 @@ resource_fields:
       - kmz
       - shp
       - xml
+
+organization_fields:
+  - field_name: title
+    label: Title
+  - field_name: description
+    label: Description
+  - field_name: logo
+    label: Logo
