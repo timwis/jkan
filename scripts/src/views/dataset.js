@@ -43,8 +43,6 @@ export default function (opts) {
   opts.user.on('change', (user) => {
     if (user.username && user.isCollaborator) elements.addBtn.show()
   })
-}
-
 
   // If user is logged in and a collaborator, show the Edit Dataset button
   if (opts.user.username && opts.user.isCollaborator) elements.editButton.show()
