@@ -51,14 +51,14 @@ fork_me_url: https://github.com/iltempe/opendatagentediprato
 navigation:
   - title: Dati
     url: /datasets/
+- title: Organizzazioni
+    url: /organizations/
   - title: Cosa è?
     url: /cosa/
   - title: Come aggiungo dati?
     url: /come/
-  - title: Fallo anche tu
+  - title: Come puoi farlo?
     url: /fallo/
-  - title: Organizations
-    url: /organizations/
 
 # Collections
 collections:
@@ -106,8 +106,8 @@ hypothesis:
 
 # Twitter
 twittercard:
-  enabled: false
-  username: "@"
+  enabled: true
+  username: "@odgentediprato"
 
 # Open Graph
 opengraph:

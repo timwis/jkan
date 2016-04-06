@@ -17,17 +17,17 @@
     {% endfor %}
   </fieldset>
 
-  <h2>Resources</h2>
+  <h2>Risorse</h2>
   <div data-hook="resource-rows">
   {% for resource in include.dataset.resources %}
     {% include dataset-form-resource.html %}
   {% endfor %}
   </div>
-  <button type="button" class="btn btn-default" data-hook="add-resource" title="Add resource"><i class="fa fa-plus"></i> Add Resource</button>
+  <button type="button" class="btn btn-default" data-hook="add-resource" title="Add resource"><i class="fa fa-plus"></i> Aggiungi Risorsa</button>
 
   <fieldset>
 
-    <h2>Additional Info</h2>
+    <h2>Informazioni Addizionali</h2>
 
     {% for field in dataset_fields %}
       {% unless dataset_system_fields contains field.field_name %}
@@ -40,9 +40,9 @@
 
   </fieldset>
 
-  <button type="submit" class="btn btn-primary">Submit</button>
+  <button type="submit" class="btn btn-primary">Sottometti</button>
   {% if include.dataset %}
-    <button class="btn btn-danger" data-hook="delete-button"><i class="fa fa-trash"></i> Delete dataset</button>
+    <button class="btn btn-danger" data-hook="delete-button"><i class="fa fa-trash"></i> Cancella Dataset</button>
   {% endif %}
 </form>
 
