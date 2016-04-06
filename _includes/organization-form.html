@@ -1,0 +1,21 @@
+{% assign schema = page.schema | default: site.schema %}
+{% assign organization_fields = site.data.schemas[schema].organization_fields %}
+{% assign organization_system_fields = "title|description|logo" | split: "|" %}
+
+<form data-hook="organization-form">
+  <input type="hidden" id="schema" name="schema" value="{{ schema }}">
+
+  <fieldset>
+    {% for field in organization_fields %}
+      {% assign template = field.form_template | default: "form/text.html" %}
+      {% assign field_name = field.field_name %}
+      {% assign value = include.organization[field_name] %}
+      {% include {{ template }} field=field field_name=field_name value=value %}
+    {% endfor %}
+  </fieldset>
+
+  <button type="submit" class="btn btn-primary">Submit</button>
+  {% if include.organization %}
+    <button class="btn btn-danger" data-hook="delete-button"><i class="fa fa-trash"></i> Delete organization</button>
+  {% endif %}
+</form>
