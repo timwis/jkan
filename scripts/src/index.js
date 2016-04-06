@@ -77,7 +77,6 @@ const router = {
       OrganizationsView({el: elements.main, user})
     },
     '/add-organization/': function () {
-      console.log('add org')
       const file = new FileModel({
         user,
         repoOwner: settings.REPO_OWNER,
