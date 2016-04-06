@@ -66,6 +66,7 @@ export default function (opts) {
   opts.user.on('change', (user) => {
     if (user.username && user.isCollaborator) elements.addDatasetBtn.show()
   })
+
 }
 
 // Given an array of datasets, returns an array of their organizations with counts
