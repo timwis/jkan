@@ -48,8 +48,8 @@ resource_fields:
 
 organization_fields:
   - field_name: title
-    label: Title
+    label: Titolo
   - field_name: description
-    label: Description
+    label: Descrizione
   - field_name: logo
     label: Logo
