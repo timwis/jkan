@@ -58,7 +58,7 @@ export default function (opts) {
     if (window.confirm('Delete this organization?')) {
       opts.file.remove()
       .then((response) => {
-        alert('success', response.commit.html_url)
+        alert('success', {commitUrl: response.commit.html_url})
       }).catch((msg) => {
         alert('error')
         console.error(msg)
