@@ -13,6 +13,7 @@ export default function (opts) {
     cancelButton: queryByHook('cancel-button', opts.el),
     deleteButton: queryByHook('delete-button', opts.el),
     resourceRows: queryByHook('resource-rows', opts.el),
+     addBtn: queryByHook('add-btn', opts.el)
     addResourceButton: queryByHook('add-resource', opts.el),
     alert: queryByHook('alert', opts.el),
     commitUrl: queryByHook('commit-url', opts.el),
@@ -36,6 +37,14 @@ export default function (opts) {
     $(e.currentTarget).closest('[data-hook~=resource-item]').children('[data-hook~=resource-details]').toggle()
     e.preventDefault()
   })
+
+  // If user is logged in and a collaborator, show the Add Dataset button
+  if (opts.user.username && opts.user.isCollaborator) elements.addBtn.show()
+  opts.user.on('change', (user) => {
+    if (user.username && user.isCollaborator) elements.addBtn.show()
+  })
+}
+
 
   // If user is logged in and a collaborator, show the Edit Dataset button
   if (opts.user.username && opts.user.isCollaborator) elements.editButton.show()
