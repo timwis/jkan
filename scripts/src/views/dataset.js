@@ -13,7 +13,7 @@ export default function (opts) {
     cancelButton: queryByHook('cancel-button', opts.el),
     deleteButton: queryByHook('delete-button', opts.el),
     resourceRows: queryByHook('resource-rows', opts.el),
-    addBtn: queryByHook('add-btn', opts.el)
+    addBtn: queryByHook('add-btn', opts.el),
     addResourceButton: queryByHook('add-resource', opts.el),
     alert: queryByHook('alert', opts.el),
     commitUrl: queryByHook('commit-url', opts.el),
