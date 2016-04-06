@@ -11,7 +11,7 @@ permalink: /organizations/
   {% assign dataset_count = site.datasets | where:"organization", organization.title | size %}
   <div class="media">
     <div class="media-left">
-      {% if organization.logo %}
+      {% if organization.logo != "" %}
         <a href="{{ site.baseurl }}{{ organization.url }}" class="organization-thumbnail">
           <img class="media-object" src="{{ organization.logo }}" alt="{{ organization.title }}">
         </a>
