@@ -17,22 +17,21 @@ layout: default
 </div>
 
 {% assign organization = site.organizations | where:"title",page.organization | first %}
-<div data-hook="read-view">
+<div class="row" data-hook="read-view">
   {% if organization %}
-    <div class="col-sm-3">
-      <div class="panel panel-default">
-          <div class="panel-heading">
-            {% if organization.logo %}
-            <a href="{{ site.baseurl }}/datasets/?organization={{ organization.title | slugify }}" class="thumbnail"><img src="{{ organization.logo }}" alt="{{ organization.title }} logo"></a>
-            {% endif %}
-          </div>
-          <div class="panel-body">
-            <h3><a href="{{ site.baseurl }}/datasets/?organization={{ organization.title | slugify }}">{{ organization.title }}</a></h3>
-            {{ organization.description }}
-          </div>
-        </div>
+  <div class="col-sm-3">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        {% if organization.logo %}
+        <a href="{{ site.baseurl }}/datasets/?organization={{ organization.title | slugify }}" class="thumbnail"><img src="{{ organization.logo }}" alt="{{ organization.title }} logo"></a>
+        {% endif %}
+      </div>
+      <div class="panel-body">
+        <h3><a href="{{ site.baseurl }}/datasets/?organization={{ organization.title | slugify }}">{{ organization.title }}</a></h3>
+        {{ organization.description }}
       </div>
     </div>
+  </div>
   <div class="col-sm-9">
   {% else %}
   <div class="col-sm-12">
