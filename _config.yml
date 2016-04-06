@@ -51,7 +51,7 @@ fork_me_url: https://github.com/iltempe/opendatagentediprato
 navigation:
   - title: Dati
     url: /datasets/
-- title: Organizzazioni
+  - title: Organizzazioni
     url: /organizations/
   - title: Cosa è?
     url: /cosa/
