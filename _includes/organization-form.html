@@ -1,3 +1,7 @@
+{% assign schema = page.schema | default: site.schema %}
+{% assign organization_fields = site.data.schemas[schema].organization_fields %}
+{% assign organization_system_fields = "title|description|logo" | split: "|" %}
+
 <form data-hook="organization-form">
   <input type="hidden" id="schema" name="schema" value="{{ schema }}">
 

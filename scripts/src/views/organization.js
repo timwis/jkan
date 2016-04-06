@@ -1,4 +1,5 @@
-import {queryByHook} from '../util'
+/* global settings */
+import {queryByHook, slugify} from '../util'
 
 export default function (opts) {
   const elements = {
@@ -9,7 +10,8 @@ export default function (opts) {
     cancelButton: queryByHook('cancel-button', opts.el),
     deleteButton: queryByHook('delete-button', opts.el),
     alert: queryByHook('alert', opts.el),
-    commitUrl: queryByHook('commit-url', opts.el)
+    commitUrl: queryByHook('commit-url', opts.el),
+    organizationUrl: queryByHook('organization-url', opts.el)
   }
 
   // If user is logged in and a collaborator, show the Edit Dataset button
@@ -26,17 +28,29 @@ export default function (opts) {
 
   // Edit form submission
   elements.form.on('submit', function (e) {
+    e.preventDefault()
+
     const formData = elements.form.serializeJSON({useIntKeysAsArrayIndex: true})
     const yaml = opts.file.formatFrontMatter(formData)
-    opts.file.save(yaml)
-    .then((response) => {
-      switchView()
-      alert('success', response.commit.html_url)
+    // Ensure title was set (needed to construct filename)
+    if (!formData.title) return alert('error')
+
+    // If new file, construct file name
+    let command
+    let fileSlug
+    if (!opts.file.filePath) {
+      fileSlug = slugify(formData.title)
+      command = opts.file.create(`${fileSlug}.md`, yaml)
+    } else {
+      command = opts.file.save(yaml)
+    }
+    command.then((response) => {
+      if (elements.readView.length) switchView()
+      alert('success', {commitUrl: response.commit.html_url, fileSlug})
     }).catch((msg) => {
       alert('error')
       console.error(msg)
     })
-    e.preventDefault()
   })
 
   // Delete button
@@ -58,11 +72,15 @@ export default function (opts) {
   }
 
   // Show alert box on page
-  function alert (type, commitUrl) {
+  function alert (type, {commitUrl, fileSlug} = {}) {
     elements.alert.hide()
     $('[data-hook~=alert-' + type +']').show()
     if (type === 'success' && commitUrl) {
       elements.commitUrl.attr('href', commitUrl)
+      if (fileSlug) {
+        const pagePath = `${settings.BASE_URL}/organizations/${fileSlug}/`
+        elements.organizationUrl.attr('href', pagePath).text(pagePath)
+      }
     }
   }
 }

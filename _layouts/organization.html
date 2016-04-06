@@ -2,9 +2,6 @@
 layout: default
 ---
 {% include breadcrumbs.html parent="Organizations" %}
-{% assign schema = page.schema | default: site.schema %}
-{% assign organization_fields = site.data.schemas[schema].organization_fields %}
-{% assign organization_system_fields = "title|description|logo" | split: "|" %}
 
 <div class="alert alert-success" role="alert" data-hook="alert-success" style="display: none;">
   This organization has been <a href="#" data-hook="commit-url">saved</a> and the page is currently regenerating.
