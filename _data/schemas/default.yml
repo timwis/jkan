@@ -2,37 +2,37 @@
 # and change the schema setting in _config.yml to its name
 dataset_fields:
   - field_name: title
-    label: Title
+    label: Titolo
     datajson: title
   - field_name: organization
-    label: Organization
+    label: Organizzazione
     form_template: form/organization.html
     datajson: publisher.name
   - field_name: notes
-    label: Description
+    label: Descrizione
     form_template: form/textarea.html
     datajson: description
   - field_name: category
-    label: Category
+    label: Categoria
     form_template: form/category.html
     display_template: display/category.html
     datajson: category
   - field_name: maintainer
-    label: Maintainer
+    label: Manutentore
     datajson: contactPoint.fn
   - field_name: maintainer_email
-    label: Maintainer Email
+    label: Email Manutentore
     datajson: contactPoint.hasEmail
 
 resource_fields:
   - field_name: name
-    label: Resource Name
+    label: Nome Risorsa
     datajson: distribution.title
   - field_name: url
     label: URL
     datajson: distribution.downloadURL
   - field_name: format
-    label: Format
+    label: Formato
     datajson: distribution.format
     form_template: form/dropdown.html
     values:
