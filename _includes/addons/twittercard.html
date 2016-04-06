@@ -1,0 +1,9 @@
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="{{ site.twittercard.username }}" />
+<!-- Twitter truncates twitter:title to 70 characters. -->
+{% capture title %}{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}{% endcapture %}
+<meta name="twitter:title" content="{{ title | truncate: 70 }}" />
+<!-- Twitter truncates twitter:description at the word to 200 characters. -->
+{% assign description = page.notes | default: site.description %}
+<meta name="twitter:description" content="{{ description | truncate: 200 }}" />
+<meta name="twitter:image" content="{{ site.baseurl }}{{ site.logo }}" />

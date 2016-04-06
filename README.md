@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Questo portale è stato creato a partire dal framework JKAN Registrandoti su Github puoi farne uno anche tu procedendo in questo modo. Ti consiglio di riusare il codice di questo progetto che si basa su JKAN ma è stato già tradotto in lingua italiana ed in parte adattato. Procedi in questo modo:
 
 Iscriviti a Github
@@ -9,6 +10,7 @@ A questo punto tu puoi aggiungere o editare gli archivi dei dati direttamente ne
 
 
 Istruzioni originali di JKAN
+![JKAN logo, made by @JJediny](https://raw.githubusercontent.com/timwis/jkan/gh-pages/img/jkan.png)
 
 # JKAN [![Build Status](https://travis-ci.org/timwis/jkan.svg?branch=gh-pages)](https://travis-ci.org/timwis/jkan) [![Join the chat at https://gitter.im/timwis/jkan](https://badges.gitter.im/timwis/jkan.svg)](https://gitter.im/timwis/jkan?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 A lightweight, backend-free open data portal, powered by Jekyll
@@ -26,6 +28,8 @@ out or give feedback.
 
 ## Installation
 See [Get Started](https://jkan.io/#get-started) on [jkan.io](https://jkan.io)
+
+For configuration details, see the [wiki](https://github.com/timwis/jkan/wiki)
 
 ## Development
 * Requires [Jekyll](http://jekyllrb.com), a ruby thing

@@ -2,8 +2,7 @@
 module.exports = {
   entry: __dirname + '/scripts/src/index.js',
   output: {
-    path: __dirname + '/scripts/dist',
-    publicPath: '/scripts/dist/',
+    path: __dirname + (process.env.NODE_ENV === 'development' ? '/_site' : '') + '/scripts/dist',
     filename: 'bundle.js'
   },
   module: {

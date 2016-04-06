@@ -1,0 +1,40 @@
+---
+layout: default
+---
+{% include breadcrumbs.html parent="Organizations" %}
+
+<div class="alert alert-success" role="alert" data-hook="alert-success" style="display: none;">
+  This organization has been <a href="#" data-hook="commit-url">saved</a> and the page is currently regenerating.
+</div>
+
+<div class="alert alert-danger" role="alert" data-hook="alert-error" style="display: none;">
+  There was an error saving this page
+</div>
+
+<div class="row" data-hook="read-view">
+  {% if page.logo != "" %}
+  <div class="col-sm-3">
+    <a href="{{ page.logo }}" class="thumbnail"><img src="{{ page.logo }}" alt="{{ page.title }} logo"></a>
+  </div>
+  <div class="col-sm-9">
+  {% else %}
+  <div class="col-sm-12">
+  {% endif %}
+    <h1>
+      {{ page.title }}
+      <a href="https://github.com/{{ site.github.owner_name }}/{{ site.github.project_title }}/edit/gh-pages/{{ page.path }}" class="pull-right btn btn-default edit-organization-btn" role="button" data-hook="edit-button">Edit</a>
+    </h1>
+    <p>{{ page.description }}</p>
+    {% assign dataset_count = site.datasets | where: "organization", page.title | size %}
+    <a href="{{ site.baseurl }}/datasets/?organization={{ page.slug }}">{{ dataset_count }} datasets</a>
+  </div>
+</div>
+
+<div class="row" data-hook="edit-view" style="display: none;">
+  <div class="col-sm-8 col-sm-offset-2">
+    {% include organization-form.html organization=page %}
+  </div>
+  <div class="col-sm-2">
+    <button class="btn btn-default pull-right" data-hook="cancel-button">Cancel</button>
+  </div>
+</div>

@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack-dev-server --progress --colors",
-    "watch": "webpack -d -w",
+    "watch": "NODE_ENV=development webpack -d -w",
     "build": "webpack -p"
   },
   "repository": {
@@ -29,7 +29,7 @@
   "dependencies": {
     "ampersand-state": "^5.0.0",
     "bootstrap": "^3.3.6",
-    "github-api": "^0.11.2",
+    "github-api": "github:michael/github",
     "jquery-deparam": "^0.5.2",
     "jquery-serializejson": "^2.6.2",
     "js-cookie": "^2.1.0",

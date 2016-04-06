@@ -1,60 +1,43 @@
+{% assign schema = include.dataset.schema | default: site.schema %}
+{% assign dataset_fields = site.data.schemas[schema].dataset_fields %}
+{% assign resource_fields = site.data.schemas[schema].resource_fields %}
+{% assign dataset_system_fields = "title|organization|notes" | split: "|" %}
 <form data-hook="dataset-form">
+  <input type="hidden" id="schema" name="schema" value="{{ schema }}">
 
   <fieldset>
-    <div class="form-group">
-      <label for="title">Titolo</label>
-      <input type="text" class="form-control" id="title" name="title" placeholder="Titolo" value="{{ include.dataset.title }}">
-    </div>
-    <div class="form-group">
-      <label for="organization">Organizzazione</label>
-      <select class="form-control" id="organization" name="organization">
-        <option value="">Select...</option>
-        {% for organization in site.organizations %}
-          <option{% if include.dataset.organization == organization.title %} selected="selected"{% endif %}>{{ organization.title }}</option>
-        {% endfor %}
-      </select>
-    </div>
-    <div class="form-group">
-      <label for="notes">Descrizione</label>
-      <textarea class="form-control" id="notes" placeholder="Descrizione" name="notes">{{ include.dataset.notes }}</textarea>
-    </div>
-  </fieldset>
 
-  <fieldset>
-    <h2>Risorse</h2>
-    <div data-hook="resource-rows">
-    {% for resource in include.dataset.resources %}
-      {% include dataset-form-resource.html resource=resource %}
+    {% for field in dataset_fields %}
+      {% if dataset_system_fields contains field.field_name %}
+        {% assign template = field.form_template | default: "form/text.html" %}
+        {% assign field_name = field.field_name %}
+        {% assign value = include.dataset[field_name] %}
+        {% include {{ template }} field=field field_name=field_name value=value %}
+      {% endif %}
     {% endfor %}
-    </div>
-    <button type="button" class="btn btn-default" data-hook="add-resource" title="Add resource"><i class="fa fa-plus"></i> Risorsa</button>
   </fieldset>
 
+  <h2>Resources</h2>
+  <div data-hook="resource-rows">
+  {% for resource in include.dataset.resources %}
+    {% include dataset-form-resource.html %}
+  {% endfor %}
+  </div>
+  <button type="button" class="btn btn-default" data-hook="add-resource" title="Add resource"><i class="fa fa-plus"></i> Add Resource</button>
+
   <fieldset>
-    <h2>Informazioni Addizionali</h2>
-    
-    <div class="form-group">
-      <label for="category[]">Categoria</label>
-      <select class="form-control select2" id="category[]" name="category[]" multiple="multiple" style="width: 100%">
-        {% for category in site.category_list %}
-          <option{% if include.dataset.category == category or include.dataset.category contains category %} selected="selected"{% endif %}>{{ category }}</option>
-        {% endfor %}
-      </select>
-    
-    <div class="row">
-      <div class="col-xs-6">
-        <div class="form-group">
-          <label for="maintainer">Manutentore</label>
-          <input type="text" class="form-control" id="maintainer" name="maintainer" placeholder="Manutentore" value="{{ include.dataset.maintainer }}">
-        </div>
-      </div>
-      <div class="col-xs-6">
-        <div class="form-group">
-          <label for="maintainer_email">Email</label>
-          <input type="text" class="form-control" id="maintainer_email" name="maintainer_email" placeholder="Email del Manutentore" value="{{ include.dataset.maintainer_email }}">
-        </div>
-      </div>
-    </div>
+
+    <h2>Additional Info</h2>
+
+    {% for field in dataset_fields %}
+      {% unless dataset_system_fields contains field.field_name %}
+        {% assign template = field.form_template | default: "form/text.html" %}
+        {% assign field_name = field.field_name %}
+        {% assign value = include.dataset[field_name] %}
+        {% include {{ template }} field=field field_name=field_name value=value %}
+      {% endunless %}
+    {% endfor %}
+
   </fieldset>
 
   <button type="submit" class="btn btn-primary">Submit</button>

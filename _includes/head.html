@@ -12,23 +12,40 @@
   <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
 
-  <meta property="og:image" content="https://raw.githubusercontent.com/iltempe/opendatagentediprato/gh-pages/assets/prato.jpg" />
-  <meta property="og:title" content="OpendataGentediPrato, un semplice portale di dati dalla gente di Prato per la gente di Prato." />
-  <meta property="og:description" content="Un semplice portale di dati aperti per Prato" />
+  {% if site.digital_analytics_program.enabled == true %}
+    <!-- US Digital Analytics Program - see https://analytics.usa.gov for data-->
+    <script id="_fed_an_ua_tag" src="https://dap.digitalgov.gov/Universal-Federated-Analytics-Min.js?agency={{ site.digital_analytics_program.agency }}&subagency={{ site.digital_analytics_program.subagency }}"></script>
+  {% endif %}
 
-  <meta property="twitter:card" content="summary"/>
-  <meta property="twitter:title" content="{{ page.title }}"/>
-  <meta property="twitter:description" content="Un semplice portale di dati aperti per Prato"/>
-  <meta property="twitter:url" content="{{ page.url }}"/>
-  <meta property="twitter:image" content="https://raw.githubusercontent.com/iltempe/opendatagentediprato/gh-pages/assets/prato.jpg"/>
+  {% if site.google_analytics.enabled == true %}
+    <!-- Google Analytics -->
+    {% include addons/google-analytics.html %}
+  {% endif %}
+
+  {% if site.hypothesis.enabled == true %}
+    <!-- Hypothesis.io -->
+    <script async defer src="//hypothes.is/embed.js"></script>
+  {% endif %}
+
+  {% if site.opengraph.enabled == true %}
+    <!-- Open Graph -->
+    {% include addons/opengraph.html %}
+  {% endif %}
+
+  {% if site.twittercard.enabled == true %}
+    <!-- Twittercard -->
+    {% include addons/twittercard.html %}
+  {% endif %}
 
   {% assign datasets = site.collections | where:"label","datasets" | first %}
+  {% assign organizations = site.collections | where: "label", "organizations" | first %}
   <script>
   var settings = {
     BASE_URL: {{ site.baseurl | jsonify }},
     PAGE_URL: {{ page.url | jsonify }},
     FILE_PATH: {{ page.path | jsonify }},
     DATASETS_DIR: {{ datasets.relative_directory | jsonify }},
+    ORGANIZATIONS_DIR: {{ organizations.relative_directory | jsonify }},
     BRANCH: {% if site.github.is_user_page %}"master"{% else %}"gh-pages"{% endif %},
     REPO_OWNER: {{ site.github.owner_name | jsonify }},
     REPO_NAME: {{ site.github.project_title | jsonify }},

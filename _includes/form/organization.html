@@ -1,0 +1,14 @@
+<div class="form-group">
+  <label for="{{ include.field_name }}">{{ include.field.label }}</label>
+  <div class="input-group">
+    <select class="form-control" id="{{ include.field_name }}" name="{{ include.field_name }}">
+      <option value="">{{ include.field.placeholder | default: "Select..." }}</option>
+      {% for organization in site.organizations %}
+        <option{% if include.value == organization.title %} selected="selected"{% endif %}>{{ organization.title }}</option>
+      {% endfor %}
+    </select>
+    <span class="input-group-btn">
+      <a href="{{ site.baseurl }}/add-organization/" class="btn btn-default"><i class="fa fa-plus"></i></a>
+    </span>
+  </div>
+</div>
