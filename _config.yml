@@ -56,7 +56,7 @@ navigation:
   - title: Cosa è?
     url: /cosa/
   - title: WIKI
-    url: /wiki/
+    url: https://github.com/iltempe/opendatagentediprato/wiki
   - title: Mappa dei portali
     url: /map/
 
