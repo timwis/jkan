@@ -6,6 +6,7 @@
       <option{% if include.value.url == value %} selected="selected"{% endif %} value="{{ value.url }}">{{ value.name }}</option>
     {% endfor %}
   </select>
+  <div class="help-block">Not sure what license to use? See <a href="http://licenses.opendefinition.org/">http://licenses.opendefinition.org/</a></div>
 </div>
 
 <div class="form-group hidden" id="{{ include.field_name }}-wrapper">
