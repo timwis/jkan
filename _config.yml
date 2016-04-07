@@ -58,7 +58,7 @@ navigation:
   - title: WIKI
     url: https://github.com/iltempe/opendatagentediprato/wiki
   - title: Mappa dei portali
-    url: /mappa/
+    url: /map/
 
 # Collections
 collections:
