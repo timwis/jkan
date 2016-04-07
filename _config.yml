@@ -55,10 +55,10 @@ navigation:
     url: /organizations/
   - title: Cosa è?
     url: /cosa/
-  - title: Come aggiungo dati?
-    url: /come/
-  - title: Come puoi farlo?
-    url: /fallo/
+  - title: WIKI
+    url: https://github.com/iltempe/opendatagentediprato/wiki
+  - title: Mappa dei portali
+    url: /mappa/
 
 # Collections
 collections:
