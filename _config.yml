@@ -1,6 +1,6 @@
-title: Jkan
-description: A lightweight, backend-free open data portal, powered by Jekyll.
-baseurl: /jkan
+title: Portal Data KPU Kota Surabaya
+description: Open data portal, powered by Jekyll.
+baseurl: /
 
 # Authentication
 github_client_id: 
@@ -24,7 +24,7 @@ category_list:
   - Uncategorized
 
 # Link for the "fork me on github" banner. Remove this line to suppress banner.
-fork_me_url: https://github.com/timwis/jkan
+# fork_me_url: https://github.com/timwis/jkan
 
 # Nav bar
 navigation:
