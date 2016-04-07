@@ -12,6 +12,32 @@ dataset_fields:
     label: Description
     form_template: form/textarea.html
     datajson: description
+  - field_name: license_url
+    label: License
+    form_template: form/license.html
+    datajson: license.url
+    values:
+      - name: Creative Commons Attribution
+        url: https://creativecommons.org/licenses/by/4.0/
+      - name: Creative Commons Attribution Share-Alike
+        url: https://creativecommons.org/licenses/by-sa/4.0/
+      - name: Creative Commons CCZero
+        url: https://creativecommons.org/publicdomain/zero/1.0/
+      - name: UK Open Government Licence
+        url: https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/
+      - name: Open Data Commons Attribution License
+        url: http://www.opendefinition.org/licenses/odc-by
+      - name: Open Data Commons Open Database License (ODbL)
+        url: http://www.opendefinition.org/licenses/odc-odbl
+      - name: Open Data Commons Public Domain Dedication and Licence (PDDL)
+        url: http://www.opendefinition.org/licenses/odc-pddl
+      - name: Not Applicable
+        url: ''
+      - name: Other...
+        url: 'other'
+  - field_name: license_name
+    datajson: license.name
+    form_template: form/hidden.html
   - field_name: category
     label: Category
     form_template: form/category.html
