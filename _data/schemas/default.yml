@@ -13,7 +13,7 @@ dataset_fields:
     form_template: form/textarea.html
     datajson: description
   - field_name: license_url
-    label: License
+    label: License URL
     form_template: form/license.html
     datajson: license.url
     values:
@@ -36,6 +36,7 @@ dataset_fields:
       - name: Other...
         url: 'other'
   - field_name: license_name
+    label: License Name
     datajson: license.name
     form_template: form/hidden.html
   - field_name: category
