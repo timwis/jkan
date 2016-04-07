@@ -1,6 +1,6 @@
 title: Portal Data KPU Kota Surabaya
 description: Open data portal, powered by Jekyll.
-baseurl: /
+baseurl: http://portaldata.kpu-surabayakota.go.id/
 
 # Authentication
 github_client_id: 
