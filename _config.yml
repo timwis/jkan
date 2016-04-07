@@ -55,9 +55,7 @@ navigation:
     url: /organizations/
   - title: Cosa è?
     url: /cosa/
-  - title: WIKI
-    url: /wiki/
-  - title: Mappa dei portali
+  - title: Fai un portale anche tu
     url: /map/
 
 # Collections
