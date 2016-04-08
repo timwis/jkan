@@ -8,7 +8,6 @@ resources:
     url: 'http://www.arpat.toscana.it/temi-ambientali/aria/qualita-aria/bollettini/feed_bollettino/regionale/PRATO'
     format: xml
 category:
-  - Arte
   - Ambiente
 maintainer: Matteo Tempestini
 maintainer_email: mtempestini@gmail.com
