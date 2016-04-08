@@ -1,4 +1,5 @@
 ---
+schema: default
 title: Previsioni Meteo
 organization: OpenToscana
 notes: Previsioni metereologiche di Prato rilasciate da OpenToscana, fonte Lamma.Licenza CC BY 4.0. Aggiornati quotidianamente.
