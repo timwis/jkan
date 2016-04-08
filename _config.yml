@@ -4,8 +4,8 @@ baseurl: /jkan
 logo: /img/jkan.png
 
 # Authentication
-github_client_id:
-gatekeeper_host:
+github_client_id: 
+gatekeeper_host: 
 
 # Dataset schema
 schema: default
