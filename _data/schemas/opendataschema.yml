@@ -24,9 +24,9 @@ dataset_fields:
     label: Email Manutentore
     datajson: contactPoint.hasEmail
   - field_name: license
-    label: license type
+    label: Licenza
   - field_name: pubdate
-    label: publication date
+    label: Data di Pubblicazione
 
 resource_fields:
   - field_name: name

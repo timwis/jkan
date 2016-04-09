@@ -1,8 +1,8 @@
 ---
-schema: default
+schema: opendataschema
 title: Biometeo
 organization: Centro Interdipartimentale Di Bioclimatologia
-notes: Biometeo di Prato rilasciate da Università di FIrenze fonte Centro Interpandimentale Di Bioclimatologia. Licenza CC BY 4.0. Aggiornati quotidianamente.
+notes: Biometeo di Prato rilasciate da Università di FIrenze fonte Centro Interpandimentale Di Bioclimatologia. Aggiornati quotidianamente.
 resources:
   - name: Biometeo in lingua italiana
     url: 'https://raw.githubusercontent.com/iltempe/opendataprato/master/biometeo-ita.xml'
