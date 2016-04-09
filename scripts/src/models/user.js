@@ -23,10 +23,9 @@ export default State.extend({
     this.set(Cookies.getJSON('jkan'))
   },
   initiateLogin: function () {
-    const returnParams = {clientId: this.clientId, proxyHost: this.proxyHost}
     const redirectParams = {
       client_id: this.clientId,
-      redirect_uri: window.location.href.split('?')[0] + '?' + $.param(returnParams),
+      redirect_uri: window.location.href.split('?')[0],
       scope: 'public_repo'
     }
     window.location.href = githubLoginUrl + '?' + $.param(redirectParams)

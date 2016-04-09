@@ -5,23 +5,16 @@ import {omit} from 'lodash'
 
 import UserModel from './models/user'
 import FileModel from './models/file'
-import NavView from './views/nav'
-import DatasetsView from './views/datasets'
-import DatasetView from './views/dataset'
-import AddDatasetView from './views/add-dataset'
-import OrganizationView from './views/organization'
-import OrganizationsView from './views/organizations'
-import AdminView from './views/admin'
-import SetupView from './views/setup'
-import {queryByHook, setParams} from './util'
+import Navigation from './components/navigation'
+import DatasetsList from './components/datasets-list'
+import CategoriesFilter from './components/categories-filter'
+import OrganizationsFilter from './components/organizations-filter'
+import DatasetForm from './components/dataset-form'
+import {queryByComponent, queryByHook, setParams} from './util'
 
 const params = $.deparam(window.location.search.substr(1))
 
-const elements = {
-  main: queryByHook('main'),
-  nav: queryByHook('nav')
-}
-
+// Initialize user
 const user = new UserModel({
   clientId: params.clientId || settings.GITHUB_CLIENT_ID,
   proxyHost: params.proxyHost || settings.GATEKEEPER_HOST,
@@ -31,96 +24,62 @@ const user = new UserModel({
 
 // If user is mid-login, finish the login process
 if (params.code) {
-  setParams(omit(params, ['code', 'clientId', 'proxyHost']))
+  setParams(omit(params, 'code'))
   user.finishLogin(params.code)
 }
 
-// Always initialize nav view
-NavView({el: elements.nav, user})
+// Navigation
+const navigationEls = queryByComponent('nav')
+navigationEls.each((index, el) => new Navigation({el: $(el), user}))
 
-const router = {
-  routes: {
-    '/datasets/(.+)/': function () {
-      const file = new FileModel({
-        user,
-        repoOwner: settings.REPO_OWNER,
-        repoName: settings.REPO_NAME,
-        repoBranch: settings.BRANCH,
-        filePath: settings.FILE_PATH
-      })
-      DatasetView({el: elements.main, user, file})
-    },
-    '/datasets/': function () {
-      DatasetsView({el: elements.main, user})
-    },
-    '/add-dataset/': function () {
-      const file = new FileModel({
-        user,
-        repoOwner: settings.REPO_OWNER,
-        repoName: settings.REPO_NAME,
-        repoBranch: settings.BRANCH,
-        defaultDir: settings.DATASETS_DIR
-      })
-      AddDatasetView({el: elements.main, file})
-    },
-    '/organizations/(.+)/': function () {
-      const file = new FileModel({
-        user,
-        repoOwner: settings.REPO_OWNER,
-        repoName: settings.REPO_NAME,
-        repoBranch: settings.BRANCH,
-        filePath: settings.FILE_PATH
-      })
-      OrganizationView({el: elements.main, user, file})
-    },
-    '/organizations/': function () {
-      OrganizationsView({el: elements.main, user})
-    },
-    '/add-organization/': function () {
-      const file = new FileModel({
-        user,
-        repoOwner: settings.REPO_OWNER,
-        repoName: settings.REPO_NAME,
-        repoBranch: settings.BRANCH,
-        defaultDir: settings.ORGANIZATIONS_DIR
-      })
-      OrganizationView({el: elements.main, user, file})
-    },
-    '/admin/': function () {
-      const file = new FileModel({
-        user,
-        repoOwner: settings.REPO_OWNER,
-        repoName: settings.REPO_NAME,
-        repoBranch: settings.BRANCH,
-        filePath: '_config.yml'
-      })
-      AdminView({el: elements.main, file})
-    },
-    '/setup/': function () {
-      const file = new FileModel({
-        user,
-        repoOwner: settings.REPO_OWNER,
-        repoName: settings.REPO_NAME,
-        repoBranch: settings.BRANCH,
-        filePath: '_config.yml'
-      })
-      SetupView({
-        el: elements.main,
-        file,
-        user,
-        clientId: params.clientId,
-        proxyHost: params.proxyHost
-      })
-    }
-  },
-  route: function (pageUrl) {
-    for (let route in this.routes) {
-      if ((new RegExp(route)).test(pageUrl)) {
-        this.routes[route]()
-        break
-      }
-    }
-  }
+// Datasets List
+const datasetsListEls = queryByComponent('datasets-list')
+if (datasetsListEls.length) {
+  getDatasets().then((datasets) => {
+    datasetsListEls.each((index, el) => new DatasetsList({el: $(el), datasets, params}))
+  })
 }
 
-router.route(settings.PAGE_URL)
+// Categories Filter
+const categoriesFilterEls = queryByComponent('categories-filter')
+if (categoriesFilterEls.length) {
+  getDatasets().then((datasets) => {
+    categoriesFilterEls.each((index, el) => new CategoriesFilter({el: $(el), datasets, params}))
+  })
+}
+
+// Organizations Filter
+const organizationsFilterEls = queryByComponent('organizations-filter')
+if (organizationsFilterEls.length) {
+  getDatasets().then((datasets) => {
+    organizationsFilterEls.each((index, el) => new OrganizationsFilter({el: $(el), datasets, params}))
+  })
+}
+
+// Dataset Form
+const datasetFormEls = queryByComponent('dataset-form')
+if (datasetFormEls.length) {
+  const file = new FileModel({
+    user,
+    repoOwner: settings.REPO_OWNER,
+    repoName: settings.REPO_NAME,
+    repoBranch: settings.BRANCH,
+    defaultDir: settings.DATASETS_DIR
+  })
+  datasetFormEls.each((index, el) => new DatasetForm({el: $(el), file}))
+}
+
+// Show administrator elements if/when logged in and a collaborator
+const adminEls = [
+  queryByHook('add-dataset-btn')
+]
+if (user.username && user.isCollaborator) adminEls.forEach((el) => el.show())
+user.on('change', (changedUser) => {
+  if (changedUser.username && changedUser.isCollaborator) adminEls.forEach((el) => el.show())
+})
+
+let datasetsCache
+function getDatasets () {
+  datasetsCache = datasetsCache || $.getJSON(`${settings.BASE_URL}/datasets.json`)
+  return datasetsCache
+}

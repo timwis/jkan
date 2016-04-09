@@ -2,7 +2,7 @@
 {% assign dataset_fields = site.data.schemas[schema].dataset_fields %}
 {% assign resource_fields = site.data.schemas[schema].resource_fields %}
 {% assign dataset_system_fields = "title|organization|notes" | split: "|" %}
-<form data-hook="dataset-form">
+<form data-component="dataset-form">
   <input type="hidden" id="schema" name="schema" value="{{ schema }}">
 
   <fieldset>
@@ -22,7 +22,7 @@
     {% include dataset-form-resource.html %}
   {% endfor %}
   </div>
-  <button type="button" class="btn btn-default" data-hook="add-resource" title="Add resource"><i class="fa fa-plus"></i> Add Resource</button>
+  <button type="button" class="btn btn-default" data-hook="add-resource-btn" title="Add resource"><i class="fa fa-plus"></i> Add Resource</button>
 
   <fieldset>
     <h2>Additional Info</h2>

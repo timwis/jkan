@@ -35,6 +35,7 @@
     "js-cookie": "^2.1.0",
     "js-yaml": "^3.5.5",
     "lodash": "^4.6.1",
+    "notie": "github:timwis/notie#string-types",
     "select2": "^4.0.2"
   }
 }
