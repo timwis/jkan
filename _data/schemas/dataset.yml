@@ -1,0 +1,59 @@
+# To add fields, make a new schema file in this directory
+# and change the schema setting in _config.yml to its name
+dataset_fields:
+  - field_name: title
+    label: Titolo
+    datajson: title
+  - field_name: organization
+    label: Organizzazione
+    form_template: form/organization.html
+    datajson: publisher.name
+  - field_name: notes
+    label: Descrizione
+    form_template: form/textarea.html
+    datajson: description
+  - field_name: category
+    label: Categoria
+    form_template: form/category.html
+    display_template: display/category.html
+    datajson: category
+  - field_name: maintainer
+    label: Manutentore
+    datajson: contactPoint.fn
+  - field_name: maintainer_email
+    label: Email Manutentore
+    datajson: contactPoint.hasEmail
+  - field_name: license
+    label: license type
+  - field_name: pubdate
+    label: publication date
+
+resource_fields:
+  - field_name: name
+    label: Nome Risorsa
+    datajson: distribution.title
+  - field_name: url
+    label: URL
+    datajson: distribution.downloadURL
+  - field_name: format
+    label: Formato
+    datajson: distribution.format
+    form_template: form/dropdown.html
+    values:
+      - api
+      - csv
+      - json
+      - geojson
+      - html
+      - kml
+      - kmz
+      - shp
+      - xml
+
+organization_fields:
+  - field_name: title
+    label: Titolo
+  - field_name: description
+    label: Descrizione
+  - field_name: logo
+    label: Logo

@@ -12,4 +12,6 @@ category:
   - Meteo
 maintainer: iltempe
 maintainer_email: mtempestini@gmail.com
+license: CC BY 4.0
+pubdate: 09/04/2016
 ---

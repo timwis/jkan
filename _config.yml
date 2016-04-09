@@ -12,7 +12,7 @@ facebook-page: https://www.facebook.com/Opendata-Gente-di-Prato-996274160459781/
 twitter: https://twitter.com/odgentediprato
 
 # Dataset schema
-schema: default
+schema: dataset
 
 # Categories
 category_list:
