@@ -2,6 +2,19 @@
 
 Add this file to `_plugins` in the root of your Jekyll site.
 
+Add dependencies these dependencie to your sites Gemfile
+
+```
+gem 'json'
+gem 'hash-joiner'
+gem 'open-uri-cached'
+```
+
+# Run
+`bundle install`
+`jekyll build`
+`jekyll
+
 # Configure
 
 This plugin reads settings from the `_config.yml` file. Add settings as attributes or an array of attributes for multiple files.
