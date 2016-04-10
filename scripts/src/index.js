@@ -11,6 +11,7 @@ import DatasetsList from './components/datasets-list'
 import CategoriesFilter from './components/categories-filter'
 import OrganizationsFilter from './components/organizations-filter'
 import DatasetForm from './components/dataset-form'
+import DatasetDisplay from './components/dataset-display'
 import ViewSwitcher from './components/view-switcher'
 import {queryByComponent, queryByHook, setParams} from './util'
 
@@ -74,6 +75,10 @@ if (datasetFormEls.length) {
     new DatasetForm({el: $el, file})
   })
 }
+
+// Dataset Display
+const datasetDisplayEls = queryByComponent('dataset-display')
+datasetDisplayEls.each((index, el) => new DatasetDisplay({el: $(el)}))
 
 // View Switcher
 const viewSwitcherEls = queryByComponent('view-switcher')
