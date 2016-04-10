@@ -34,12 +34,8 @@ dataset {
 }
 
 /* Hidden from guests */
-.add-dataset-btn,
-.edit-dataset-btn,
-.add-organization-btn,
-.edit-organization-btn,
-.admin-link-list-item,
-.user-issue {
+.user-issue,
+.admin-only {
   display: none;
 }
 

@@ -8,7 +8,7 @@ export default State.extend({
     repoName: 'string',
     repoBranch: 'string',
     filePath: 'string',
-    pageUrl: 'string'
+    renderPath: 'string'
   },
   session: {
     user: 'state'

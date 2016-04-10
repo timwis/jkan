@@ -2,10 +2,14 @@
 {% assign dataset_fields = site.data.schemas[schema].dataset_fields %}
 {% assign resource_fields = site.data.schemas[schema].resource_fields %}
 {% assign dataset_system_fields = "title|organization|notes" | split: "|" %}
-<form data-component="dataset-form"{% if include.dataset %}
-  data-file-path="{{ include.dataset.path }}"
-  data-page-url="{{ include.dataset.url }}"
-{% endif %}>
+{% assign datasets = site.collections | where:"label","datasets" | first %}
+<form data-component="form dataset-form"
+  data-file-dir="{{ datasets.relative_directory }}"
+  data-render-dir="datasets"
+  {% if include.dataset %}
+    data-file-path="{{ include.dataset.path }}"
+    data-render-path="{{ include.dataset.url }}"
+  {% endif %}>
   <input type="hidden" id="schema" name="schema" value="{{ schema }}">
 
   <fieldset>
@@ -43,7 +47,9 @@
 
   <button type="submit" class="btn btn-primary">Submit</button>
   {% if include.dataset %}
-    <button class="btn btn-danger" data-hook="delete-dataset-btn"><i class="fa fa-trash"></i> Delete dataset</button>
+    <button class="btn btn-danger" data-component="delete-page-button" data-file-path="{{ include.dataset.path }}">
+      <i class="fa fa-trash"></i> Delete dataset
+    </button>
   {% endif %}
 </form>
 
