@@ -1,3 +1,4 @@
+/*eslint no-new:0*/
 /* global settings */
 import $ from 'jquery'
 import 'jquery-deparam'
@@ -10,6 +11,7 @@ import DatasetsList from './components/datasets-list'
 import CategoriesFilter from './components/categories-filter'
 import OrganizationsFilter from './components/organizations-filter'
 import DatasetForm from './components/dataset-form'
+import ViewSwitcher from './components/view-switcher'
 import {queryByComponent, queryByHook, setParams} from './util'
 
 const params = $.deparam(window.location.search.substr(1))
@@ -59,19 +61,28 @@ if (organizationsFilterEls.length) {
 // Dataset Form
 const datasetFormEls = queryByComponent('dataset-form')
 if (datasetFormEls.length) {
-  const file = new FileModel({
-    user,
-    repoOwner: settings.REPO_OWNER,
-    repoName: settings.REPO_NAME,
-    repoBranch: settings.BRANCH,
-    defaultDir: settings.DATASETS_DIR
+  datasetFormEls.each((index, el) => {
+    const $el = $(el)
+    const file = new FileModel({
+      user,
+      repoOwner: settings.REPO_OWNER,
+      repoName: settings.REPO_NAME,
+      repoBranch: settings.BRANCH,
+      filePath: $el.data('file-path'),
+      pageUrl: $el.data('page-url')
+    })
+    new DatasetForm({el: $el, file})
   })
-  datasetFormEls.each((index, el) => new DatasetForm({el: $(el), file}))
 }
+
+// View Switcher
+const viewSwitcherEls = queryByComponent('view-switcher')
+viewSwitcherEls.each((index, el) => new ViewSwitcher({el: $(el), params}))
 
 // Show administrator elements if/when logged in and a collaborator
 const adminEls = [
-  queryByHook('add-dataset-btn')
+  queryByHook('add-dataset-btn'),
+  queryByHook('edit-dataset-btn')
 ]
 if (user.username && user.isCollaborator) adminEls.forEach((el) => el.show())
 user.on('change', (changedUser) => {

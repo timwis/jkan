@@ -44,7 +44,6 @@
   var settings = {
     BASE_URL: {{ site.baseurl | jsonify }},
     PAGE_URL: {{ page.url | jsonify }},
-    FILE_PATH: {{ page.path | jsonify }},
     DATASETS_DIR: {{ datasets.relative_directory | jsonify }},
     ORGANIZATIONS_DIR: {{ organizations.relative_directory | jsonify }},
     BRANCH: {% if site.github.is_user_page %}"master"{% else %}"gh-pages"{% endif %},

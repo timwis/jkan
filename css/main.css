@@ -65,3 +65,7 @@ dataset {
 .user-issue {
   color: red;
 }
+
+[data-component~=view-switcher] [data-hook~=view] {
+  display: none;
+}
