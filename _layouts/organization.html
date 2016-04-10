@@ -18,8 +18,11 @@ layout: default
         <a href="?view=edit" class="pull-right btn btn-default admin-only">Edit</a>
       </h1>
       <p>{{ page.description }}</p>
-      {% assign dataset_count = site.datasets | where: "organization", page.title | size %}
-      <a href="{{ site.baseurl }}/datasets/?organization={{ page.slug }}">{{ dataset_count }} datasets</a>
+      <div data-component="datasets-list" data-organization="{{ page.slug }}">
+        <h3 class="datasets-count" data-hook="datasets-count"></h3>
+        <input type="text" data-hook="search-query" placeholder="Search..." class="form-control">
+        <div data-hook="datasets-items"></div>
+      </div>
     </div>
   </div>
 

@@ -1,4 +1,16 @@
-import {pick, filter} from 'lodash'
+/**
+ * Usage:
+ * <div data-component="datasets-list">
+ *   <h3 class="datasets-count" data-hook="datasets-count"></h3>
+ *   <input type="text" data-hook="search-query" placeholder="Search..." class="form-control">
+ *   <div data-hook="datasets-items"></div>
+ * </div>
+ *
+ * Optionally, add filters to the component element such as
+ *   data-organization="sample-department"
+ *   data-category="education"
+ */
+import {pick, defaults, filter} from 'lodash'
 
 import TmplDatasetItem from '../templates/dataset-item'
 import {queryByHook, setContent, createDatasetFilters} from '../util'
@@ -12,7 +24,9 @@ export default class {
     }
 
     // Filter datasets and render in items container
-    const filters = createDatasetFilters(pick(opts.params, ['organization', 'category']))
+    const paramFilters = pick(opts.params, ['organization', 'category'])
+    const attributeFilters = pick(opts.el.data(), ['organization', 'category'])
+    const filters = createDatasetFilters(defaults(paramFilters, attributeFilters))
     const filteredDatasets = filter(opts.datasets, filters)
     const datasetsMarkup = filteredDatasets.map(TmplDatasetItem)
     setContent(elements.datasetsItems, datasetsMarkup)
