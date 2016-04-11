@@ -7,6 +7,7 @@
  *   data-render-path="/datasets/foo/"
  */
 /* global settings */
+import jsyaml from 'js-yaml'
 import notie from 'notie'
 import 'jquery-serializejson'
 
@@ -26,7 +27,7 @@ export default class {
     const fileDir = opts.el.data('file-dir')
     const renderDir = opts.el.data('render-dir')
 
-    opts.el.on('submit', function (e) {
+    opts.el.on('submit', (e) => {
       e.preventDefault()
       const formData = opts.el.serializeJSON({useIntKeysAsArrayIndex: true})
       let commitMsg
@@ -43,18 +44,21 @@ export default class {
         commitMsg = `Created ${file.fileName}` // computed by file model when filePath is set
       }
 
-      const yaml = file.formatFrontMatter(formData)
+      const yaml = this._formatData(formData)
       file.save(yaml, commitMsg)
       .then((response) => {
         const commitUrl = response.commit.html_url
-        notie.alert('success', `
-          This page has been <a href="${commitUrl}">saved</a> and will be
-          available momentarily at <a href="${settings.BASE_URL}${file.renderPath}">${file.renderPath}</a>.
-        `)
+        let successMsg = `This page has been <a href="${commitUrl}">saved</a>`
+        if (file.renderPath) successMsg += `and will be available momentarily at <a href="${settings.BASE_URL}${file.renderPath}">${file.renderPath}</a>.`
+        notie.alert('success', successMsg)
       }).catch((msg) => {
         notie.alert('error', 'There was an error saving the page')
         console.error(msg)
       })
     })
+  }
+
+  _formatData (formData) {
+    return `---\n${jsyaml.safeDump(formData).trim()}\n---`
   }
 }

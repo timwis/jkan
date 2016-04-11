@@ -56,12 +56,6 @@ export default State.extend({
       })
     })
   },
-  formatYaml: function (data) {
-    return jsyaml.safeDump(data)
-  },
-  formatFrontMatter: function (data) {
-    return `---\n${this.formatYaml(data).trim()}\n---`
-  },
   updateYamlString: function (yamlString, updateObject) {
     for (let key in updateObject) {
       const regex = new RegExp(`^( *${key}: +?).*`, 'm')

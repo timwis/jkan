@@ -69,7 +69,7 @@ permalink: /admin/
   <div role="tabpanel" class="tab-pane" id="categories">
     <h2>Categories</h2>
     {% assign category_fields = site.data.schemas[site[schema]].category_fields %}
-    <form data-component="form editable-list" data-file-path="_data/categories.yml" data-item-label="category">
+    <form data-component="categories-form editable-list" data-file-path="_data/categories.yml" data-item-label="category">
       <div data-hook="items">
         {% for category in site.data.categories %}
           {% include admin-form-category.html %}

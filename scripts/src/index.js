@@ -12,6 +12,7 @@ import OrganizationsFilter from './components/organizations-filter'
 import Form from './components/form'
 import DatasetForm from './components/dataset-form'
 import AdminForm from './components/admin-form'
+import CategoriesForm from './components/categories-form'
 import DatasetDisplay from './components/dataset-display'
 import DeletePageButton from './components/delete-page-button'
 import EditableList from './components/editable-list'
@@ -47,6 +48,7 @@ const components = [
   {tag: 'form', class: Form},
   {tag: 'dataset-form', class: DatasetForm},
   {tag: 'admin-form', class: AdminForm},
+  {tag: 'categories-form', class: CategoriesForm},
   {tag: 'dataset-display', class: DatasetDisplay},
   {tag: 'delete-page-button', class: DeletePageButton},
   {tag: 'editable-list', class: EditableList},
