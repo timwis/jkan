@@ -15,7 +15,8 @@ out or give feedback.
 [Demo site](https://demo.jkan.io)
 
 ## Installation
-See [Get Started](https://jkan.io/#get-started) on [jkan.io](https://jkan.io)
+See [Get Started](https://jkan.io/#get-started) on [jkan.io](https://jkan.io) for an installation wizard,
+or follow the [manual installation](https://github.com/timwis/jkan/wiki/Manual-Installation) instructions yourself.
 
 For configuration details, see the [wiki](https://github.com/timwis/jkan/wiki)
 
