@@ -14,6 +14,7 @@ import DatasetForm from './components/dataset-form'
 import AdminForm from './components/admin-form'
 import DatasetDisplay from './components/dataset-display'
 import DeletePageButton from './components/delete-page-button'
+import EditableList from './components/editable-list'
 import ViewSwitcher from './components/view-switcher'
 import {queryByComponent, setParams} from './util'
 
@@ -48,6 +49,7 @@ const components = [
   {tag: 'admin-form', class: AdminForm},
   {tag: 'dataset-display', class: DatasetDisplay},
   {tag: 'delete-page-button', class: DeletePageButton},
+  {tag: 'editable-list', class: EditableList},
   {tag: 'view-switcher', class: ViewSwitcher},
   {tag: 'datasets-list', class: DatasetsList, usesDatasets: true},
   {tag: 'categories-filter', class: CategoriesFilter, usesDatasets: true},

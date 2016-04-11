@@ -8,6 +8,7 @@ permalink: /admin/
 <ul class="nav nav-tabs" role="tablist">
   <li role="presentation" class="active"><a href="#general" aria-controls="general" role="tab" data-toggle="tab">General</a></li>
   <li role="presentation"><a href="#authentication" aria-controls="authentication" role="tab" data-toggle="tab">Authentication</a></li>
+  <li role="presentation"><a href="#categories" aria-controls="categories" role="tab" data-toggle="tab">Categories</a></li>
   <li role="presentation"><a href="#maintenance" aria-controls="maintenance" role="tab" data-toggle="tab">Maintenance</a></li>
 </ul>
 
@@ -62,6 +63,27 @@ permalink: /admin/
 
       </fieldset>
 
+    </form>
+  </div>
+
+  <div role="tabpanel" class="tab-pane" id="categories">
+    <h2>Categories</h2>
+    {% assign category_fields = site.data.schemas[site[schema]].category_fields %}
+    <form data-component="form editable-list" data-file-path="_data/categories.yml" data-item-label="category">
+      <div data-hook="items">
+        {% for category in site.data.categories %}
+          {% include admin-form-category.html %}
+        {% endfor %}
+      </div>
+      <div class="form-group">
+        <button type="button" class="btn btn-default" data-hook="add-item-btn"><i class="fa fa-plus"></i> Add Category</button>
+      </div>
+
+      <button type="submit" class="btn btn-primary">Submit</button>
+
+      <script type="text/template" data-hook="item-template">
+      {% include admin-form-category.html %}
+      </script>
     </form>
   </div>
 

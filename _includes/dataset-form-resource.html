@@ -1,5 +1,5 @@
-<div class="resource-row" data-hook="resource-row">
-  <fieldset class="resource-fieldset">
+<div class="editable-list-item" data-hook="item">
+  <fieldset>
   {% for field in resource_fields %}
     {% assign template = field.form_template | default: "form/text.html" %}
     {% capture field_name %}resources[][{{ field.field_name }}]{% endcapture %}
@@ -7,5 +7,5 @@
     {% include {{ template }} field=field field_name=field_name value=value %}
   {% endfor %}
   </fieldset>
-  <button type="button" class="btn btn-danger btn-sm" data-hook="remove-resource-btn" title="Remove resource" data-toggle="tooltip"><i class="fa fa-minus"></i> Remove Resource</button>
+  <button type="button" class="btn btn-danger btn-sm" data-hook="remove-item-btn"><i class="fa fa-minus"></i> Remove Resource</button>
 </div>

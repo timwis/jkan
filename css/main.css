@@ -39,7 +39,7 @@ dataset {
   display: none;
 }
 
-.resource-row {
+.editable-list-item {
   padding: 19px;
   margin-bottom: 20px;
   background-color: #f5f5f5;
