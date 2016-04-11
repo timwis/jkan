@@ -13,6 +13,8 @@ GEM
     ethon (0.8.1)
       ffi (>= 1.3.0)
     ffi (1.9.10)
+    hash-joiner (0.0.7)
+      safe_yaml
     html-proofer (2.6.4)
       activesupport (~> 4.2)
       addressable (~> 2.3)
@@ -47,6 +49,7 @@ GEM
     minitest (5.8.4)
     nokogiri (1.6.7.2)
       mini_portile2 (~> 2.0.0.rc2)
+    open-uri-cached (0.0.5)
     parallel (1.6.2)
     rb-fsevent (0.9.7)
     rb-inotify (0.9.7)
@@ -65,8 +68,11 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  hash-joiner
   html-proofer
   jekyll
+  json
+  open-uri-cached
 
 BUNDLED WITH
    1.11.2
