@@ -4,7 +4,7 @@ baseurl: http://portaldata.kpu-surabayakota.go.id/
 
 # Authentication
 github_client_id: b3e49a2f4d893e6d8282
-gatekeeper_host: https://portaldatakpu.herokuapp.com/
+gatekeeper_host: https://portaldatakpu.herokuapp.com
 
 # Categories
 category_list:
