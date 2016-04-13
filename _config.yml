@@ -3,8 +3,8 @@ description: Open data portal, powered by Jekyll.
 baseurl: http://portaldata.kpu-surabayakota.go.id/
 
 # Authentication
-github_client_id: 
-gatekeeper_host: 
+github_client_id: b3e49a2f4d893e6d8282
+gatekeeper_host: https://portaldatakpu.herokuapp.com/
 
 # Categories
 category_list:
