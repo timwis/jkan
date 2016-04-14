@@ -1,7 +1,7 @@
 ---
 schema: opendataschema
 title: WiFi Free
-organization: opendatanetwork
+organization: Opendatanetwork
 notes: Aree con copertura Wi-Fi ad accesso libero nel Comune di Prato Aggiornati mensilmente.
 resources:
   - name: WifiFree

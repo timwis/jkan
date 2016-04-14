@@ -1,7 +1,7 @@
 ---
 schema: opendataschema
 title: Luoghi in Lingua Cinese
-organization: openstreetmap
+organization: Openstreetmap
 notes: Tutti i luoghi di Prato che hanno traduzione in lingua cinese con ideogrammi su Openstreetmap. Aggiornati mensilmente.
 resources:
   - name: 'Luoghi di Prato con tag [name:zh]'

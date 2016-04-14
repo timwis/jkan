@@ -1,7 +1,7 @@
 ---
 schema: opendataschema
 title: "Bollettino della qualità dell'aria"
-organization: arpat
+organization: ARPAT
 notes: 'Il bollettino esce nei giorni feriali, alle 13 dal lunedì al venerdì, i dati di PM10 sono invece pubblicati tutti i giorni. I dati pubblicati hanno una validazionedi primo livello pertanto sono suscettibili di variazioni in seguito a ulteriori step della procedura di validazione.Per ogni comune della Toscana è possibile filtrare le stazioni della zona omogenea corrispondente.'
 resources:
   - name: "Feed RSS - Bollettino della qualità dell'aria"
