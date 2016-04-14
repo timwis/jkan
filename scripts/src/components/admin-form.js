@@ -14,12 +14,12 @@ export default class {
       filePath: opts.el.data('file-path')
     })
 
-    opts.el.on('submit', function (e) {
+    opts.el.on('submit', (e) => {
       const formData = opts.el.serializeJSON()
 
       file.read()
       .then((contents) => {
-        const newContents = file.updateYamlString(contents, formData)
+        const newContents = this._updateYamlString(contents, formData)
         file.save(newContents)
         .then((response) => {
           const commitUrl = response.commit.html_url
@@ -35,5 +35,18 @@ export default class {
 
       e.preventDefault()
     })
+  }
+
+  _updateYamlString (yamlString, updateObject) {
+    for (let key in updateObject) {
+      const regex = new RegExp(`^( *${key}: +?).*`, 'm')
+      const match = yamlString.match(regex)
+      if (match) {
+        yamlString = yamlString.replace(regex, match[1] + updateObject[key])
+      } else {
+        yamlString += `\n${key}: ${updateObject[key]}`
+      }
+    }
+    return yamlString
   }
 }

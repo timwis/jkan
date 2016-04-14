@@ -1,6 +1,5 @@
 import State from 'ampersand-state'
 import Github from 'github-api'
-import jsyaml from 'js-yaml'
 
 export default State.extend({
   props: {
@@ -55,23 +54,5 @@ export default State.extend({
         else resolve(data)
       })
     })
-  },
-  formatYaml: function (data) {
-    return jsyaml.safeDump(data)
-  },
-  formatFrontMatter: function (data) {
-    return `---\n${this.formatYaml(data).trim()}\n---`
-  },
-  updateYamlString: function (yamlString, updateObject) {
-    for (let key in updateObject) {
-      const regex = new RegExp(`^( *${key}: +?).*`, 'm')
-      const match = yamlString.match(regex)
-      if (match) {
-        yamlString = yamlString.replace(regex, match[1] + updateObject[key])
-      } else {
-        yamlString += `\n${key}: ${updateObject[key]}`
-      }
-    }
-    return yamlString
   }
 })
