@@ -21,7 +21,7 @@ permalink: /organizations/
     <div class="media-body">
       <h4 class="media-heading"><a href="{{ site.baseurl }}{{ organization.url }}">{{ organization.title }}</a></h4>
       <p>{{ organization.description }}</p>
-      <p><a href="{{ site.baseurl }}/datasets/?organization={{ organization.slug }}">{{ dataset_count }} datasets</a></p>
+      <p><a href="{{ site.baseurl }}/datasets/?organization={{ organization.title }}">{{ dataset_count }} datasets</a></p>
     </div>
   </div>
 {% endfor %}
