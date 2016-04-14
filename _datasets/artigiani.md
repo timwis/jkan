@@ -1,7 +1,7 @@
 ---
 schema: opendataschema
 title: Artigiani
-organization: Openstreetmap
+organization: openstreetmap
 notes: 'Tutti gli artigiani di Prato referenziati tramite il tag "craft" su Openstreetmap. Puoi contribuire ad aggiornare questo dataset usando Openstreetmap ed il tag "craft". Aggiornati mensilmente.'
 resources:
   - name: Artigiani

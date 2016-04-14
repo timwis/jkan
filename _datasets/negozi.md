@@ -1,7 +1,7 @@
 ---
 schema: opendataschema
 title: Negozi
-organization: Openstreetmap
+organization: openstreetmap
 notes: 'Tutti i negozi di Prato referenziati tramite il tag "shop" su Openstreetmap. Puoi contribuire ad aggiornare questo dataset usando Openstreetmap ed il tag "shop". Aggiornati mensilmente.'
 resources:
   - name: Negozi
