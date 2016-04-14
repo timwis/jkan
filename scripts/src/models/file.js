@@ -8,7 +8,7 @@ export default State.extend({
     repoName: 'string',
     repoBranch: 'string',
     filePath: 'string',
-    defaultDir: 'string'
+    renderPath: 'string'
   },
   session: {
     user: 'state'
@@ -38,10 +38,6 @@ export default State.extend({
         else resolve(contents)
       })
     })
-  },
-  create: function (fileName, contents) {
-    this.filePath = (this.defaultDir ? this.defaultDir + '/' : '') + fileName
-    return this.save(contents, `Created ${fileName}`)
   },
   save: function (contents, commitMsg) {
     return new Promise((resolve, reject) => {

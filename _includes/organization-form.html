@@ -1,8 +1,14 @@
 {% assign schema = page.schema | default: site.schema %}
 {% assign organization_fields = site.data.schemas[schema].organization_fields %}
 {% assign organization_system_fields = "title|description|logo" | split: "|" %}
-
-<form data-hook="organization-form">
+{% assign organizations = site.collections | where: "label", "organizations" | first %}
+<form data-component="form"
+  data-file-dir="{{ organizations.relative_directory }}"
+  data-render-dir="organizations"
+  {% if include.organization %}
+    data-file-path="{{ include.organization.path }}"
+    data-render-path="{{ include.organization.url }}"
+  {% endif %}>
   <input type="hidden" id="schema" name="schema" value="{{ schema }}">
 
   <fieldset>
@@ -16,6 +22,8 @@
 
   <button type="submit" class="btn btn-primary">Submit</button>
   {% if include.organization %}
-    <button class="btn btn-danger" data-hook="delete-button"><i class="fa fa-trash"></i> Delete organization</button>
+    <button class="btn btn-danger" data-component="delete-page-button" data-file-path="{{ include.organization.path }}">
+      <i class="fa fa-trash"></i> Delete organization
+    </button>
   {% endif %}
 </form>
