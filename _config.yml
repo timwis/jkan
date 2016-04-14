@@ -8,21 +8,68 @@ gatekeeper_host: https://portaldatakpu.herokuapp.com
 
 # Categories
 category_list:
-  - Arts / Culture / History
-  - Budget / Finance
-  - Economy
-  - Education
-  - Elections / Politics
-  - Environment
-  - Food
-  - Health / Human Services
-  - Parks / Recreation
-  - Planning / Zoning
-  - Public Safety
-  - Real Estate / Land Records
-  - Transportation
-  - Uncategorized
-
+  - Agenda DPR
+  - Ambang Batas
+  - Anggaran PILKADA
+  - Badan ADHOC
+  - Berita PILKADA Surabaya
+  - Berita PILKADA
+  - Berita
+  - C1 PILKADA 2015
+  - CALEG Berdasarkan DAPIL
+  - CALEG Berdasarkan Jenis Kelamin
+  - CALEG Berdasarkan Usia
+  - Calon Presiden
+  - Calon Terpilih DPD
+  - Calon
+  - Candidate PILKADA Surabaya
+  - DAPIL
+  - Data Kekerasan
+  - DIPA
+  - DPR
+  - DPRD
+  - DPT DPK
+  - FAQ PILKADA
+  - FAQ Presiden
+  - Formulir
+  - Hasil PEMILU 2014
+  - IDI
+  - INCUMBENTS
+  - Info Dana Kampanye
+  - Laporan Pelanggaran
+  - Latar Belakang CALEG
+  - Partai
+  - Pemantauan PILKADA 2015
+  - Pemilih Data
+  - Pendidikan
+  - Pengguna Hak Pilih
+  - Peraturan
+  - Perolehan Kursi CALEG
+  - Perolehan Suara CALEG
+  - Perolehan Suara PEMILU
+  - Perolehan Suara DPD Surabaya 2004
+  - Perolehan Suara Partai
+  - PILKADA 2015 Data Calon
+  - Potret PEMILU Kota Banda Aceh
+  - Produk Hukum
+  - Proporsi Kursi Perempuan
+  - Provinsi
+  - Realisasi Anggaran PEEMILU 2014
+  - Rekam Jejak Media
+  - Rekap PILPRES
+  - Rekapitulasi C1 PILKADA Surabaya 2015
+  - Results
+  - Sengketa PILKADA
+  - Stamps
+  - Struktur KPU
+  - Surabaya Angka Partisipasi Pemilih
+  - Surabaya DPT
+  - Surabaya TPS
+  - Tahapan PILKADA
+  - Tingkat Pendidikan CALEG
+  - Track Record Buruk
+  - Web KPU
+  - Webnews
 # Link for the "fork me on github" banner. Remove this line to suppress banner.
 # fork_me_url: https://github.com/timwis/jkan
 
