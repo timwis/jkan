@@ -1,4 +1,4 @@
-<nav class="navbar navbar-default" data-hook="nav">
+<nav class="navbar navbar-default" data-component="navigation">
   <div class="container">
 
     <div class="navbar-header">
@@ -32,7 +32,7 @@
             <span class="caret"></span>
           </a>
           <ul class="dropdown-menu">
-            <li class="admin-link-list-item" data-hook="admin-link-list-item"><a href="{{ site.baseurl }}/admin/">Administration</a></li>
+            <li class="admin-only" data-hook="admin-link-list-item"><a href="{{ site.baseurl }}/admin/">Administration</a></li>
             <li><a href="#" data-hook="logout-link">Logout</a></li>
           </ul>
         </li>

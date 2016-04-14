@@ -57,3 +57,7 @@ organization_fields:
     label: Descrizione
   - field_name: logo
     label: Logo
+
+category_fields:
+  - field_name: name
+    label: Name

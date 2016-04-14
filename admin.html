@@ -6,50 +6,90 @@ permalink: /admin/
 {% include breadcrumbs.html %}
 
 
-<div class="alert alert-success" role="alert" data-hook="alert-success" style="display: none;">
-  I settaggi sono stati <a href="#" data-hook="commit-url">salvaggi</a> e il sito è in aggiornamento.
+<ul class="nav nav-tabs" role="tablist">
+  <li role="presentation" class="active"><a href="#general" aria-controls="general" role="tab" data-toggle="tab">Generale</a></li>
+  <li role="presentation"><a href="#authentication" aria-controls="authentication" role="tab" data-toggle="tab">Autenticazione</a></li>
+  <li role="presentation"><a href="#categories" aria-controls="categories" role="tab" data-toggle="tab">Categorie</a></li>
+  <li role="presentation"><a href="#maintenance" aria-controls="maintenance" role="tab" data-toggle="tab">Manutenzione</a></li>
+</ul>
+
+<div class="tab-content">
+  <div role="tabpanel" class="tab-pane active" id="general">
+    <h2>Generale</h2>
+    <form data-component="admin-form" data-file-path="_config.yml">
+
+      <fieldset>
+
+        <div class="form-group">
+          <label for="title">Titolo del portale</label>
+          <input type="text" class="form-control" id="title" name="title" value="{{ site.title }}">
+        </div>
+
+        <div class="form-group">
+          <label for="description">Descrizione del portale</label>
+          <textarea class="form-control" id="description" name="description">{{ site.description }}</textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="baseurl">Base URL</label>
+          <input type="text" class="form-control" id="baseurl" name="baseurl" value="{{ site.baseurl }}" placeholder="ie. /JKAN">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+
+
+      </fieldset>
+
+    </form>
+  </div>
+
+  <div role="tabpanel" class="tab-pane" id="authentication">
+    <h2>Autenticazione</h2>
+    <form data-component="admin-form" data-file-path="_config.yml">
+
+      <fieldset>
+
+        <div class="form-group">
+          <label for="github_client_id">GitHub Client ID</label>
+          <input type="text" class="form-control" id="github_client_id" name="github_client_id" value="{{ site.github_client_id }}" placeholder="ie. 9098sdf876sdfs768az">
+          <p class="help-block"><a href="https://github.com/settings/applications/new">Registra un applicazione Github</a> per prendere il Client ID</p>
+        </div>
+
+        <div class="form-group">
+          <label for="gatekeeper_host">Gatekeeper Host</label>
+          <input type="text" class="form-control" id="gatekeeper_host" name="gatekeeper_host" value="{{ site.gatekeeper_host }}" placeholder="ie. http://jkan-gatekeeper.herokuapp.com">
+          <p class="help-block">Autenticazione sul server su cui fai deploy</p>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+
+      </fieldset>
+
+    </form>
+  </div>
+
+  <div role="tabpanel" class="tab-pane" id="categories">
+    <h2>Categorie</h2>
+    {% assign category_fields = site.data.schemas[site[schema]].category_fields %}
+    <form data-component="categories-form editable-list" data-file-path="_data/categories.yml" data-item-label="category">
+      <div data-hook="items">
+        {% for category in site.data.categories %}
+          {% include admin-form-category.html %}
+        {% endfor %}
+      </div>
+      <div class="form-group">
+        <button type="button" class="btn btn-default" data-hook="add-item-btn"><i class="fa fa-plus"></i> Aggiungi Categoria</button>
+      </div>
+
+      <button type="submit" class="btn btn-primary">Submit</button>
+
+      <script type="text/template" data-hook="item-template">
+      {% include admin-form-category.html %}
+      </script>
+    </form>
+  </div>
+
+  <div role="tabpanel" class="tab-pane" id="maintenance">
+    <h2>Manutenzione</h2>
+    <a href="https://github.com/{{ site.github.owner_name }}/{{ site.github.project_title }}/compare/gh-pages...timwis:gh-pages?expand=1" class="btn btn-info">Controlla per aggiornamenti</a>
+  </div>
 </div>
-
-<div class="alert alert-danger" role="alert" data-hook="alert-error" style="display: none;">
-C'è stato un errore nel salvataggio della pagina
-</div>
-
-<h1>Amministrazione</h1>
-<form data-hook="admin-form">
-
-  <fieldset>
-
-    <div class="form-group">
-      <label for="title">Titolo</label>
-      <input type="text" class="form-control" id="title" name="title" value="{{ site.title }}">
-    </div>
-
-    <div class="form-group">
-      <label for="description">Descrizione</label>
-      <textarea class="form-control" id="description" name="description">{{ site.description }}</textarea>
-    </div>
-
-    <div class="form-group">
-      <label for="baseurl">Base URL</label>
-      <input type="text" class="form-control" id="baseurl" name="baseurl" value="{{ site.baseurl }}" placeholder="ie. /JKAN">
-    </div>
-
-    <h3>Autenticazione</h3>
-
-    <div class="form-group">
-      <label for="github_client_id">GitHub Client ID</label>
-      <input type="text" class="form-control" id="github_client_id" name="github_client_id" value="{{ site.github_client_id }}" placeholder="ie. 9098sdf876sdfs768az">
-      <p class="help-block"><a href="https://github.com/settings/applications/new">Registra un'applicazione Github </a> per avere un Client ID</p>
-    </div>
-
-    <div class="form-group">
-      <label for="gatekeeper_host">Gatekeeper Host</label>
-      <input type="text" class="form-control" id="gatekeeper_host" name="gatekeeper_host" value="{{ site.gatekeeper_host }}" placeholder="ie. http://jkan-gatekeeper.herokuapp.com">
-      <p class="help-block">Autenticazione tramite server su cui ha fatto il deploy</p>
-    </div>
-
-    <button type="submit" class="btn btn-primary">Submit</button>
-
-  </fieldset>
-
-</form>

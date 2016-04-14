@@ -14,37 +14,6 @@ twitter: https://twitter.com/odgentediprato
 # Dataset schema
 schema: opendataschema
 
-# Categories
-category_list:
-  - Arte
-  - Storia
-  - Cultura
-  - Inclusione
-  - Finanza
-  - Economia
-  - Educazione
-  - Elezioni
-  - Politica
-  - Ambiente
-  - Meteo
-  - Aria
-  - Acqua
-  - Terra
-  - Cibo
-  - Salute
-  - Servizi Umanitari
-  - Parchi
-  - Svago
-  - Pianificazione / Territorio
-  - Sicurezza Pubblica
-  - Immobili
-  - Trasporti
-  - Autobus
-  - Biciclette
-  - Car Sharing
-  - Infrastrutture
-  - Senza categoria
-
 # Link for the "fork me on github" banner. Remove this line to suppress banner.
 fork_me_url: https://github.com/iltempe/opendatagentediprato
 

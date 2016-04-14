@@ -5,7 +5,8 @@ permalink: /organizations/
 ---
 {% include breadcrumbs.html %}
 
-<a href="{{ site.baseurl }}/add-organization/" class="btn btn-default pull-right add-organization-btn" data-hook="add-btn"><i class="fa fa-plus"></i> Aggiungi Organizzazione</a>
+
+<a href="{{ site.baseurl }}/add-organization/" class="btn btn-default pull-right admin-only" data-hook="add-organization-btn"><i class="fa fa-plus"></i> Aggiungi Organizzazione</a>
 
 {% for organization in site.organizations %}
   {% assign dataset_count = site.datasets | where:"organization", organization.title | size %}

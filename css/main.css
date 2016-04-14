@@ -50,16 +50,12 @@ body {
 }
 
 /* Hidden from guests */
-.add-dataset-btn,
-.edit-dataset-btn,
-.add-organization-btn,
-.edit-organization-btn,
-.admin-link-list-item,
-.user-issue {
+.user-issue,
+.admin-only {
   display: none;
 }
 
-.resource-row {
+.editable-list-item {
   padding: 19px;
   margin-bottom: 20px;
   background-color: #f5f5f5;
@@ -80,4 +76,8 @@ body {
 
 .user-issue {
   color: red;
+}
+
+[data-component~=view-switcher] [data-hook~=view] {
+  display: none;
 }
