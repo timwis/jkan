@@ -17,7 +17,7 @@ layout: default
       <div class="col-sm-3" property="dct:publisher" resource="{{ organization_url }}">
         <div class="panel panel-default">
             <div class="panel-heading">
-              {% if organization.logo != "" %}
+              {% if organization.logo != empty %}
               <a href="{{ site.baseurl }}/datasets/?organization={{ organization.title | slugify }}" class="thumbnail"><img src="{{ organization.logo }}" alt="{{ organization.title }} logo"></a>
               {% endif %}
             </div>
