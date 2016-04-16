@@ -65,3 +65,27 @@ dataset {
 [data-component~=view-switcher] [data-hook~=view] {
   display: none;
 }
+
+.theme-gallery {
+  text-align: justify;
+}
+
+.theme-gallery:after {
+  display: inline-block;
+  width: 100%;
+  content: '';
+}
+
+.theme-gallery .panel {
+  display: inline-block;
+  max-width: 250px;
+  text-align: center;
+}
+
+.theme-gallery .panel img {
+  width: 100%;
+}
+
+.theme-gallery .panel-primary {
+  border-width: 5px;
+}

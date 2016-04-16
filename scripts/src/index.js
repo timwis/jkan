@@ -17,6 +17,7 @@ import DatasetDisplay from './components/dataset-display'
 import DeletePageButton from './components/delete-page-button'
 import EditableList from './components/editable-list'
 import ViewSwitcher from './components/view-switcher'
+import ThemeGallery from './components/theme-gallery'
 import {queryByComponent, setParams} from './util'
 
 const params = $.deparam(window.location.search.substr(1))
@@ -53,6 +54,7 @@ const components = [
   {tag: 'delete-page-button', class: DeletePageButton},
   {tag: 'editable-list', class: EditableList},
   {tag: 'view-switcher', class: ViewSwitcher},
+  {tag: 'theme-gallery', class: ThemeGallery},
   {tag: 'datasets-list', class: DatasetsList, usesDatasets: true},
   {tag: 'categories-filter', class: CategoriesFilter, usesDatasets: true},
   {tag: 'organizations-filter', class: OrganizationsFilter, usesDatasets: true}

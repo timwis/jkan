@@ -1,9 +1,10 @@
 /* global settings */
+import $ from 'jquery'
 import notie from 'notie'
 import 'jquery-serializejson'
 
 import FileModel from '../models/file'
-import {updateYamlString} from '../util'
+import {queryByHook, updateYamlString} from '../util'
 
 export default class {
   constructor (opts) {
@@ -15,12 +16,12 @@ export default class {
       filePath: opts.el.data('file-path')
     })
 
-    opts.el.on('submit', (e) => {
-      const formData = opts.el.serializeJSON()
-
+    const activateBtn = queryByHook('activate-btn')
+    activateBtn.on('click', (e) => {
+      const theme = $(e.currentTarget).data('theme')
       file.read()
       .then((contents) => {
-        const newContents = updateYamlString(contents, formData)
+        const newContents = updateYamlString(contents, {theme})
         file.save(newContents)
         .then((response) => {
           const commitUrl = response.commit.html_url
@@ -33,8 +34,6 @@ export default class {
           console.error(msg)
         })
       }).catch((err) => console.error(err))
-
-      e.preventDefault()
     })
   }
 }
