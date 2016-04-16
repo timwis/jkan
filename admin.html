@@ -93,7 +93,7 @@ permalink: /admin/
     <div class="theme-gallery" data-component="theme-gallery" data-file-path="_config.yml">
       {% for theme in site.data.themes %}
       <div class="panel {% if site.theme == theme.name %}panel-primary{% else %}panel-default{% endif %}">
-        {% if theme.logo and theme.logo != empty %}<img src="{{ theme.logo }}" alt="{{ theme.name }} logo">{% endif %}
+        {% if theme.logo and theme.logo != empty %}<img src="{{ site.baseurl }}{{ theme.logo }}" alt="{{ theme.name }} logo">{% endif %}
         <div class="panel-body">
           {% if site.theme == theme.name %}
             <button type="button" class="btn btn-default" disabled="disabled">Activated</button>
