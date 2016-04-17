@@ -26,6 +26,12 @@ permalink: /admin/
         </div>
 
         <div class="form-group">
+          <label for="greeting">Site Greeting</label>
+          <input type="text" class="form-control" id="greeting" name="greeting" value="{{ site.greeting }}">
+          <p class="help-block">Displayed on the homepage</p>
+        </div>
+
+        <div class="form-group">
           <label for="description">Site Description</label>
           <textarea class="form-control" id="description" name="description">{{ site.description }}</textarea>
         </div>

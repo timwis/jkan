@@ -7,9 +7,25 @@ layout: default
 {% endif %}
 
 <div class="jumbotron">
-  <h1>Welcome to {{ site.title }}</h1>
+  <h1>{{ site.greeting }}</h1>
   <p>
     {{ site.description }}
   </p>
   <p><a class="btn btn-primary btn-lg" href="{{ site.baseurl }}/datasets" role="button">Start browsing</a></p>
+</div>
+
+<h3>Browse by Category</h3>
+
+<div class="homepage-categories">
+{% for category in site.data.categories %}
+  {% if category.featured == true %}
+    {% capture logo_alt %}{{ category.name }}{% if category.logo_credit and category.logo_credit != empty %} logo by {{ category.logo_credit }}{% endif %}{% endcapture %}
+    <a href="{{ site.baseurl }}/datasets/?category={{ category.name | slugify }}" class="thumbnail" title="{{ logo_alt }}">
+      {% if category.logo and category.logo != empty %}
+        <img src="{{ site.baseurl }}{{ category.logo }}" alt="{{ logo_alt }}">
+      {% endif %}
+      {{ category.name }}
+    </a>
+  {% endif %}
+{% endfor %}
 </div>
