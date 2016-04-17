@@ -10,7 +10,9 @@ permalink: /admin/
   <li role="presentation" class="active"><a href="#general" aria-controls="general" role="tab" data-toggle="tab">Generale</a></li>
   <li role="presentation"><a href="#authentication" aria-controls="authentication" role="tab" data-toggle="tab">Autenticazione</a></li>
   <li role="presentation"><a href="#categories" aria-controls="categories" role="tab" data-toggle="tab">Categorie</a></li>
+  <li role="presentation"><a href="#theme" aria-controls="thtme" role="tab" data-toggle="tab">Tema</a></li>
   <li role="presentation"><a href="#maintenance" aria-controls="maintenance" role="tab" data-toggle="tab">Manutenzione</a></li>
+
 </ul>
 
 <div class="tab-content">
@@ -26,7 +28,14 @@ permalink: /admin/
         </div>
 
         <div class="form-group">
-          <label for="description">Descrizione del portale</label>
+
+          <label for="greeting">Titolo</label>
+          <input type="text" class="form-control" id="greeting" name="greeting" value="{{ site.greeting }}">
+          <p class="help-block">Visualizzato su HomePage</p>
+        </div>
+
+        <div class="form-group">
+          <label for="description">Descrizione Portale</label>
           <textarea class="form-control" id="description" name="description">{{ site.description }}</textarea>
         </div>
 
@@ -86,6 +95,25 @@ permalink: /admin/
       {% include admin-form-category.html %}
       </script>
     </form>
+  </div>
+
+  <div role="tabpanel" class="tab-pane" id="theme">
+    <h2>Theme</h2>
+    <div class="theme-gallery" data-component="theme-gallery" data-file-path="_config.yml">
+      {% for theme in site.data.themes %}
+      <div class="panel {% if site.theme == theme.name %}panel-primary{% else %}panel-default{% endif %}">
+        {% if theme.logo and theme.logo != empty %}<img src="{{ site.baseurl }}{{ theme.logo }}" alt="{{ theme.name }} logo">{% endif %}
+        <div class="panel-body">
+          {% if site.theme == theme.name %}
+            <button type="button" class="btn btn-default" disabled="disabled">Activated</button>
+          {% else %}
+            <button type="button" class="btn btn-default" data-hook="activate-btn" data-theme="{{ theme.name }}">Activate {{ theme.name }}</button>
+          {% endif %}
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+    Themes provided by <a href="https://bootswatch.com/">Bootswatch</a> via <a href="https://www.bootstrapcdn.com/">BootstrapCDN</a>.
   </div>
 
   <div role="tabpanel" class="tab-pane" id="maintenance">

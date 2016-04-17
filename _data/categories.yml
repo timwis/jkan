@@ -1,30 +1,100 @@
 - name: Arte
+  logo: /img/categories/arts-culture-history.svg
+  featured: true
 - name: Storia
+  logo: /img/categories/arts-culture-history.svg
+  featured: true
 - name: Cultura
+  logo: /img/categories/culture.png
+  featured: true
 - name: Inclusione
+  logo: /img/categories/inclusion.jpg
+  featured: true
 - name: Finanza
+  logo: /img/categories/budget-finance.svg
+  logo_credit: Renan Ferreira Santos from the Noun Project
+  featured: true
 - name: Economia
+  logo: /img/categories/economy.svg
+  logo_credit: Vectors Market from the Noun Project
+  featured: true
 - name: Educazione
+  logo: /img/categories/education.svg
+  logo_credit: Sergey Patutin from the Noun Project
+  featured: true
 - name: Elezioni
+  logo: /img/categories/elections-politics.svg
+  logo_credit: Jean Soo from the Noun Project
+  featured: true
 - name: Politica
+  logo: /img/categories/elections-politics.svg
+  logo_credit: Jean Soo from the Noun Project
+  featured: true
 - name: Ambiente
+  logo: /img/categories/environment.svg
+  featured: true
 - name: Meteo
+  logo: /img/categories/weather.svg
+  featured: true
 - name: Aria
+  logo: /img/categories/air.png
+  featured: true
 - name: Acqua
+  logo: /img/categories/water.png
+  featured: true
 - name: Terra
+  logo: /img/categories/planning-zoning.svg
+  featured: true
 - name: Cibo
+  logo: /img/categories/food.svg
+  logo_credit: Creative Stall from the Noun Project
+  featured: true
 - name: Salute
-- name: Servizi Umanitari
+  logo: /img/categories/health-human-services.svg
+  logo_credit: Timothy Miller from the Noun Project
+  featured: true
 - name: Parchi
+  logo: /img/categories/parks-recreation.svg
+  logo_credit: Pipe Rosas Licht from the Noun Project
+  featured: true
 - name: Svago
+  logo: /img/categories/freetime.png
+  logo_credit: Pipe Rosas Licht from the Noun Project
+  featured: true
 - name: Territorio
+  logo: /img/categories/planning-zoning.svg
+  featured: true
 - name: Sicurezza Pubblica
+  logo: /img/categories/public-safety.svg
+  logo_credit: Rohith M S from the Noun Project
+  featured: true
 - name: Immobili
+  logo: /img/categories/real-estate-land-records.svg
+  featured: true
 - name: Trasporti
+  logo: /img/categories/transportation.svg
+  logo_credit: Dmitry Baranovskiy from the Noun Project
+  featured: true
 - name: Autobus
+  logo: /img/categories/bus.png
+  featured: true
 - name: Automobili
+  logo: /img/categories/car.png
+  featured: true
 - name: Biciclette
+  logo: /img/categories/bike.png
+  featured: true
 - name: Car Sharing
+  logo: /img/categories/transportation.svg
+  logo_credit: Dmitry Baranovskiy from the Noun Project
+  featured: true
 - name: Infrastrutture
-- name: Senza Categoria
+  logo: /img/categories/infrastracture.svg
+  featured: true
 - name: Fiumi
+  logo: /img/categories/river.png
+  featured: true
+- name: Senza Categoria
+  logo: /img/categories/uncategorized.svg
+  logo_credit: Edward Boatman from the Noun Project
+  featured: true
