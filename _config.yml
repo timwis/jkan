@@ -1,4 +1,5 @@
 title: JKAN
+greeting: Welcome to JKAN
 description: A lightweight, backend-free open data portal, powered by Jekyll.
 baseurl: /jkan
 logo: /img/jkan.png
@@ -9,9 +10,6 @@ gatekeeper_host:
 
 # Dataset schema
 schema: default
-
-# Link for the "fork me on github" banner. Remove this line to suppress banner.
-fork_me_url: https://github.com/timwis/jkan
 
 # Nav bar
 navigation:

@@ -65,3 +65,30 @@ dataset {
 [data-component~=view-switcher] [data-hook~=view] {
   display: none;
 }
+
+.homepage-categories {
+  text-align: justify;
+}
+
+/* allows last line of categories to be justify aligned */
+.homepage-categories:after {
+  display: inline-block;
+  width: 100%;
+  content: '';
+}
+
+.homepage-categories .thumbnail {
+  display: inline-block;
+  min-width: 120px;
+  text-align: center;
+  border: none;
+  padding: 10px;
+}
+
+.homepage-categories .thumbnail img {
+  height: 80px;
+}
+
+.homepage-categories a {
+  color: #000;
+}
