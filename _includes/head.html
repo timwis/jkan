@@ -7,6 +7,12 @@
   <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  {% assign theme_name = site.theme | default: 'Default' %}
+  {% assign theme = site.data.themes | where:'name', theme_name | first %}
+  {% if theme and theme.src and theme.src != empty %}
+    <link rel="stylesheet" href="{{ theme.src }}">
+  {% endif %}
+  
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.2/css/select2.min.css">
   <link rel="stylesheet" href="{{ site.baseurl }}/css/notie.css">

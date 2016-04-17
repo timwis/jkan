@@ -62,3 +62,17 @@ export function collapseListGroup (container, show) {
     container.append(showMoreButton)
   }
 }
+
+// Applies a basic regex replace on a YAML string for each property in a data object
+export function updateYamlString (yamlString, updateObject) {
+  for (let key in updateObject) {
+    const regex = new RegExp(`^( *${key}: +?).*`, 'm')
+    const match = yamlString.match(regex)
+    if (match) {
+      yamlString = yamlString.replace(regex, match[1] + updateObject[key])
+    } else {
+      yamlString += `\n${key}: ${updateObject[key]}`
+    }
+  }
+  return yamlString
+}
