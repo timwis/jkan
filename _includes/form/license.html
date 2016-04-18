@@ -1,15 +1,10 @@
 <div class="form-group">
   <label for="license">License</label>
-  <select class="form-control" id="license">
+  <select class="form-control" id="license" name="license">
     <option value="">Select...</option>
-    {% for value in field.values %}
-      <option{% if include.value.url == value %} selected="selected"{% endif %} value="{{ value.url }}">{{ value.name }}</option>
+    {% for value in site.data.licenses %}
+      <option{% if include.value.url == value[0] %} selected="selected"{% endif %} value="{{ value[0] }}">{{ value[1] }}</option>
     {% endfor %}
   </select>
   <div class="help-block">Not sure what license to use? See <a href="http://licenses.opendefinition.org/">http://licenses.opendefinition.org/</a></div>
-</div>
-
-<div class="form-group hidden" id="{{ include.field_name }}-wrapper">
-  <label for="{{ include.field_name }}">{{ include.field.label }}</label>
-  <input type="text" id="{{ include.field_name }}" name="{{ include.field_name }}" value="{{ include.value }}" class="form-control">
 </div>
