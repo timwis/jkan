@@ -4,7 +4,7 @@ layout: default
 {% include breadcrumbs.html parent="Datasets" %}
 {% assign schema = page.schema | default: site.schema %}
 {% assign dataset_fields = site.data.schemas[schema].dataset_fields %}
-{% assign dataset_system_fields = "title|organization|notes|license_url|license_name" | split: "|" %}
+{% assign dataset_system_fields = "title|organization|notes|license" | split: "|" %}
 {% assign resource_fields = site.data.schemas[schema].resource_fields %}
 {% assign resource_system_fields = "name|url|format|description" | split: "|" %}
 
@@ -72,12 +72,12 @@ layout: default
 
       <h2>Additional Info</h2>
       <table class="table table-striped dataset-details">
-        {% if license_name != "" %}
+        {% if license != "" %}
           <tr>
             <th>License</th>
             <td>
-              <a property="dct:license" resource="{{ page.license_url }}" href="{{ page.license_url }}">
-                {{ page.license_name }}
+              <a property="dct:license" resource="{{ page.license }}" href="{{ page.license }}">
+                {{ site.data.licenses[page.license] }}
               </a>
             </td>
           </tr>
