@@ -3,7 +3,7 @@
   <select class="form-control" id="license" name="license">
     <option value="">Select...</option>
     {% for value in site.data.licenses %}
-      <option{% if include.value.url == value[0] %} selected="selected"{% endif %} value="{{ value[0] }}">{{ value[1] }}</option>
+      <option{% if include.value == value[0] %} selected="selected"{% endif %} value="{{ value[0] }}">{{ value[1] }}</option>
     {% endfor %}
   </select>
   <div class="help-block">Not sure what license to use? See <a href="http://licenses.opendefinition.org/">http://licenses.opendefinition.org/</a></div>
