@@ -1,7 +1,7 @@
 <div class="form-group">
-  <label for="license">License</label>
-  <select class="form-control" id="license" name="license">
-    <option value="">Select...</option>
+  <label for="{{ include.field_name }}">{{ include.field.label }}</label>
+  <select class="form-control" id="{{ include.field_name }}" name="{{ include.field_name }}">
+    <option value="">{{ include.field.placeholder | default: "Select..." }}</option>
     {% for value in site.data.licenses %}
       <option{% if include.value == value[0] %} selected="selected"{% endif %} value="{{ value[0] }}">{{ value[1] }}</option>
     {% endfor %}
