@@ -72,7 +72,7 @@ layout: default
 
       <h2>Additional Info</h2>
       <table class="table table-striped dataset-details">
-        {% if license != "" %}
+        {% if page.license and page.license != empty %}
           <tr>
             <th>License</th>
             <td>
