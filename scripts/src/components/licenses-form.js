@@ -4,12 +4,12 @@ import Form from './form'
 
 export default class extends Form {
   _formatData (formData) {
-    var list = {}
-    for(let license of formData.licenses) {
-      if (license.license_name != '') {
+    const list = {}
+    for (let license of formData.licenses) {
+      if (license.license_name !== '') {
         list[license.license_url] = license.license_name
       }
     }
-    return jsyaml.safeDump(list || [])
+    return jsyaml.safeDump(list)
   }
 }
