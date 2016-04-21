@@ -2,7 +2,7 @@
 schema: opendataschema
 title: Orari trasporto pubblico
 organization: OpenToscana
-notes: 'Il dataset contiene i dati relativi alle corse, agli orari e alle fermate del trasporto pubblico urbano ed extra-urbano di regione Toscana. Ogni risorsa è relativa ad una specifica azienda di trasporti. I dati sono conformi alle General Transit Feed Specification Reference. Aggiornati mensilmente.'
+notes: 'Il dataset contiene i dati relativi alle corse, agli orari e alle fermate del trasporto pubblico urbano ed extra-urbano di regione Toscana. I dati sono conformi alle General Transit Feed Specification Reference. Aggiornati mensilmente.'
 resources:
   - name: GTFS
     url: 'https://github.com/iltempe/opendataprato/blob/master/bus.gtfs'
