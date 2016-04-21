@@ -49,6 +49,8 @@ resource_fields:
       - kmz
       - shp
       - xml
+      - zip
+      - txt
 
 organization_fields:
   - field_name: title
