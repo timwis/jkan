@@ -8,7 +8,9 @@ resources:
     url: 'https://github.com/iltempe/opendataprato/blob/master/traffic_signals.geojson'
     format: geojson
 category:
-  - Economia
+  - Automobili
+  - Infrastrutture
+  - Territorio
 maintainer: Matteo Tempestini
 maintainer_email: mtempestini@gmail.com
 license: CC BY SA
