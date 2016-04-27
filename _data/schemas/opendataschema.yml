@@ -51,6 +51,7 @@ resource_fields:
       - xml
       - zip
       - txt
+      - feed_rss
 
 organization_fields:
   - field_name: title
