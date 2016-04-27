@@ -77,6 +77,8 @@ category_list:
 navigation:
   - title: Datasets
     url: /datasets/
+  - title: Kontak
+    url: /kontak/
 
 # Collections
 collections:
