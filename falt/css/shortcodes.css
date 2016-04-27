@@ -1,0 +1,137 @@
+/************************
+* Shortcodes
+************************/
+
+.page-heading {
+}
+
+.breadcrumbs span {
+	font-size: 1.5em;
+	font-weight: 100;
+}
+
+/***************
+
+* Buttons 
+
+****************/
+.button:hover {
+  background: #56C16B;
+  border: 2px solid #56C16B;
+}
+
+.button {
+  display: inline-block;
+  padding: 20px 60px;
+  color: #D7D7D7;
+  background: #48A65B;
+  border: 2px solid #48A65B;
+  font-size: .95em;
+  font-weight: 600;
+  text-transform: uppercase;
+  -webkit-transition: all .2s;
+  -moz-transition: all .2s;
+  -o-transition: all .2s;
+  transition: all .2s;
+}
+
+.button.medium {
+  padding: 10px 30px;
+  font-size: .85em;
+}
+
+.button.small {
+  padding: 5px 15px;
+  font-size: .75em;
+}
+
+.button.border {
+  color: #D7D7D7;
+  border: 2px solid #D7D7D7;
+  background: none;
+}
+
+.button.medium {
+  padding: 10px 30px;
+  font-size: .85em;
+}
+
+.button.small {
+  padding: 5px 15px;
+  font-size: .75em;
+}
+
+.button.border:hover {
+  color: #48A65B;
+  border: 2px solid #48A65B;
+  background: none;
+}
+
+.button:hover {
+  background: #56C16B;
+  border: 2px solid #56C16B;
+}
+
+.button.border {
+  color: #D7D7D7;
+  border: 2px solid #D7D7D7;
+  background: none;
+}
+
+/**************************
+* BLOACKQUOTE
+**************************/
+
+p.blockquote {
+  padding: 0 0 0 20px;
+  color: rgba(255,255,255,0.4);
+  border-left: 5px solid #48A65B;
+  font-size: 1em;
+  font-style: italic;
+}
+
+
+/******************************
+* Highlights
+*******************************/
+
+.text-red {
+  color: #FFF;
+padding: 0 2px;
+background: #c0392b;
+}
+
+.text-green {
+  color: #FFF;
+padding: 0 2px;
+background: #27AE60; 
+}
+
+
+/************************
+
+* icons box 
+
+************************/
+.icon-box {
+  padding-top: 30px;
+}
+
+.icon-box,.icon-box p {
+  text-align: center !important;
+}
+
+.icons-heading {
+  padding-top: 35px;
+}
+
+/*****************
+* Social icons
+******************/
+/*.facebookelegance-icons-,.twitter-birdelegance-icons-,.vimeoelegance-icons-,.tumblrelegance-icons-.,
+.googleplus-rectelegance-,.github-textelegance-icons-,.githubelegance-icons-,.skypeelegance-icons-,
+.vkontakte-rectelegance-icons-,.odnoklassnikielegance-icons-,.friendfeedelegance-icons-,.bloggerelegance-icons-,
+.deviantartelegance-icons-,.jabberelegance-icons-,.lastfmelegance-icons-,.linkedinelegance-icons-,.picasaelegance-icons-,
+.wordpresselegance-icons-,.instagramelegance-icons-,.diigoelegance-icons-,.boxelegance-icons- {
+  font-size: 300%;
+}*/
