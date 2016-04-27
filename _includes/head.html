@@ -1,29 +1,33 @@
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}</title>
-  <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+    <title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}</title>
+    <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
 
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.2/css/select2.min.css">
-  <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
-  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.2/css/select2.min.css">
+    <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
+    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
 
-  {% assign datasets = site.collections | where:"label","datasets" | first %}
-  <script>
-  var settings = {
-    BASE_URL: {{ site.baseurl | jsonify }},
-    PAGE_URL: {{ page.url | jsonify }},
-    FILE_PATH: {{ page.path | jsonify }},
-    DATASETS_DIR: {{ datasets.relative_directory | jsonify }},
-    BRANCH: {% if site.github.is_user_page %}"master"{% else %}"gh-pages"{% endif %},
-    REPO_OWNER: {{ site.github.owner_name | jsonify }},
-    REPO_NAME: {{ site.github.project_title | jsonify }},
-    GITHUB_CLIENT_ID: {{ site.github_client_id | jsonify }},
-    GATEKEEPER_HOST: {{ site.gatekeeper_host | jsonify }}
-  }
-  </script>
+    <link href="/triang/template/multicolor/css/animate.min.css" rel="stylesheet"> 
+    <link href="/triang/template/multicolor/css/lightbox.css" rel="stylesheet"> 
+    <link href="/triang/template/multicolor/css/main.css" rel="stylesheet">
+    <link href="/triang/template/multicolor/css/responsive.css" rel="stylesheet">
+    {% assign datasets = site.collections | where:"label","datasets" | first %}
+    <script>
+        var settings = {
+        BASE_URL: {{ site.baseurl | jsonify }},
+                PAGE_URL: {{ page.url | jsonify }},
+                FILE_PATH: {{ page.path | jsonify }},
+                DATASETS_DIR: {{ datasets.relative_directory | jsonify }},
+                BRANCH: { % if site.github.is_user_page % }"master"{ % else % }"gh-pages"{ % endif % },
+                REPO_OWNER: {{ site.github.owner_name | jsonify }},
+                REPO_NAME: {{ site.github.project_title | jsonify }},
+                GITHUB_CLIENT_ID: {{ site.github_client_id | jsonify }},
+                GATEKEEPER_HOST: {{ site.gatekeeper_host | jsonify }}
+        }
+    </script>
 </head>

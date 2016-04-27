@@ -4,3 +4,4 @@ _site
 _config.dev.yml
 node_modules
 *.map
+/nbproject/private/
