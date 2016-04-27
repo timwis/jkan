@@ -1,5 +1,5 @@
 ---
 title: Comune di Prato
 description: Comune di Prato
-logo: http://www.comune.prato.it/home/img/new/logo.gif
+logo: https://pbs.twimg.com/profile_images/475921102317694977/vOj_eDZV.jpeg
 ---
