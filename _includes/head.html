@@ -12,22 +12,43 @@
     <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
 
-    <link href="/triang/template/multicolor/css/animate.min.css" rel="stylesheet"> 
-    <link href="/triang/template/multicolor/css/lightbox.css" rel="stylesheet"> 
-    <link href="/triang/template/multicolor/css/main.css" rel="stylesheet">
-    <link href="/triang/template/multicolor/css/responsive.css" rel="stylesheet">
+    <link href="/acme-free/css/theme.css" rel="stylesheet">
+    <link href="/acme-free/css/bootstrap-reset.css" rel="stylesheet">
+    <!-- <link href="css/bootstrap.min.css" rel="stylesheet">-->
+
+    <!--external css-->
+    <link href="/acme-free/assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/acme-free/css/flexslider.css"/>
+    <link href="/acme-free/assets/bxslider/jquery.bxslider.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/acme-free/css/animate.css">
+    <link rel="stylesheet" href="/acme-free/assets/owlcarousel/owl.carousel.css">
+    <link rel="stylesheet" href="/acme-free/assets/owlcarousel/owl.theme.css">
+
+    <link href="/acme-free/css/superfish.css" rel="stylesheet" media="screen">
+    <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+    <!-- <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'> -->
+
+
+    <!-- Custom styles for this template -->
+    <link rel="stylesheet" type="text/css" href="/acme-free/css/component.css">
+    <link href="/acme-free/css/style.css" rel="stylesheet">
+    <link href="/acme-free/css/style-responsive.css" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="css/parallax-slider/parallax-slider.css" />
+    <script type="text/javascript" src="js/parallax-slider/modernizr.custom.28468.js"></script>
+
     {% assign datasets = site.collections | where:"label","datasets" | first %}
     <script>
-        var settings = {
-        BASE_URL: {{ site.baseurl | jsonify }},
-                PAGE_URL: {{ page.url | jsonify }},
-                FILE_PATH: {{ page.path | jsonify }},
-                DATASETS_DIR: {{ datasets.relative_directory | jsonify }},
-                BRANCH: { % if site.github.is_user_page % }"master"{ % else % }"gh-pages"{ % endif % },
-                REPO_OWNER: {{ site.github.owner_name | jsonify }},
-                REPO_NAME: {{ site.github.project_title | jsonify }},
-                GITHUB_CLIENT_ID: {{ site.github_client_id | jsonify }},
-                GATEKEEPER_HOST: {{ site.gatekeeper_host | jsonify }}
-        }
+var settings = {
+BASE_URL: {{ site.baseurl | jsonify }},
+        PAGE_URL: {{ page.url | jsonify }},
+        FILE_PATH: {{ page.path | jsonify }},
+        DATASETS_DIR: {{ datasets.relative_directory | jsonify }},
+        BRANCH: { % if site.github.is_user_page % }"master"{ % else % }"gh-pages"{ % endif % },
+        REPO_OWNER: {{ site.github.owner_name | jsonify }},
+        REPO_NAME: {{ site.github.project_title | jsonify }},
+        GITHUB_CLIENT_ID: {{ site.github_client_id | jsonify }},
+        GATEKEEPER_HOST: {{ site.gatekeeper_host | jsonify }}
+}
     </script>
 </head>
