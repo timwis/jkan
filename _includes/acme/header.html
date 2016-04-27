@@ -1,0 +1,38 @@
+<nav class="navbar navbar-default" data-hook="nav">
+  <div class="container">
+
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="{{ site.baseurl }}/">{{ site.title }}</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        {% for link in site.navigation %}
+          {% if page.url contains link.url %}
+            <li class="active"><a href="{{ site.baseurl }}{{ link.url }}">{{ link.title }} <span class="sr-only">(current)</span></a></li>
+          {% else %}
+            <li><a href="{{ site.baseurl }}{{ link.url }}">{{ link.title }}</a></li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#" data-hook="login-link">Login</a></li>
+        <li class="dropdown hidden" data-hook="user-dropdown">
+          <a href="#" class="dropdown-toggle" data-hook="user-name" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">User <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="{{ site.baseurl }}/admin/">Administration</a></li>
+            <li><a href="#" data-hook="logout-link">Logout</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+</nav>

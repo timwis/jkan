@@ -2,65 +2,6 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 <script src="{{ site.baseurl }}/scripts/dist/bundle.js"></script>
 
-<script type="text/javascript" src="/acme-free/js/hover-dropdown.js"></script>
-<script defer src="/acme-free/js/jquery.flexslider.js"></script>
-<script type="text/javascript" src="/acme-free/assets/bxslider/jquery.bxslider.js"></script>
-
-<script type="text/javascript" src="/acme-free/js/jquery.parallax-1.1.3.js"></script>
-<script src="/acme-free/js/wow.min.js"></script>
-<script src="/acme-free/assets/owlcarousel/owl.carousel.js"></script>
-
-<script src="/acme-free/js/jquery.easing.min.js"></script>
-<script src="/acme-free/js/link-hover.js"></script>
-<script src="/acme-free/js/superfish.js"></script>
-<script type="text/javascript" src="/acme-free/js/parallax-slider/jquery.cslider.js"></script>
-<script type="text/javascript">
-$(function () {
-    $('#da-slider').cslider({
-        autoplay: true,
-        bgincrement: 100
-    });
-
-});
-</script>
-<!--common script for all pages-->
-<script src="/acme-free/js/common-scripts.js"></script>
-<script type="text/javascript">
-jQuery(document).ready(function () {
-    $('.bxslider1').bxSlider({
-        minSlides: 5,
-        maxSlides: 6,
-        slideWidth: 360,
-        slideMargin: 2,
-        moveSlides: 1,
-        responsive: true,
-        nextSelector: '#slider-next',
-        prevSelector: '#slider-prev',
-        nextText: 'Onward →',
-        prevText: '← Go back'
-    });
-});
-</script>
-<script>
-    $('a.info').tooltip();
-    $(window).load(function () {
-        $('.flexslider').flexslider({
-            animation: "slide",
-            start: function (slider) {
-                $('body').removeClass('loading');
-            }
-        });
-    });
-    $(document).ready(function () {
-        $("#owl-demo").owlCarousel({
-            items: 4
-        });
-    });
-    jQuery(document).ready(function () {
-        jQuery('ul.superfish').superfish();
-    });
-    new WOW().init();
-</script>
 <footer>
 
 </footer>

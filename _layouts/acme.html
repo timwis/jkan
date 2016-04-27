@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+
+    {% include acme/head.html %}
+
+    <body>
+
+        {% include acme/header.html %}
+
+        <section data-hook="main" class="container">
+            {{ content }}
+        </section>
+
+        {% include acme/footer.html %}
+
+    </body>
+
+</html>
