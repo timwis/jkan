@@ -15,6 +15,6 @@ category:
   - Inclusione
 maintainer: iltempe
 maintainer_email: mtempestini@gmail.com
-license: Open Data Commons Open Database License (ODbL)
+license: 'http://www.opendefinition.org/licenses/odc-odbl'
 pubdate: 09/04/2016
 ---

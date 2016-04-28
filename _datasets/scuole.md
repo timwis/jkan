@@ -15,6 +15,6 @@ category:
   - Educazione
 maintainer: Matteo Tempestini
 maintainer_email: mtempestini@gmail.com
-license: CC BY 4.0
+license: 'https://creativecommons.org/licenses/by/4.0/'
 pubdate: 28/04/2016
 ---
