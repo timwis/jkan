@@ -7,7 +7,7 @@ resources:
   - name: Scuole Statali del Comune di Prato
     url: 'https://github.com/iltempe/opendataprato/blob/master/scuole_statali.csv'
     format: csv
-  - name: Scuole Paritarie
+  - name: Scuole Paritarie della Provincia di Prato
     url: 'https://github.com/iltempe/opendataprato/blob/master/scuole_paritarie.csv'
     format: csv
 category:
