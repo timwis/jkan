@@ -12,6 +12,10 @@ dataset_fields:
     label: Descrizione
     form_template: form/textarea.html
     datajson: description
+  - field_name: license
+    label: License
+    form_template: form/license.html
+    datajson: license
   - field_name: category
     label: Categoria
     form_template: form/category.html
