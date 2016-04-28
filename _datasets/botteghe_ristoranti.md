@@ -8,8 +8,9 @@ resources:
     url: 'https://github.com/iltempe/opendataprato/blob/master/botteghe.csv'
     format: csv
 category:
+  - Economia
   - Ambiente
-  - Meteo
+  - Cibo
 maintainer: iltempe
 maintainer_email: mtempestini@gmail.com
 license: CC BY 4.0
