@@ -78,6 +78,9 @@ twittercard:
   enabled: true
   username: "@odgentediprato"
 
+#Disqus
+disqus_shortname: ilTempe
+
 # Open Graph
 opengraph:
   enabled: true
