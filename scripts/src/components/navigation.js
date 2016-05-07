@@ -1,6 +1,7 @@
 import 'bootstrap/js/dropdown'
 import 'bootstrap/js/tooltip'
 import 'bootstrap/js/popover'
+import 'bootstrap/js/collapse'
 
 import {queryByHook} from '../util'
 
