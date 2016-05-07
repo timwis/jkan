@@ -18,4 +18,5 @@ category:
   - Education
 maintainer: Tim Wisniewski
 maintainer_email: tim@timwis.com
+comments: true
 ---
