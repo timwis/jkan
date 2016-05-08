@@ -70,6 +70,9 @@ twittercard:
   enabled: false
   username: "@"
 
+#Disqus
+disqus_shortname: //put here your disqus shortname
+
 # Open Graph
 opengraph:
   enabled: true
