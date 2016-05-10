@@ -13,5 +13,4 @@ maintainer: Matteo Tempestini
 maintainer_email: mtempestini@gmail.com
 license: 'http://www.opendefinition.org/licenses/odc-odbl'
 pubdate: 10/04/2016
-comments: true
 ---

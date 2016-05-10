@@ -13,5 +13,4 @@ maintainer: Matteo Tempestini
 maintainer_email: mtempestini@gmail.com
 license: 'https://creativecommons.org/licenses/by/4.0/'
 pubdate: 09/04/2016
-comments: true
 ---

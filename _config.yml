@@ -80,6 +80,7 @@ twittercard:
 
 #Disqus
 disqus_shortname: ilTempe
+comments_enabled: true
 
 # Open Graph
 opengraph:
