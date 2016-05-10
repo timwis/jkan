@@ -72,6 +72,7 @@ twittercard:
 
 #Disqus
 disqus_shortname: //put here your disqus shortname
+comments_enabled: true
 
 # Open Graph
 opengraph:
