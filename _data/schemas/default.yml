@@ -49,6 +49,8 @@ resource_fields:
       - kmz
       - shp
       - xml
+      - osm
+      - pbf
 
 organization_fields:
   - field_name: title
