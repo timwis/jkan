@@ -37,7 +37,7 @@ export default class {
         commitMsg = `Updated ${file.fileName}`
       // If creating new file, set file path and page url
       } else {
-        if (!formData.title) return notie.alert('error', 'Title is required')
+        if (!formData.title) return notie.alert('error', 'Titolo richiesto')
         const fileSlug = slugify(formData.title)
         file.filePath = (fileDir ? fileDir + '/' : '') + `${fileSlug}.md`
         file.renderPath = `/${renderDir}/${fileSlug}/`
@@ -48,11 +48,11 @@ export default class {
       file.save(yaml, commitMsg)
       .then((response) => {
         const commitUrl = response.commit.html_url
-        let successMsg = `This page has been <a href="${commitUrl}">saved</a>`
-        if (file.renderPath) successMsg += `and will be available momentarily at <a href="${settings.BASE_URL}${file.renderPath}">${file.renderPath}</a>.`
+        let successMsg = `Pagina <a href="${commitUrl}">salvata</a>`
+        if (file.renderPath) successMsg += ` e sarà a momenti disponibile in <a href="${settings.BASE_URL}${file.renderPath}">${file.renderPath}</a>.`
         notie.alert('success', successMsg)
       }).catch((msg) => {
-        notie.alert('error', 'There was an error saving the page')
+        notie.alert('error', 'Errore di salvataggio pagina')
         console.error(msg)
       })
     })

@@ -5,35 +5,37 @@ permalink: /admin/
 ---
 {% include breadcrumbs.html %}
 
+
 <ul class="nav nav-tabs" role="tablist">
-  <li role="presentation" class="active"><a href="#general" aria-controls="general" role="tab" data-toggle="tab">General</a></li>
-  <li role="presentation"><a href="#authentication" aria-controls="authentication" role="tab" data-toggle="tab">Authentication</a></li>
-  <li role="presentation"><a href="#categories" aria-controls="categories" role="tab" data-toggle="tab">Categories</a></li>
-  <li role="presentation"><a href="#licenses" aria-controls="licenses" role="tab" data-toggle="tab">Licenses</a></li>
-  <li role="presentation"><a href="#theme" aria-controls="thtme" role="tab" data-toggle="tab">Theme</a></li>
-  <li role="presentation"><a href="#maintenance" aria-controls="maintenance" role="tab" data-toggle="tab">Maintenance</a></li>
+  <li role="presentation" class="active"><a href="#general" aria-controls="general" role="tab" data-toggle="tab">Generale</a></li>
+  <li role="presentation"><a href="#authentication" aria-controls="authentication" role="tab" data-toggle="tab">Autenticazione</a></li>
+  <li role="presentation"><a href="#categories" aria-controls="categories" role="tab" data-toggle="tab">Categorie</a></li>
+  <li role="presentation"><a href="#licenses" aria-controls="licenses" role="tab" data-toggle="tab">Licenze</a></li>
+  <li role="presentation"><a href="#theme" aria-controls="thtme" role="tab" data-toggle="tab">Tema</a></li>
+  <li role="presentation"><a href="#maintenance" aria-controls="maintenance" role="tab" data-toggle="tab">Manutenzione</a></li>
 </ul>
 
 <div class="tab-content">
   <div role="tabpanel" class="tab-pane active" id="general">
-    <h2>General</h2>
+    <h2>Generale</h2>
     <form data-component="admin-form" data-file-path="_config.yml">
 
       <fieldset>
 
         <div class="form-group">
-          <label for="title">Site Title</label>
+          <label for="title">Titolo del portale</label>
           <input type="text" class="form-control" id="title" name="title" value="{{ site.title }}">
         </div>
 
         <div class="form-group">
-          <label for="greeting">Site Greeting</label>
+
+          <label for="greeting">Titolo</label>
           <input type="text" class="form-control" id="greeting" name="greeting" value="{{ site.greeting }}">
-          <p class="help-block">Displayed on the homepage</p>
+          <p class="help-block">Visualizzato su HomePage</p>
         </div>
 
         <div class="form-group">
-          <label for="description">Site Description</label>
+          <label for="description">Descrizione Portale</label>
           <textarea class="form-control" id="description" name="description">{{ site.description }}</textarea>
         </div>
 
@@ -41,8 +43,8 @@ permalink: /admin/
           <label for="baseurl">Base URL</label>
           <input type="text" class="form-control" id="baseurl" name="baseurl" value="{{ site.baseurl }}" placeholder="ie. /JKAN">
         </div>
-
         <button type="submit" class="btn btn-primary">Submit</button>
+
 
       </fieldset>
 
@@ -50,7 +52,7 @@ permalink: /admin/
   </div>
 
   <div role="tabpanel" class="tab-pane" id="authentication">
-    <h2>Authentication</h2>
+    <h2>Autenticazione</h2>
     <form data-component="admin-form" data-file-path="_config.yml">
 
       <fieldset>
@@ -58,13 +60,13 @@ permalink: /admin/
         <div class="form-group">
           <label for="github_client_id">GitHub Client ID</label>
           <input type="text" class="form-control" id="github_client_id" name="github_client_id" value="{{ site.github_client_id }}" placeholder="ie. 9098sdf876sdfs768az">
-          <p class="help-block"><a href="https://github.com/settings/applications/new">Register a Github application</a> to get a Client ID</p>
+          <p class="help-block"><a href="https://github.com/settings/applications/new">Registra un applicazione Github</a> per prendere il Client ID</p>
         </div>
 
         <div class="form-group">
           <label for="gatekeeper_host">Gatekeeper Host</label>
           <input type="text" class="form-control" id="gatekeeper_host" name="gatekeeper_host" value="{{ site.gatekeeper_host }}" placeholder="ie. http://jkan-gatekeeper.herokuapp.com">
-          <p class="help-block">Authentication server you deployed</p>
+          <p class="help-block">Autenticazione sul server su cui fai deploy</p>
         </div>
 
         <button type="submit" class="btn btn-primary">Submit</button>
@@ -75,7 +77,7 @@ permalink: /admin/
   </div>
 
   <div role="tabpanel" class="tab-pane" id="categories">
-    <h2>Categories</h2>
+    <h2>Categorie</h2>
     {% assign category_fields = site.data.schemas[site[schema]].category_fields %}
     <form data-component="categories-form editable-list" data-file-path="_data/categories.yml" data-item-label="category">
       <div data-hook="items">
@@ -84,7 +86,7 @@ permalink: /admin/
         {% endfor %}
       </div>
       <div class="form-group">
-        <button type="button" class="btn btn-default" data-hook="add-item-btn"><i class="fa fa-plus"></i> Add Category</button>
+        <button type="button" class="btn btn-default" data-hook="add-item-btn"><i class="fa fa-plus"></i> Aggiungi Categoria</button>
       </div>
 
       <button type="submit" class="btn btn-primary">Submit</button>
@@ -142,7 +144,7 @@ permalink: /admin/
   </div>
 
   <div role="tabpanel" class="tab-pane" id="maintenance">
-    <h2>Site Maintenance</h2>
-    <a href="https://github.com/{{ site.github.owner_name }}/{{ site.github.project_title }}/compare/gh-pages...timwis:gh-pages?expand=1" class="btn btn-info">Check for updates</a>
+    <h2>Manutenzione</h2>
+    <a href="https://github.com/{{ site.github.owner_name }}/{{ site.github.project_title }}/compare/gh-pages...timwis:gh-pages?expand=1" class="btn btn-info">Controlla per aggiornamenti</a>
   </div>
 </div>

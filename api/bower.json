@@ -1,0 +1,27 @@
+{
+  "name": "Api",
+  "version": "1.0.0",
+  "authors": [
+    "iltempe"
+  ],
+  "description": "API for JKAN datasets",
+  "main": "datasets.json",
+  "keywords": [
+    "jekyll",
+    "json",
+    "spa",
+    "api",
+    "rest",
+    "feed",
+    "javascript"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

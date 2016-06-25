@@ -4,3 +4,5 @@ _site
 _config.dev.yml
 node_modules
 *.map
+
+_datasets/sample-dataset.md

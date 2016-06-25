@@ -33,6 +33,22 @@ dataset {
   margin-top: 15px;
 }
 
+body {
+    background-image: url("/opendatagentediprato/assets/prato.jpg");
+    background-size: 100%;
+    background-repeat:   no-repeat;
+    /*background-position: center center; */
+  }
+
+  #background {
+    width: 100%; 
+    height: 100%; 
+    position: fixed; 
+    left: 0px; 
+    top: 0px; 
+    z-index: -1; /* Ensure div tag stays behind content; -999 might work, too. */
+}
+
 /* Hidden from guests */
 .user-issue,
 .admin-only {

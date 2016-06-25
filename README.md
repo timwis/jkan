@@ -1,7 +1,7 @@
-![JKAN logo, made by @JJediny](https://raw.githubusercontent.com/timwis/jkan/gh-pages/img/jkan.png)
+Questo progetto è stato creato a partire dal framework [JKAN](https://github.com/timwis/jkan).
 
-# JKAN [![Build Status](https://travis-ci.org/timwis/jkan.svg?branch=gh-pages)](https://travis-ci.org/timwis/jkan) [![Join the chat at https://gitter.im/timwis/jkan](https://badges.gitter.im/timwis/jkan.svg)](https://gitter.im/timwis/jkan?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
-A lightweight, backend-free open data portal, powered by Jekyll
+Sul [WIKI](https://github.com/iltempe/opendatagentediprato/wiki) di questo progetto tutte le indicazioni per usarlo o rifarne uno simile.
+
 
 Open-source data portals can be [really](https://twitter.com/waldojaquith/status/282599673569619969).
 [hard](https://twitter.com/chris_whong/status/669207423719235584). to install and maintain. But their

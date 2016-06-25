@@ -6,19 +6,19 @@ layout: default
 {% include breadcrumbs.html parent="Administration" %}
 
 <div class="alert alert-success" role="alert" data-hook="alert-success" style="display: none;">
-  These settings have been <a href="#" data-hook="commit-url">saved</a> and the site is currently regenerating.
+  La configurazione è stata <a href="#" data-hook="commit-url">salvata</a> e il sito è in fase di aggiornamento.
 </div>
 
 <div class="alert alert-danger" role="alert" data-hook="alert-error" style="display: none;">
-  There was an error saving this page
+C'è stato un errore nel salvataggio della pagina
 </div>
 
 # Setup
 
 ## Step 1
-[Register your application](https://github.com/settings/applications/new) with GitHub. Set the `Callback URL`
-to the URL of your JKAN site (ie. `http://<your_github_username>.github.io/jkan`. After clicking `Register`, you'll
-be given a `Client ID` and a `Client Secret`. Enter the `Client ID` below.
+[Registra una tua applicazione](https://github.com/settings/applications/new) con GitHub. Imposta `Callback URL`
+nel URL del tuo portale JKAN (esempio. `http://<your_github_username>.github.io/portale`. Dopo cliccando su `Register`,  ti sarà fornito 
+un codice `Client ID` e un `Client Secret`. Inserisci il `Client ID` qui sotto.
 
 <div class="row">
   <div class="col-sm-6 col-sm-offset-3">
@@ -31,12 +31,12 @@ be given a `Client ID` and a `Client Secret`. Enter the `Client ID` below.
 </div>
 
 ## Step 2
-In order to authenticate with GitHub, setup [Gatekeeper](https://github.com/prose/gatekeeper), an
-open-source authentication tool. [Heroku](http://heroku.com) provides free hosting.
+Per effettuare una procedura di login con Github, fai un setup di [Gatekeeper](https://github.com/prose/gatekeeper), un tool
+open-source per autenticazione. [Heroku](http://heroku.com) fornisce hosting libero per questo.
 
-[![Deploy to Heroku](https://www.herokucdn.com/deploy/button.png)](https://dashboard.heroku.com/new?button-url=https%3A%2F%2Fgithub.com%2Fprose%2Fgatekeeper&template=https%3A%2F%2Fgithub.com%2Fprose%2Fgatekeeper)
+[![Fai setup su Heroku](https://www.herokucdn.com/deploy/button.png)](https://dashboard.heroku.com/new?button-url=https%3A%2F%2Fgithub.com%2Fprose%2Fgatekeeper&template=https%3A%2F%2Fgithub.com%2Fprose%2Fgatekeeper)
 
-Pick an `App Name`, and fill in your `Client ID` and `Client Secret`. Enter the `App Name` you chose below. 
+Fornisci un nome  all'applicazione in `App Name`, e riempi solo il settaggi HEROKU `Client ID` e `Client Secret` con i codici della applicazione Github creata in precedenza. Inserisci l' `App Name` che hai definito qui sotto. 
 
 <div class="row">
   <div class="col-sm-6 col-sm-offset-3">
@@ -49,11 +49,11 @@ Pick an `App Name`, and fill in your `Client ID` and `Client Secret`. Enter the 
 </div>
 
 ## Step 3
-Login to this site via GitHub to save these settings.
+Fai un login in questo sito con GitHub per salvare i settaggi.
 
 <a href="#" class="btn btn-success" data-hook="login-link"><i class="fa fa-github"></i> Sign in with GitHub</a>
 
 ## Step 4
-Save these settings to `_config.yml`.
+Salva questa configurazione nel tuo file `_config.yml`.
 
-<a href="#" class="btn btn-primary disabled" data-hook="save"><i class="fa fa-save"></i> Save</a>
+<a href="#" class="btn btn-primary disabled" data-hook="save"><i class="fa fa-save"></i> Salva</a>

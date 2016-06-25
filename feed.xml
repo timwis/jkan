@@ -1,0 +1,24 @@
+---
+---
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+  <channel>
+    <title>{{ site.title | xml_escape }}</title>
+    <description>{{ site.description | xml_escape }}</description>
+    <link>{{ site.baseurl }}</link>
+    <language>it</language>
+    <ttl>1440</ttl>
+
+    {% for dataset in site.datasets limit:10 %}
+    <item>
+      <title>{{ dataset.title | xml_escape }}</title>
+      <description>{{ dataset.notes | xml_escape }}</description>
+      <link>iltempe.github.io{{site.baseurl}}{{ dataset.url }}</link>
+      <pubDate>{{ dataset.date | date: "%a, %d %b %Y %H:%M:%S %z" }}</pubDate>
+      <guid isPermaLink="true">{{ site.url }}{{ dataset.url }}</guid>
+      <comments>https://twitter.com/odgentediprato</comments>
+    </item>
+
+    {% endfor %}
+  </channel>
+</rss>
