@@ -32,7 +32,7 @@ export default State.extend({
   },
   read: function () {
     return new Promise((resolve, reject) => {
-      this.repo.read(this.repoBranch, this.filePath, (err, contents) => {
+      this.repo.getContents(this.repoBranch, this.filePath, (err, contents) => {
         if (err) reject(err)
         else resolve(contents)
       })
@@ -41,7 +41,7 @@ export default State.extend({
   save: function (contents, commitMsg) {
     return new Promise((resolve, reject) => {
       if (!commitMsg) commitMsg = `Updated ${this.fileName}`
-      this.repo.write(this.repoBranch, this.filePath, contents, commitMsg, {}, (err, data) => {
+      this.repo.writeFile(this.repoBranch, this.filePath, contents, commitMsg, {}, (err, data) => {
         if (err) reject(err)
         else resolve(data)
       })
@@ -49,7 +49,7 @@ export default State.extend({
   },
   remove: function () {
     return new Promise((resolve, reject) => {
-      this.repo.remove(this.repoBranch, this.filePath, (err, data) => {
+      this.repo.deleteFile(this.repoBranch, this.filePath, (err, data) => {
         if (err) reject(err)
         else resolve(data)
       })

@@ -30,7 +30,7 @@
   "dependencies": {
     "ampersand-state": "^5.0.0",
     "bootstrap": "^3.3.6",
-    "github-api": "github:michael/github#849e058",
+    "github-api": "^2.3.0",
     "jquery-deparam": "^0.5.2",
     "jquery-serializejson": "^2.6.2",
     "js-cookie": "^2.1.0",
