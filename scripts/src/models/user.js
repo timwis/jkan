@@ -75,7 +75,7 @@ export default State.extend({
         auth: 'oauth'
       })
       const user = github.getUser()
-      user.show(null, (err, userData) => {
+      user.getProfile((err, userData) => {
         if (err) reject(err)
         else resolve(userData)
       })
