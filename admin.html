@@ -126,10 +126,10 @@ permalink: /admin/
     <h2>Theme</h2>
     <div class="theme-gallery" data-component="theme-gallery" data-file-path="_config.yml">
       {% for theme in site.data.themes %}
-      <div class="panel {% if site.theme == theme.name %}panel-primary{% else %}panel-default{% endif %}">
+      <div class="panel {% if site.jkan_theme == theme.name %}panel-primary{% else %}panel-default{% endif %}">
         {% if theme.logo and theme.logo != empty %}<img src="{{ site.baseurl }}{{ theme.logo }}" alt="{{ theme.name }} logo">{% endif %}
         <div class="panel-body">
-          {% if site.theme == theme.name %}
+          {% if site.jkan_theme == theme.name %}
             <button type="button" class="btn btn-default" disabled="disabled">Activated</button>
           {% else %}
             <button type="button" class="btn btn-default" data-hook="activate-btn" data-theme="{{ theme.name }}">Activate {{ theme.name }}</button>

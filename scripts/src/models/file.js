@@ -32,7 +32,7 @@ export default State.extend({
   },
   read: function () {
     return new Promise((resolve, reject) => {
-      this.repo.getContents(this.repoBranch, this.filePath, (err, contents) => {
+      this.repo.getContents(this.repoBranch, this.filePath, true, (err, contents) => {
         if (err) reject(err)
         else resolve(contents)
       })

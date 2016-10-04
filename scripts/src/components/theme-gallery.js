@@ -21,7 +21,7 @@ export default class {
       const theme = $(e.currentTarget).data('theme')
       file.read()
       .then((contents) => {
-        const newContents = updateYamlString(contents, {theme})
+        const newContents = updateYamlString(contents, { jkan_theme: theme })
         file.save(newContents)
         .then((response) => {
           const commitUrl = response.commit.html_url
