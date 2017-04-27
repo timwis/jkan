@@ -8,8 +8,8 @@ logo: /img/jkan.png
 jkan_theme: Default
 
 # Authentication
-github_client_id: 
-gatekeeper_host: 
+github_client_id: 64faf0dd9da6a98d21b0
+gatekeeper_host: https://sheltered-temple-54610.herokuapp.com
 
 # Dataset schema
 schema: default
