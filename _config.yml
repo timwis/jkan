@@ -1,6 +1,6 @@
-title: JKAN
-greeting: Welcome to JKAN
-description: A lightweight, backend-free open data portal, powered by Jekyll.
+title: SODA
+greeting: Welcome to SODA
+description: Shanghai Open Data Apps
 baseurl: /jkan
 logo: /img/jkan.png
 
@@ -16,9 +16,11 @@ schema: default
 
 # Nav bar
 navigation:
-  - title: Datasets
+  - title: 城市问题
+    url: /challenges/
+  - title: 比赛数据
     url: /datasets/
-  - title: Organizations
+  - title: 组织单位
     url: /organizations/
 
 # Collections
