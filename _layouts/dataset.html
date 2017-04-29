@@ -24,7 +24,7 @@ layout: default
             <div class="panel-body">
               <h3>
                 <a href="{{ organization_url }}" about="{{ organization_url }}" property="foaf:homepage">
-                  <span property="foaf:name">{{ organization.title }}</span>
+                  <span property="foaf:name">{{ organization.name }}</span>
                 </a>
               </h3>
               {{ organization.description }}
@@ -69,6 +69,67 @@ layout: default
         </li>
         {% endfor %}
       </ul>
+
+
+      <h2>Challenges</h2>
+      <table class="table table-striped dataset-details">
+        {% if page.license and page.license != empty %}
+          <tr>
+            <th>License</th>
+            <td>
+              <a property="dct:license" resource="{{ page.license }}" href="{{ page.license }}">
+                {{ site.data.licenses[page.license] }}
+              </a>
+            </td>
+          </tr>
+        {% endif %}
+        {% for field in dataset_fields %}
+          {% unless dataset_system_fields contains field.field_name %}
+            {% assign value = page[field[field_name]] %}
+            {% if value %}
+              {% if field.display_template %}
+                {% include {{ field.display_template }} field=field value=value %}
+              {% else %}
+                <tr>
+                  <th>{{ field.label }}</th>
+                  <td>{{ value }}</td>
+                </tr>
+              {% endif %}
+            {% endif %}
+          {% endunless %}
+        {% endfor %}
+
+      </table>
+
+      <h2>Projects</h2>
+      <table class="table table-striped dataset-details">
+        {% if page.license and page.license != empty %}
+          <tr>
+            <th>License</th>
+            <td>
+              <a property="dct:license" resource="{{ page.license }}" href="{{ page.license }}">
+                {{ site.data.licenses[page.license] }}
+              </a>
+            </td>
+          </tr>
+        {% endif %}
+        {% for field in dataset_fields %}
+          {% unless dataset_system_fields contains field.field_name %}
+            {% assign value = page[field[field_name]] %}
+            {% if value %}
+              {% if field.display_template %}
+                {% include {{ field.display_template }} field=field value=value %}
+              {% else %}
+                <tr>
+                  <th>{{ field.label }}</th>
+                  <td>{{ value }}</td>
+                </tr>
+              {% endif %}
+            {% endif %}
+          {% endunless %}
+        {% endfor %}
+
+      </table>
 
       <h2>Additional Info</h2>
       <table class="table table-striped dataset-details">

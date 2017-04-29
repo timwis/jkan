@@ -53,6 +53,8 @@ resource_fields:
 organization_fields:
   - field_name: title
     label: Title
+  - field_name: name
+    label: Name
   - field_name: description
     label: Description
   - field_name: logo
