@@ -17,7 +17,7 @@ layout: default
 
 ## Step 1
 [Register your application](https://github.com/settings/applications/new) with GitHub. Set the `Callback URL`
-to the URL of your JKAN site (ie. `http://<your_github_username>.github.io/jkan`. After clicking `Register`, you'll
+to the URL of your JKAN site (ie. `https://<your_github_username>.github.io/jkan`. After clicking `Register`, you'll
 be given a `Client ID` and a `Client Secret`. Enter the `Client ID` below.
 
 <div class="row">
