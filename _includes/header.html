@@ -21,21 +21,23 @@
           {% endif %}
         {% endfor %}
       </ul>
-
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#" data-hook="login-link">Login</a></li>
-        <li class="dropdown hidden" data-hook="user-dropdown">
-          <a href="#" class="dropdown-toggle" data-hook="user-dropdown-link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-            <span class="user-issue" data-hook="user-issue"><i class="fa fa-exclamation-circle"></i></span>
-            <span data-hook="user-name">User</span>
-            <span class="caret"></span>
-          </a>
-          <ul class="dropdown-menu">
-            <li class="admin-only" data-hook="admin-link-list-item"><a href="{{ site.baseurl }}/admin/">Administration</a></li>
-            <li><a href="#" data-hook="logout-link">Logout</a></li>
-          </ul>
-        </li>
-      </ul>
+      
+      {% if site.github_client_id and site.github_client_id != empty and site.gatekeeper_host and site.gatekeeper_host != empty %}
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#" data-hook="login-link">Login</a></li>
+          <li class="dropdown hidden" data-hook="user-dropdown">
+            <a href="#" class="dropdown-toggle" data-hook="user-dropdown-link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+              <span class="user-issue" data-hook="user-issue"><i class="fa fa-exclamation-circle"></i></span>
+              <span data-hook="user-name">User</span>
+              <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu">
+              <li class="admin-only" data-hook="admin-link-list-item"><a href="{{ site.baseurl }}/admin/">Administration</a></li>
+              <li><a href="#" data-hook="logout-link">Logout</a></li>
+            </ul>
+          </li>
+        </ul>
+      {% endif %}
     </div>
 
   </div>
