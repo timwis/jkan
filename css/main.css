@@ -1,3 +1,11 @@
+input[data-hook=search-query] {
+  display: none;
+}
+
+.js input[data-hook=search-query] {
+  display: block;
+}
+
 .organization-thumbnail img,
 .category-thumbnail img {
   width: 64px;
