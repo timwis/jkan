@@ -4,20 +4,56 @@ layout: default
 permalink: /datasets/
 ---
 {% include breadcrumbs.html %}
+{% assign datasets_count = site.datasets | size %}
 
 <div class="row">
   <div class="col-sm-4">
 
     <h3>Categories</h3>
-    <div class="list-group" data-component="categories-filter" data-show="5"></div>
+    <div class="list-group" data-component="categories-filter" data-show="5">
+      {% assign categories = site.datasets | map: 'category' | uniq %}
+      {% assign first_set = categories | slice: 0, 5 %}
+      {% assign other_categories = categories | slice: 5 %}
+      {% include filter-category.html categories=first_set %}
+
+      <div class="js-hidden">
+        {% include filter-category.html categories=other_categories %}
+      </div>
+      {% if other_categories.size > 0 %}
+      <div class="js-shown">
+        <a href="#" class="list-group-item">Show {{ other_categories.size }} more...</a>
+      </div>
+      {% endif %}
+    </div>
 
     <h3>Organizations</h3>
-    <div class="list-group" data-component="organizations-filter" data-show="15"></div>
+    <div class="list-group" data-component="organizations-filter" data-show="15">
+      {% assign first_set = site.organizations | slice: 0, 15 %}
+      {% assign other_orgs = site.organizations | slice: 15 %}
+      {% include filter-organization.html organizations=first_set %}
+
+      <div class="js-hidden">
+        {% include filter-organization.html organizations=other_orgs %}
+      </div>
+      {% if other_orgs.size > 0 %}
+      <div class="js-shown">
+        <a href="#" class="list-group-item">Show {{ other_orgs.size }} more...</a>
+      </div>
+      {% endif %}
+    </div>
   </div>
   <div class="col-sm-8" data-component="datasets-list">
-    <h3 class="datasets-count" data-hook="datasets-count"></h3>
+    <h3 class="datasets-count" data-hook="datasets-count">{{ datasets_count }}
+      {% if datasets_count == 1 %}dataset{% else %}datasets{% endif %}</h3>
     <a href="{{ site.baseurl }}/add-dataset/" class="btn btn-outline-secondary float-right admin-only" data-hook="add-dataset-btn"><i class="fa fa-plus"></i> Add Dataset</a>
     <input type="text" data-hook="search-query" placeholder="Search..." class="form-control mb-3">
-    <div data-hook="datasets-items"></div>
+    <div data-hook="datasets-items">
+      {% for dataset in site.datasets %}
+       <dataset>
+         <h3><a href="{{ site.baseurl }}{{ dataset.url }}">{{ dataset.title }}</a></h3>
+         {{ dataset.notes }}
+       </dataset>
+      {% endfor %}
+    </div>
   </div>
 </div>

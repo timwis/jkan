@@ -1,0 +1,17 @@
+{% assign sizes = '' | split: "" %}
+{% for org in include.organizations %}
+  {% assign c = site.datasets | where:"organization", org.title | size %}
+  {% assign sizes = sizes | push: c %}
+{% endfor %}
+{% assign sorted_sizes = sizes | sort | reverse | uniq %}
+{% for s in sorted_sizes %}
+  {% for org in include.organizations %}
+    {% assign c = sizes[forloop.index0] %}
+    {% if c == s %}
+      <a href="{{ site.baseurl }}{{ org.url }}" class="list-group-item">
+        <span class="list-group-item-truncate">{{ org.title }}</span>
+        <span class="badge">{{ s }}</span>
+      </a>
+    {% endif %}
+  {% endfor %}
+{% endfor %}
