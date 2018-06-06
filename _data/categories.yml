@@ -1,11 +1,3 @@
-- name: Budget / Finance
-  logo: /img/categories/budget-finance.svg
-  logo_credit: Renan Ferreira Santos from the Noun Project
-  featured: true
-- name: Economy
-  logo: /img/categories/economy.svg
-  logo_credit: Vectors Market from the Noun Project
-  featured: true
 - name: Education
   logo: /img/categories/education.svg
   logo_credit: Sergey Patutin from the Noun Project
