@@ -1,6 +1,3 @@
-- name: Arts / Culture / History
-  logo: /img/categories/arts-culture-history.svg
-  featured: true
 - name: Budget / Finance
   logo: /img/categories/budget-finance.svg
   logo_credit: Renan Ferreira Santos from the Noun Project
@@ -19,6 +16,7 @@
   featured: true
 - name: Environment
   logo: /img/categories/environment.svg
+  logo_credit: ''
   featured: true
 - name: Food
   logo: /img/categories/food.svg
@@ -34,6 +32,7 @@
   featured: true
 - name: Planning / Zoning
   logo: /img/categories/planning-zoning.svg
+  logo_credit: ''
   featured: true
 - name: Public Safety
   logo: /img/categories/public-safety.svg
@@ -41,6 +40,7 @@
   featured: true
 - name: Real Estate / Land Records
   logo: /img/categories/real-estate-land-records.svg
+  logo_credit: ''
   featured: true
 - name: Transportation
   logo: /img/categories/transportation.svg
