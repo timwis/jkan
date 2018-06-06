@@ -1,1 +1,48 @@
-[]
+- name: Economy
+  logo: /img/categories/economy.svg
+  logo_credit: Vectors Market from the Noun Project
+  featured: true
+- name: Education
+  logo: /img/categories/education.svg
+  logo_credit: Sergey Patutin from the Noun Project
+  featured: true
+- name: Elections / Politics
+  logo: /img/categories/elections-politics.svg
+  logo_credit: Jean Soo from the Noun Project
+  featured: true
+- name: Environment
+  logo: /img/categories/environment.svg
+  logo_credit: ''
+  featured: true
+- name: Food
+  logo: /img/categories/food.svg
+  logo_credit: Creative Stall from the Noun Project
+  featured: true
+- name: Health / Human Services
+  logo: /img/categories/health-human-services.svg
+  logo_credit: Timothy Miller from the Noun Project
+  featured: true
+- name: Parks / Recreation
+  logo: /img/categories/parks-recreation.svg
+  logo_credit: Pipe Rosas Licht from the Noun Project
+  featured: true
+- name: Planning / Zoning
+  logo: /img/categories/planning-zoning.svg
+  logo_credit: ''
+  featured: true
+- name: Public Safety
+  logo: /img/categories/public-safety.svg
+  logo_credit: Rohith M S from the Noun Project
+  featured: true
+- name: Real Estate / Land Records
+  logo: /img/categories/real-estate-land-records.svg
+  logo_credit: ''
+  featured: true
+- name: Transportation
+  logo: /img/categories/transportation.svg
+  logo_credit: Dmitry Baranovskiy from the Noun Project
+  featured: true
+- name: Uncategorized
+  logo: /img/categories/uncategorized.svg
+  logo_credit: Edward Boatman from the Noun Project
+  featured: true
