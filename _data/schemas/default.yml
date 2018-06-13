@@ -27,7 +27,7 @@ dataset_fields:
     form_template: form/category.html
     display_template: display/category.html
     datajson: category
-  - field_name: maintainer
+  - field_name: maintainer_name
     label: Maintainer
     datajson: contactPoint.fn
   - field_name: maintainer_email
