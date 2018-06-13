@@ -4,13 +4,7 @@ dataset_fields:
   - field_name: title
     label: Title
     datajson: title
-  - field_name: date_issued
-    label: Date Issued (YYYY-MM-DD)
-    datajson: issued
-  - field_name: date_modified
-    label: Date Modified (YYYY-MM-DD)
-    datajson: modified
- - field_name: organization
+  - field_name: organization
     label: Organization
     form_template: form/organization.html
     datajson: publisher.name
