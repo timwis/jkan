@@ -1,0 +1,19 @@
+---
+schema: default
+title: Statistika andmebaas
+department: ''
+category:
+  - Economy and industry
+resources:
+  - name: Statistikaameti statistika andmebaas
+    url: 'http://www.stat.ee/andmebaas'
+    format: veebileht
+license: 'http://creativecommons.org/licenses/by/3.0/'
+date_issued: 11/04/2017
+date_modified: 11/04/2017
+maintainer: Statistikaamet
+maintainer_email: ''
+legacy_url: 'https://opendata.riik.ee/en/dataset/statistika-andmebaas'
+---
+Statistikaameti poolt koostatav riiklik statistika PC-Axis platvormil.
+   Plaanis on lähiajal uuendada kogu süsteemi platvorm ja teha kõik andmestikud kättesaadavaks masinloetavalt.
