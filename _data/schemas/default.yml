@@ -71,7 +71,8 @@ organization_fields:
     label: Maintainer Email
   - field_name: description
     label: Description
- 
+  - field_name: logo
+    label: Logo
   
 category_fields:
   - field_name: name
