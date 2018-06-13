@@ -30,7 +30,7 @@ dataset_fields:
   - field_name: maintainer
     label: Maintainer
     datajson: contactPoint.fn
-  - field_name: maintainer_email
+  - field_name: maintainers_email
     label: Maintainer Email
     datajson: contactPoint.hasEmail
     
