@@ -1,6 +1,6 @@
-title: JKAN
-greeting: Welcome to JKAN
-description: A lightweight, backend-free open data portal, powered by Jekyll.
+title: Eesti Avaandmete Portaal
+greeting: Welcome to the Estonian Open Data Portal - Test
+description: The Open Data Portal provides a single point of access for general public to unrestricted public sector data with the permission to re-use and redistribute such data for both commercial and non-commercial purposes.
 baseurl: /jkan
 logo: /img/jkan.png
 
@@ -12,7 +12,7 @@ github_client_id: 0eed203fe7cb7b330d2b
 gatekeeper_host: https://jkan-eesti.herokuapp.com
 
 # Dataset schema
-schema: default
+schema: cerulean
 
 # Nav bar
 navigation:
