@@ -1,7 +1,7 @@
 ---
 schema: default
 title: Aadressiandmed
-organization: Majandus -ja Kommunikatsiooniministeerium (MKM)
+organization: Maa-amet
 notes: ''
 resources:
   - name: Aadressid
