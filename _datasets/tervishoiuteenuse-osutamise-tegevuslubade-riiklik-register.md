@@ -1,0 +1,30 @@
+---
+schema: default
+title: Tervishoiuteenuse osutamise tegevuslubade riiklik register
+department: ''
+category:
+  - Health
+resources:
+  - name: 'Asutused, tegevusload, töötajad'
+    url: 'http://mveeb.sm.ee/od/od_asutused.xml'
+    format: XML
+  - name: Avaandmete kirjeldus
+    url: 'http://mveeb.sm.ee/img/meta_asutused.pdf'
+    format: PDF
+  - name: Erialade loend
+    url: 'http://mveeb.sm.ee/od/od_erialad.xml'
+    format: XML
+  - name: Kutsete loend
+    url: 'http://mveeb.sm.ee/od/od_kutsed.xml'
+    format: XML
+  - name: Teenuste loend
+    url: 'http://mveeb.sm.ee/od/od_teenused.xml'
+    format: XML
+license: 'http://creativecommons.org/licenses/by/3.0/'
+date_issued: 19/03/2015
+date_modified: 19/03/2015
+maintainer: Terviseamet
+maintainer_email: ''
+legacy_url: 'https://opendata.riik.ee/en/dataset/tervishoiuteenuse-osutamise-tegevuslubade-riiklik-register'
+---
+Tervishoiuteenuse osutamise tegevuslubade riikliku registri avaandmete puhul on esitatud tervishoiuteenuseid osutavad asutused, nende tegevusload ja töötajad. Esitatud on ainult kehtivaid tegevuslube omavad asutused.
