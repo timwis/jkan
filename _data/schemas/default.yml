@@ -65,10 +65,6 @@ resource_fields:
 organization_fields:
   - field_name: title
     label: Title
-  -field_name: maintainer_name
-    label: Maintainer Name
-  -field_name: maintainer_email
-    label: Maintainer Email
   - field_name: description
     label: Description
   - field_name: logo
