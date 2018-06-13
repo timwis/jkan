@@ -27,7 +27,7 @@ dataset_fields:
     form_template: form/category.html
     display_template: display/category.html
     datajson: category
-  - field_name: maintainer_name
+  - field_name: maintainer
     label: Maintainer
     datajson: contactPoint.fn
   - field_name: maintainer_email
@@ -65,6 +65,10 @@ resource_fields:
 organization_fields:
   - field_name: title
     label: Title
+  -field_name: maintainer_name
+    label: Maintainer Name
+  -field_name: maintainer_email
+    label: Maintainer Email
   - field_name: description
     label: Description
   - field_name: logo
