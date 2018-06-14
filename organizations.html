@@ -8,7 +8,7 @@ permalink: /organizations/
 <a href="{{ site.baseurl }}/add-organization/" class="btn btn-default pull-right admin-only" data-hook="add-organization-btn"><i class="fa fa-plus"></i> Add Organization</a>
 
 {% for organization in site.organizations %}
-  {% assign dataset_count = site.datasets | where:"organization", organization.title | size %}
+  {% assign dataset_count = site.datasets | where:"maintainer", organization.title | size %}
   <div class="media">
     <div class="media-left">
       {% if organization.logo and organization.logo != empty %}
@@ -20,7 +20,9 @@ permalink: /organizations/
     <div class="media-body">
       <h4 class="media-heading"><a href="{{ site.baseurl }}{{ organization.url }}">{{ organization.title }}</a></h4>
       <p>{{ organization.description }}</p>
+      {% if dataset_count > 0 %}
       <p><a href="{{ site.baseurl }}/datasets/?organization={{ organization.title | slugify }}">{{ dataset_count }} datasets</a></p>
+      {% endif %}
     </div>
   </div>
 {% endfor %}
