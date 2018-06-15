@@ -34,9 +34,12 @@ collections:
   organizations:
     output: true
     permalink: /organizations/:path/
-#  applications:
-#    output: true
-#    permalink: /applications/:path/
+  applications:
+    output: true
+    permalink: /applications/:path/
+  news:
+    output: true
+    permalink: /news/:path/
 
 # Collections (cont'd)
 defaults:
@@ -52,11 +55,16 @@ defaults:
       type: organizations
     values:
       layout: organization
-#  - scope:
-#      path: ""
-#      type: applications
-#      values:
-#      layout: applications
+  - scope:
+      path: ""
+      type: applications
+      values:
+      layout: default
+  - scope:
+      path: ""
+      type: news
+    values:
+      layout: default 
 
 # Markdown settings
 markdown: kramdown
