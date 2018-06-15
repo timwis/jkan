@@ -8,7 +8,7 @@ permalink: /organizations/
 <a href="{{ site.baseurl }}/add-organization/" class="btn btn-default pull-right admin-only" data-hook="add-organization-btn"><i class="fa fa-plus"></i> Add Organization</a>
 
 {% for organization in site.organizations %}
-  {% assign dataset_count = site.datasets | where:"maintainer", organization.title | size %}
+  {% assign dataset_count = site.datasets | where:"organization", organization.title | size %}
       {% if dataset_count > 0 %}
   <div class="media">
     <div class="media-left">

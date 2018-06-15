@@ -1,6 +1,7 @@
 ---
 schema: default
 title: Majandus- ja Kommunikatsiooniministeeriumi teenuste otsing
+notes: Siin lehel saad erinevate tunnuste abil otsida Majandus- ja Kommunikatsiooniministeeriumi haldusala teenuseid.
 department: ''
 category:
   - Government services
@@ -14,8 +15,9 @@ resources:
 license: 'http://creativecommons.org/licenses/by/3.0/'
 date_issued: 27/08/2015
 date_modified: 27/08/2015
-maintainer: Majandus -ja Kommunikatsiooniministeerium
-maintainer_email: ''
+organization: Majandus -ja Kommunikatsiooniministeerium
+maintainer_name: Risto Hinno
+maintainer_email: Risto.Hinno@mkm.ee
+maintainer_phone: ''
 legacy_url: 'https://opendata.riik.ee/en/dataset/majandus-ja-kommunikatsiooniministeeriumi-teenuste-otsing'
 ---
-Siin lehel saad erinevate tunnuste abil otsida Majandus- ja Kommunikatsiooniministeeriumi haldusala teenuseid.

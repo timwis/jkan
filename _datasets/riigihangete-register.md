@@ -1,6 +1,9 @@
 ---
 schema: default
 title: Riigihangete register
+notes: |-
+  Riigihangete registri eesmärk on pakkuda innovaatilist töökeskkonda hankijatele riigihangete korraldamiseks ning pakkujatele riigihangetel osalemiseks.
+     Andmed Riigihangete registri hangetest seisuga 18.05.2015
 department: ''
 category:
   - Government services
@@ -11,9 +14,9 @@ resources:
 license: 'http://creativecommons.org/licenses/by/3.0/'
 date_issued: 25/05/2015
 date_modified: 25/05/2015
-maintainer: Rahandusministeerium
-maintainer_email: ''
+organization: Rahandusministeerium
+maintainer_name: Evelin Kasenõmm
+maintainer_email: Evelin.kasenomm@fin.ee
+maintainer_phone: ''
 legacy_url: 'https://opendata.riik.ee/en/dataset/riigihangete-register'
 ---
-Riigihangete registri eesmärk on pakkuda innovaatilist töökeskkonda hankijatele riigihangete korraldamiseks ning pakkujatele riigihangetel osalemiseks.
-   Andmed Riigihangete registri hangetest seisuga 18.05.2015

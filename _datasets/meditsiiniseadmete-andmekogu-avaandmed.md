@@ -1,6 +1,11 @@
 ---
 schema: default
 title: Meditsiiniseadmete andmekogu avaandmed
+notes: |-
+  Meditsiiniseadmete andmekogu avaandmed on digitaalsel ja masinloetaval kujul kättesaadavad vastavalt Avaliku teabe seaduse § 28 lg1 p30 ja § 29 lg4. MSA komplekti kuuluvad järgmised andmekomplektid:
+      Kliinilised uuringud
+      Ohujuhtumid
+      Meditsiiniseadmed (sh nende tootjad, levitajad ja professionaalsed kasutajad)
 department: ''
 category:
   - Health
@@ -20,11 +25,9 @@ resources:
 license: 'http://creativecommons.org/licenses/by/3.0/'
 date_issued: 26/02/2015
 date_modified: 26/02/2015
-maintainer: Terviseamet
-maintainer_email: ''
+organization: Terviseamet
+maintainer_name: Kadri Tõnnisson
+maintainer_email: kadri.tonnisson@terviseamet.ee
+maintainer_phone: '7447421'
 legacy_url: 'https://opendata.riik.ee/en/dataset/meditsiiniseadmete-andmekogu-avaandmed'
 ---
-Meditsiiniseadmete andmekogu avaandmed on digitaalsel ja masinloetaval kujul kättesaadavad vastavalt Avaliku teabe seaduse § 28 lg1 p30 ja § 29 lg4. MSA komplekti kuuluvad järgmised andmekomplektid:
-    Kliinilised uuringud
-    Ohujuhtumid
-    Meditsiiniseadmed (sh nende tootjad, levitajad ja professionaalsed kasutajad)

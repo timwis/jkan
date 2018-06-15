@@ -1,6 +1,7 @@
 ---
 schema: default
 title: Kutseregistri avaandmed
+notes: 'Aastal 2001 asutatud register sisaldab andmeid kutsestandardite, kutsealade, kehtivate kutsetunnistuste, kutse andjate ja kutsenõukogude kohta. Kutseregistri väljavõtted on igapäevaselt uuendatud ja kättesaadavad Exceli formaadis.'
 department: ''
 category:
   - Education and research
@@ -14,8 +15,9 @@ resources:
 license: 'http://creativecommons.org/licenses/by/3.0/'
 date_issued: 17/04/2018
 date_modified: 17/04/2018
-maintainer: Haridus- ja Teadusministeerium
-maintainer_email: ''
+organization: Haridus- ja Teadusministeerium
+maintainer_name: Sihtasutus Kutsekoda
+maintainer_email: kutsekoda@kutsekoda.ee
+maintainer_phone: ''
 legacy_url: 'https://opendata.riik.ee/en/dataset/kutseregister'
 ---
-Aastal 2001 asutatud register sisaldab andmeid kutsestandardite, kutsealade, kehtivate kutsetunnistuste, kutse andjate ja kutsenõukogude kohta. Kutseregistri väljavõtted on igapäevaselt uuendatud ja kättesaadavad Exceli formaadis.

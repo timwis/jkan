@@ -1,6 +1,7 @@
 ---
 schema: default
 title: Äriregistri avalikud tasuta andmed
+notes: 'Äriregistri avalikud tasuta andmed [ettevõtja (ühingu) nimi, registrikood, käibemaksukohustuslase number, staatus, aadress, link ettevõtja andmetele]'
 department: ''
 category:
   - Economy and industry
@@ -11,8 +12,9 @@ resources:
 license: 'http://creativecommons.org/licenses/by-sa/3.0/'
 date_issued: 06/07/2015
 date_modified: 06/07/2015
-maintainer: Justiitsministeerium
-maintainer_email: ''
+organization: Justiitsministeerium
+maintainer_name: Justiitsministeerium
+maintainer_email: info@just.ee
+maintainer_phone: '6208100'
 legacy_url: 'https://opendata.riik.ee/en/dataset/http-avaandmed-rik-ee-andmed-ariregister'
 ---
-Äriregistri avalikud tasuta andmed [ettevõtja (ühingu) nimi, registrikood, käibemaksukohustuslase number, staatus, aadress, link ettevõtja andmetele]

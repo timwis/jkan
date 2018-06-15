@@ -1,6 +1,9 @@
 ---
 schema: default
 title: Eesti Rahvusbibliograafia
+notes: >-
+  Eesti rahvusbibliograafia andmebaas ERB (http://erb.nlib.ee) registreerib andmed rahvusteavikute kohta. Rahvusteavikutena käsitletakse Eestis kõigis keeltes ning välismaal eesti keeles avaldatud väljaandeid, Eesti autorite teoseid ja nende tõlkeid sõltumata nende füüsilisest kandjast (paber, elektrooniline kandja). ERB koostamise põhimõtted on fikseeritud dokumendis Rahvusbibliograafia koostamise alused. Andmebaasi täiendatakse uute andmetega pidevalt, kuid mitte harvemini kui üks kord
+  nädalas.
 department: ''
 category:
   - Culture
@@ -44,8 +47,9 @@ resources:
 license: 'http://creativecommons.org/about/cc0'
 date_issued: 13/03/2017
 date_modified: 13/03/2017
-maintainer: Eesti Rahvusraamatukogu
-maintainer_email: ''
+organization: Eesti Rahvusraamatukogu
+maintainer_name: Urmas Sinisalu
+maintainer_email: urmas@nlib.ee
+maintainer_phone: ''
 legacy_url: 'https://opendata.riik.ee/en/dataset/erb'
 ---
-Eesti rahvusbibliograafia andmebaas ERB (http://erb.nlib.ee) registreerib andmed rahvusteavikute kohta. Rahvusteavikutena käsitletakse Eestis kõigis keeltes ning välismaal eesti keeles avaldatud väljaandeid, Eesti autorite teoseid ja nende tõlkeid sõltumata nende füüsilisest kandjast (paber, elektrooniline kandja). ERB koostamise põhimõtted on fikseeritud dokumendis Rahvusbibliograafia koostamise alused. Andmebaasi täiendatakse uute andmetega pidevalt, kuid mitte harvemini kui üks kord nädalas.

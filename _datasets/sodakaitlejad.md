@@ -1,6 +1,7 @@
 ---
 schema: default
 title: Söödakäitlejad
+notes: Teavitatud ja tegevusloaga söödakäitlejad
 department: ''
 category:
   - Agriculture
@@ -19,8 +20,9 @@ resources:
 license: 'http://creativecommons.org/licenses/by/3.0/'
 date_issued: 17/07/2017
 date_modified: 17/07/2017
-maintainer: Maaeluministeerium
-maintainer_email: ''
+organization: Maaeluministeerium
+maintainer_name: Jüri Tali
+maintainer_email: jyri.tali@agri.ee
+maintainer_phone: ''
 legacy_url: 'https://opendata.riik.ee/en/dataset/sodakaitlejad'
 ---
-Teavitatud ja tegevusloaga söödakäitlejad

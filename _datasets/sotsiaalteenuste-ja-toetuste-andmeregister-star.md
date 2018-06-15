@@ -1,6 +1,7 @@
 ---
 schema: default
 title: Sotsiaalteenuste ja -toetuste andmeregister (STAR)
+notes: 'Siin on avaldatud sotsiaalteenuste ja -toetuste andmeregistri (STAR) järgmised andmed: maakond, haldusasutus, riiklikult kehtestatud toimetulekutoetuse parameetrid, toimetulekutoetuse maksmiseks kehtestatud eluasemekulude piirmäärad omavalitsustes, riiklikult kehtestatud vajaduspõhise peretoetuse parameetrid, parameetri kehtivuse algus, parameetri kehtivuse lõpp, parameetri väärtus, parameetri mõõtühik.'
 department: ''
 category:
   - Social sphere
@@ -14,8 +15,9 @@ resources:
 license: 'http://creativecommons.org/licenses/by/3.0/'
 date_issued: 10/02/2015
 date_modified: 10/02/2015
-maintainer: Sotsiaalministeerium
-maintainer_email: ''
+organization: Sotsiaalministeerium
+maintainer_name: STAR teenusetugi
+maintainer_email: STARteenusetugi@tehik.ee
+maintainer_phone: '7943903'
 legacy_url: 'https://opendata.riik.ee/en/dataset/sotsiaalteenuste-ja-toetuste-andmeregister-star'
 ---
-Siin on avaldatud sotsiaalteenuste ja -toetuste andmeregistri (STAR) järgmised andmed: maakond, haldusasutus, riiklikult kehtestatud toimetulekutoetuse parameetrid, toimetulekutoetuse maksmiseks kehtestatud eluasemekulude piirmäärad omavalitsustes, riiklikult kehtestatud vajaduspõhise peretoetuse parameetrid, parameetri kehtivuse algus, parameetri kehtivuse lõpp, parameetri väärtus, parameetri mõõtühik.

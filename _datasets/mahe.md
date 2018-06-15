@@ -1,6 +1,7 @@
 ---
 schema: default
 title: Mahepõllumajanduse register
+notes: Mahepõllumajanduse registri pidamise eesmärk on pidada arvestust mahepõllumajanduse valdkonnas tegutsevate isikute ja nende tunnustatud ettevõtete üle avalikkusele kättesaadaval ning tõhusa järelevalve teostamist võimaldaval viisil. Registri vastutav töötleja on Maaeluministeerium ja volitatud töötleja on Põllumajandusamet (PMA). Täpsemat teavet mahepõllumajanduse registri kohta saab PMA kodulehelt
 department: ''
 category:
   - Agriculture
@@ -37,8 +38,9 @@ resources:
 license: 'http://creativecommons.org/licenses/by/3.0/'
 date_issued: 12/07/2017
 date_modified: 12/07/2017
-maintainer: Maaeluministeerium
-maintainer_email: ''
+organization: Maaeluministeerium
+maintainer_name: Jüri Tali
+maintainer_email: jyri.tali@agri.ee
+maintainer_phone: ''
 legacy_url: 'https://opendata.riik.ee/en/dataset/mahe'
 ---
-Mahepõllumajanduse registri pidamise eesmärk on pidada arvestust mahepõllumajanduse valdkonnas tegutsevate isikute ja nende tunnustatud ettevõtete üle avalikkusele kättesaadaval ning tõhusa järelevalve teostamist võimaldaval viisil. Registri vastutav töötleja on Maaeluministeerium ja volitatud töötleja on Põllumajandusamet (PMA). Täpsemat teavet mahepõllumajanduse registri kohta saab PMA kodulehelt

@@ -1,6 +1,7 @@
 ---
 schema: default
 title: Eesti tollitariifistik
+notes: 'Euroopa Liitu importimise ja liidust eksportimisega seotud meetmete kohaldamiseks kasutatakse integreeritud tollitariifistikku TARIC (Tarif Intégré Communautaire) http://ec.europa.eu/taxation_customs/dds2/taric/taric_consultation.jsp?Lang=en . TARICi rakendamiseks Eestis on välja töötatud Eesti Tollitariifistik (ETT) https://apps.emta.ee/arctictariff-public-web/ , mis sisaldab lisaks TARIC meetmetele ka Eesti riigisiseseid meetmeid (lisatud avaandmetena seisuga 01.02.2018).'
 department: ''
 category:
   - Finances and budgeting
@@ -35,8 +36,9 @@ resources:
 license: 'http://creativecommons.org/licenses/by/3.0/'
 date_issued: 01/02/2018
 date_modified: 01/02/2018
-maintainer: Maksu- ja Tolliamet
-maintainer_email: ''
+organization: Maksu- ja Tolliamet
+maintainer_name: Kati Liik.
+maintainer_email: kati.liik@emta.ee
+maintainer_phone: ''
 legacy_url: 'https://opendata.riik.ee/en/dataset/eesti-tollitariifistik_01022018'
 ---
-Euroopa Liitu importimise ja liidust eksportimisega seotud meetmete kohaldamiseks kasutatakse integreeritud tollitariifistikku TARIC (Tarif Intégré Communautaire) http://ec.europa.eu/taxation_customs/dds2/taric/taric_consultation.jsp?Lang=en . TARICi rakendamiseks Eestis on välja töötatud Eesti Tollitariifistik (ETT) https://apps.emta.ee/arctictariff-public-web/ , mis sisaldab lisaks TARIC meetmetele ka Eesti riigisiseseid meetmeid (lisatud avaandmetena seisuga 01.02.2018).

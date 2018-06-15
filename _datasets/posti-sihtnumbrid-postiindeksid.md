@@ -1,6 +1,7 @@
 ---
 schema: default
 title: Posti sihtnumbrid (postiindeksid)
+notes: Posti sihtnumbrid on seotud aadressiandmete süsteemi aadressidega (ADR-ID-dega). Andmeid uuendatakse süsteemi väliselt kuni 2018. aasta arendustööde valmimiseni. Seejärel levitab Maa-amet samu andmeid enamuse ADS-i teenuste ja väljavõtete koosseisus.
 department: ''
 category:
   - Geography
@@ -14,8 +15,9 @@ resources:
 license: 'http://creativecommons.org/licenses/by/3.0/'
 date_issued: 08/12/2017
 date_modified: 08/12/2017
-maintainer: Maa-amet
-maintainer_email: ''
+organization: Maa-amet
+maintainer_name: Tanel Hurt
+maintainer_email: Tanel.Hurt@maaamet.ee
+maintainer_phone: ''
 legacy_url: 'https://opendata.riik.ee/en/dataset/posti-sihtnumbrid-postiindeksid'
 ---
-Posti sihtnumbrid on seotud aadressiandmete süsteemi aadressidega (ADR-ID-dega). Andmeid uuendatakse süsteemi väliselt kuni 2018. aasta arendustööde valmimiseni. Seejärel levitab Maa-amet samu andmeid enamuse ADS-i teenuste ja väljavõtete koosseisus.

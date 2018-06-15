@@ -1,6 +1,7 @@
 ---
 schema: default
 title: Loomeliitude andmekogu avaandmed
+notes: Loomeliitude andmekogu avaandmed
 department: ''
 category:
   - Culture
@@ -11,8 +12,9 @@ resources:
 license: 'http://creativecommons.org/licenses/by/3.0/'
 date_issued: 20/04/2015
 date_modified: 20/04/2015
-maintainer: Kultuuriministeerium
-maintainer_email: ''
+organization: Kultuuriministeerium
+maintainer_name: Indrek Reimand
+maintainer_email: indrek.reimand@kul.ee
+maintainer_phone: ''
 legacy_url: 'https://opendata.riik.ee/en/dataset/loomeliitude-andmekogu-avaandmed'
 ---
-Loomeliitude andmekogu avaandmed

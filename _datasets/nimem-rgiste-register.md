@@ -1,6 +1,7 @@
 ---
 schema: default
 title: Nimemärgiste register
+notes: 'Nimemärgiste registris hoitakse väärismetalltoodete nimemärgised, mis väljastatakse nende valmistajale või sissevedajale. Avaandmetena on kättesaadavaks tehtud järgmised andmed : ettevõtte andmed, nimemärgise andmed - kujutis, kommentaar, registreerimise kuupäev ja number, olek, kehtivusaeg, lisamise kuupäeva.'
 department: ''
 category:
   - Economy and industry
@@ -14,8 +15,9 @@ resources:
 license: 'http://creativecommons.org/licenses/by/3.0/'
 date_issued: 28/05/2018
 date_modified: 28/05/2018
-maintainer: Majandus -ja Kommunikatsiooniministeerium
-maintainer_email: ''
+organization: Majandus -ja Kommunikatsiooniministeerium
+maintainer_name: Kristjan Kaiklem
+maintainer_email: kristjan.kaiklem@mkm.ee
+maintainer_phone: ''
 legacy_url: 'https://opendata.riik.ee/en/dataset/nimem-rgiste-register'
 ---
-Nimemärgiste registris hoitakse väärismetalltoodete nimemärgised, mis väljastatakse nende valmistajale või sissevedajale. Avaandmetena on kättesaadavaks tehtud järgmised andmed : ettevõtte andmed, nimemärgise andmed - kujutis, kommentaar, registreerimise kuupäev ja number, olek, kehtivusaeg, lisamise kuupäeva.

@@ -1,6 +1,7 @@
 ---
 schema: default
 title: Majandustegevuse register
+notes: 'Ettevõtja andmed, millel on MTR-is kehtivad tegevusload või majandustegevusteated'
 department: ''
 category:
   - Economy and industry
@@ -14,8 +15,9 @@ resources:
 license: 'http://creativecommons.org/licenses/by/3.0/'
 date_issued: 07/05/2018
 date_modified: 07/05/2018
-maintainer: Majandus -ja Kommunikatsiooniministeerium
-maintainer_email: ''
+organization: Majandus -ja Kommunikatsiooniministeerium
+maintainer_name: Majandustegevuse register
+maintainer_email: mtr@mkm.ee
+maintainer_phone: '6687080'
 legacy_url: 'https://opendata.riik.ee/en/dataset/majandustegevuse-register'
 ---
-Ettevõtja andmed, millel on MTR-is kehtivad tegevusload või majandustegevusteated

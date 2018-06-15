@@ -1,6 +1,7 @@
 ---
 schema: default
 title: Andmestik rahvastikuregistris leiduvate nimedega
+notes: 'Andmefailis on kuvatud rahvastikuregistris esinevad nimed, eristamata ees- ja perekonnanimesid. Andmed on 01.02.2018 seisuga.'
 department: ''
 category:
   - Population and vital statistics
@@ -11,8 +12,9 @@ resources:
 license: ''
 date_issued: 05/02/2018
 date_modified: 05/02/2018
-maintainer: Siseministeerium
-maintainer_email: ''
+organization: Siseministeerium
+maintainer_name: Maarja-Eliisabet Mäe
+maintainer_email: maarja-eliisabet.mae@siseministeerium.ee
+maintainer_phone: ''
 legacy_url: 'https://opendata.riik.ee/en/dataset/andmestik-rahvastikuregistris-leiduvate-nimedega'
 ---
-Andmefailis on kuvatud rahvastikuregistris esinevad nimed, eristamata ees- ja perekonnanimesid. Andmed on 01.02.2018 seisuga.

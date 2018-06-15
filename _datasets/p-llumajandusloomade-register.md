@@ -1,6 +1,7 @@
 ---
 schema: default
 title: Põllumajandusloomade register
+notes: 'Põllumajandusloomade registri pidamise eesmärk on  põllumajandusloomade, loomapidajate ja tegevuskohtade andmete kogumine ja süstematiseerimine, et teostada veterinaarjärelevalvet ning ära hoida ja likvideerida loomade nakkushaigusi ja kaitsta inimest loomadega ühiste ja loomade kaudu levivate haiguste eest. Registri vastutav töötleja on Põllumajandusministeerium ja volitatud töötleja Põllumajanduse Registrite ja Informatsiooni Amet (PRIA).'
 department: ''
 category:
   - Agriculture
@@ -31,8 +32,9 @@ resources:
 license: 'http://creativecommons.org/licenses/by/3.0/'
 date_issued: 30/01/2018
 date_modified: 30/01/2018
-maintainer: Põllumajanduse Registrite ja Informatsiooni Amet
-maintainer_email: ''
+organization: Põllumajanduse Registrite ja Informatsiooni Amet
+maintainer_name: Kiido Levin
+maintainer_email: kiido.levin@pria.ee
+maintainer_phone: '7377625'
 legacy_url: 'https://opendata.riik.ee/en/dataset/p-llumajandusloomade-register'
 ---
-Põllumajandusloomade registri pidamise eesmärk on  põllumajandusloomade, loomapidajate ja tegevuskohtade andmete kogumine ja süstematiseerimine, et teostada veterinaarjärelevalvet ning ära hoida ja likvideerida loomade nakkushaigusi ja kaitsta inimest loomadega ühiste ja loomade kaudu levivate haiguste eest. Registri vastutav töötleja on Põllumajandusministeerium ja volitatud töötleja Põllumajanduse Registrite ja Informatsiooni Amet (PRIA).
