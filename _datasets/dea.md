@@ -1,6 +1,7 @@
 ---
 schema: default
 title: Rahvusraamatukogu digiarhiiv DIGAR - Eesti artiklid
+notes: 'DIGARi Eesti artiklite portaali eesmärgiks on koondada ühte keskkonda ja pakkuda juurdepääsu kõigile läbi aegade Eestis ilmunud või välismaal eesti keeles avaldatud digitaalselt sündinud ja digiteeritud ajalehtedele, lisaks alates 2017.aastast ilmuvatele ajakirjadele jt jadaväljaannetele.'
 department: ''
 category:
   - Culture
@@ -14,8 +15,9 @@ resources:
 license: 'http://creativecommons.org/about/cc0'
 date_issued: 10/04/2017
 date_modified: 10/04/2017
-maintainer: Eesti Rahvusraamatukogu
-maintainer_email: ''
+organization: Eesti Rahvusraamatukogu
+maintainer_name: Urmas Sinisalu
+maintainer_email: urmas@nlib.ee
+maintainer_phone: ''
 legacy_url: 'https://opendata.riik.ee/en/dataset/dea'
 ---
-DIGARi Eesti artiklite portaali eesmärgiks on koondada ühte keskkonda ja pakkuda juurdepääsu kõigile läbi aegade Eestis ilmunud või välismaal eesti keeles avaldatud digitaalselt sündinud ja digiteeritud ajalehtedele, lisaks alates 2017.aastast ilmuvatele ajakirjadele jt jadaväljaannetele.

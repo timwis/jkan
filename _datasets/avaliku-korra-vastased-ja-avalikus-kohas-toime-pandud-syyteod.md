@@ -1,6 +1,7 @@
 ---
 schema: default
 title: Avaliku korra vastased ja avalikus kohas toime pandud süüteod
+notes: Andmehulk sisaldab andmeid Politsei- ja Piirivalveametis registreeritud avaliku korra vastaste süütegude ja avalikus kohas toime pandud varavastaste süütegude kohta. Avaldatavate andmete täpsemale kirjeldusele on viidatud täiendavate linkide all.
 department: ''
 category:
   - Government services
@@ -29,8 +30,9 @@ resources:
 license: 'http://creativecommons.org/licenses/by-sa/3.0/'
 date_issued: 15/11/2017
 date_modified: 15/11/2017
-maintainer: Politsei- ja Piirivalveamet
-maintainer_email: ''
+organization: Politsei- ja Piirivalveamet
+maintainer_name: Maarja Vesi
+maintainer_email: maarja.vesi@politsei.ee
+maintainer_phone: '6123348'
 legacy_url: 'https://opendata.riik.ee/en/dataset/avaliku-korra-vastased-ja-avalikus-kohas-toime-pandud-syyteod'
 ---
-Andmehulk sisaldab andmeid Politsei- ja Piirivalveametis registreeritud avaliku korra vastaste süütegude ja avalikus kohas toime pandud varavastaste süütegude kohta. Avaldatavate andmete täpsemale kirjeldusele on viidatud täiendavate linkide all.

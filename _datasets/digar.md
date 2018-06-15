@@ -1,6 +1,7 @@
 ---
 schema: default
 title: Rahvusraamatukogu digiarhiiv DIGAR
+notes: 'DIGAR on Rahvusraamatukogu kasutajakeskkond, mis praegu pakub juurdepääsu digitaalarhiivis talletatud väljaannetele. Nende hulgas on e-raamatuid, ajalehti, ajakirju, kaarte, noote, fotosid, postkaarte, plakateid, illustratsioone, audioraamatuid ning muusikafaile. Raamatute ja perioodika vorming on enamasti pdf või epub, pildimaterjalil jpeg ja helisalvestistel wav.'
 department: ''
 category:
   - Culture
@@ -41,8 +42,9 @@ resources:
 license: ''
 date_issued: 13/03/2017
 date_modified: 13/03/2017
-maintainer: Eesti Rahvusraamatukogu
-maintainer_email: ''
+organization: Eesti Rahvusraamatukogu
+maintainer_name: Urmas Sinisalu
+maintainer_email: urmas@nlib.ee
+maintainer_phone: ''
 legacy_url: 'https://opendata.riik.ee/en/dataset/digar'
 ---
-DIGAR on Rahvusraamatukogu kasutajakeskkond, mis praegu pakub juurdepääsu digitaalarhiivis talletatud väljaannetele. Nende hulgas on e-raamatuid, ajalehti, ajakirju, kaarte, noote, fotosid, postkaarte, plakateid, illustratsioone, audioraamatuid ning muusikafaile. Raamatute ja perioodika vorming on enamasti pdf või epub, pildimaterjalil jpeg ja helisalvestistel wav.

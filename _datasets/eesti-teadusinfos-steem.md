@@ -1,6 +1,10 @@
 ---
 schema: default
 title: Eesti Teadusinfosüsteemi avaandmed
+notes: |-
+  Eesti Teadusinfosüsteem (ETIS) koondab Eesti teadus- ja arendustegevusega seotud andmeid. Kõige vanemad andmed on aastast 2006. Kõik ETISe avalikud andmed on kättesaadavad portaalist ja API kaudu (väljundformaadid XML, JSON).
+     API kasutamise juhend on lisatud täiendava failina. Allpool on  näitena lisatud API kasutamise juhendi abil  koostatud Tartu Ülikooli teadusaparatuuri ja käimasolevate sihtfinatseeringuga projektide andmehulgad.
+     Portaalist on võimalik andmeid ning otsingu tulemeid eksportida Excelisse ja CSV, XML formaati.
 department: ''
 category:
   - Education and research
@@ -50,10 +54,9 @@ resources:
 license: 'http://creativecommons.org/licenses/by-sa/3.0/'
 date_issued: 16/04/2018
 date_modified: 16/04/2018
-maintainer: Haridus- ja Teadusministeerium
-maintainer_email: ''
+organization: Haridus- ja Teadusministeerium
+maintainer_name: ETIS kasutajatugi
+maintainer_email: etis@etag.ee
+maintainer_phone: ''
 legacy_url: 'https://opendata.riik.ee/en/dataset/eesti-teadusinfos-steem'
 ---
-Eesti Teadusinfosüsteem (ETIS) koondab Eesti teadus- ja arendustegevusega seotud andmeid. Kõige vanemad andmed on aastast 2006. Kõik ETISe avalikud andmed on kättesaadavad portaalist ja API kaudu (väljundformaadid XML, JSON).
-   API kasutamise juhend on lisatud täiendava failina. Allpool on  näitena lisatud API kasutamise juhendi abil  koostatud Tartu Ülikooli teadusaparatuuri ja käimasolevate sihtfinatseeringuga projektide andmehulgad.
-   Portaalist on võimalik andmeid ning otsingu tulemeid eksportida Excelisse ja CSV, XML formaati.

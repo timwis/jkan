@@ -1,6 +1,7 @@
 ---
 schema: default
 title: Eesti Spordiregistri avaandmed
+notes: Eesti Spordiregistri avaandmed.
 department: ''
 category:
   - Culture
@@ -35,8 +36,9 @@ resources:
 license: 'http://creativecommons.org/licenses/by/3.0/'
 date_issued: 26/02/2015
 date_modified: 26/02/2015
-maintainer: Kultuuriministeerium
-maintainer_email: ''
+organization: Kultuuriministeerium
+maintainer_name: Spordikoolituse ja -Teabe SA
+maintainer_email: ' esr@spordiinfo.ee'
+maintainer_phone: ''
 legacy_url: 'https://opendata.riik.ee/en/dataset/eesti-spordiregistri-avaandmed'
 ---
-Eesti Spordiregistri avaandmed.

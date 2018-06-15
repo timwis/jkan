@@ -1,6 +1,7 @@
 ---
 schema: default
 title: Liiklusjärelevalve käigus avastatud süüteod
+notes: Andmehulk sisaldab andmeid Politsei- ja Piirivalveameti tehtava liiklusjärelevalve käigus avastatud süütegude kohta. Avaldatavate andmete täpsemale kirjeldusele on viidatud täiendavate linkide all.
 department: ''
 category:
   - Government services
@@ -29,8 +30,9 @@ resources:
 license: 'http://creativecommons.org/licenses/by-sa/3.0/'
 date_issued: 09/11/2017
 date_modified: 09/11/2017
-maintainer: Politsei- ja Piirivalveamet
-maintainer_email: ''
+organization: Politsei- ja Piirivalveamet
+maintainer_name: Maarja Vesi
+maintainer_email: maarja.vesi@politsei.ee
+maintainer_phone: '6123348'
 legacy_url: 'https://opendata.riik.ee/en/dataset/liiklusjarelevalve-alased-syyteod'
 ---
-Andmehulk sisaldab andmeid Politsei- ja Piirivalveameti tehtava liiklusjärelevalve käigus avastatud süütegude kohta. Avaldatavate andmete täpsemale kirjeldusele on viidatud täiendavate linkide all.

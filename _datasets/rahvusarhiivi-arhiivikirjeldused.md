@@ -1,6 +1,7 @@
 ---
 schema: default
 title: Rahvusarhiivi arhiivikirjeldused
+notes: 'Rahvusarhiivi arhiivikirjeldused ehk informatsioon arhivaalide sisu kohta sõltumata nende füüsilisest kandjast (paber, elektrooniline kandja, filmilint vmt). Arhiivikirjeldustel baseeruvad kõik arhiiviainese otsivahendid.'
 department: ''
 category:
   - Culture
@@ -26,8 +27,9 @@ resources:
 license: 'http://creativecommons.org/about/cc0'
 date_issued: 12/02/2015
 date_modified: 12/02/2015
-maintainer: Rahvusarhiiv
-maintainer_email: ''
+organization: Rahvusarhiiv
+maintainer_name: Koit Saarevet
+maintainer_email: koit.saarevet@ra.ee
+maintainer_phone: ''
 legacy_url: 'https://opendata.riik.ee/en/dataset/rahvusarhiivi-arhiivikirjeldused'
 ---
-Rahvusarhiivi arhiivikirjeldused ehk informatsioon arhivaalide sisu kohta sõltumata nende füüsilisest kandjast (paber, elektrooniline kandja, filmilint vmt). Arhiivikirjeldustel baseeruvad kõik arhiiviainese otsivahendid.

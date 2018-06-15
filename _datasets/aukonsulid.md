@@ -1,6 +1,7 @@
 ---
 schema: default
 title: Aukonsulid
+notes: Eestis asuvad välisriikide aukonsulid ja nende kontaktandmed.
 department: ''
 category:
   - Government services
@@ -14,8 +15,9 @@ resources:
 license: 'http://creativecommons.org/licenses/by/3.0/'
 date_issued: 26/03/2015
 date_modified: 26/03/2015
-maintainer: Välisministeerium
-maintainer_email: ''
+organization: Välisministeerium
+maintainer_name: Riina Talts
+maintainer_email: Riina.Talts@mfa.ee
+maintainer_phone: ''
 legacy_url: 'https://opendata.riik.ee/en/dataset/aukonsulid'
 ---
-Eestis asuvad välisriikide aukonsulid ja nende kontaktandmed.

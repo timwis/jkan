@@ -1,6 +1,7 @@
 ---
 schema: default
 title: Kultuurimälestiste Register
+notes: Registrist leiate informatsiooni kõikide Eestis riikliku kaitse all olevate mälestiste kohta.
 department: ''
 category:
   - Culture
@@ -11,8 +12,9 @@ resources:
 license: 'http://opendatacommons.org/licenses/pddl/'
 date_issued: 10/02/2015
 date_modified: 10/02/2015
-maintainer: Muinsuskaitseamet
-maintainer_email: ''
+organization: Muinsuskaitseamet
+maintainer_name: Urve Russow
+maintainer_email: urve.russow@muinas.ee
+maintainer_phone: '6403012'
 legacy_url: 'https://opendata.riik.ee/en/dataset/kultuurimalestiste-register'
 ---
-Registrist leiate informatsiooni kõikide Eestis riikliku kaitse all olevate mälestiste kohta.

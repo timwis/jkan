@@ -1,6 +1,7 @@
 ---
 schema: default
 title: Vee terviseohutuse infosüsteem
+notes: Vee terviseohutuse infosüsteemi avaandmete komplektid. Veeproovide puhul esitatakse ainult avalikustamisele kuuluvad veeproovid. Veevärkide puhul esitatakse ainult järelevalve aluste veevärkide veeproovid. Veeallikate puhul esitatakse ainult kasutuses olevate veeallikate veeproovid.
 department: ''
 category:
   - Health
@@ -62,8 +63,9 @@ resources:
 license: 'http://creativecommons.org/licenses/by/3.0/'
 date_issued: 18/02/2015
 date_modified: 18/02/2015
-maintainer: Terviseamet
-maintainer_email: ''
+organization: Terviseamet
+maintainer_name: Maie Otsmann
+maintainer_email: maie.otsmann@terviseamet.ee
+maintainer_phone: '6943540'
 legacy_url: 'https://opendata.riik.ee/en/dataset/vee-terviseohutuse-infos-steemi-avalikud-andmed'
 ---
-Vee terviseohutuse infosüsteemi avaandmete komplektid. Veeproovide puhul esitatakse ainult avalikustamisele kuuluvad veeproovid. Veevärkide puhul esitatakse ainult järelevalve aluste veevärkide veeproovid. Veeallikate puhul esitatakse ainult kasutuses olevate veeallikate veeproovid.

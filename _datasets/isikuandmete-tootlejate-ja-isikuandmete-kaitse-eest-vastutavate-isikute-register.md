@@ -1,6 +1,9 @@
 ---
 schema: default
 title: Isikuandmete töötlejate ja isikuandmete kaitse eest vastutavate isikute register
+notes: |-
+  Andmehulk sisaldab inspektsioonis registreeritud delikaatsete isikuandmete töötlejaid ning määratud isikuandmete kaitse eest vastutavaid isikuid.
+     Töötlemine registreeritakse viieks aastaks.
 department: ''
 category:
   - Government services
@@ -17,9 +20,9 @@ resources:
 license: 'http://creativecommons.org/licenses/by/3.0/'
 date_issued: 24/07/2015
 date_modified: 24/07/2015
-maintainer: Andmekaitse Inspektsioon
-maintainer_email: ''
+organization: Andmekaitse Inspektsioon
+maintainer_name: Kaja Puusepp
+maintainer_email: info@aki.ee
+maintainer_phone: ''
 legacy_url: 'https://opendata.riik.ee/en/dataset/isikuandmete-tootlejate-ja-isikuandmete-kaitse-eest-vastutavate-isikute-register'
 ---
-Andmehulk sisaldab inspektsioonis registreeritud delikaatsete isikuandmete töötlejaid ning määratud isikuandmete kaitse eest vastutavaid isikuid.
-   Töötlemine registreeritakse viieks aastaks.

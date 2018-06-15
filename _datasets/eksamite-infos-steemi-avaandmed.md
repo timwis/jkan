@@ -1,6 +1,10 @@
 ---
 schema: default
 title: Eksamite infosüsteemi avaandmed
+notes: |-
+  Eksamite infosüsteemi (EIS) eesmärgiks on ülesannete loomise ja haldamise, lõpueksamite tööde koostamise ja kättesaadavaks tegemise ning lõpueksamite sooritamise ja standardiseeritud hindamise tagamine.
+     Infosüsteem sisaldab andmeid avalike ülesannete, eksamitunnistuste ja testide tulemuste statistika kohta.
+     EIS on asutatud 2010. aastal.
 department: ''
 category:
   - Education and research
@@ -17,10 +21,9 @@ resources:
 license: 'http://creativecommons.org/licenses/by/3.0/'
 date_issued: 23/05/2018
 date_modified: 23/05/2018
-maintainer: Haridus- ja Teadusministeerium
-maintainer_email: ''
+organization: Haridus- ja Teadusministeerium
+maintainer_name: EIS kasutajatugi
+maintainer_email: eis.tugi@innove.ee
+maintainer_phone: ''
 legacy_url: 'https://opendata.riik.ee/en/dataset/eksamite-infos-steemi-avaandmed'
 ---
-Eksamite infosüsteemi (EIS) eesmärgiks on ülesannete loomise ja haldamise, lõpueksamite tööde koostamise ja kättesaadavaks tegemise ning lõpueksamite sooritamise ja standardiseeritud hindamise tagamine.
-   Infosüsteem sisaldab andmeid avalike ülesannete, eksamitunnistuste ja testide tulemuste statistika kohta.
-   EIS on asutatud 2010. aastal.

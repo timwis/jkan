@@ -1,6 +1,7 @@
 ---
 schema: default
 title: Strateegilise kauba sertifikaadid EL
+notes: Strateegilise kauba sertifikaadid EL
 department: ''
 category:
   - Economy and industry
@@ -14,8 +15,9 @@ resources:
 license: 'http://creativecommons.org/licenses/by/3.0/'
 date_issued: 07/01/2016
 date_modified: 07/01/2016
-maintainer: Välisministeerium
-maintainer_email: ''
+organization: Välisministeerium
+maintainer_name: Tiina Tapupere
+maintainer_email: Tiina.Tapupere@mfa.ee
+maintainer_phone: ''
 legacy_url: 'https://opendata.riik.ee/en/dataset/strateegilise-kauba-sertifikaadid-el'
 ---
-Strateegilise kauba sertifikaadid EL

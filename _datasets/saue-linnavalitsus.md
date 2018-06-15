@@ -1,6 +1,7 @@
 ---
 schema: default
 title: Saue Linnavalitsus
+notes: Dokumendihaldussüsteem
 department: ''
 category:
   - Government services
@@ -11,8 +12,9 @@ resources:
 license: 'http://opendatacommons.org/licenses/pddl/'
 date_issued: 12/02/2015
 date_modified: 12/02/2015
-maintainer: Saue Linnavalitsus
-maintainer_email: ''
+organization: Saue Linnavalitsus
+maintainer_name: Merle Kerm
+maintainer_email: merle.kerm@saue.ee
+maintainer_phone: '6790188'
 legacy_url: 'https://opendata.riik.ee/en/dataset/saue-linnavalitsus'
 ---
-Dokumendihaldussüsteem

@@ -1,6 +1,7 @@
 ---
 schema: default
 title: Riigi kinnisvararegister
+notes: 'Riigi kinnisvararegistris peetakse arvestust keskvalitsusele kuuluva või tema poolt kasutatava kinnisvara üle. Õiguslik tähendus on riigivara valitseja ja volitatud asutuse määramise andmetel. Põhimäärus: https://www.riigiteataja.ee/akt/128122010002.'
 department: ''
 category:
   - Government services
@@ -17,8 +18,9 @@ resources:
 license: 'http://creativecommons.org/about/cc0'
 date_issued: 08/05/2015
 date_modified: 08/05/2015
-maintainer: Rahandusministeerium
-maintainer_email: ''
+organization: Rahandusministeerium
+maintainer_name: Katrin Solvak
+maintainer_email: katrin.solvak@fin.ee
+maintainer_phone: '+3726113046'
 legacy_url: 'https://opendata.riik.ee/en/dataset/kinnisvararegister'
 ---
-Riigi kinnisvararegistris peetakse arvestust keskvalitsusele kuuluva või tema poolt kasutatava kinnisvara üle. Õiguslik tähendus on riigivara valitseja ja volitatud asutuse määramise andmetel. Põhimäärus: https://www.riigiteataja.ee/akt/128122010002.

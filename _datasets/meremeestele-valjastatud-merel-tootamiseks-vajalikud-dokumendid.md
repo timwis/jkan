@@ -1,6 +1,7 @@
 ---
 schema: default
 title: Meremeestele väljastatud merel töötamiseks vajalikud dokumendid
+notes: Meremeestele väljastatud dokumendid seisuga 01.01.2017
 department: ''
 category:
   - Government services
@@ -11,8 +12,9 @@ resources:
 license: 'http://creativecommons.org/licenses/by/3.0/'
 date_issued: 27/09/2017
 date_modified: 27/09/2017
-maintainer: Veeteede Amet
-maintainer_email: ''
+organization: Veeteede Amet
+maintainer_name: Alar Siht
+maintainer_email: alar.siht@vta.ee
+maintainer_phone: '6205580'
 legacy_url: 'https://opendata.riik.ee/en/dataset/meremeestele-valjastatud-merel-tootamiseks-vajalikud-dokumendid'
 ---
-Meremeestele väljastatud dokumendid seisuga 01.01.2017

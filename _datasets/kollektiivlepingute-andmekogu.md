@@ -1,6 +1,9 @@
 ---
 schema: default
 title: Kollektiivlepingute andmekogu
+notes: |-
+  Andmehulgas on kõik Eestis sõlmitud kollektiivlepingud alates 1997. aastast, mis on sisestatud Sotsiaalministeeriumi poolt hallatavasse kollektiivlepingute andmekogusse.
+     Kuigi kollektiivlepingu seadus näeb ette, et sõlmitud kollektiivlepingud tuleb registreerida Sotsiaalministeeriumi peetavas andmekogus, ei pruugi kõik Eestis sõlmitud kollektiivlepingud siiski andmekogus registreeritud olla. Seetõttu ei anna kollektiivlepingute andmekogu statistika ammendavat ülevaadet kollektiivlepingute levikust ega kollektiivlepingutega kaetusest Eestis, vaid pakub teavet selle kohta, millised töötingimused on tavapäraselt kollektiivlepingutega reguleeritud ning kelle vahel lepingud sõlmitakse.
 department: ''
 category:
   - Employment
@@ -44,9 +47,9 @@ resources:
 license: 'http://creativecommons.org/licenses/by/3.0/'
 date_issued: 10/06/2015
 date_modified: 10/06/2015
-maintainer: Sotsiaalministeerium
-maintainer_email: ''
+organization: Sotsiaalministeerium
+maintainer_name: Liina Kaldmäe
+maintainer_email: liina.kaldmae@sm.ee
+maintainer_phone: '6269726'
 legacy_url: 'https://opendata.riik.ee/en/dataset/kollektiivlepingute-andmekogu'
 ---
-Andmehulgas on kõik Eestis sõlmitud kollektiivlepingud alates 1997. aastast, mis on sisestatud Sotsiaalministeeriumi poolt hallatavasse kollektiivlepingute andmekogusse.
-   Kuigi kollektiivlepingu seadus näeb ette, et sõlmitud kollektiivlepingud tuleb registreerida Sotsiaalministeeriumi peetavas andmekogus, ei pruugi kõik Eestis sõlmitud kollektiivlepingud siiski andmekogus registreeritud olla. Seetõttu ei anna kollektiivlepingute andmekogu statistika ammendavat ülevaadet kollektiivlepingute levikust ega kollektiivlepingutega kaetusest Eestis, vaid pakub teavet selle kohta, millised töötingimused on tavapäraselt kollektiivlepingutega reguleeritud ning kelle vahel lepingud sõlmitakse.

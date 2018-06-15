@@ -1,6 +1,7 @@
 ---
 schema: default
 title: Tervishoiuteenuse osutamise tegevuslubade riiklik register
+notes: 'Tervishoiuteenuse osutamise tegevuslubade riikliku registri avaandmete puhul on esitatud tervishoiuteenuseid osutavad asutused, nende tegevusload ja töötajad. Esitatud on ainult kehtivaid tegevuslube omavad asutused.'
 department: ''
 category:
   - Health
@@ -23,8 +24,9 @@ resources:
 license: 'http://creativecommons.org/licenses/by/3.0/'
 date_issued: 19/03/2015
 date_modified: 19/03/2015
-maintainer: Terviseamet
-maintainer_email: ''
+organization: Terviseamet
+maintainer_name: Maie Otsmann
+maintainer_email: maie.otsmann@terviseamet.ee
+maintainer_phone: '6943540'
 legacy_url: 'https://opendata.riik.ee/en/dataset/tervishoiuteenuse-osutamise-tegevuslubade-riiklik-register'
 ---
-Tervishoiuteenuse osutamise tegevuslubade riikliku registri avaandmete puhul on esitatud tervishoiuteenuseid osutavad asutused, nende tegevusload ja töötajad. Esitatud on ainult kehtivaid tegevuslube omavad asutused.

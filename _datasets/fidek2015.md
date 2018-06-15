@@ -1,6 +1,7 @@
 ---
 schema: default
 title: FIDEK2015
+notes: 'Andmestik 2015. aasta füüsiliste isikute tuludeklaratsioonidega. Failis on järgmised veerud:'
 department: ''
 category:
   - Economy and industry
@@ -11,8 +12,9 @@ resources:
 license: 'http://creativecommons.org/licenses/by/3.0/'
 date_issued: 18/03/2017
 date_modified: 18/03/2017
-maintainer: Riigi Infosüsteemi Amet
-maintainer_email: ''
+organization: Riigi Infosüsteemi Amet
+maintainer_name: Andres Kütt
+maintainer_email: andres.kutt@ria.ee
+maintainer_phone: '+3725297159'
 legacy_url: 'https://opendata.riik.ee/en/dataset/fidek2015'
 ---
-Andmestik 2015. aasta füüsiliste isikute tuludeklaratsioonidega. Failis on järgmised veerud:
