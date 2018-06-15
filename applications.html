@@ -4,6 +4,45 @@ layout: default
 permalink: /applications/
 ---
 {% include breadcrumbs.html %}
+
+<h1>Applications</h1>
+<br>
+
+<div style="
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+">
+
+{% for application in site.applications %}
+    <div
+        class="panel panel-default"
+        style="
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        "
+    >
+        <div class="panel-body">
+            <a href="{{ application.app_url }}">
+                <div style="
+                    height: 180px;
+                    background-image: url({{ application.app_preview }});
+                    background-size: cover;
+                "></div>
+                <h3>{{ application.app_name }}</h3>
+            </a>
+            <p>{{ application.app_description }}</p>
+        </div>
+        <div class="panel-footer">
+            {{ application.developed_by }} / {{ application.submitted }}
+        </div>
+    </div>
+{% endfor %}
+
+</div>
+
+{% comment %}
 <table class="table table-hover">
     <thead>
         <tr>
@@ -21,11 +60,11 @@ permalink: /applications/
         <td>{{ application.developed_by }}  </td>
         <td>{{ application.app_description }}</td>
         <td>{{ application.submitted }}</td>
-        <td><a href="{{ application.app_url }}"> <img src="{{ application.app_preview }}" height="150" width="450"></a></td>
+        <td> <img src="{{ application.app_preview }}" height="150" width="450"></a></td>
     </tr>
     {% endfor %}
     </tbody>
 </table>
-
+{% endcomment %}
 
     

@@ -1,7 +1,9 @@
 title: Eesti Avaandmete Portaal
-greeting: Uus Eesti Avaandmete Portaal - Test
+greeting: Eesti Avaandmete Portaal
 description: Portaali kaudu on igaühel juurdepääs avaliku sektori juurdepääsupiiranguteta andmetele koos nende taaskasutamise ja edasijagamise õigusega ärilistel ja mitteärilistel eesmärkidel.
-#baseurl: 
+footer_title: Eesti Avaandmete Portaal
+footer_description: Avaandmete portaali sisustatakse Euroopa Liidu struktuuritoetuse toetusskeemist "Infoühiskonna teadlikkuse tõstmine", mida rahastab Euroopa Regionaalarengu Fond.
+#baseurl:
 logo: /img/jkan.png
 
 # Site theme
