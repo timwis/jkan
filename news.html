@@ -3,14 +3,19 @@ title: News
 layout: default
 permalink: /news/
 ---
+
 {% include breadcrumbs.html %}
-<div class="panel-group" id="accordion">
+
+<h1>News</h1>
+
+<div>
     {% for news in site.news %}
-      <h2 class="panel-title">{{ news.news_title }}</h2>
-      <small>By {{ news.author }}</small>
-      <p>{{ news.text }}</p>
+        <a><h3>{{ news.news_title }}</h3></a>
+        <p class="text-muted">By {{ news.author }}</p>
+        <p>{{ news.text }}</p>
     </div>
-  </div>
+</div>
+
 {% endfor %}
 
 

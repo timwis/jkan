@@ -5,6 +5,9 @@ permalink: /organizations/
 ---
 {% include breadcrumbs.html %}
 
+<h1>Organizations</h1>
+<br>
+
 <a href="{{ site.baseurl }}/add-organization/" class="btn btn-default pull-right admin-only" data-hook="add-organization-btn"><i class="fa fa-plus"></i> Add Organization</a>
 
 {% for organization in site.organizations %}
@@ -19,7 +22,7 @@ permalink: /organizations/
       {% endif %}
     </div>
     <div class="media-body">
-      <h4 class="media-heading"><a href="{{ site.baseurl }}{{ organization.url }}">{{ organization.title }}</a></h4>
+      <h3 class="media-heading"><a href="{{ site.baseurl }}{{ organization.url }}">{{ organization.title }}</a></h3>
           
       <p>{{ organization.description }}</p>
       <p><a href="{{ site.baseurl }}/datasets/?organization={{ organization.title | slugify }}">{{ dataset_count }} datasets</a></p>
