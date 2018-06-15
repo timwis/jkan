@@ -20,10 +20,11 @@ navigation:
     url: /datasets/
   - title: Organizations
     url: /organizations/
-  - title: Applications
-    url: /applications/
   - title: News
     url: /news/
+  - title: Applications
+    url: /applications/
+
 
 # Collections
 collections:
