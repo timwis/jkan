@@ -1,6 +1,6 @@
 title: Eesti Avaandmete Portaal
-greeting: Welcome to the Estonian Open Data Portal - Test
-description: The Open Data Portal provides a single point of access for general public to unrestricted public sector data with the permission to re-use and redistribute such data for both commercial and non-commercial purposes.
+greeting: Uus Eesti Avaandmete Portaal - Test
+description: Portaali kaudu on igaühel juurdepääs avaliku sektori juurdepääsupiiranguteta andmetele koos nende taaskasutamise ja edasijagamise õigusega ärilistel ja mitteärilistel eesmärkidel.
 baseurl: /jkan
 logo: /img/jkan.png
 
