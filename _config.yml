@@ -20,8 +20,10 @@ navigation:
     url: /datasets/
   - title: Organizations
     url: /organizations/
- # - title: Apps
- #  url: /apps/
+  - title: Applications
+    url: /applications/
+  - title: News
+    url: /news/
 
 # Collections
 collections:
@@ -31,6 +33,9 @@ collections:
   organizations:
     output: true
     permalink: /organizations/:path/
+#  applications:
+#    output: true
+#    permalink: /applications/:path/
 
 # Collections (cont'd)
 defaults:
@@ -46,6 +51,11 @@ defaults:
       type: organizations
     values:
       layout: organization
+#  - scope:
+#      path: ""
+#      type: applications
+#      values:
+#      layout: applications
 
 # Markdown settings
 markdown: kramdown

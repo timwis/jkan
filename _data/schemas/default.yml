@@ -86,3 +86,15 @@ category_fields:
   - field_name: featured
     label: Featured on Homepage
     form_template: form/checkbox.html
+    
+#application_fields:
+# - field_name: app_name
+#  label: Application
+##  - field_name: developed_by
+#    label: Developer
+#  - field_name: app_description
+#    label: Description
+#  - field_name: submitted
+#    label: Submitted Date
+#  - field_name: app_preview
+#    label: Preview Image
