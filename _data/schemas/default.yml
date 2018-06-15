@@ -4,6 +4,12 @@ dataset_fields:
   - field_name: title
     label: Title
     datajson: title
+  - field_name: date_issued
+    label: Date Issued (YYYY-MM-DD)
+    datajson: issued
+  - field_name: date_modified
+    label: Date Modified (YYYY-MM-DD)
+    datajson: modified
   - field_name: organization
     label: Organization
     form_template: form/organization.html
@@ -21,13 +27,15 @@ dataset_fields:
     form_template: form/category.html
     display_template: display/category.html
     datajson: category
-  - field_name: maintainer
+  - field_name: maintainer_name
     label: Maintainer
     datajson: contactPoint.fn
   - field_name: maintainer_email
     label: Maintainer Email
     datajson: contactPoint.hasEmail
-
+  - field_name: maintainer_phone
+    label: Maintainer Phone
+    
 resource_fields:
   - field_name: name
     label: Resource Name
@@ -49,15 +57,25 @@ resource_fields:
       - kmz
       - shp
       - xml
-
+      - xlsx
+      - xsd
+      - txt
+      - zip
+      - pdf
+      - rdf
+      
 organization_fields:
   - field_name: title
     label: Title
+  - field_name: maintainer_name
+    label: Maintainer Name
+  - field_name: maintainer_email
+    label: Maintainer Email
   - field_name: description
     label: Description
   - field_name: logo
     label: Logo
-
+  
 category_fields:
   - field_name: name
     label: Name
@@ -68,3 +86,28 @@ category_fields:
   - field_name: featured
     label: Featured on Homepage
     form_template: form/checkbox.html
+    
+application_fields:
+  - field_name: app_name
+    label: Application
+  - field_name: developed_by
+    label: Developer
+  - field_name: app_description
+    label: Description
+  - field_name: submitted
+    label: Submitted Date
+  - field_name: app_url
+    label: App URL
+  - field_name: app_preview
+    label: Preview Image
+
+news_fields:
+  - field_name: news_title
+    label: Title
+  - field_name: author
+    label: Author
+  - field_name: text
+    label: Text
+   # form_template: form/textarea.html
+  - field_name: preview_image
+    label: Image URL

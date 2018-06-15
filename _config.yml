@@ -1,15 +1,15 @@
-title: JKAN
-greeting: Welcome to JKAN
-description: A lightweight, backend-free open data portal, powered by Jekyll.
-baseurl: /jkan
+title: Eesti Avaandmete Portaal
+greeting: Uus Eesti Avaandmete Portaal - Test
+description: Portaali kaudu on igaühel juurdepääs avaliku sektori juurdepääsupiiranguteta andmetele koos nende taaskasutamise ja edasijagamise õigusega ärilistel ja mitteärilistel eesmärkidel.
+#baseurl: 
 logo: /img/jkan.png
 
 # Site theme
 jkan_theme: Default
 
 # Authentication
-github_client_id: 
-gatekeeper_host: 
+github_client_id: 0eed203fe7cb7b330d2b
+gatekeeper_host: https://jkan-eesti.herokuapp.com
 
 # Dataset schema
 schema: default
@@ -20,6 +20,11 @@ navigation:
     url: /datasets/
   - title: Organizations
     url: /organizations/
+  - title: News
+    url: /news/
+  - title: Applications
+    url: /applications/
+
 
 # Collections
 collections:
@@ -29,6 +34,12 @@ collections:
   organizations:
     output: true
     permalink: /organizations/:path/
+  applications:
+    output: true
+    permalink: /applications/:path/
+  news:
+    output: true
+    permalink: /news/:path/
 
 # Collections (cont'd)
 defaults:
@@ -44,6 +55,16 @@ defaults:
       type: organizations
     values:
       layout: organization
+#  - scope:
+#      path: ""
+#      type: applications
+#      values:
+#      layout: default
+#  - scope:
+#      path: ""
+#      type: news
+#    values:
+#      layout: default 
 
 # Markdown settings
 markdown: kramdown
