@@ -6,15 +6,9 @@ permalink: /news/
 {% include breadcrumbs.html %}
 <div class="panel-group" id="accordion">
     {% for news in site.news %}
-  <div class="panel panel-default">
-    <div class="panel-heading">
-      <h4 class="panel-title">
-        <a data-toggle="collapse" data-parent="#accordion" href="{{ news.news_title }}">
-        {{ news.news_title }} By {{ news.author }}</a>
-      </h4>
-    </div>
-    <div id="{{ news.news_title }}" class="panel-collapse collapse">
-      <div class="panel-body">{{ news.text }}</div>
+      <h2 class="panel-title">{{ news.news_title }}</h2>
+      <small>By {{ news.author }}</small>
+      <p>{{ news.text }}</p>
     </div>
   </div>
 {% endfor %}

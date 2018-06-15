@@ -1,8 +1,15 @@
-<ol class="breadcrumb">
+<ol class="breadcrumb" style="
+  padding: 0;
+  background: none;
+  border: none;
+  margin-bottom: 40px;
+  font-size: 1.3rem;
+  font-weight: 500;
+">
   {% if page.title == site.title %}
-    <li class="active"><i class="fa fa-home" aria-label="Home"></i></li>
+    <li class="active">Home</li>
   {% else %}
-    <li><a href="{{ site.baseurl }}/"><i class="fa fa-home" aria-label="Home"></i></a></li>
+    <li><a href="{{ site.baseurl }}/">Home</a></li>
     {% if include.parent %}
       {% assign parent = site.pages | where:"title",include.parent | first %}
       {% if parent %}
