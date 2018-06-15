@@ -96,6 +96,8 @@ application_fields:
     label: Description
   - field_name: submitted
     label: Submitted Date
+  - field_name: app_url
+    label: App URL
   - field_name: app_preview
     label: Preview Image
 
@@ -106,6 +108,6 @@ news_fields:
     label: Author
   - field_name: text
     label: Text
-    form_template: form/textarea.html
+   # form_template: form/textarea.html
   - field_name: preview_image
     label: Image URL

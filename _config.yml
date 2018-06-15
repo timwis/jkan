@@ -55,16 +55,16 @@ defaults:
       type: organizations
     values:
       layout: organization
-  - scope:
-      path: ""
-      type: applications
-      values:
-      layout: default
-  - scope:
-      path: ""
-      type: news
-    values:
-      layout: default 
+#  - scope:
+#      path: ""
+#      type: applications
+#      values:
+#      layout: default
+#  - scope:
+#      path: ""
+#      type: news
+#    values:
+#      layout: default 
 
 # Markdown settings
 markdown: kramdown

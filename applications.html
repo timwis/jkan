@@ -4,10 +4,28 @@ layout: default
 permalink: /applications/
 ---
 {% include breadcrumbs.html %}
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>Application</th>
+            <th>Developer</th>
+            <th>Description</th>
+            <th>Submitted Date</th>
+            <th>Preview Image</th> <!-- This needs to be done better -->
+        </tr>
+    </thead>
+    <tbody>
+    {% for application in site.applications %}
+    <tr>
+        <td>{{ application.app_name }}</td>
+        <td>{{ application.developed_by }}  </td>
+        <td>{{ application.app_description }}</td>
+        <td>{{ application.submitted }}</td>
+        <td><a href="{{ application.app_url }}"> <img src="{{ application.app_preview }}" height="150" width="450"></a></td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
 
-<div class="jumptron">
 
-    <h1>Applications built on top of Estonian Open Government Data coming here soon.</h1>
-
-</div>
-
+    
