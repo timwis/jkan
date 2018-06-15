@@ -25,20 +25,20 @@ Please see the [Architecture](https://github.com/timwis/jkan/wiki/Architecture) 
 
 ### Installation
 
-```sh
+```bash
 bundle install
 npm install # Optional, for JS
 ```
 ### Local development
 
-```sh
+```bash
 bundle exec jekyll serve --incremental
 ```
 
 ### Building
 
-```sh
-npx npx parcel build scripts/src/index.js --out-file scripts/dist --no-source-maps # Optional, for JS
+```bash
+npx parcel build scripts/src/index.js --out-file scripts/dist --no-source-maps # Optional, for JS
 bundle exec jekyll build
 # Built site is available at _site
 ```
