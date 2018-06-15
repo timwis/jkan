@@ -98,9 +98,3 @@ dataset {
 .theme-gallery .panel-primary {
   border-width: 5px;
 }
-
-/* Estonian additions */
-
-.navbar {
-    border-radius: 0;
-}
