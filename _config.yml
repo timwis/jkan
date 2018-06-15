@@ -20,6 +20,8 @@ navigation:
     url: /datasets/
   - title: Organizations
     url: /organizations/
+  - title: Apps
+    url: /apps/
 
 # Collections
 collections:
