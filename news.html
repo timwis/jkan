@@ -10,9 +10,9 @@ permalink: /news/
 
 <div>
     {% for news in site.news %}
-        <a><h3>{{ news.news_title }}</h3></a>
+        <h3>{{ news.news_title }}</h3>
         <p class="text-muted">By {{ news.author }}</p>
-        <p>{{ news.text }}</p>
+        <div class="text">{{ news.text }}</p></div>
     </div>
 </div>
 
