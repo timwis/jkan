@@ -10,6 +10,5 @@ tags:
   - liiklusjärelevalve
   - andmeajakirjandus
 submitted: 18.03.2018
-author:
-  - 1
+author: Annegrete
 ---

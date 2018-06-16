@@ -10,6 +10,5 @@ tags:
   - ODB
   - Avaandmete kasutamise edendamine
 submitted: Toots
-author:
-  - 1
+author: Maarja
 ---

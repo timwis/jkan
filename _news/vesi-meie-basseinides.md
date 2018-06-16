@@ -49,6 +49,5 @@ tags:
   - Eesti
   - tervis
 submitted: 27.04.2018
-author:
-  - 1
+author: Annegrete
 ---
