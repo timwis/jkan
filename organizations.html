@@ -25,7 +25,7 @@ permalink: /organizations/
       <h3 class="media-heading"><a href="{{ site.baseurl }}{{ organization.url }}">{{ organization.title }}</a></h3>
           
       <p>{{ organization.description }}</p>
-      <p><a href="{{ site.baseurl }}/datasets/?organization={{ organization.title | slugify }}">{{ dataset_count }} datasets</a></p>
+      <p><a href="{{ site.baseurl }}/datasets/?organization={{ organization.title | slugify }}"><span class="badge">{{ dataset_count }}</span> datasets</a></p>
       {% endif %}
     </div>
   </div>
