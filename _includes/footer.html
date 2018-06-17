@@ -8,9 +8,11 @@
     color: #888;
     margin-top: 50px;
 ">
-    <div class="container">
-        <h4>{{ site.footer_title }}</h4>
-        <p style="width: 50%">{{ site.footer_description }}</p>
+    <div class="container" style="display: flex; align-items: flex-start;">
+        <img src="{{ site.baseurl }}/img/esf_logo.svg" width="150" />
+        <div style="margin-left: 25px">
+            <p style="width: 50%">{{ site.footer_description }}</p>
+        </div>
     </div>
 
 </footer>
