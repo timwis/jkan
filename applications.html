@@ -13,8 +13,10 @@ permalink: /apps/
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 20px;
 ">
+    
+    {% assign sortapps = site.applications | sort:"submitted" | reverse %}
+    {% for application in sortapps %}
 
-{% for application in site.applications %}
     <div
         class="panel panel-default"
         style="
