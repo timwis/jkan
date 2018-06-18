@@ -9,7 +9,7 @@ layout: default
 {% assign resource_system_fields = "name|url|format|description" | split: "|" %}
 
 {% assign organization = site.organizations | where:"title",page.organization | first %}
-{% capture organization_url %}{{ site.baseurl }}/datasets/?organization={{ organization.title | slugify }}{% endcapture %}
+{% capture organization_url %}{{ site.baseurl }}/data/?organization={{ organization.title | slugify }}{% endcapture %}
 
 <div data-component="view-switcher">
   <div class="row" data-component="dataset-display" data-hook="view" data-view="display" typeof="dcat:Dataset" resource="{{ page.url }}">

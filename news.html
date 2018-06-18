@@ -1,15 +1,16 @@
 ---
-title: News
+title: Blogi
 layout: default
 permalink: /blogi/
 ---
 
 {% include breadcrumbs.html %}
 
-<h1>News</h1>
 
+<h1>Blogi</h1>
 <div>
-    {% for news in site.news %}
+    {% assign sortnews = site.news | sort:"submitted" | reverse %}
+    {% for news in sortnews %}
         <h3>{{ news.news_title }}</h3>
         <p class="text-muted">By {{ news.author }}</p>
         <div class="text">{{ news.text }}</p></div>

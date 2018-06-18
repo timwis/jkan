@@ -7,9 +7,9 @@
   font-weight: 500;
 ">
   {% if page.title == site.title %}
-    <li class="active">Home</li>
+    <li class="active">Kodu</li>
   {% else %}
-    <li><a href="{{ site.baseurl }}/">Home</a></li>
+    <li><a href="{{ site.baseurl }}/">Kodu</a></li>
     {% if include.parent %}
       {% assign parent = site.pages | where:"title",include.parent | first %}
       {% if parent %}
