@@ -1,7 +1,7 @@
 title: Eesti Avaandmete Portaal
 greeting: Uus Eesti Avaandmete Portaal - Test
 description: Portaali kaudu on igaühel juurdepääs avaliku sektori juurdepääsupiiranguteta andmetele koos nende taaskasutamise ja edasijagamise õigusega ärilistel ja mitteärilistel eesmärkidel.
-baseurl: /jkan
+baseurl: 
 logo: /img/jkan.png
 
 # Site theme
@@ -16,30 +16,30 @@ schema: default
 
 # Nav bar
 navigation:
-  - title: Datasets
-    url: /datasets/
-  - title: Organizations
-    url: /organizations/
-  - title: News
-    url: /news/
-  - title: Applications
-    url: /applications/
+  - title: Andmehulgad
+    url: /data/
+  - title: Teabevaldajad
+    url: /publishers/
+  - title: Blogi
+    url: /blogi/
+  - title: Rakendused
+    url: /apps/
 
 
 # Collections
 collections:
   datasets:
     output: true
-    permalink: /datasets/:path/
+    permalink: /data/:path/
   organizations:
     output: true
-    permalink: /organizations/:path/
+    permalink: /publishers/:path/
   applications:
     output: true
-    permalink: /applications/:path/
+    permalink: /apps/:path/
   news:
     output: true
-    permalink: /news/:path/
+    permalink: /blogi/:path/
 
 # Collections (cont'd)
 defaults:
