@@ -6,6 +6,16 @@
     "organization": {{ dataset.organization | jsonify }}{% if dataset.notes != "" %},
     "notes": {{ dataset.notes | jsonify }}{% endif %}{% if dataset.notes != "" %},
     "category": {{ dataset.category | jsonify }}{% endif %},
-    "url": "{{ site.baseurl }}{{ dataset.url }}"
+    "url": "{{ site.baseurl }}{{ dataset.url }}",
+    "resources": [
+      {% for resource in dataset.resources %}
+      {
+        "name" : "{{ resource.name }}",
+        "url": "{{ resource.url }}",
+        "format": "{{ resource.format }}"
+      }
+      {% unless forloop.last %},{% endunless %}
+      {% endfor %}
+    ]
   }{% unless forloop.last %},{% endunless %}{% endfor %}
 ]

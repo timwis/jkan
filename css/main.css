@@ -98,3 +98,9 @@ dataset {
 .theme-gallery .panel-primary {
   border-width: 5px;
 }
+
+/* Custom additions */
+
+.text img {
+  width: 100%;
+}

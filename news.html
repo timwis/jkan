@@ -3,20 +3,19 @@ title: News
 layout: default
 permalink: /blogi/
 ---
+
 {% include breadcrumbs.html %}
-<div class="panel-group" id="accordion">
+
+<h1>News</h1>
+
+<div>
     {% for news in site.news %}
-  <div class="panel panel-default">
-    <div class="panel-heading">
-      <h4 class="panel-title">
-        <a data-toggle="collapse" data-parent="#accordion" href="{{ news.news_title }}">
-        {{ news.news_title }} By {{ news.author }}</a>
-      </h4>
+        <h3>{{ news.news_title }}</h3>
+        <p class="text-muted">By {{ news.author }}</p>
+        <div class="text">{{ news.text }}</p></div>
     </div>
-    <div id="{{ news.news_title }}" class="panel-collapse collapse">
-      <div class="panel-body">{{ news.text }}</div>
-    </div>
-  </div>
+</div>
+
 {% endfor %}
 
 
