@@ -28,14 +28,13 @@ resources:
     url: 'https://www.etis.ee/Portal/Projects/Index'
     format: HTML
   - name: Teadus- ja arendustegevusega seotud publikatsioonid
-    url: 'https://www.etis.ee/Portal/Mentorships/Index'
+    url: 'https://www.etis.ee/Portal/Publications/Index'
     format: HTML
   - name: Teadus- ja arendustegevusega seotud juhendamised
     url: 'https://www.etis.ee/Portal/Mentorships/Index'
     format: HTML
   - name: Teadus- ja arendustegevusega seotud tööstusomand
-    url: 'https://www.etis.ee/Portal/IndustrialProperties/Index'
-    format: HTML
+
   - name: Teadus- ja arendustegevusega seotud kollektsioonid ja kogud
     url: 'https://www.etis.ee/Portal/Collections/Index'
     format: HTML

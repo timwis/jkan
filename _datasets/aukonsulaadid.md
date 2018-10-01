@@ -11,7 +11,7 @@ resources:
     format: XML
   - name: asutused_avaandmed_schema.xml
     url: 'http://opendata.vm.ee/asutused_avaandmed_schema.xml'
-    format: XML
+    format: XSD
 license: 'http://creativecommons.org/licenses/by/3.0/'
 date_issued: 26/03/2015
 date_modified: 26/03/2015
