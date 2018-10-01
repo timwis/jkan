@@ -79,6 +79,6 @@ for (let component of components) {
 // Helper function to ensure datasets.json is only fetched once per page
 let datasetsCache
 function getDatasets () {
-  datasetsCache = datasetsCache || $.getJSON(`${settings.BASE_URL}/datasets.json`)
+  datasetsCache = datasetsCache || $.getJSON(`${settings.BASE_URL ? settings.BASE_URL : ''}/datasets.json`)
   return datasetsCache
 }

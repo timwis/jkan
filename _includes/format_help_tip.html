@@ -1,0 +1,21 @@
+<div class="help-tip resource-format">
+    {{ include.format }}
+    <p>
+        {% case include.format %}
+            {% when 'csv' %}
+                CSV is tabular data. Excel, Google Docs, <a title="Download LibreOffice" href="https://www.libreoffice.org/download/download/" target="_blank">LibreOffice</a> Calc or any plain text editor will open files with this format.
+                <br/><a title="Learn about working with Tabular Data" href="{{ site.baseurl }}/resources/#working-with-tabular-data" target="_blank">Learn More</a>
+            {% when 'shp' %}
+                Shapefile is a common format for geospatial vector and raster data. It was developed by a mapping software company, but most mapping tools can open shapefiles, including <a title="Download QGIS" href="http://www.qgis.org/en/site/forusers/download.html" target="_blank">QGIS</a>, <a title="Download Google Earth" href="https://www.google.com/earth/" target="_blank">Google Earth</a>, <a title="Sign up for CartoDB" href="https://carto.com/signup/" target="_blank">CartoDB</a>, and <a title="Download QGIS" href="https://www.mapbox.com/mapbox-studio/" target="_blank">Mapbox Studio.</a>
+                <br/><a title="Learn more about Shapefiles" href="https://en.wikipedia.org/wiki/Shapefile" target="_blank">Learn More</a>
+            {% when 'pbf' %}
+                Geobuf is a compact binary encoding for GeoJSON data created by Mapbox. These pbf files load more quickly onto a web map than their GeoJSON versions because they are smaller. You will need two JavaScript libraries created by Mapbox to decode geobuf: the <a title="Learn more about the Mapbox geobuf library" href="https://github.com/mapbox/geobuf" target="_blank">geobuf library</a> and the <a title="Learn more about the Mapbox geobuf library" href="https://github.com/mapbox/geobuf" target="_blank">pbf library</a>.
+            {% when 'geojson' %}
+                GeoJSON is an open standard format designed for representing simple geographical features, along with their non-spatial attributes, based on JavaScript Object Notation.
+                <br/><a title="Learn more about GeoJSON" href="https://geojson.io" target="_blank">Learn More</a>
+            {% when 'topojson' %}
+                TopoJSON extends GeoJSON to encode topology. GeoJSON is an open standard format designed for representing simple geographical features, along with their non-spatial attributes, based on JavaScript Object Notation.
+                <br/><a title="Learn more about TopoJSON" href="https://github.com/topojson/topojson" target="_blank">Learn More</a>
+        {% endcase %}
+    </p>
+</div>
