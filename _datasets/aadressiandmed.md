@@ -1,7 +1,7 @@
 ---
 schema: default
 title: Aadressiandmed
-notes: 'Aadressiandmed (aadressiandmete süsteemi ADS andmed). Kõigi maaüksuste, hoonete ja hooneosade (korterite) aadressid ja ruumilised asukohad kaardil. Andmed on tasuta kõigile kättesaadavad, väljavõtteid uuendatakse 1 kord kuus. Esimesed andmed pärinevad maakatastri algusaegadest 1992.a. ADS loodi 2007, peale seda on kättesaadav andmemuudatuste info. Igapäevased muudatused on kätte saadavad X-tee teenuste kaudu.'
+notes: 'Aadressiandmed (aadressiandmete süsteemi ADS andmed) eri lõigetes (eraldi Tallinn, eraldi kehtivate aadressikomponentide nimekiri jne.). Kõigi maaüksuste, hoonete ja hooneosade (korterite) aadressid ja ruumilised asukohad kaardil. Andmed on tasuta kõigile kättesaadavad, väljavõtteid uuendatakse 1 kord kuus. Esimesed andmed pärinevad maakatastri algusaegadest 1992.a. ADS loodi 2007, peale seda on kättesaadav andmemuudatuste info. Igapäevased muudatused on kätte saadavad X-tee teenuste kaudu.'
 department: ''
 category:
   - Geography

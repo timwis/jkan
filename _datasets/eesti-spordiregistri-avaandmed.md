@@ -35,7 +35,7 @@ resources:
     format: HTML
 license: 'http://creativecommons.org/licenses/by/3.0/'
 date_issued: 26/02/2015
-date_modified: 26/02/2015
+date_modified: 01/10/2018
 organization: Kultuuriministeerium
 maintainer_name: Spordikoolituse ja -Teabe SA
 maintainer_email: ' esr@spordiinfo.ee'

@@ -25,8 +25,8 @@ resources:
     url: 'https://opendata.smit.ee/ppa/csv/avalik_1.csv'
     format: CSV
   - name: Selgitused avaldatavate andmete kohta
-    url: 'https://www.politsei.ee/et/organisatsioon/analuus-ja-statistika/avaandmed.dot'
-    format: veebileht
+    url: 'https://www.politsei.ee/et/avaandmed'
+    format: HTML
 license: 'http://creativecommons.org/licenses/by-sa/3.0/'
 date_issued: 15/11/2017
 date_modified: 15/11/2017

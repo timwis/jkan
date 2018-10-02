@@ -12,9 +12,6 @@ resources:
   - name: 16.04.2018 Õppeasutuste tegevuslubade avaandmed
     url: 'http://enda.ehis.ee/avaandmed/rest/tegevusload/-/-/-/-/-/-/-/-/1/XML'
     format: XML
-  - name: 16.04.2018 Õppeasutuste kontaktandmed
-    url: 'https://opendata.riik.ee/et/dataset/0f830c0f-d26f-422f-a7ab-2c2f1a8c028c/resource/f9ba27be-a136-4dd4-81e4-73cb95916da9/download/xml'
-    format: XML
   - name: EHIS avaandmete CSV ja XML päringute koostamise juhend
     url: 'http://enda.ehis.ee/avaandmed/EHIS_avaandmed.pdf'
     format: PDF

@@ -11,7 +11,7 @@ resources:
     format: HTML
 license: 'http://creativecommons.org/licenses/by-sa/3.0/'
 date_issued: 03/08/2015
-date_modified: 03/08/2015
+date_modified: 01/10/2018
 organization: Patendiamet
 maintainer_name: Robin Lõo
 maintainer_email: robin.loo@just.ee
