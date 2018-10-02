@@ -1,7 +1,7 @@
 ---
 schema: default
 title: Aegviidu Vallavalitsuse dokumendihaldussüsteem
-notes: Aegviidu Vallavalitsuse dokumendihaldussüsteem. Masinloetaval kujul viimased muudatused saadaval siin: http://avalik.amphora.ee/aegviiduvv/RssDocuments.aspx
+notes: Aegviidu Vallavalitsuse dokumendihaldussüsteem. Masinloetaval kujul viimased muudatused saadaval siin - http://avalik.amphora.ee/aegviiduvv/RssDocuments.aspx
 department: ''
 category:
   - Open governance
