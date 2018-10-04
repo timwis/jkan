@@ -17,7 +17,7 @@ https://fontawesome.com/ .
 Soovime Teile head kasutamist!
 
 Diana Sokurova ja Linnet Puskar"
-app_preview: 'https://github.com/keeganmcbride/jkan/blob/gh-pages/img/preview.PNG'
+app_preview: 'https://raw.githubusercontent.com/keeganmcbride/jkan/gh-pages/img/preview.PNG'
 app_url: 'https://andmeteadus2018.shinyapps.io/KuritegevusEestis/'
 developed_by: Diana Sokurova ja Linnet Puskar
 tags:
