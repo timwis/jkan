@@ -7,7 +7,7 @@ category:
   - Government services
 resources:
   - name: organisatsioonid.xml
-    url: 'http:// http://opendata.vm.ee/organisatsioonid.xml'
+    url: 'http://opendata.vm.ee/organisatsioonid.xml'
     format: XML
   - name: organisatsioonid_schema.xml
     url: 'http://opendata.vm.ee/esindused_schema.xml'
