@@ -18,7 +18,7 @@ layout: default
         <div class="panel panel-default">
             <div class="panel-heading">
               {% if organization.logo and organization.logo != empty %}
-              <a href="{{ site.baseurl }}/datasets/?organization={{ organization.title | slugify }}" class="thumbnail"><img src="{{ organization.logo }}" alt="{{ organization.title }} logo"></a>
+              <a href="{{ site.baseurl }}/publishers/?organization={{ organization.title | slugify }}" class="thumbnail"><img src="{{ organization.logo }}" alt="{{ organization.title }} logo"></a>
               {% endif %}
             </div>
             <div class="panel-body">
