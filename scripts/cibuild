@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -e # halt script on error
 
-bundle exec jekyll build --destination _site/
+bundle exec jekyll build --destination _site/jkan
 #bundle exec htmlproofer ./_site --disable-external --allow-hash-href
 
 
