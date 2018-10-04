@@ -10,7 +10,7 @@ resources:
     url: 'http://opendata.vm.ee/rahvuspyhad.xml'
     format: XML
   - name: rahvuspyhad_schema.xml
-    url: 'http:// http://opendata.vm.ee/rahvuspyhad_schema.xml'
+    url: 'http://opendata.vm.ee/rahvuspyhad_schema.xml'
     format: XML
 license: 'http://creativecommons.org/licenses/by/3.0/'
 date_issued: 26/03/2015
