@@ -32,7 +32,7 @@ navigation:
 collections:
   datasets:
     output: true
-    permalink: /data/:path/
+    permalink: /datasets/:path/
   organizations:
     output: true
     permalink: /publishers/:path/
