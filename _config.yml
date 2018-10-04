@@ -19,7 +19,7 @@ schema: default
 # Nav bar
 navigation:
   - title: Andmehulgad
-    url: /data/
+    url: /datasets/
   - title: Teabevaldajad
     url: /publishers/
   - title: Blogi
