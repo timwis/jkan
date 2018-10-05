@@ -13,13 +13,13 @@ text: >
 
   <p>Kahjuks, tuleb tõdeda, et iga viies veeproov ei vasta nõuetele. Tavaliselt ühes veeproovis vaadatakse 5-17 näitajat. Kui veeproov ei vasta nõuetele, siis 72% juhtudest on põhjuseks üks halba näitajat ja 21% kaks halba näitajat. Kõige tihedamini nõuetele mittevastavad näitajad on vaba ja seotud kloor. Kloor on Eestis kõige levinum basseinivee desinfitseerimise vahend.</p>
 
-  <p><img src="https://raw.githubusercontent.com/okestonia/Data-Viz-Protos/master/basseinivesi/vaba_kloor.png"></p>
+  <p><img src="https://raw.githubusercontent.com/okestonia/Data-Viz-Protos/master/basseinivesi/vaba_kloor.png" style="width: 100%;"></p>
 
   <p>75% proovidest jäävad nõutud 0,5 – 1,5 mg/l vahemikku. Kui vaba kloori näitaja ei vasta nõuetele, siis üldiselt on probleemiks liiga väike kogus. Kuid harva – 2% juhtudest – on see näitaja väga kõrge (üle 2 mg/l).</p>
 
   <p>Vaba kloor on see osa vees olevast kloorist, mida algselt vette lisatakse ja millel on suur desinfitseerimise võime, et hoida vesi puhas ja selge ning mis ei ole veel reageerinud vees leiduvate orgaaniliste ainetega. Vaba kloor ei põhjusta naha ega silmade ärritust. <sup>1</sup></p>
 
-  <p><img src="https://raw.githubusercontent.com/okestonia/Data-Viz-Protos/master/basseinivesi/seotud_kloor.png"></p>
+  <p><img src="https://raw.githubusercontent.com/okestonia/Data-Viz-Protos/master/basseinivesi/seotud_kloor.png" style="width: 100%;"></p>
 
   <p>Seotud kloorile on seatud ainult ülemine piir. Soojemas basseinis (temperatuur üle 31 °C) võib seotud kloori olla kuni 0,5 mg/l, jahedamas basseinis (temperatuur kuni 31 °C) kuni 0,4 mg/l. Igas viiendas veeproovis on seotud kloori liiga palju.</p>
 
