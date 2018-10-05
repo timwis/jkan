@@ -4,7 +4,6 @@ rvm:
   
 before_script:
  - chmod +x ./scripts/cibuild # or do this locally and commit
-install: gem install s3_website
 script: ./scripts/cibuild
 after_success: s3_website push
 
