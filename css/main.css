@@ -2,10 +2,17 @@
   width: 64px;
 }
 
+.news_text {
+  text-align: justify;
+  overflow-wrap: break-word;  
+}
+
 dataset {
   display: block;
   border-bottom: 1px #d6d6d6 solid;
   padding-bottom: 20px;
+  overflow-wrap: break-word;
+  text-align: justify;
 }
 
 .list-group-item-truncate {
