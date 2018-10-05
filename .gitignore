@@ -6,3 +6,4 @@ node_modules
 *.map
 vendor
 .cache
+settings.env
