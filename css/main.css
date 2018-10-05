@@ -2,7 +2,7 @@
   width: 64px;
 }
 
-.news_text {
+.text_control {
   text-align: justify;
   overflow-wrap: break-word;  
 }
