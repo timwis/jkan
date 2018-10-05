@@ -10,7 +10,7 @@ permalink: /apps/
 
 <div style="
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat( auto-fit, minmax(300px, 1fr) );
     grid-gap: 20px;
 ">
     
@@ -34,7 +34,7 @@ permalink: /apps/
                 "></div>
                 <h3>{{ application.app_name }}</h3>
             </a>
-            <p>{{ application.app_description }}</p>
+            <p style="text-align: justify; overflow-wrap: break-word;">{{ application.app_description }}</p>
         </div>
         <div class="panel-footer">
             {{ application.developed_by }} / {{ application.submitted }}
