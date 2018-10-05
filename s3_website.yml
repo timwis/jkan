@@ -3,6 +3,7 @@
 # ~/.aws/credentials.
 s3_id: <%= ENV['S3_ID'] %>
 s3_secret: <%= ENV['S3_SECRET'] %>
+s3_endpoint: eu-central-1
 s3_bucket: avaandmed-jkan
 
 # set session_token if using temporary credentials with a session token (eg: when assuming a role)
