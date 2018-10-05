@@ -36,10 +36,10 @@ layout: default
     <div class="col-sm-12">
     {% endif %}
       <h1>
-        <span property="dct:title" style="text_control">{{ page.title }}</span>
+        <span property="dct:title">{{ page.title }}</span>
         <a href="?view=edit" class="pull-right btn btn-default admin-only" data-hook="edit-dataset-btn">Edit</a>
       </h1>
-      <p property="dct:description">{{ page.notes }}</p>
+      <p property="dct:description" style="text_control">{{ page.notes }}</p>
 
       <h2>Resources</h2>
       <ul>
