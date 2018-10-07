@@ -8,7 +8,7 @@ dataset_fields:
     label: Lisatud Portaali (YYYY-MM-DD)
     datajson: issued
   - field_name: date_modified
-    label: Date Modified (YYYY-MM-DD)
+    label: Viimati muudetud (YYYY-MM-DD)
     datajson: modified
   - field_name: organization
     label: Teabevaldaja

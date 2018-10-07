@@ -48,7 +48,7 @@ export default class {
       setContent(elements.datasetsItems, resultsMarkup)
 
       // Dataset count
-      const resultsCountMarkup = results.length + ' datasets'
+      const resultsCountMarkup = results.length + ' Andmehulgad'
       setContent(elements.datasetsCount, resultsCountMarkup)
     })
   }
