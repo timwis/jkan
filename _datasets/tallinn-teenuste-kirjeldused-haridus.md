@@ -4,7 +4,7 @@ title: Teenuste kirjeldused - haridus
 notes: Hariduse valdkonna teenuste kirjeldused
 department: ''
 category:
-  - Goverment services
+  - Riigiteenused
 resources:
   - url: 'http://www.tallinn.ee/teenused?action=avaandmed&valdkond_id=4'
     format: XML

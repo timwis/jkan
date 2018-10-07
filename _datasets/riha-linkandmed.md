@@ -4,7 +4,7 @@ title: RIHA linkandmed
 notes: 'Andmekomplektis on aprillis 2014 RIHAst korjatud andmed X-tee teenuste, teenusepakkujate ning teenuste tarbijate kohta. Andmekomplekt on korjatud ja kodeeritud Tartu Ülikooli arvutiteaduse instituudi doktorandi Svetlana Omelkova poolt ning seda kasutatakse teenuste ökosüsteemi evolutsiooni analüüsiks ning teenuste soovitamise algoritmide väljatöötamisel.'
 department: ''
 category:
-  - Government services
+  - Riigiteenused
 resources:
   - name: X-tee teenuste linkandmed
     url: 'http://deepweb.ut.ee/services/api-network-x-road.rdf'

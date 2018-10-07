@@ -8,7 +8,7 @@ notes: |-
       Meditsiiniseadmed (sh nende tootjad, levitajad ja professionaalsed kasutajad)
 department: ''
 category:
-  - Health
+  - Tervis
 resources:
   - name: 26.02.2015 Meditsiiniseadmed
     url: 'https://msa.sm.ee/avaandmed/ms_seadmed.php'

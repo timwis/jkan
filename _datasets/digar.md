@@ -4,7 +4,7 @@ title: Rahvusraamatukogu digiarhiiv DIGAR
 notes: 'DIGAR on Rahvusraamatukogu kasutajakeskkond, mis praegu pakub juurdepääsu digitaalarhiivis talletatud väljaannetele. Nende hulgas on e-raamatuid, ajalehti, ajakirju, kaarte, noote, fotosid, postkaarte, plakateid, illustratsioone, audioraamatuid ning muusikafaile. Raamatute ja perioodika vorming on enamasti pdf või epub, pildimaterjalil jpeg ja helisalvestistel wav.'
 department: ''
 category:
-  - Culture
+  - Kultuur
 resources:
   - name: 01.03.2017 Ajakirjad (EDM - Europeana Data Model)
     url: 'http://data.digar.ee:8080/repox/OAIHandler?verb=ListRecords&set=journal&metadataPrefix=edm'

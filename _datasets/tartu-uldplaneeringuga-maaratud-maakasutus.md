@@ -4,7 +4,7 @@ title: Üldplaneeringuga määratud maakasutus
 notes: Üldplaneeringuga määratud maakasutus
 department: 'Maad, ehitus ja planeerimine'
 category:
-  - Goverment services
+  - Riigiteenused
 resources:
   - url: 'https://gis.tartulv.ee/arcgis/services/Planeeringud/Maakasutus_WMS/MapServer/WMSServer'
     format: WMS

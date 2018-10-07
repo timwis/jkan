@@ -4,7 +4,7 @@ title: Koolide asukohad Tartu linnas
 notes: Koolide asukohad Tartu linnas
 department: Haridus ja lapsed
 category:
-  - Goverment services
+  - Riigiteenused
 resources:
   - url: 'https://gis.tartulv.ee/arcgis/services/Proov/Koolid/MapServer?wsdl'
     format: XML

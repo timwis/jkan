@@ -4,7 +4,7 @@ title: Valimisjaoskondade asukohad Tartu linnas
 notes: Valimisjaoskondade asukohad Tartu linnas
 department: Linnavalitsemine
 category:
-  - Goverment services
+  - Riigiteenused
 resources:
   - url: 'https://gis.tartulv.ee/arcgis/services/Proov/Valimisjaoskonnad/MapServer?wsdl'
     format: XML

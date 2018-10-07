@@ -4,7 +4,7 @@ title: Tartu linnavolikogu liikmed ja komisjonide liikmed
 notes: Tartu linnavolikogu liikmed ja komisjonide liikmed
 department: Linnavalitsemine
 category:
-  - Goverment services
+  - Riigiteenused
 resources:
   - url: 'http://info.raad.tartu.ee/tootajad.nsf/web/volisik/xml'
     format: XML

@@ -4,7 +4,7 @@ title: Vee terviseohutuse infosüsteem
 notes: Vee terviseohutuse infosüsteemi avaandmete komplektid. Veeproovide puhul esitatakse ainult avalikustamisele kuuluvad veeproovid. Veevärkide puhul esitatakse ainult järelevalve aluste veevärkide veeproovid. Veeallikate puhul esitatakse ainult kasutuses olevate veeallikate veeproovid.
 department: ''
 category:
-  - Health
+  - Tervis
 resources:
   - name: Veekäitlejad
     url: 'http://vtiav.sm.ee/index.php/opendata/veekaitlejad.xml'

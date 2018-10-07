@@ -4,7 +4,7 @@ title: PPA piirivalvekordonid
 notes: PPA kordonite kontaktid. Andmed on genereeritud 02. jaanuari. 2016 seisuga.
 department: ''
 category:
-  - Government services
+  - Riigiteenused
 resources:
   - name: PPA kordonid ver.1
     url: 'https://www.politsei.ee/dotAsset/528870.csv'

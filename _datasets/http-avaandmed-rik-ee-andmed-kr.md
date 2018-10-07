@@ -4,7 +4,7 @@ title: Kinnistusraamatu avalikud tasuta andmed
 notes: Kinnistusraamatu avalikud tasuta andmed
 department: ''
 category:
-  - Government services
+  - Riigiteenused
 resources:
   - name: Kinnistusraamatu avalikud tasuta andmed
     url: 'http://avaandmed.rik.ee/andmed/KR/'

@@ -6,7 +6,7 @@ notes: |-
      Avaandmete esitamise juriidiline alus
 department: ''
 category:
-  - Government services
+  - Riigiteenused
 resources:
   - name: Alkoholiregister
     url: 'https://alkoreg.agri.ee/avaandmed'

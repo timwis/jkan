@@ -4,9 +4,7 @@ title: Tuulekaeraga saastunud alade andmekogu
 notes: Maakasutajate teavituste põhjal on loodud tuulekaeraga saastunud alade kaardikiht. Kaardikiht asub Põllumajanduse Registrite ja Informatsiooni Ameti põllumassiivi veebikaardil . Tuulekaerast saab teavitada tuulekaer@pma.agri.ee
 department: ''
 category:
-  - Agriculture
-  - fisheries
-  - forestry
+  - Põllumajandus, kalandus, metsandus
 resources:
   - name: Tuulekaera leviku kaart 2016
     url: 'http://www.pma.agri.ee/download.php?getfile2=8518'

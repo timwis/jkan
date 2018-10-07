@@ -4,7 +4,7 @@ title: Eesti Spordiregistri avaandmed
 notes: Eesti Spordiregistri avaandmed.
 department: ''
 category:
-  - Culture
+  - Kultuur
 resources:
   - name: 23.02.2015 Treenerid
     url: 'https://www.spordiregister.ee/opendata/files/treenerid.json'

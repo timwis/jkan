@@ -4,7 +4,7 @@ title: Tallinna eelarve
 notes: 'Tallinna eelarvestrateegia aastateks 2016 - 2019, Tallinna linna eelarved 2015, 2016, 2017, 2018'
 department: ''
 category:
-  - Goverment services
+  - Riigiteenused
 resources:
   - url: 'http://www.tallinn.ee/eelarve'
     format: PDF

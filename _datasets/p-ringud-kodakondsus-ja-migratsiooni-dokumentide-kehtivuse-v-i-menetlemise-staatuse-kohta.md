@@ -4,7 +4,7 @@ title: Päringud kodakondsus- ja migratsiooni dokumentide kehtivuse või menetle
 notes: 'Andmehulk sisaldab tabelit URL-ga kust saab teha erinevaid päringuid, mis on seotud kodakondsus- ja migratsiooni dokumentidega. Valides Teid huvitava päringu ning sisestades avanevale lehele selleks vajaliku info saate sooritada soovitud päringu.'
 department: ''
 category:
-  - Government services
+  - Riigiteenused
 resources:
   - name: Isikut tõendavate dokumentide staatuse päringud
     url: 'https://www.politsei.ee//dotAsset/495155.csv'

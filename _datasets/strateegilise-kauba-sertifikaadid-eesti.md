@@ -4,7 +4,7 @@ title: Strateegilise kauba sertifikaadid Eesti
 notes: Strateegilise kauba sertifikaadid Eesti
 department: ''
 category:
-  - Economy and industry
+  - Majandus ja tööstus
 resources:
   - name: sertifikaadid_eesti.xml
     url: 'http://opendata.vm.ee/stratkom/sertifikaadid_eesti.xml'

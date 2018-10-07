@@ -6,7 +6,7 @@ notes: |-
      Andmed Riigihangete registri hangetest seisuga 18.05.2015
 department: ''
 category:
-  - Government services
+  - Riigiteenused
 resources:
   - name: Riigihangete register
     url: 'https://opendata.riik.ee/dataset/2681ade3-5250-4283-8f9c-16633a4b081f/resource/f104acb4-736a-499f-8bda-609c5439479d/download/rhravaandmed.csv'

@@ -6,7 +6,7 @@ notes: |-
      Töötlemine registreeritakse viieks aastaks.
 department: ''
 category:
-  - Government services
+  - Riigiteenused
 resources:
   - name: 24.07.2015 Isikuandmete kaitse eest vastutavate isikute määramised
     url: 'http://avaandmed.rik.ee/andmed/AKI/ISIKUANDMETE_EESTVASTUTAVATE_ISIKUTE_MAARAMISED.xml'

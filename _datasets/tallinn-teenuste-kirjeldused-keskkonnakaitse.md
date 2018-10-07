@@ -4,7 +4,7 @@ title: Teenuste kirjeldused - keskkonnakaitse
 notes: Keskkonnakaitse valdkonna teenuste kirjeldused
 department: ''
 category:
-  - Goverment services
+  - Riigiteenused
 resources:
   - url: 'http://www.tallinn.ee/teenused?action=avaandmed&valdkond_id=14'
     format: XML

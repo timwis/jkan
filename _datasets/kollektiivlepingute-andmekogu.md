@@ -6,7 +6,7 @@ notes: |-
      Kuigi kollektiivlepingu seadus näeb ette, et sõlmitud kollektiivlepingud tuleb registreerida Sotsiaalministeeriumi peetavas andmekogus, ei pruugi kõik Eestis sõlmitud kollektiivlepingud siiski andmekogus registreeritud olla. Seetõttu ei anna kollektiivlepingute andmekogu statistika ammendavat ülevaadet kollektiivlepingute levikust ega kollektiivlepingutega kaetusest Eestis, vaid pakub teavet selle kohta, millised töötingimused on tavapäraselt kollektiivlepingutega reguleeritud ning kelle vahel lepingud sõlmitakse.
 department: ''
 category:
-  - Employment
+  - Tööhõive
 resources:
   - name: Metadata
     url: 'https://opendata.riik.ee/dataset/8a76d1ef-112f-4a68-b50e-3b2b3f16bb5c/resource/83051c82-1d34-4bd5-a26d-789586ee3e15/download/avaandmedxmllepingud'

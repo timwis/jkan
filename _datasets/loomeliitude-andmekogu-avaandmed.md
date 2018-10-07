@@ -4,7 +4,7 @@ title: Loomeliitude andmekogu avaandmed
 notes: Loomeliitude andmekogu avaandmed
 department: ''
 category:
-  - Culture
+  - Kultuur
 resources:
   - name: '20.04.2015 Loomeliitude andmekogu avaand,ed'
     url: 'http://avaandmed.rik.ee/andmed/LLA/'

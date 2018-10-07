@@ -4,7 +4,7 @@ title: Tartu linnavalitsuse andmekogud
 notes: Tartu linnavalitsuse andmekogudest koondatud ja avatud andmed Tartu kodulehel
 department: ''
 category:
-  - Open governance
+  - Avatud valitsemine
 resources:
   - name: Tartu linna avaandmed
     url: 'http://www.tartu.ee/et/avaandmed'

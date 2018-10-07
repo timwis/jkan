@@ -4,7 +4,7 @@ title: Rahvuspühad
 notes: Rahvuspühad - Eestis akrediteeritud välisesindust omavate riikide rahvuspühade andmed.
 department: ''
 category:
-  - Government services
+  - Riigiteenused
 resources:
   - name: rahvuspyhad.xml
     url: 'http://opendata.vm.ee/rahvuspyhad.xml'

@@ -4,7 +4,7 @@ title: Eesti Hariduse Infosüsteemi avaandmed
 notes: 'Eesti Hariduse Infosüsteem (EHIS) koondab haridussüsteemi puudutavaid andmeid. Register sisaldab andmeid õppeasutuse, õpilaste, õpetajate/õppejõudude, lõpudokumentide, õpikute ja õppekavade kohta. Kõige vanemad andmed on aastast 2004.'
 department: ''
 category:
-  - Education and research
+  - Haridus ja teadus
 resources:
   - name: 16.04.2018 Õppeasutuste avaandmed
     url: 'http://enda.ehis.ee/avaandmed/rest/oppeasutused/-/Kool/E/-/-/-/-/-/-/0/0/XML'

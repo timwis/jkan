@@ -4,7 +4,7 @@ title: Lasteaedade asukohad Tartu linnas
 notes: Lasteaedade asukohad Tartu linnas
 department: Haridus ja lapsed
 category:
-  - Goverment services
+  - Riigiteenused
 resources:
   - url: 'https://gis.tartulv.ee/arcgis/services/Proov/Lasteaiad/MapServer?wsdl'
     format: XML

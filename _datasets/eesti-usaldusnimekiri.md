@@ -4,7 +4,7 @@ title: Eesti usaldusnimekiri
 notes: The present list is the 'Trusted List of supervised/accredited Certification Service Providers' providing information about the supervision/accreditation status of certification services from Certification Service Providers (CSPs) who are supervised/accredited by Estonia for compliance with the relevant provisions of Directive 1999/93/EC of the European Parliament and of the Council of 13 December 1999 on a Community framework for electronic signatures.
 department: ''
 category:
-  - Government services
+  - Riigiteenused
 resources:
   - name: 09.10.2014 Usaldusnimekirja räsi
     url: 'http://sr.riik.ee/tsl/estonian-tsl.sha2'

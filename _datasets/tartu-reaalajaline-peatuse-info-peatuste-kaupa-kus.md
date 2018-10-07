@@ -4,7 +4,7 @@ title: 'Reaalajaline peatuse info'
 notes: 'Reaalajaline peatuse info peatuste kaupa, kus "stop_id=" pärineb Sõiduplaanide gtfs-failist'
 department: Transport ja liiklus
 category:
-  - Goverment services
+  - Riigiteenused
 resources:
   - url: "http://lv.raad.tartu.ee:8877/SmartBusSVC.asmx/GetBoardInfo?stop_id=7820321-1"
     format: XML

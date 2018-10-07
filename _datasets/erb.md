@@ -6,7 +6,7 @@ notes: >-
   nädalas.
 department: ''
 category:
-  - Culture
+  - Kultuur
 resources:
   - name: 15.03.2017 Perioodika (marc21xml)
     url: 'http://data.digar.ee/erb/ERB_perioodika.zip'

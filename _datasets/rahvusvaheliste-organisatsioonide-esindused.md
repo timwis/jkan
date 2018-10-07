@@ -4,7 +4,7 @@ title: Rahvusvaheliste organisatsioonide esindused
 notes: 'Rahvusvaheliste organisatsioonide esindused - Eestisse akrediteeritud rahvusvaheliste organisatsioonide esindused, nende juhid ja kontaktandmed.'
 department: ''
 category:
-  - Government services
+  - Riigiteenused
 resources:
   - name: esindused.xml
     url: 'http://opendata.vm.ee/esindused.xml'

@@ -4,7 +4,7 @@ title: Lastehoiu asukohad Tartu linnas
 notes: Lastehoiu asukohad Tartu linnas
 department: Haridus ja lapsed
 category:
-  - Goverment services
+  - Riigiteenused
 resources:
   - url: 'https://gis.tartulv.ee/arcgis/services/Proov/Lastehoiud/MapServer?wsdl'
     format: XML

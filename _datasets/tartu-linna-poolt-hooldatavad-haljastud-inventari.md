@@ -4,7 +4,7 @@ title: Tartu linna poolt hooldatavad haljastud ja inventari paiknemine. Teenus s
 notes: 'Tartu linna poolt hooldatavad haljastud ja inventari paiknemine. Teenus sisaldab järgmiste nähtuste asukohainfot: lilled, pingid, truubid, riietuskabiinid, purskkaev, käimlad, trepid, piirded, metsa- ja terviserajad, haljasalad.'
 department: Heakord ja keskkond
 category:
-  - Goverment services
+  - Riigiteenused
 resources:
   - url: 'https://gis.tartulv.ee/arcgis/services/Haljastus/HALGIS_avaandmed/MapServer?wsdl'
     format: XML

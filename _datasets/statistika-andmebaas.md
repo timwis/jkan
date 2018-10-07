@@ -6,7 +6,7 @@ notes: |-
      Plaanis on lähiajal uuendada kogu süsteemi platvorm ja teha kõik andmestikud kättesaadavaks masinloetavalt.
 department: ''
 category:
-  - Economy and industry
+  - Majandus ja tööstus
 resources:
   - name: Statistikaameti statistika andmebaas
     url: 'http://www.stat.ee/andmebaas'

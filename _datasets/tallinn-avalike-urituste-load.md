@@ -4,7 +4,7 @@ title: Avalike ürituste load
 notes: Jooksval nädalal toimuvad avalikud üritused Tallinnas koos asukohtadega
 department: ''
 category:
-  - Goverment services
+  - Riigiteenused
 resources:
   - url: 'https://akis.tallinn.ee/kogunemised/xml/23d381ce'
     format: XML

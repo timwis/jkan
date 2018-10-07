@@ -4,7 +4,7 @@ title: Posti sihtnumbrid (postiindeksid)
 notes: Posti sihtnumbrid on seotud aadressiandmete süsteemi aadressidega (ADR-ID-dega). Andmeid uuendatakse süsteemi väliselt kuni 2018. aasta arendustööde valmimiseni. Seejärel levitab Maa-amet samu andmeid enamuse ADS-i teenuste ja väljavõtete koosseisus.
 department: ''
 category:
-  - Geography
+  - Geograafia
 resources:
   - name: sihtnumbrid.zip
     url: 'http://geoportaal.maaamet.ee/docs/aadress/sihtnumbrid.zip'

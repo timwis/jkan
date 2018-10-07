@@ -4,9 +4,7 @@ title: Veterinaararstid
 notes: Riiklik veterinaararstide register
 department: ''
 category:
-  - Agriculture
-  - fisheries
-  - forestry
+  - Põllumajandus, kalandus, metsandus
 resources:
   - name: Registri avalik vaade
     url: 'https://jvis.agri.ee/jvis/avalik.html#/vetarstparing'

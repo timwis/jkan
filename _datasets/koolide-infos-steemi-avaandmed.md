@@ -4,7 +4,7 @@ title: Koolide infosüsteemi avaandmed
 notes: 'Eesti koolide haldamise infosüsteem (EKIS) on suunatud kõigile haridusasutustele, mis on registreeritud Eesti hariduse infosüsteemis (EHIS). EKIS sisaldab dokumendihalduse, finantsarvestuse, personalihalduse, varahalduse, raamatukogu, kooli töö, intraneti ja kommunikatsioonimooduleid ning on liidestatud DVK ja avaliku veebiga võimaldades koolidel täita kõiki dokumendihaldusega seotud nõudeid. Uusi kirjeid lisatakse igapäevaselt.'
 department: ''
 category:
-  - Education and research
+  - Haridus ja teadus
 resources:
   - name: EKIS avalik dokumendiregister
     url: 'https://ekis.ee/'

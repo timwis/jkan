@@ -6,7 +6,7 @@ notes: |-
      Fail on UTF8, *.csv formaadis.
 department: ''
 category:
-  - Finances and budgeting
+  - Rahandus ja eelarvestamine
 resources:
   - name: Euroopa Liidu struktuuritoetuse saajad
     url: 'http://www.struktuurifondid.ee/et/toetatud-projektid/toetatud-projektid'

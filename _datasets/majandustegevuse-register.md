@@ -4,7 +4,7 @@ title: Majandustegevuse register
 notes: 'Ettevõtja andmed, millel on MTR-is kehtivad tegevusload või majandustegevusteated'
 department: ''
 category:
-  - Economy and industry
+  - Majandus ja tööstus
 resources:
   - name: 07.05.2018 Majandustegevuse register
     url: 'http://opendata.mkm.ee/mtr/'

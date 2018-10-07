@@ -4,7 +4,7 @@ title: RIHA lühiandmestik
 notes: 'Kõik RIHAs registreeritud andmekogud, kirjed  https://github.com/e-gov/RIHA-API/blob/master/RIHA-API.yaml järgi'
 department: ''
 category:
-  - Government services
+  - Riigiteenused
 resources:
   - name: 18.11.2016 RIHA_live.json
     url: 'https://raw.githubusercontent.com/e-gov/RIHA-API/master/riha_live.json'

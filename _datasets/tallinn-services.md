@@ -4,7 +4,7 @@ title: Services
 notes: Tallinn Public Service Database. Tallinna teenuste kataloog inglise keeles
 department: ''
 category:
-  - Goverment services
+  - Riigiteenused
 resources:
   - url: 'http://www.tallinn.ee/eng/teenused?action=avaandmed'
     format: XML

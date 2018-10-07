@@ -4,7 +4,7 @@ title: Aegviidu Vallavalitsuse dokumendihaldussüsteem
 notes: Aegviidu Vallavalitsuse dokumendihaldussüsteem. Masinloetaval kujul viimased muudatused saadaval siin - http://avalik.amphora.ee/aegviiduvv/RssDocuments.aspx
 department: ''
 category:
-  - Open governance
+  - Avatud valitsemine
 resources:
   - name: Aegviidu Vallavalitsuse DHS
     url: 'http://avalik.amphora.ee/aegviiduvv/index.aspx?org=363&unit=-1'

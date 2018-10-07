@@ -4,7 +4,7 @@ title: Eesti Vabariigi aukonsulaadid
 notes: Eesti Vabariigi aukonsulaatide andmed.
 department: ''
 category:
-  - Government services
+  - Riigiteenused
 resources:
   - name: asutused_avaandmed.xml
     url: 'http://opendata.vm.ee/asutused_avaandmed.xml'

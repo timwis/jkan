@@ -4,9 +4,7 @@ title: Sordiregister
 notes: 'Sordiregistri pidamise eesmärk on koguda, töödelda ja säilitada andmeid sortide kohta «Taimede paljundamise ja sordikaitse seaduses» ettenähtud ülesannete täitmiseks. Registri vastutav töötleja on Maaeluministeerium ja volitatud töötleja on Põllumajandusamet (PMA). Täpsemat teavet sordiregistri kohta saab PMA kodulehelt.'
 department: ''
 category:
-  - Agriculture
-  - fisheries
-  - forestry
+  - Põllumajandus, kalandus, metsandus
 resources:
   - name: Sordiregister
     url: 'http://www.agri.ee/sites/default/files/opendata/sordiregister/Sordiregister.xml'

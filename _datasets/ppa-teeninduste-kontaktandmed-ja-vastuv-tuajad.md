@@ -4,7 +4,7 @@ title: PPA teeninduste kontaktandmed ja vastuvõtuajad
 notes: PPA teeninduste aadressid ja vastuvõtuajad koos lingiga vastuvõtuaja broneeringu süsteemi. Andmed on genereeritud 02. jaanuari. 2016 seisuga.
 department: ''
 category:
-  - Government services
+  - Riigiteenused
 resources:
   - name: Teenindusbüroodprefektuurides
     url: 'https://www.politsei.ee/dotAsset/528874.csv'

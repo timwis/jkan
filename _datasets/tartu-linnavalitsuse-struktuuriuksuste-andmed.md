@@ -4,7 +4,7 @@ title: Tartu linnavalitsuse struktuuriüksuste andmed
 notes: Tartu linnavalitsuse struktuuriüksuste andmed
 department: Linnavalitsemine
 category:
-  - Goverment services
+  - Riigiteenused
 resources:
   - url: 'http://info.raad.tartu.ee/tootajad.nsf/web/org/xml'
     format: XML

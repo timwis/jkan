@@ -4,7 +4,7 @@ title: Riigi kinnisvararegister
 notes: 'Riigi kinnisvararegistris peetakse arvestust keskvalitsusele kuuluva või tema poolt kasutatava kinnisvara üle. Õiguslik tähendus on riigivara valitseja ja volitatud asutuse määramise andmetel. Põhimäärus: https://www.riigiteataja.ee/akt/128122010002.'
 department: ''
 category:
-  - Government services
+  - Riigiteenused
 resources:
   - name: Riigi omandis ja kasutuses olev kinnisvara (27.05.2015)
     url: 'https://opendata.riik.ee/et/dataset/df7cd482-0391-4231-b67f-1efd7c4e8a43/resource/8121cbff-f1ff-4d09-954a-aac829a55d32/download/varadeloend.csv'

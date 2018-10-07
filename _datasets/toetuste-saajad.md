@@ -4,9 +4,7 @@ title: Toetuste saajad
 notes: 'Toetuse saajate otsingumootor võimaldabl leida infot eelmise finantsaasta jooksul toetuseid saanute kohta. Juhime tähelepanu, et finantsaasta kestvus hõlmab perioodi 16.10.2014 kuni 15.10.2016.'
 department: ''
 category:
-  - Agriculture
-  - fisheries
-  - forestry
+  - Põllumajandus, kalandus, metsandus
 resources:
   - name: 30.01.2018 Toetuste saajad
     url: 'http://www.pria.ee/et/toetused/toetusesaajad/'

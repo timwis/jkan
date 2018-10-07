@@ -4,7 +4,7 @@ title: Tallinna geoportaal
 notes: Tallinna geograafilist ruumiinfot koondav koht ehk avalikud ruumiandmed. Andmete uuendamine toimub korra kvartalis.
 department: ''
 category:
-  - Goverment services
+  - Riigiteenused
 resources:
   - url: 'https://www.tallinn.ee/geoportaal/'
     format: Veebileht

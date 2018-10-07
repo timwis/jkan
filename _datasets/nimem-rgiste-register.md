@@ -4,7 +4,7 @@ title: Nimemärgiste register
 notes: 'Nimemärgiste registris hoitakse väärismetalltoodete nimemärgised, mis väljastatakse nende valmistajale või sissevedajale. Avaandmetena on kättesaadavaks tehtud järgmised andmed : ettevõtte andmed, nimemärgise andmed - kujutis, kommentaar, registreerimise kuupäev ja number, olek, kehtivusaeg, lisamise kuupäeva.'
 department: ''
 category:
-  - Economy and industry
+  - Majandus ja tööstus
 resources:
   - name: 28.05.2018 Nimemärgised ja ettevõtted
     url: 'http://opendata.mkm.ee/nmrr/'

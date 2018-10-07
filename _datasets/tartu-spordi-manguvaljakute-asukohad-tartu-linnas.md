@@ -4,7 +4,7 @@ title: Spordi- ja mänguväljakute asukohad Tartu linnas
 notes: Spordi- ja mänguväljakute asukohad Tartu linnas
 department: Vaba aeg ja kultuur
 category:
-  - Goverment services
+  - Riigiteenused
 resources:
   - url: 'https://gis.tartulv.ee/arcgis/services/Haljastus/MV_SV_uus/MapServer?wsdl'
     format: XML

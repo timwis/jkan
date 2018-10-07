@@ -4,7 +4,7 @@ title: PPA politseijaoskondade kontaktid
 notes: 'PPA politseijaoskondade kontaktid (alluvus, aadress, telefon, e-post ja vastuvõtuaeg). Andmed on genereeritud 02. jaanuari 2016 seisuga.'
 department: ''
 category:
-  - Government services
+  - Riigiteenused
 resources:
   - name: PPA politseijaoskondade kontaktid ver.1
     url: 'https://www.politsei.ee/dotAsset/528872.csv'

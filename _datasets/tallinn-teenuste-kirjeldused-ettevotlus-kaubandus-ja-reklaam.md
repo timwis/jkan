@@ -4,7 +4,7 @@ title: 'Teenuste kirjeldused - ettevõtlus, kaubandus ja reklaam'
 notes: 'Ettevõtluse, kaubanduse ja reklaami valdkonna teenuste kirjeldused'
 department: ''
 category:
-  - Goverment services
+  - Riigiteenused
 resources:
   - url: 'http://www.tallinn.ee/teenused#valdkond_12'
     format: XML

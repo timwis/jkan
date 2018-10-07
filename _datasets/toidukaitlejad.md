@@ -4,9 +4,7 @@ title: Toidukäitlejad
 notes: Teavitatud ja tegevusloaga toidu / toiduga kokkupuutumiseks ettenähtud materjalide ja esemete käitlejad
 department: ''
 category:
-  - Agriculture
-  - fisheries
-  - forestry
+  - Põllumajandus, kalandus, metsandus
 resources:
   - name: Toidukäitlejad
     url: 'https://agri.ee/sites/default/files/opendata/toit/Toidukaitlejad.xml'

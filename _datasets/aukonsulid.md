@@ -4,7 +4,7 @@ title: Aukonsulid
 notes: Eestis asuvad välisriikide aukonsulid ja nende kontaktandmed.
 department: ''
 category:
-  - Government services
+  - Riigiteenused
 resources:
   - name: aukonsulid.xml
     url: 'http://opendata.vm.ee/aukonsulid.xml'

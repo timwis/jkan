@@ -4,7 +4,7 @@ title: Ametlike teadaannete avaandmed
 notes: 'Ametlikud teadaanded, mis ei ole avaldatud füüsilisest isikust adressaadile kätte toimetamiseks või mille avaldamine ei ole lõpetatud.'
 department: ''
 category:
-  - Government services
+  - Riigiteenused
 resources:
   - name: Ametlikud Teadaanded
     url: 'https://www.ametlikudteadaanded.ee/avalik/uriotsing'

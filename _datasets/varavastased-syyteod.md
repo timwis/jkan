@@ -4,7 +4,7 @@ title: Varavastased süüteod
 notes: Andmehulk sisaldab andmeid Politsei- ja Piirivalveametis registreeritud varavastaste süütegude kohta. Avaldatavate andmete täpsemale kirjeldusele on viidatud täiendavate linkide all.
 department: ''
 category:
-  - Government services
+  - Riigiteenused
 resources:
   - name: 11.01.2018 Süüteod üle-eelmise viie aasta kohta
     url: 'https://opendata.smit.ee/ppa/files/vara_3.zip'

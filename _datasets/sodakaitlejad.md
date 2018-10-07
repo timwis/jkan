@@ -4,9 +4,7 @@ title: Söödakäitlejad
 notes: Teavitatud ja tegevusloaga söödakäitlejad
 department: ''
 category:
-  - Agriculture
-  - fisheries
-  - forestry
+  - Põllumajandus, kalandus, metsandus
 resources:
   - name: Söödakäitlejad
     url: 'https://agri.ee/sites/default/files/opendata/soot/Soodakaitlejad.xml'

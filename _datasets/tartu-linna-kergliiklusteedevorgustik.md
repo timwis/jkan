@@ -4,7 +4,7 @@ title: Tartu linna kergliiklusteedevõrgustik
 notes: Tartu linna kergliiklusteedevõrgustik
 department: Transport ja liiklus
 category:
-  - Goverment services
+  - Riigiteenused
 resources:
   - url: 'https://gis.tartulv.ee/arcgis/services/Kergliiklus/kergliiklus/MapServer?wsdl'
     format: XML

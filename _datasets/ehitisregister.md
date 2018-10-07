@@ -4,7 +4,7 @@ title: Ehitisregister
 notes: 'Ehitistega seotud andmestik : aadress, seos katastriga, kasutusotstarbed, ruumikuju, sissepääsupunktid, energiamärgi, ehitusloa info, kasutusloa info ja tehnilised andmed.  Ehitisregistri klassifikaatorid. Avaandmeid uuendatakse 1 kord ööpäevas Ehitisregistri töö andmebaasi alusel.'
 department: ''
 category:
-  - Environment
+  - Keskkond
 resources:
   - name: 07.05.2018 Ehitisregistri avaandmed
     url: 'https://avaandmed.ehr.ee'

@@ -4,9 +4,7 @@ title: Põllumajandusloomade register
 notes: 'Põllumajandusloomade registri pidamise eesmärk on  põllumajandusloomade, loomapidajate ja tegevuskohtade andmete kogumine ja süstematiseerimine, et teostada veterinaarjärelevalvet ning ära hoida ja likvideerida loomade nakkushaigusi ja kaitsta inimest loomadega ühiste ja loomade kaudu levivate haiguste eest. Registri vastutav töötleja on Põllumajandusministeerium ja volitatud töötleja Põllumajanduse Registrite ja Informatsiooni Amet (PRIA).'
 department: ''
 category:
-  - Agriculture
-  - fisheries
-  - forestry
+  - Põllumajandus, kalandus, metsandus
 resources:
   - name: 30.01.2018 Teenus vesiviljelusettevõtete andmete vaatamiseks
     url: 'https://ariel.pria.ee/vesiviljelus/'

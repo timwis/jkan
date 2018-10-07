@@ -4,7 +4,7 @@ title: Teenuste kirjeldused - arhiiv
 notes: Arhiivi valdkonna teenuste kirjeldused
 department: ''
 category:
-  - Goverment services
+  - Riigiteenused
 resources:
   - url: 'http://www.tallinn.ee/teenused?action=avaandmed&valdkond_id=11'
     format: XML

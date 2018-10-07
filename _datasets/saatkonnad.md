@@ -4,7 +4,7 @@ title: Saatkonnad
 notes: 'Eestisse akrediteeritud välisesindused, nende kontaktandmed ning esindustes töötavate diplomaatide nimekiri koos ametinimetustega. Eestisse akrediteeritud suursaadikute Eesti Vabariigi presidendile volikirjade üleandmise kuupäevad.'
 department: ''
 category:
-  - Government services
+  - Riigiteenused
 resources:
   - name: saatkonnad.xml
     url: 'http://opendata.vm.ee/saatkonnad.xml'

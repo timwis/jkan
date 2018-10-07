@@ -7,7 +7,7 @@ notes: |-
      EIS on asutatud 2010. aastal.
 department: ''
 category:
-  - Education and research
+  - Haridus ja teadus
 resources:
   - name: Avalikud ülesanded
     url: 'https://eis.ekk.edu.ee/eis/lahendamine'

@@ -4,7 +4,7 @@ title: Äriregistri avalikud tasuta andmed
 notes: 'Äriregistri avalikud tasuta andmed [ettevõtja (ühingu) nimi, registrikood, käibemaksukohustuslase number, staatus, aadress, link ettevõtja andmetele]'
 department: ''
 category:
-  - Economy and industry
+  - Majandus ja tööstus
 resources:
   - name: 'Äriregistri avalikud tasuta andmed [ettevõtja (ühingu) nimi, registrikood, käibemaksukohustuslase number, staatus, aadress, link ettevõtja andmetele]'
     url: 'http://avaandmed.rik.ee/andmed/ARIREGISTER/'

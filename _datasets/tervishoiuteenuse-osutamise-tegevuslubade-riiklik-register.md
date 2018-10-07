@@ -4,7 +4,7 @@ title: Tervishoiuteenuse osutamise tegevuslubade riiklik register
 notes: 'Tervishoiuteenuse osutamise tegevuslubade riikliku registri avaandmete puhul on esitatud tervishoiuteenuseid osutavad asutused, nende tegevusload ja töötajad. Esitatud on ainult kehtivaid tegevuslube omavad asutused.'
 department: ''
 category:
-  - Health
+  - Tervis
 resources:
   - name: 'Asutused, tegevusload, töötajad'
     url: 'http://mveeb.sm.ee/od/od_asutused.xml'

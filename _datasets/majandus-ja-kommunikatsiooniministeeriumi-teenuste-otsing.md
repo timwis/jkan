@@ -4,7 +4,7 @@ title: Majandus- ja Kommunikatsiooniministeeriumi teenuste otsing
 notes: Siin lehel saad erinevate tunnuste abil otsida Majandus- ja Kommunikatsiooniministeeriumi haldusala teenuseid.
 department: ''
 category:
-  - Government services
+  - Riigiteenused
 resources:
   - name: Teenuste otsing
     url: 'https://www.mkm.ee/et/teenuste-otsing'

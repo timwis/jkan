@@ -4,7 +4,7 @@ title: Lähiaastatel korrastatud kõnniteed Tartu linnas
 notes: Lähiaastatel korrastatud kõnniteed Tartu linnas
 department: Transport ja liiklus
 category:
-  - Goverment services
+  - Riigiteenused
 resources:
   - url: 'https://gis.tartulv.ee/arcgis/services/Kergliiklus/k%C3%B5nniteed/MapServer?wsdl'
     format: XML

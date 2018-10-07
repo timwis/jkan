@@ -4,7 +4,7 @@ title: Alkoholireklaami keelualad Tartu linnas
 notes: Alkoholireklaami keelualad Tartu linnas
 department: Linnavalitsemine
 category:
-  - Goverment services
+  - Riigiteenused
 resources:
   - url: 'https://gis.tartulv.ee/arcgis/services/Proov/Alkoholireklaami_keelualad/MapServer?wsdl'
     format: XML

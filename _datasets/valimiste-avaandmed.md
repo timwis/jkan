@@ -4,7 +4,7 @@ title: Valimiste avaandmed
 notes: Sisaldab valimistega seotud andmeid 1992 aastast kuni viimaste valimisteni.
 department: ''
 category:
-  - Government services
+  - Riigiteenused
 resources:
   - name: 04.12.2015 Toimunud valimised
     url: 'http://vvk.ee/arhiiv/'

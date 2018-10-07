@@ -4,7 +4,7 @@ title: Laevakinnistusraamatu avalikud andmed
 notes: Kõik laevakinnistusraamatu avalikud andmed
 department: ''
 category:
-  - Government services
+  - Riigiteenused
 resources:
   - name: Kõik laevakinnistusraamatu avalikud andmed
     url: 'http://avaandmed.rik.ee/andmed/LAEV/'

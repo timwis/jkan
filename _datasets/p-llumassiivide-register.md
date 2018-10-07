@@ -4,9 +4,7 @@ title: Põllumassiivide register
 notes: 'Põllumassiivide registri pidamise eesmärk on anda pindalapõhiste maaelu arengukava toetuste ning otsetoetuste taotlejatele avalikku teavet põllumassiivide piiride, unikaalse numberkoodi, pindala ja tunnuste kohta. Registri vastutav töötleja on Põllumajandusministeerium ja volitatud töötleja on Põllumajanduse registrite ja informatsiooni amet (PRIA). Täpsemat teavet põllumassiivide registri kohta saab http://www.pria.ee/et/Registrid/Pollumassiivide_register'
 department: ''
 category:
-  - Agriculture
-  - fisheries
-  - forestry
+  - Põllumajandus, kalandus, metsandus
 resources:
   - name: 13.05.2015 Põllumassiivid
     url: 'http://www.pria.ee/avaandmed/'

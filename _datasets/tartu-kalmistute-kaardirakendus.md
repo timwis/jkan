@@ -4,7 +4,7 @@ title: Tartu kalmistute kaardirakendus
 notes: Tartu kalmistute kaardirakendus
 department: Heakord ja keskkond
 category:
-  - Goverment services
+  - Riigiteenused
 resources:
   - url: 'https://gis.tartulv.ee/arcgis/services/Kalmistu/KL_koond/MapServer/FeatureServer?wsdl'
     format: XML

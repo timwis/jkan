@@ -4,7 +4,7 @@ title: 'Tartu linna ühistranspordi peatuste numbrid ja nimekiri, asukohad ja s�
 notes: 'Tartu linna ühistranspordi peatuste numbrid ja nimekiri, asukohad ja sõiduplaanid Maanteameti halduses olevas ÜTRIS serveris'
 department: Transport ja liiklus
 category:
-  - Goverment services
+  - Riigiteenused
 resources:
   - url: 'http://www.peatus.ee/gtfs/'
     format: GTFS

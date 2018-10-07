@@ -4,7 +4,7 @@ title: Muuseumide infosüsteemi avaandmed
 notes: MuIS püsiviited ja avaandmed
 department: ''
 category:
-  - Culture
+  - Kultuur
 resources:
   - name: 25.03.2015 MuIS püsiviited ja avaandmete liides
     url: 'http://opendata.muis.ee'

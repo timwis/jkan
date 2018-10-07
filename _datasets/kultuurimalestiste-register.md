@@ -4,7 +4,7 @@ title: Kultuurimälestiste Register
 notes: Registrist leiate informatsiooni kõikide Eestis riikliku kaitse all olevate mälestiste kohta.
 department: ''
 category:
-  - Culture
+  - Kultuur
 resources:
   - name: Rest API
     url: 'http://register.muinas.ee/rest/v1/monuments?'

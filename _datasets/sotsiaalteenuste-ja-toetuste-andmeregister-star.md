@@ -4,7 +4,7 @@ title: Sotsiaalteenuste ja -toetuste andmeregister (STAR)
 notes: 'Siin on avaldatud sotsiaalteenuste ja -toetuste andmeregistri (STAR) järgmised andmed: maakond, haldusasutus, riiklikult kehtestatud toimetulekutoetuse parameetrid, toimetulekutoetuse maksmiseks kehtestatud eluasemekulude piirmäärad omavalitsustes, riiklikult kehtestatud vajaduspõhise peretoetuse parameetrid, parameetri kehtivuse algus, parameetri kehtivuse lõpp, parameetri väärtus, parameetri mõõtühik.'
 department: ''
 category:
-  - Social sphere
+  - Sotsiaalvaldkond
 resources:
   - name: STARi kehtivad parameetrid (27.11.2017 seisuga)
     url: 'https://opendata.riik.ee/dataset/d889f5ab-e6da-4376-9c6e-25249baf2a4c/resource/15be7427-32c4-4f90-adff-b9832d1901e2/download/parameeterexcel.xlsx'

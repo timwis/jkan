@@ -4,7 +4,7 @@ title: Riigi Teatajas avaldatud õigusaktid
 notes: Õigusaktid
 department: ''
 category:
-  - Government services
+  - Riigiteenused
 resources:
   - name: Õigusaktid
     url: 'http://avaandmed.rik.ee/andmed/ERT'

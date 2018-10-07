@@ -4,7 +4,7 @@ title: Tartu linnaosad (mitteametlikud)
 notes: Tartu linnaosad (mitteametlikud)
 department: 'Maad, ehitus ja planeerimine'
 category:
-  - Goverment services
+  - Riigiteenused
 resources:
   - url: 'https://www.tartu.ee/sites/default/files/uploads/Avaandmed/Tartu_LO.7z'
     format: SHP

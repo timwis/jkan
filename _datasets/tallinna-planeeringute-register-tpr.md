@@ -4,7 +4,7 @@ title: Tallinna planeeringute register (TPR)
 notes: Planeeringute andmed
 department: ''
 category:
-  - Goverment services
+  - Riigiteenused
 resources:
   - url: 'http://www.tallinn.ee/est/ehitus/Masinliides'
     format: XML

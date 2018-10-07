@@ -4,9 +4,7 @@ title: Kutselise kalapüügi register
 notes: 'Kutselise kalapüügi register on andmekogu, mille ülesanne on võimaldada kutselise kalapüügiga tegelevate isikute, nende tegevuse ja kalalaevade üle arvestuse pidamist ning järelevalve teostamist.'
 department: ''
 category:
-  - Agriculture
-  - fisheries
-  - forestry
+  - Põllumajandus, kalandus, metsandus
 resources:
   - name: Kalalaevaregister
     url: 'https://www.agri.ee/et/eesmargid-tegevused/kalamajandus-ja-kutseline-kalapuuk/kalalaevaregister'

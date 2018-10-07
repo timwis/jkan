@@ -4,7 +4,7 @@ title: Proviisorite ja farmatseutide riiklik register
 notes: Proviisorite ja farmatseutide riikliku registri avaandmed.
 department: ''
 category:
-  - Health
+  - Tervis
 resources:
   - name: 'Proviisorid, farmatseudid'
     url: 'http://mveeb.sm.ee/od/od_apteekrid.xml'

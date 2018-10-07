@@ -4,7 +4,7 @@ title: Statistiline ülevaade Tartu 2015
 notes: Statistiline ülevaade Tartu 2015
 department: 'Maad, ehitus ja planeerimine'
 category:
-  - Goverment services
+  - Riigiteenused
 resources:
   - url: 'http://www.tartu.ee/sites/default/files/uploads/Tartu%20linn/Statistika/Lyhiylevaade_2015.pdf'
     format: 'PDF, CSV'
