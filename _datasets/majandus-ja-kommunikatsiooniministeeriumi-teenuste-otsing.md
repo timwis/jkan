@@ -14,8 +14,8 @@ resources:
     format: JSON
 license: 'http://creativecommons.org/licenses/by/3.0/'
 update_freq: ''
-date_issued: 27/08/2015
-date_modified: 27/08/2015
+date_issued: 2015/08/27
+date_modified: 2015/08/27
 organization: Majandus -ja Kommunikatsiooniministeerium
 maintainer_name: Risto Hinno
 maintainer_email: Risto.Hinno@mkm.ee

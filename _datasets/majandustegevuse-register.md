@@ -14,8 +14,8 @@ resources:
     format: XML
 license: 'http://creativecommons.org/licenses/by/3.0/'
 update_freq: ''
-date_issued: 07/05/2018
-date_modified: 07/05/2018
+date_issued: 2018/05/07
+date_modified: 2018/05/07
 organization: Majandus -ja Kommunikatsiooniministeerium
 maintainer_name: Majandustegevuse register
 maintainer_email: mtr@mkm.ee

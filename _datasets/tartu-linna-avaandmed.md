@@ -11,8 +11,8 @@ resources:
     format: HTML
 license: 'http://creativecommons.org/licenses/by/3.0/'
 update_freq: ''
-date_issued: 28/02/2017
-date_modified: 28/02/2017
+date_issued: 2017/02/28
+date_modified: 2017/02/28
 organization: Tartu Linnavalitsus
 maintainer_name: Hüite Bergmann
 maintainer_email: Hyite.Bergmann@raad.tartu.ee

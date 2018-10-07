@@ -20,8 +20,8 @@ resources:
     format: HTML
 license: 'http://creativecommons.org/licenses/by/3.0/'
 update_freq: ''
-date_issued: 23/05/2018
-date_modified: 23/05/2018
+date_issued: 2018/05/23
+date_modified: 2018/05/23
 organization: Haridus- ja Teadusministeerium
 maintainer_name: EIS kasutajatugi
 maintainer_email: eis.tugi@innove.ee

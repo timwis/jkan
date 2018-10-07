@@ -11,8 +11,8 @@ resources:
     format: HTML
 license: ''
 update_freq: ''
-date_issued: 27/04/2015
-date_modified: 27/04/2015
+date_issued: 2015/04/27
+date_modified: 2015/04/27
 organization: Tallinna Linnavalitsus
 maintainer_name: Liina Karjane
 maintainer_email: liina.karjane@tallinnlv.ee

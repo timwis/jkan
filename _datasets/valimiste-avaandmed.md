@@ -11,8 +11,8 @@ resources:
     format: HTML
 license: ''
 update_freq: ''
-date_issued: 04/12/2015
-date_modified: 04/12/2015
+date_issued: 2015/12/04
+date_modified: 2015/12/04
 organization: Vabariigi Valimiskomisjon
 maintainer_name: Leino Mandre
 maintainer_email: info@vvk.ee

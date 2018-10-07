@@ -13,8 +13,8 @@ resources:
     format: CSV
 license: 'http://creativecommons.org/licenses/by/3.0/'
 update_freq: ''
-date_issued: 06/05/2015
-date_modified: 06/05/2015
+date_issued: 2015/05/06
+date_modified: 2015/05/06
 organization: Rahandusministeerium
 maintainer_name: Margus Lehesaar
 maintainer_email: margus.lehesaar@fin.ee

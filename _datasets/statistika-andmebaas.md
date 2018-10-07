@@ -13,8 +13,8 @@ resources:
     format: veebileht
 license: 'http://creativecommons.org/licenses/by/3.0/'
 update_freq: ''
-date_issued: 11/04/2017
-date_modified: 11/04/2017
+date_issued: 2017/04/11
+date_modified: 2017/04/11
 organization: Statistikaamet
 maintainer_name: Statistikaamet
 maintainer_email: stat@stat.ee

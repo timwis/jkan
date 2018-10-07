@@ -17,8 +17,8 @@ resources:
     format: HTML
 license: 'http://creativecommons.org/licenses/by/3.0/'
 update_freq: ''
-date_issued: 17/07/2017
-date_modified: 17/07/2017
+date_issued: 2017/07/17
+date_modified: 2017/07/17
 organization: Maaeluministeerium
 maintainer_name: Jüri Tali
 maintainer_email: jyri.tali@agri.ee

@@ -19,8 +19,8 @@ resources:
     format: HTML
 license: 'http://creativecommons.org/licenses/by/3.0/'
 
-date_issued: 24/07/2015
-date_modified: 24/07/2015
+date_issued: 2015/07/24
+date_modified: 2015/07/24
 organization: Andmekaitse Inspektsioon
 maintainer_name: Kaja Puusepp
 maintainer_email: info@aki.ee

@@ -35,8 +35,8 @@ resources:
     format: CSV
 license: 'http://creativecommons.org/licenses/by/3.0/'
 update_freq: ''
-date_issued: 01/02/2018
-date_modified: 01/02/2018
+date_issued: 2018/02/01
+date_modified: 2018/02/01
 organization: Maksu- ja Tolliamet
 maintainer_name: Kati Liik.
 maintainer_email: kati.liik@emta.ee

@@ -11,8 +11,8 @@ resources:
     format: CSV
 license: 'http://creativecommons.org/licenses/by/3.0/'
 update_freq: ''
-date_issued: 17/11/2015
-date_modified: 17/11/2015
+date_issued: 2015/11/17
+date_modified: 2015/11/17
 organization: Politsei- ja Piirivalveamet
 maintainer_name: Ants Hinno
 maintainer_email: ants.hinno@politsei.ee

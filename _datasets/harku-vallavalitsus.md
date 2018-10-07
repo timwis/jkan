@@ -11,8 +11,8 @@ resources:
     format: HTML
 license: ''
 update_freq: ''
-date_issued: 31/05/2018
-date_modified: 31/05/2018
+date_issued: 2018/05/31
+date_modified: 2018/05/31
 organization: Harku Vallavalitsus
 maintainer_name: Harku Vallavalitsus
 maintainer_email: harku@harku.ee

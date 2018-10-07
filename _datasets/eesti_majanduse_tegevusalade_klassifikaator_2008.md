@@ -11,8 +11,8 @@ resources:
     format: 'xml, odf, csv'
 license: 'http://creativecommons.org/licenses/by-sa/3.0/'
 update_freq: ''
-date_issued: 17/06/2015
-date_modified: 17/06/2015
+date_issued: 2015/06/17
+date_modified: 2015/06/17
 organization: Registrite ja Infosüsteemide Keskus
 maintainer_name: Jaanus Laane
 maintainer_email: jaanus.laane@just.ee

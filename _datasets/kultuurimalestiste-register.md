@@ -11,8 +11,8 @@ resources:
     format: JSON
 license: 'http://opendatacommons.org/licenses/pddl/'
 update_freq: ''
-date_issued: 10/02/2015
-date_modified: 10/02/2015
+date_issued: 2015/02/10
+date_modified: 2015/02/10
 organization: Muinsuskaitseamet
 maintainer_name: Urve Russow
 maintainer_email: urve.russow@muinas.ee

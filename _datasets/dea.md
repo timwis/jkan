@@ -14,8 +14,8 @@ resources:
     format: HTML
 license: 'http://creativecommons.org/about/cc0'
 update_freq: ''
-date_issued: 10/04/2017
-date_modified: 10/04/2017
+date_issued: 2017/04/10
+date_modified: 2017/04/10
 organization: Eesti Rahvusraamatukogu
 maintainer_name: Urmas Sinisalu
 maintainer_email: urmas@nlib.ee

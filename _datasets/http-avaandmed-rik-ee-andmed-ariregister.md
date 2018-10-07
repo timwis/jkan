@@ -11,8 +11,8 @@ resources:
     format: 'xml, csv'
 license: 'http://creativecommons.org/licenses/by-sa/3.0/'
 update_freq: ''
-date_issued: 06/07/2015
-date_modified: 06/07/2015
+date_issued: 2015/07/06
+date_modified: 2015/07/06
 organization: Justiitsministeerium
 maintainer_name: Justiitsministeerium
 maintainer_email: info@just.ee

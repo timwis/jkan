@@ -11,8 +11,8 @@ resources:
     format: XML
 license: ''
 update_freq: ''
-date_issued: 01/02/2018
-date_modified: 01/02/2018
+date_issued: 2018/02/01
+date_modified: 2018/02/01
 organization: Siseministeerium
 maintainer_name: Maarja-Eliisabet Mäe
 maintainer_email: maarja-eliisabet.mae@siseministeerium.ee

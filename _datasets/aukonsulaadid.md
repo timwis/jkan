@@ -14,8 +14,8 @@ resources:
     format: XSD
 license: 'http://creativecommons.org/licenses/by/3.0/'
 update_freq: ''
-date_issued: 26/03/2015
-date_modified: 26/03/2015
+date_issued: 2015/03/26
+date_modified: 2015/03/26
 organization: Välisministeerium
 maintainer_name: Riina Talts
 maintainer_email: Riina.Talts@mfa.ee

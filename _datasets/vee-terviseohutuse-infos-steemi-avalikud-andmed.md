@@ -62,8 +62,8 @@ resources:
     format: HTML
 license: 'http://creativecommons.org/licenses/by/3.0/'
 update_freq: ''
-date_issued: 18/02/2015
-date_modified: 18/02/2015
+date_issued: 2015/02/18
+date_modified: 2015/02/18
 organization: Terviseamet
 maintainer_name: Maie Otsmann
 maintainer_email: maie.otsmann@terviseamet.ee

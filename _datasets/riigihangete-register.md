@@ -13,8 +13,8 @@ resources:
     format: CSV
 license: 'http://creativecommons.org/licenses/by/3.0/'
 update_freq: ''
-date_issued: 25/05/2015
-date_modified: 25/05/2015
+date_issued: 2015/05/25
+date_modified: 2015/05/25
 organization: Rahandusministeerium
 maintainer_name: Evelin Kasenõmm
 maintainer_email: Evelin.kasenomm@fin.ee

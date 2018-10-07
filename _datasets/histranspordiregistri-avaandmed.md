@@ -17,8 +17,8 @@ resources:
     format: HTML
 license: 'http://opendatacommons.org/licenses/by/'
 update_freq: ''
-date_issued: 29/05/2018
-date_modified: 29/05/2018
+date_issued: 2018/05/29
+date_modified: 2018/05/29
 organization: Maanteeamet
 maintainer_name: Thomas Lepik
 maintainer_email: opendata@mnt.ee

@@ -14,8 +14,8 @@ resources:
     format: XML
 license: 'http://creativecommons.org/licenses/by/3.0/'
 update_freq: ''
-date_issued: 28/05/2018
-date_modified: 28/05/2018
+date_issued: 2018/05/28
+date_modified: 2018/05/28
 organization: Majandus -ja Kommunikatsiooniministeerium
 maintainer_name: Kristjan Kaiklem
 maintainer_email: kristjan.kaiklem@mkm.ee

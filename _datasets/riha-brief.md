@@ -14,8 +14,8 @@ resources:
     format: yaml
 license: 'http://creativecommons.org/licenses/by/3.0/'
 update_freq: ''
-date_issued: 28/11/2016
-date_modified: 28/11/2016
+date_issued: 2016/11/28
+date_modified: 2016/11/28
 organization: Riigi Infosüsteemi Amet
 maintainer_name: Andres Kütt
 maintainer_email: andres.kutt@ria.ee

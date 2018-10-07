@@ -11,8 +11,8 @@ resources:
     format: RDF
 license: 'http://creativecommons.org/licenses/by/3.0/'
 update_freq: ''
-date_issued: 21/05/2015
-date_modified: 21/05/2015
+date_issued: 2015/05/21
+date_modified: 2015/05/21
 organization: Tartu Ülikool
 maintainer_name: Peep Küngas
 maintainer_email: peep.kungas@ut.ee

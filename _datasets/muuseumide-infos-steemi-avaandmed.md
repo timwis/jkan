@@ -11,8 +11,8 @@ resources:
     format: HTML
 license: ''
 update_freq: ''
-date_issued: 25/03/2015
-date_modified: 25/03/2015
+date_issued: 2015/03/25
+date_modified: 2015/03/25
 organization: Kultuuriministeerium
 maintainer_name: Kadri Nigulas
 maintainer_email: kadri.nigulas@kul.ee

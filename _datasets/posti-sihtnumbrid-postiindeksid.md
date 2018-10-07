@@ -14,8 +14,8 @@ resources:
     format: HTML
 license: 'http://creativecommons.org/licenses/by/3.0/'
 update_freq: ''
-date_issued: 08/12/2017
-date_modified: 08/12/2017
+date_issued: 2017/12/08
+date_modified: 2017/12/08
 organization: Maa-amet
 maintainer_name: Tanel Hurt
 maintainer_email: Tanel.Hurt@maaamet.ee

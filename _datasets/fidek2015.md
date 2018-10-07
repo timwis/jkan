@@ -11,8 +11,8 @@ resources:
     format: TXT
 license: 'http://creativecommons.org/licenses/by/3.0/'
 update_freq: ''
-date_issued: 18/03/2017
-date_modified: 18/03/2017
+date_issued: 2017/03/18
+date_modified: 2017/03/18
 organization: Riigi Infosüsteemi Amet
 maintainer_name: Andres Kütt
 maintainer_email: andres.kutt@ria.ee

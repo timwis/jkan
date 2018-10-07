@@ -11,8 +11,8 @@ resources:
     format: XML
 license: 'http://creativecommons.org/licenses/by/3.0/'
 update_freq: ''
-date_issued: 20/04/2015
-date_modified: 20/04/2015
+date_issued: 2015/04/20
+date_modified: 2015/04/20
 organization: Kultuuriministeerium
 maintainer_name: Indrek Reimand
 maintainer_email: indrek.reimand@kul.ee

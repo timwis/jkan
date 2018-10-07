@@ -11,8 +11,8 @@ resources:
     format: HTML
 license: 'http://creativecommons.org/licenses/by/3.0/'
 update_freq: 'http://purl.org/linked-data/sdmx/2009/code#freq-A'
-date_issued: 27/04/2015
-date_modified: 27/04/2015
+date_issued: 2015/04/27
+date_modified: 2015/04/27
 organization: Maa-amet
 maintainer_name: Andre Kaptein
 maintainer_email: Andre.Kaptein@maaamet.ee
