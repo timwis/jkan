@@ -9,7 +9,8 @@ resources:
   - url: 'http://www.tallinn.ee/est/Tallinn-arvudes'
     format: PDF
     name: Tallinn arvudes
-licence: ''
+license: ''
+update_freq: ''
 date_issued: 09.01.2015
 date_modified: 10.01.2018
 organization: Tallinna Linnavalitsus

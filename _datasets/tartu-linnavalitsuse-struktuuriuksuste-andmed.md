@@ -9,7 +9,8 @@ resources:
   - url: 'http://info.raad.tartu.ee/tootajad.nsf/web/org/xml'
     format: XML
     name: Tartu linnavalitsuse struktuuriüksuste andmed
-licence: 'https://creativecommons.org/licenses/by-sa/3.0/ee/legalcode'
+license: 'https://creativecommons.org/licenses/by-sa/3.0/ee/legalcode'
+update_freq: ''
 date_issued: ''
 date_modified: ''
 organization: Tartu Linnavalitsus

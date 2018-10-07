@@ -10,6 +10,7 @@ resources:
     url: 'http://www.tartu.ee/et/avaandmed'
     format: HTML
 license: 'http://creativecommons.org/licenses/by/3.0/'
+update_freq: ''
 date_issued: 28/02/2017
 date_modified: 28/02/2017
 organization: Tartu Linnavalitsus

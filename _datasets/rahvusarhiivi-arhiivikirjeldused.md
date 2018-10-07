@@ -25,6 +25,7 @@ resources:
     url: 'http://opendata.ra.ee'
     format: veebileht
 license: 'http://creativecommons.org/about/cc0'
+update_freq: ''
 date_issued: 12/02/2015
 date_modified: 12/02/2015
 organization: Rahvusarhiiv

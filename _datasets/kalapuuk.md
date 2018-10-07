@@ -16,6 +16,7 @@ resources:
     url: 'https://www.agri.ee/et/avaandmed'
     format: HTML
 license: 'http://creativecommons.org/licenses/by/3.0/'
+update_freq: ''
 date_issued: 04/05/2018
 date_modified: 04/05/2018
 organization: Maaeluministeerium

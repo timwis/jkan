@@ -18,6 +18,7 @@ resources:
     url: 'https://alkoreg.agri.ee/#querRegisteredAlcoForm'
     format: HTML
 license: 'http://creativecommons.org/licenses/by/3.0/'
+update_freq: ''
 date_issued: 07/06/2017
 date_modified: 07/06/2017
 organization: Maaeluministeerium

@@ -12,7 +12,8 @@ resources:
   - url: 'https://akis.tallinn.ee/kogunemised/kml/32421f85'
     format: KML
     name: Spordiürituste load
-licence: ''
+license: ''
+update_freq: ''
 date_issued: ''
 date_modified: ''
 organization: Tallinna Linnavalitsus

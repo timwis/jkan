@@ -45,6 +45,7 @@ resources:
     url: 'http://data.digar.ee/'
     format: HTML
 license: 'http://creativecommons.org/about/cc0'
+update_freq: ''
 date_issued: 13/03/2017
 date_modified: 13/03/2017
 organization: Eesti Rahvusraamatukogu

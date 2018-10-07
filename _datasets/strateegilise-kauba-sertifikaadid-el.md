@@ -13,6 +13,7 @@ resources:
     url: 'http://opendata.vm.ee/stratkom/sertifikaadid_el.xsd'
     format: 'skeem, xsd'
 license: 'http://creativecommons.org/licenses/by/3.0/'
+update_freq: ''
 date_issued: 07/01/2016
 date_modified: 07/01/2016
 organization: Välisministeerium

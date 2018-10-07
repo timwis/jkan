@@ -10,6 +10,7 @@ resources:
     url: 'http://opendata.muis.ee'
     format: HTML
 license: ''
+update_freq: ''
 date_issued: 25/03/2015
 date_modified: 25/03/2015
 organization: Kultuuriministeerium

@@ -12,7 +12,8 @@ resources:
   - url: 'https://akis.tallinn.ee/kogunemised/kml/28cef206'
     format: KML
     name: Ilutulestike load
-licence: ''
+license: ''
+update_freq: ''
 date_issued: ''
 date_modified: ''
 organization: Tallinna Linnavalitsus

@@ -10,6 +10,7 @@ resources:
     url: 'https://emtak.rik.ee/EMTAK/pages/klassifikaatorOtsing.jspx'
     format: 'xml, odf, csv'
 license: 'http://creativecommons.org/licenses/by-sa/3.0/'
+update_freq: ''
 date_issued: 17/06/2015
 date_modified: 17/06/2015
 organization: Registrite ja Infosüsteemide Keskus

@@ -10,6 +10,7 @@ resources:
     url: 'http://vvk.ee/arhiiv/'
     format: HTML
 license: ''
+update_freq: ''
 date_issued: 04/12/2015
 date_modified: 04/12/2015
 organization: Vabariigi Valimiskomisjon

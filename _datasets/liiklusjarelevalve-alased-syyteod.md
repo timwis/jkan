@@ -28,6 +28,7 @@ resources:
     url: 'https://www.politsei.ee/et/organisatsioon/analuus-ja-statistika/avaandmed.dot'
     format: veebileht
 license: 'http://creativecommons.org/licenses/by-sa/3.0/'
+update_freq: ''
 date_issued: 09/11/2017
 date_modified: 09/11/2017
 organization: Politsei- ja Piirivalveamet

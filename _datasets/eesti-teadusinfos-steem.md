@@ -51,6 +51,7 @@ resources:
     url: 'https://www.etis.ee/Portal/Classifiers/Index'
     format: HTML
 license: 'http://creativecommons.org/licenses/by-sa/3.0/'
+update_freq: ''
 date_issued: 16/04/2018
 date_modified: 16/04/2018
 organization: Haridus- ja Teadusministeerium

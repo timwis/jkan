@@ -22,6 +22,7 @@ resources:
     url: 'http://mveeb.sm.ee/od/od_teenused.xml'
     format: XML
 license: 'http://creativecommons.org/licenses/by/3.0/'
+update_freq: ''
 date_issued: 19/03/2015
 date_modified: 19/03/2015
 organization: Terviseamet

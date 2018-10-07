@@ -61,6 +61,7 @@ resources:
     url: 'http://vtiav.sm.ee/?active_tab_id=A'
     format: HTML
 license: 'http://creativecommons.org/licenses/by/3.0/'
+update_freq: ''
 date_issued: 18/02/2015
 date_modified: 18/02/2015
 organization: Terviseamet

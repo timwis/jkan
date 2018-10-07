@@ -10,6 +10,7 @@ resources:
     url: 'http://avaandmed.rik.ee/andmed/LLA/'
     format: XML
 license: 'http://creativecommons.org/licenses/by/3.0/'
+update_freq: ''
 date_issued: 20/04/2015
 date_modified: 20/04/2015
 organization: Kultuuriministeerium

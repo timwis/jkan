@@ -10,6 +10,7 @@ resources:
     url: 'http://avaandmed.rik.ee/andmed/ERT'
     format: XML
 license: 'http://creativecommons.org/licenses/by-sa/3.0/'
+update_freq: ''
 date_issued: 06/07/2015
 date_modified: 06/07/2015
 organization: Justiitsministeerium

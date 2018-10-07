@@ -13,6 +13,7 @@ resources:
     url: 'https://kls.pria.ee/toetuste-veebikaart/'
     format: HTML
 license: 'http://creativecommons.org/licenses/by/3.0/'
+update_freq: ''
 date_issued: 30/01/2018
 date_modified: 30/01/2018
 organization: Põllumajanduse Registrite ja Informatsiooni Amet

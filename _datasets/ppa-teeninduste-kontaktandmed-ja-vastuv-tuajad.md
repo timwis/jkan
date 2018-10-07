@@ -10,6 +10,7 @@ resources:
     url: 'https://www.politsei.ee/dotAsset/528874.csv'
     format: CSV
 license: 'http://creativecommons.org/licenses/by/3.0/'
+update_freq: ''
 date_issued: 21/01/2016
 date_modified: 21/01/2016
 organization: Politsei- ja Piirivalveamet

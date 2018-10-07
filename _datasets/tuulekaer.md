@@ -13,6 +13,7 @@ resources:
     url: 'http://www.pma.agri.ee/index.php?id=104&sub=331&sub2=479'
     format: HTML
 license: 'http://creativecommons.org/licenses/by/3.0/'
+update_freq: ''
 date_issued: 12/07/2017
 date_modified: 12/07/2017
 organization: Maaeluministeerium

@@ -10,6 +10,7 @@ resources:
     url: 'http://xgis.maaamet.ee/adsavalik/ads?xBTN.newvalja'
     format: HTML
 license: 'http://creativecommons.org/licenses/by/3.0/'
+update_freq: 'http://purl.org/linked-data/sdmx/2009/code#freq-A'
 date_issued: 27/04/2015
 date_modified: 27/04/2015
 organization: Maa-amet

@@ -13,6 +13,7 @@ resources:
     url: 'http://geoportaal.maaamet.ee/est/Andmed-ja-kaardid/Aadressiandmed/Aadressid-ja-posti-sihtnumbrid-e-indeksid-p582.html'
     format: HTML
 license: 'http://creativecommons.org/licenses/by/3.0/'
+update_freq: ''
 date_issued: 08/12/2017
 date_modified: 08/12/2017
 organization: Maa-amet

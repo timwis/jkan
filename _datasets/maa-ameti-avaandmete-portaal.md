@@ -10,6 +10,7 @@ resources:
     url: 'http://geoportaal.maaamet.ee/est/Andmete-tellimine/Avaandmed-p487.html'
     format: veebileht
 license: 'http://creativecommons.org/licenses/by/3.0/'
+update_freq: ''
 date_issued: 26/02/2015
 date_modified: 26/02/2015
 organization: Maa-amet

@@ -34,6 +34,7 @@ resources:
     url: 'https://www.spordiregister.ee/opendata/'
     format: HTML
 license: 'http://creativecommons.org/licenses/by/3.0/'
+update_freq: ''
 date_issued: 26/02/2015
 date_modified: 01/10/2018
 organization: Kultuuriministeerium

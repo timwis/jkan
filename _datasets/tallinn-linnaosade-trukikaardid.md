@@ -9,7 +9,8 @@ resources:
   - url: 'http://www.tallinn.ee/est/ehitus/Linnaosade-trukikaardid'
     format: PDF
     name: Linnaosade trükikaardid
-licence: ''
+license: ''
+update_freq: ''
 date_issued: 01.09.2015
 date_modified: ''
 organization: Tallinna Linnavalitsus

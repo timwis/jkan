@@ -19,6 +19,7 @@ resources:
     url: 'https://eis.ekk.edu.ee/eis/eksamistatistika'
     format: HTML
 license: 'http://creativecommons.org/licenses/by/3.0/'
+update_freq: ''
 date_issued: 23/05/2018
 date_modified: 23/05/2018
 organization: Haridus- ja Teadusministeerium

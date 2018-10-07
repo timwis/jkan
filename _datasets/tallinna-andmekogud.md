@@ -10,6 +10,7 @@ resources:
     url: 'http://www.tallinn.ee/avaandmed/'
     format: HTML
 license: ''
+update_freq: ''
 date_issued: 27/04/2015
 date_modified: 27/04/2015
 organization: Tallinna Linnavalitsus

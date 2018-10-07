@@ -10,6 +10,7 @@ resources:
     url: 'http://register.muinas.ee/rest/v1/monuments?'
     format: JSON
 license: 'http://opendatacommons.org/licenses/pddl/'
+update_freq: ''
 date_issued: 10/02/2015
 date_modified: 10/02/2015
 organization: Muinsuskaitseamet

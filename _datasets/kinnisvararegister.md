@@ -16,6 +16,7 @@ resources:
     url: 'https://riigivara.fin.ee/kvr/'
     format: HTML
 license: 'http://creativecommons.org/about/cc0'
+update_freq: ''
 date_issued: 08/05/2015
 date_modified: 08/05/2015
 organization: Rahandusministeerium

@@ -10,6 +10,7 @@ resources:
     url: 'http://avaandmed.rik.ee/andmed/PA/'
     format: HTML
 license: 'http://creativecommons.org/licenses/by-sa/3.0/'
+update_freq: ''
 date_issued: 03/08/2015
 date_modified: 01/10/2018
 organization: Patendiamet

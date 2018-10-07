@@ -37,6 +37,7 @@ resources:
     url: 'https://enda.ehis.ee/avalik/avalik/oppekava/OppekavaOtsi.faces'
     format: HTML
 license: 'http://creativecommons.org/licenses/by/3.0/'
+update_freq: ''
 date_issued: 19/04/2018
 date_modified: 19/04/2018
 organization: Haridus- ja Teadusministeerium

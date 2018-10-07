@@ -16,6 +16,7 @@ resources:
     url: 'http://sr.riik.ee/tsl/estonian-tsl.xml'
     format: XML
 license: 'http://creativecommons.org/licenses/by/3.0/'
+update_freq: ''
 date_issued: 02/02/2015
 date_modified: 02/02/2015
 organization: Majandus -ja Kommunikatsiooniministeerium

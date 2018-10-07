@@ -10,6 +10,7 @@ resources:
     url: 'https://ekis.ee/'
     format: HTML
 license: 'http://creativecommons.org/licenses/by/3.0/'
+update_freq: ''
 date_issued: 09/05/2018
 date_modified: 09/05/2018
 organization: Haridus- ja Teadusministeerium

@@ -10,6 +10,7 @@ resources:
     url: 'https://www.ametlikudteadaanded.ee/avalik/uriotsing'
     format: 'xml, rtf, txt'
 license: 'http://creativecommons.org/licenses/by-sa/3.0/'
+
 date_issued: 06/07/2015
 date_modified: 06/07/2015
 organization: Justiitsministeerium

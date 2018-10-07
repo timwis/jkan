@@ -12,6 +12,7 @@ resources:
     url: 'http://www.stat.ee/andmebaas'
     format: veebileht
 license: 'http://creativecommons.org/licenses/by/3.0/'
+update_freq: ''
 date_issued: 11/04/2017
 date_modified: 11/04/2017
 organization: Statistikaamet

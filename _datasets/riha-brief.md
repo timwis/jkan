@@ -13,6 +13,7 @@ resources:
     url: 'https://github.com/e-gov/RIHA-API/blob/master/RIHA-API.yaml'
     format: yaml
 license: 'http://creativecommons.org/licenses/by/3.0/'
+update_freq: ''
 date_issued: 28/11/2016
 date_modified: 28/11/2016
 organization: Riigi Infosüsteemi Amet

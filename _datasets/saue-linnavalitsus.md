@@ -10,6 +10,7 @@ resources:
     url: 'http://avalik.amphora.ee/saue/index.aspx?org=33&unit=9642'
     format: aspx
 license: 'http://opendatacommons.org/licenses/pddl/'
+update_freq: ''
 date_issued: 12/02/2015
 date_modified: 12/02/2015
 organization: Saue Linnavalitsus

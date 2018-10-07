@@ -10,6 +10,7 @@ resources:
     url: 'https://atp.amphora.ee/harkuvv/index.aspx?hdr=hp&o=903&tbs=all&o2=-1'
     format: HTML
 license: ''
+update_freq: ''
 date_issued: 31/05/2018
 date_modified: 31/05/2018
 organization: Harku Vallavalitsus

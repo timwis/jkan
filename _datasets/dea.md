@@ -13,6 +13,7 @@ resources:
     url: 'http://dea.digar.ee'
     format: HTML
 license: 'http://creativecommons.org/about/cc0'
+update_freq: ''
 date_issued: 10/04/2017
 date_modified: 10/04/2017
 organization: Eesti Rahvusraamatukogu

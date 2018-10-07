@@ -13,6 +13,7 @@ resources:
     url: 'http://opendata.mkm.ee/mtr/avaandmed_schema.xml'
     format: XML
 license: 'http://creativecommons.org/licenses/by/3.0/'
+update_freq: ''
 date_issued: 07/05/2018
 date_modified: 07/05/2018
 organization: Majandus -ja Kommunikatsiooniministeerium

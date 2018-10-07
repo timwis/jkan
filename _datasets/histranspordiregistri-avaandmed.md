@@ -16,6 +16,7 @@ resources:
     url: 'https://developers.google.com/transit/gtfs/reference/'
     format: HTML
 license: 'http://opendatacommons.org/licenses/by/'
+update_freq: ''
 date_issued: 29/05/2018
 date_modified: 29/05/2018
 organization: Maanteeamet

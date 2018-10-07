@@ -18,6 +18,7 @@ resources:
     url: 'http://www.aki.ee/et/inspektsioon/avaandmed'
     format: HTML
 license: 'http://creativecommons.org/licenses/by/3.0/'
+
 date_issued: 24/07/2015
 date_modified: 24/07/2015
 organization: Andmekaitse Inspektsioon

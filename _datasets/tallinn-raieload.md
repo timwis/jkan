@@ -9,7 +9,8 @@ resources:
   - url: 'http://raie.tallinn.ee/open_xml.php'
     format: XML
     name: Raieload
-licence: ''
+license: ''
+update_freq: ''
 date_issued: ''
 date_modified: ''
 organization: Tallinna Linnavalitsus
