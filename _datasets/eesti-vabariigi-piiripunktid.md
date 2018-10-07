@@ -1,7 +1,7 @@
 ---
 schema: default
 title: Eesti Vabariigi piiripunktid
-notes: Riigi piiripunktide kontaktid koos piiriületamise võimaluse ja piirangutega. Andmed on genereeritud 02. jaanuari 2016 seisuga.
+notes: Riigi piiripunktide kontaktid koos piiriületamise võimaluse ja piirangutega. Andmed on genereeritud 02. jaanuari 2016 seisuga. 
 department: ''
 category:
   - Government services

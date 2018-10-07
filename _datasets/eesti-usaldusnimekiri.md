@@ -10,17 +10,17 @@ resources:
     url: 'http://sr.riik.ee/tsl/estonian-tsl.sha2'
     format: sha2
   - name: 09.10.2014 Eesti usaldusnimekiri (PDF)
-    url: 'http://sr.riik.ee/tsl/estonian-tsl.sha2'
+    url: 'http://sr.riik.ee/tsl/estonian-tsl.pdf'
     format: PDF
   - name: 09.10.2014 Eesti usaldusnimekiri (XML)
     url: 'http://sr.riik.ee/tsl/estonian-tsl.xml'
     format: XML
 license: 'http://creativecommons.org/licenses/by/3.0/'
 date_issued: 02/02/2015
-date_modified: 02/02/2015
-organization: Majandus -ja Kommunikatsiooniministeerium
-maintainer_name: Uuno Vallner
-maintainer_email: uuno.vallner@riso.ee
+date_modified: 17/09/2018
+organization: Tehnilise Järelevalve Amet
+maintainer_name: Tehnilise Järelevalve Amet
+maintainer_email: info@tja.ee
 maintainer_phone: ''
 legacy_url: 'https://opendata.riik.ee/en/dataset/eesti-usaldusnimekiri'
 ---
