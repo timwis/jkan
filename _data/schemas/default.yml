@@ -5,37 +5,37 @@ dataset_fields:
     label: Title
     datajson: title
   - field_name: date_issued
-    label: Date Issued (YYYY-MM-DD)
+    label: Lisatud Portaali (YYYY-MM-DD)
     datajson: issued
   - field_name: date_modified
     label: Date Modified (YYYY-MM-DD)
     datajson: modified
   - field_name: organization
-    label: Organization
+    label: Teabevaldaja
     form_template: form/organization.html
     datajson: publisher.name
   - field_name: notes
-    label: Description
+    label: Kirjeldus
     form_template: form/textarea.html
     datajson: description
   - field_name: license
-    label: License
+    label: Kasutuslitsents
     form_template: form/license.html
     datajson: license
   - field_name: category
-    label: Category
+    label: Peamine teema
     form_template: form/category.html
     display_template: display/category.html
     datajson: category
   - field_name: maintainer_name
-    label: Maintainer
+    label: Kontakt nimi
     datajson: contactPoint.fn
   - field_name: maintainer_email
-    label: Maintainer Email
+    label: Kontakt Email
     datajson: contactPoint.hasEmail
   - field_name: maintainer_phone
-    label: Maintainer Phone
-    
+    label: Kontakt telefon
+
 resource_fields:
   - field_name: name
     label: Resource Name
@@ -63,19 +63,19 @@ resource_fields:
       - zip
       - pdf
       - rdf
-      
+
 organization_fields:
   - field_name: title
     label: Title
   - field_name: maintainer_name
-    label: Maintainer Name
+    label: Kontakt nimi
   - field_name: maintainer_email
-    label: Maintainer Email
+    label: Kontakt Email
   - field_name: description
     label: Description
   - field_name: logo
     label: Logo
-  
+
 category_fields:
   - field_name: name
     label: Name
@@ -86,7 +86,7 @@ category_fields:
   - field_name: featured
     label: Featured on Homepage
     form_template: form/checkbox.html
-    
+
 application_fields:
   - field_name: app_name
     label: Application

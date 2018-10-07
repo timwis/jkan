@@ -32,8 +32,9 @@ export default class {
     setContent(elements.datasetsItems, datasetsMarkup)
 
     // // Dataset count
-    const datasetSuffix =  filteredDatasets.length > 1 ? 's' : ''
-    const datasetsCountMarkup = filteredDatasets.length + ' dataset' + datasetSuffix;
+  //  const datasetSuffix =  filteredDatasets.length > 1 ? 's' : ''
+    const datasetsCountMarkup = filteredDatasets.length + ' Andmehulgad';
+    // + datasetSuffix;
     setContent(elements.datasetsCount, datasetsCountMarkup)
 
     // Search datasets listener
