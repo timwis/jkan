@@ -26717,11 +26717,11 @@
 	    serialize: function (options) {
 	        var attrOpts = assign({props: true}, options);
 	        var res = this.getAttributes(attrOpts, true);
-	        
+
 	        var setFromSerializedValue = function (value, key) {
 		        res[key] = this[key].serialize();
 	        }.bind(this);
-	        
+
 	        forOwn(this._children, setFromSerializedValue);
 	        forOwn(this._collections, setFromSerializedValue);
 	        return res;
@@ -36653,7 +36653,7 @@
 /* 554 */
 /***/ (function(module, exports, __webpack_require__) {
 
-	
+
 	/**
 	 * This is the common logic for both the Node.js and web browser
 	 * implementations of `debug()`.
@@ -40197,7 +40197,7 @@
 	    The primary way of interacting with a promise is through its `then` method,
 	    which registers callbacks to receive either a promise's eventual value or the
 	    reason why the promise cannot be fulfilled.
-	  
+
 	    ```js
 	    findUser().then(function(user){
 	      // user is available
@@ -40205,14 +40205,14 @@
 	      // user is unavailable, and you are given the reason why
 	    });
 	    ```
-	  
+
 	    Chaining
 	    --------
-	  
+
 	    The return value of `then` is itself a promise.  This second, 'downstream'
 	    promise is resolved with the return value of the first promise's fulfillment
 	    or rejection handler, or rejected if the handler throws an exception.
-	  
+
 	    ```js
 	    findUser().then(function (user) {
 	      return user.name;
@@ -40222,7 +40222,7 @@
 	      // If `findUser` fulfilled, `userName` will be the user's name, otherwise it
 	      // will be `'default name'`
 	    });
-	  
+
 	    findUser().then(function (user) {
 	      throw new Error('Found user, but still unhappy');
 	    }, function (reason) {
@@ -40235,7 +40235,7 @@
 	    });
 	    ```
 	    If the downstream promise does not specify a rejection handler, rejection reasons will be propagated further downstream.
-	  
+
 	    ```js
 	    findUser().then(function (user) {
 	      throw new PedagogicalException('Upstream error');
@@ -40247,15 +40247,15 @@
 	      // The `PedgagocialException` is propagated all the way down to here
 	    });
 	    ```
-	  
+
 	    Assimilation
 	    ------------
-	  
+
 	    Sometimes the value you want to propagate to a downstream promise can only be
 	    retrieved asynchronously. This can be achieved by returning a promise in the
 	    fulfillment or rejection handler. The downstream promise will then be pending
 	    until the returned promise is settled. This is called *assimilation*.
-	  
+
 	    ```js
 	    findUser().then(function (user) {
 	      return findCommentsByAuthor(user);
@@ -40263,9 +40263,9 @@
 	      // The user's comments are now available
 	    });
 	    ```
-	  
+
 	    If the assimliated promise rejects, then the downstream promise will also reject.
-	  
+
 	    ```js
 	    findUser().then(function (user) {
 	      return findCommentsByAuthor(user);
@@ -40275,15 +40275,15 @@
 	      // If `findCommentsByAuthor` rejects, we'll have the reason here
 	    });
 	    ```
-	  
+
 	    Simple Example
 	    --------------
-	  
+
 	    Synchronous Example
-	  
+
 	    ```javascript
 	    let result;
-	  
+
 	    try {
 	      result = findResult();
 	      // success
@@ -40291,9 +40291,9 @@
 	      // failure
 	    }
 	    ```
-	  
+
 	    Errback Example
-	  
+
 	    ```js
 	    findResult(function(result, err){
 	      if (err) {
@@ -40303,9 +40303,9 @@
 	      }
 	    });
 	    ```
-	  
+
 	    Promise Example;
-	  
+
 	    ```javascript
 	    findResult().then(function(result){
 	      // success
@@ -40313,15 +40313,15 @@
 	      // failure
 	    });
 	    ```
-	  
+
 	    Advanced Example
 	    --------------
-	  
+
 	    Synchronous Example
-	  
+
 	    ```javascript
 	    let author, books;
-	  
+
 	    try {
 	      author = findAuthor();
 	      books  = findBooksByAuthor(author);
@@ -40330,19 +40330,19 @@
 	      // failure
 	    }
 	    ```
-	  
+
 	    Errback Example
-	  
+
 	    ```js
-	  
+
 	    function foundBooks(books) {
-	  
+
 	    }
-	  
+
 	    function failure(reason) {
-	  
+
 	    }
-	  
+
 	    findAuthor(function(author, err){
 	      if (err) {
 	        failure(err);
@@ -40367,9 +40367,9 @@
 	      }
 	    });
 	    ```
-	  
+
 	    Promise Example;
-	  
+
 	    ```javascript
 	    findAuthor().
 	      then(findBooksByAuthor).
@@ -40379,7 +40379,7 @@
 	      // something went wrong
 	    });
 	    ```
-	  
+
 	    @method then
 	    @param {Function} onFulfilled
 	    @param {Function} onRejected
@@ -40391,25 +40391,25 @@
 	  /**
 	    `catch` is simply sugar for `then(undefined, onRejection)` which makes it the same
 	    as the catch block of a try/catch statement.
-	  
+
 	    ```js
 	    function findAuthor(){
 	      throw new Error('couldn't find that author');
 	    }
-	  
+
 	    // synchronous
 	    try {
 	      findAuthor();
 	    } catch(reason) {
 	      // something went wrong
 	    }
-	  
+
 	    // async with promises
 	    findAuthor().catch(function(reason){
 	      // something went wrong
 	    });
 	    ```
-	  
+
 	    @method catch
 	    @param {Function} onRejection
 	    Useful for tooling.
@@ -43639,8 +43639,9 @@
 	    (0, _util.setContent)(elements.datasetsItems, datasetsMarkup);
 
 	    // // Dataset count
-	    var datasetSuffix = filteredDatasets.length > 1 ? 's' : '';
-	    var datasetsCountMarkup = filteredDatasets.length + ' dataset' + datasetSuffix;
+	   // var datasetSuffix = filteredDatasets.length > 1 ? 's' : '';
+	    var datasetsCountMarkup = filteredDatasets.length + ' andmehulgad';
+			//+ datasetSuffix;
 	    (0, _util.setContent)(elements.datasetsCount, datasetsCountMarkup);
 
 	    // Search datasets listener
@@ -43654,7 +43655,7 @@
 	      (0, _util.setContent)(elements.datasetsItems, resultsMarkup);
 
 	      // Dataset count
-	      var resultsCountMarkup = results.length + ' datasets';
+	      var resultsCountMarkup = results.length + ' andmehulgad';
 	      (0, _util.setContent)(elements.datasetsCount, resultsCountMarkup);
 	    });
 	  }
@@ -54708,60 +54709,60 @@
 
 	*/
 
-	var notie = function(){	
-		
+	var notie = function(){
+
 		// Default options
 		var options = {
 			animationDelay: 300,
 			backgroundClickDismiss: true
-		}	
+		}
 		function setOptions(customOptions) {
 			// Custom options
 			for (var key in customOptions) {
 				options[key] = customOptions[key];
 			}
 		}
-		
+
 		// ALERT
 	    // **************
-		
+
 		// create alert container
 		var alertOuter = document.createElement('div');
 		alertOuter.id = 'notie-alert-outer';
-		
+
 		// Hide alert on click
 	    alertOuter.onclick = function() {
 	        clearTimeout(alertTimeout1);
 	        clearTimeout(alertTimeout2);
 	        alertHide();
 	    };
-		
+
 		// add alert to body
 		document.body.appendChild(alertOuter);
-		
+
 		// create alert inner container
 		var alertInner = document.createElement('div');
 	    alertInner.id = 'notie-alert-inner';
 	    alertOuter.appendChild(alertInner);
-		
+
 		// create alert content container
 		var alertContent = document.createElement('div');
 	    alertContent.id = 'notie-alert-content';
 	    alertInner.appendChild(alertContent);
-		
+
 		// Initialize alert text
 	    var alertText = document.createElement('span');
 	    alertText.id = 'notie-alert-text';
 	    alertContent.appendChild(alertText);
-		
+
 		// alert helper variables
 	    var alertIsShowing = false;
 	    var alertTimeout1;
 	    var alertTimeout2;
 	    var wasClickedCounter = 0;
-		
+
 		function alert(type, message, seconds) {
-			
+
 			blur();
 
 	        wasClickedCounter++;
@@ -54804,13 +54805,13 @@
 	        else {
 	            duration = seconds * 1000;
 	        }
-			
+
 			// Remove all color classes first
 			removeClass(alertOuter, 'background-success');
 			removeClass(alertOuter, 'background-warning');
 			removeClass(alertOuter, 'background-error');
 			removeClass(alertOuter, 'background-info');
-			
+
 	        // Set notie type (background color)
 	        switch(type) {
 	            case 1:
@@ -54839,7 +54840,7 @@
 	        alertOuter.style.top = '-' + alertOuter.offsetHeight - 5 + 'px';
 
 	        alertTimeout1 = setTimeout(function() {
-				
+
 				addClass(alertOuter, 'transition');
 
 	            alertOuter.style.top = 0;
@@ -54853,7 +54854,7 @@
 	            }, duration);
 
 	        }, 20);
-			
+
 	    }
 
 	    function alertHide(callback) {
@@ -54861,9 +54862,9 @@
 	        alertOuter.style.top = '-' + alertOuter.offsetHeight - 5 + 'px';
 
 	        setTimeout(function() {
-				
+
 				removeClass(alertOuter, 'transition');
-	            
+
 	            alertOuter.style.top = '-10000px';
 
 	            alertIsShowing = false;
@@ -54873,23 +54874,23 @@
 	        }, (options.animationDelay + 10));
 
 	    }
-		
-		
-		
+
+
+
 		// confirm
 	    // **************
-		
+
 		var confirmOuter = document.createElement('div');
 	    confirmOuter.id = 'notie-confirm-outer';
-		
+
 		var confirmInner = document.createElement('div');
 	    confirmInner.id = 'notie-confirm-inner';
 	    confirmOuter.appendChild(confirmInner);
-		
+
 		var confirmText = document.createElement('span');
 	    confirmText.id = 'notie-confirm-text';
 	    confirmInner.appendChild(confirmText);
-		
+
 		var confirmYes = document.createElement('div');
 	    confirmYes.id = 'notie-confirm-yes'
 	    confirmOuter.appendChild(confirmYes);
@@ -54897,7 +54898,7 @@
 	    var confirmNo = document.createElement('div');
 	   	confirmNo.id = 'notie-confirm-no';
 		confirmOuter.appendChild(confirmNo);
-		
+
 		var confirmTextYes = document.createElement('span');
 	    confirmTextYes.id = 'notie-confirm-text-yes';
 	    confirmYes.appendChild(confirmTextYes);
@@ -54905,29 +54906,29 @@
 	    var confirmTextNo = document.createElement('span');
 	    confirmTextNo.id = 'notie-confirm-text-no';
 	    confirmNo.appendChild(confirmTextNo);
-		
+
 		var confirmBackground = document.createElement('div');
 	    confirmBackground.id = 'notie-confirm-background';
 		addClass(confirmBackground, 'transition');
-		
+
 		// Hide notie.confirm on no click and background click
 	    confirmBackground.onclick = function() {
 	        if (options.backgroundClickDismiss) {
 	            confirmHide();
 	        }
 	    };
-		
+
 		// Attach confirm elements to the body element
 	    document.body.appendChild(confirmOuter);
 	    document.body.appendChild(confirmBackground);
-		
+
 		// confirm helper variables
 	    var confirmIsShowing = false;
 
 	    function confirm(title, yesText, noText, yesCallback, noCallback) {
-			
+
 			blur();
-	        
+
 	        if (alertIsShowing) {
 	            // Hide notie.alert
 	            clearTimeout(alertTimeout1);
@@ -54939,7 +54940,7 @@
 	        else {
 	            confirmShow(title, yesText, noText, yesCallback, noCallback);
 	        }
-	        
+
 
 	    }
 	    function confirmShow(title, yesText, noText, yesCallback, noCallback) {
@@ -54955,7 +54956,7 @@
 					}, (options.animationDelay + 10));
 				}
 	        }
-			
+
 			// No callback function
 			confirmNo.onclick = function() {
 	            confirmHide();
@@ -54980,7 +54981,7 @@
 	            confirmBackground.style.display = 'block';
 
 	            setTimeout(function() {
-					
+
 	                addClass(confirmOuter, 'transition');
 
 	                confirmOuter.style.top = 0;
@@ -55012,7 +55013,7 @@
 	        confirmBackground.style.opacity = '0';
 
 	        setTimeout(function() {
-				
+
 	            removeClass(confirmOuter, 'transition');
 				confirmOuter.style.top = '-10000px';
 	            confirmBackground.style.display = 'none';
@@ -55024,25 +55025,25 @@
 	        }, (options.animationDelay + 10));
 
 	    }
-		
-		
-		
-		
+
+
+
+
 		// INPUT
 	    // **********
 
 	    // input elements and styling
 	    var inputOuter = document.createElement('div');
 	    inputOuter.id = 'notie-input-outer';
-		
+
 		var inputBackground = document.createElement('div');
 	    inputBackground.id = 'notie-input-background';
 		addClass(inputBackground, 'transition');
-		
+
 		var inputInner = document.createElement('div');
 	    inputInner.id = 'notie-input-inner';
 	    inputOuter.appendChild(inputInner);
-		
+
 	    var inputField = document.createElement('input');
 	    inputField.id = 'notie-input-field';
 		inputField.setAttribute('autocomplete', 'off');
@@ -55050,7 +55051,7 @@
 	    inputField.setAttribute('autocapitalize', 'off');
 	    inputField.setAttribute('spellcheck', 'false');
 		inputOuter.appendChild(inputField);
-	    
+
 	    var inputYes = document.createElement('div');
 	    inputYes.id = 'notie-input-yes';
 	    inputOuter.appendChild(inputYes);
@@ -55058,7 +55059,7 @@
 	    var inputNo = document.createElement('div');
 	    inputNo.id = 'notie-input-no';
 	    inputOuter.appendChild(inputNo);
-		
+
 		// Initialize input text
 	    var inputText = document.createElement('span');
 	    inputText.id = 'notie-input-text';
@@ -55074,52 +55075,52 @@
 
 	    // Attach input elements to the body element
 	    document.body.appendChild(inputOuter);
-	    document.body.appendChild(inputBackground);	
-		
+	    document.body.appendChild(inputBackground);
+
 		// Hide input on no click and background click
 	    inputBackground.onclick = function() {
 	        if (options.backgroundClickDismiss) {
 	            inputHide();
 	        }
 	    };
-		
+
 		// input helper variables
 	    var inputIsShowing = false;
-		
+
 		function input(options, title, submitText, cancelText, submitCallback, cancelCallback) {
-			
+
 			blur();
-			
+
 			if (typeof options.type !== 'undefined' && options.type) {
 				inputField.setAttribute('type', options.type);
 			}
 			else {
 				inputField.setAttribute('type', 'text');
 			}
-			
+
 			if (typeof options.placeholder !== 'undefined' && options.placeholder) {
 				inputField.setAttribute('placeholder', options.placeholder);
 			}
 			else {
 				// Do not set placeholder
 			}
-			
+
 	        if (typeof options.prefilledValue !== 'undefined' && options.prefilledValue) {
 				inputField.value = options.prefilledValue;
 			}
 			else {
 				inputField.value = '';
 			}
-	        
+
 	        if (alertIsShowing) {
-				
+
 	            // Hide alert
 	            clearTimeout(alertTimeout1);
 	            clearTimeout(alertTimeout2);
 	            alertHide(function() {
 	                inputShow(title, submitText, cancelText, submitCallback, cancelCallback);
 	            });
-				
+
 	        }
 	        else {
 	            inputShow(title, submitText, cancelText, submitCallback, cancelCallback);
@@ -55139,7 +55140,7 @@
 					}, (options.animationDelay + 10));
 				}
 	        }
-			
+
 			// No callback function
 			inputNo.onclick = function() {
 	            inputHide();
@@ -55166,16 +55167,16 @@
 	            setTimeout(function() {
 
 					addClass(inputOuter, 'transition');
-					
+
 	                inputOuter.style.top = 0;
 	                inputBackground.style.opacity = '0.75';
 
 	                setTimeout(function() {
 	                    inputIsShowing = true;
-						
+
 						// put focus on input field
 						inputField.focus();
-						
+
 	                }, (options.animationDelay + 10));
 
 	            }, 20);
@@ -55200,10 +55201,10 @@
 	        inputBackground.style.opacity = '0';
 
 	        setTimeout(function() {
-				
+
 				removeClass(inputOuter, 'transition');
 	            inputBackground.style.display = 'none';
-	            
+
 	            inputOuter.style.top = '-10000px';
 
 	            scrollEnable();
@@ -55213,12 +55214,12 @@
 	        }, (options.animationDelay + 10));
 
 	    }
-		
-		
-		
+
+
+
 		// Internal helper functions
 		// #################
-		
+
 		function addClass(element, className) {
 			if (element.classList) {
 				element.classList.add(className);
@@ -55235,11 +55236,11 @@
 				element.className = element.className.replace(new RegExp('(^|\\b)' + className.split(' ').join('|') + '(\\b|$)', 'gi'), ' ');
 			}
 		}
-		
+
 		function blur() {
 			document.activeElement.blur();
 		}
-		
+
 		var originalBodyHeight, originalBodyOverflow;
 	    function scrollDisable() {
 	        originalBodyHeight = document.body.style.height;
@@ -55251,7 +55252,7 @@
 	        document.body.style.height = originalBodyHeight;
 	        document.body.style.overflow = originalBodyOverflow;
 	    }
-		
+
 		// Event listener for keydown enter and escape keys
 	    window.addEventListener('keydown', function(event) {
 	        var enterClicked = (event.which == 13 || event.keyCode == 13);
@@ -55280,10 +55281,10 @@
 	            }
 	        }
 	    });
-		
-		
-		
-		
+
+
+
+
 	    return {
 			setOptions: setOptions,
 	        alert: alert,
@@ -55505,17 +55506,17 @@
 	    // depending on the options to skip values by name or type, and the data-skip-falsy attribute.
 	    shouldSkipFalsy: function($form, name, nameWithNoType, type, opts) {
 	      var f = $.serializeJSON;
-	      
+
 	      var skipFromDataAttr = f.attrFromInputWithName($form, name, 'data-skip-falsy');
 	      if (skipFromDataAttr != null) {
-	        return skipFromDataAttr !== 'false'; // any value is true, except if explicitly using 'false' 
+	        return skipFromDataAttr !== 'false'; // any value is true, except if explicitly using 'false'
 	      }
 
 	      var optForFields = opts.skipFalsyValuesForFields;
 	      if (optForFields && (optForFields.indexOf(nameWithNoType) !== -1 || optForFields.indexOf(name) !== -1)) {
 	        return true;
 	      }
-	      
+
 	      var optForTypes = opts.skipFalsyValuesForTypes;
 	      if (type == null) type = 'string'; // assume fields with no type are targeted as string
 	      if (optForTypes && optForTypes.indexOf(type) !== -1) {
