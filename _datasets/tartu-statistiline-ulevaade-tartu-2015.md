@@ -9,7 +9,8 @@ resources:
   - url: 'http://www.tartu.ee/sites/default/files/uploads/Tartu%20linn/Statistika/Lyhiylevaade_2015.pdf'
     format: 'PDF, CSV'
     name: Statistiline ülevaade Tartu 2015
-licence: 'https://creativecommons.org/licenses/by-sa/3.0/ee/legalcode'
+license: 'https://creativecommons.org/licenses/by-sa/3.0/ee/legalcode'
+update_freq: ''
 date_issued: ''
 date_modified: ''
 organization: Tartu Linnavalitsus

@@ -10,8 +10,9 @@ resources:
     url: 'http://avaandmed.rik.ee/andmed/PA/'
     format: HTML
 license: 'http://creativecommons.org/licenses/by-sa/3.0/'
-date_issued: 03/08/2015
-date_modified: 01/10/2018
+update_freq: ''
+date_issued: 2015/08/03
+date_modified: 2018/10/01
 organization: Patendiamet
 maintainer_name: Robin Lõo
 maintainer_email: robin.loo@just.ee

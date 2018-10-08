@@ -28,8 +28,9 @@ resources:
     url: 'https://www.politsei.ee/et/avaandmed'
     format: HTML
 license: 'http://creativecommons.org/licenses/by-sa/3.0/'
-date_issued: 15/11/2017
-date_modified: 15/11/2017
+update_freq: ''
+date_issued: 2017/11/15
+date_modified: 2017/11/15
 organization: Politsei- ja Piirivalveamet
 maintainer_name: Maarja Vesi
 maintainer_email: maarja.vesi@politsei.ee

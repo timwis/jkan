@@ -9,7 +9,8 @@ resources:
   - url: 'http://www.tallinn.ee/est/ehitus/Masinliides'
     format: XML
     name: Tallinna planeeringute register (TPR)
-licence: ''
+license: ''
+update_freq: ''
 date_issued: ''
 date_modified: ''
 organization: Tallinna Linnavalitsus

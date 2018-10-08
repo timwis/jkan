@@ -10,8 +10,9 @@ resources:
     url: 'http://geoportaal.maaamet.ee/est/Andmete-tellimine/Avaandmed-p487.html'
     format: veebileht
 license: 'http://creativecommons.org/licenses/by/3.0/'
-date_issued: 26/02/2015
-date_modified: 26/02/2015
+update_freq: ''
+date_issued: 2015/02/26
+date_modified: 2015/02/26
 organization: Maa-amet
 maintainer_name: Tanel Hurt
 maintainer_email: Tanel.Hurt@maaamet.ee

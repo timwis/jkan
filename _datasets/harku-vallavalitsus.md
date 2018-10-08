@@ -10,8 +10,9 @@ resources:
     url: 'https://atp.amphora.ee/harkuvv/index.aspx?hdr=hp&o=903&tbs=all&o2=-1'
     format: HTML
 license: ''
-date_issued: 31/05/2018
-date_modified: 31/05/2018
+update_freq: ''
+date_issued: 2018/05/31
+date_modified: 2018/05/31
 organization: Harku Vallavalitsus
 maintainer_name: Harku Vallavalitsus
 maintainer_email: harku@harku.ee

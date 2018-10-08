@@ -28,8 +28,9 @@ resources:
     url: 'http://www.pria.ee/et/Registrid/Loomade_register'
     format: HTML
 license: 'http://creativecommons.org/licenses/by/3.0/'
-date_issued: 30/01/2018
-date_modified: 30/01/2018
+update_freq: ''
+date_issued: 2018/01/30
+date_modified: 2018/01/30
 organization: Põllumajanduse Registrite ja Informatsiooni Amet
 maintainer_name: Kiido Levin
 maintainer_email: kiido.levin@pria.ee

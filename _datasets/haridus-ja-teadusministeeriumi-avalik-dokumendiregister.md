@@ -10,8 +10,9 @@ resources:
     url: 'https://www.hm.ee/et/ministeerium/dokumendiregister'
     format: HTML
 license: 'http://creativecommons.org/licenses/by/3.0/'
-date_issued: 09/05/2018
-date_modified: 09/05/2018
+update_freq: ''
+date_issued: 2018/05/09
+date_modified: 2018/05/09
 organization: Haridus- ja Teadusministeerium
 maintainer_name: Haridus- ja Teadusministeerium
 maintainer_email: info@hm.ee

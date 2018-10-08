@@ -13,8 +13,9 @@ resources:
     url: 'http://opendata.vm.ee/stratkom/sertifikaadid_el.xsd'
     format: 'skeem, xsd'
 license: 'http://creativecommons.org/licenses/by/3.0/'
-date_issued: 07/01/2016
-date_modified: 07/01/2016
+update_freq: ''
+date_issued: 2016/01/07
+date_modified: 2016/01/07
 organization: Välisministeerium
 maintainer_name: Tiina Tapupere
 maintainer_email: Tiina.Tapupere@mfa.ee

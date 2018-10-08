@@ -9,7 +9,8 @@ resources:
   - url: 'https://www.tallinn.ee/geoportaal/'
     format: Veebileht
     name: Tallinna geoportaal
-licence: ''
+license: ''
+update_freq: ''
 date_issued: 01.04.2018
 date_modified: ''
 organization: Tallinna Linnavalitsus

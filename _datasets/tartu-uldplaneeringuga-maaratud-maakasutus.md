@@ -9,7 +9,8 @@ resources:
   - url: 'https://gis.tartulv.ee/arcgis/services/Planeeringud/Maakasutus_WMS/MapServer/WMSServer'
     format: WMS
     name: Üldplaneeringuga määratud maakasutus
-licence: 'https://creativecommons.org/licenses/by-sa/3.0/ee/legalcode'
+license: 'https://creativecommons.org/licenses/by-sa/3.0/ee/legalcode'
+update_freq: ''
 date_issued: ''
 date_modified: ''
 organization: Tartu Linnavalitsus

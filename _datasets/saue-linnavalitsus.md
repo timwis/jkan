@@ -10,8 +10,9 @@ resources:
     url: 'http://avalik.amphora.ee/saue/index.aspx?org=33&unit=9642'
     format: aspx
 license: 'http://opendatacommons.org/licenses/pddl/'
-date_issued: 12/02/2015
-date_modified: 12/02/2015
+update_freq: ''
+date_issued: 2015/02/12
+date_modified: 2015/02/12
 organization: Saue Linnavalitsus
 maintainer_name: Merle Kerm
 maintainer_email: merle.kerm@saue.ee

@@ -45,8 +45,9 @@ resources:
     url: 'http://data.digar.ee/'
     format: HTML
 license: 'http://creativecommons.org/about/cc0'
-date_issued: 13/03/2017
-date_modified: 13/03/2017
+update_freq: ''
+date_issued: 2017/03/13
+date_modified: 2017/03/13
 organization: Eesti Rahvusraamatukogu
 maintainer_name: Urmas Sinisalu
 maintainer_email: urmas@nlib.ee

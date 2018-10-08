@@ -16,8 +16,9 @@ resources:
     url: 'https://riigivara.fin.ee/kvr/'
     format: HTML
 license: 'http://creativecommons.org/about/cc0'
-date_issued: 08/05/2015
-date_modified: 08/05/2015
+update_freq: ''
+date_issued: 2015/05/08
+date_modified: 2015/05/08
 organization: Rahandusministeerium
 maintainer_name: Katrin Solvak
 maintainer_email: katrin.solvak@fin.ee

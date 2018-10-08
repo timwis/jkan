@@ -13,8 +13,9 @@ resources:
     url: 'https://opendata.riik.ee/dataset/d889f5ab-e6da-4376-9c6e-25249baf2a4c/resource/e08a1aa2-906f-48e0-b88e-b05b8ffd76d7/download/parameeter.csv'
     format: CSV
 license: 'http://creativecommons.org/licenses/by/3.0/'
-date_issued: 10/02/2015
-date_modified: 10/02/2015
+update_freq: ''
+date_issued: 2015/02/10
+date_modified: 2015/02/10
 organization: Sotsiaalministeerium
 maintainer_name: STAR teenusetugi
 maintainer_email: STARteenusetugi@tehik.ee

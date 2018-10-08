@@ -12,7 +12,8 @@ resources:
   - url: 'https://akis.tallinn.ee/kogunemised/kml/23d381ce'
     format: KML
     name: Avalike ürituste load
-licence: ''
+license: ''
+update_freq: ''
 date_issued: ''
 date_modified: ''
 organization: Tallinna Linnavalitsus

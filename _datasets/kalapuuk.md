@@ -16,8 +16,9 @@ resources:
     url: 'https://www.agri.ee/et/avaandmed'
     format: HTML
 license: 'http://creativecommons.org/licenses/by/3.0/'
-date_issued: 04/05/2018
-date_modified: 04/05/2018
+update_freq: ''
+date_issued: 2018/05/04
+date_modified: 2018/05/04
 organization: Maaeluministeerium
 maintainer_name: Jüri Tali
 maintainer_email: jyri.tali@agri.ee

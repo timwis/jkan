@@ -10,8 +10,9 @@ resources:
     url: 'http://kivike.kirmus.ee/index.php?dok_id=38&module=2&op='
     format: HTML
 license: 'http://creativecommons.org/licenses/by/3.0/'
-date_issued: 16/03/2015
-date_modified: 16/03/2015
+update_freq: ''
+date_issued: 2015/03/16
+date_modified: 2015/03/16
 organization: Eesti Kirjandusmuuseum
 maintainer_name: Kaisa Kulasalu
 maintainer_email: kaisakulasalu@folklore.ee

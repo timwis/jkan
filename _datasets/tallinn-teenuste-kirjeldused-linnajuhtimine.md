@@ -9,7 +9,8 @@ resources:
   - url: 'http://www.tallinn.ee/teenused?action=avaandmed&valdkond_id=1'
     format: XML
     name: Teenuste kirjeldused - linnajuhtimine
-licence: ''
+license: ''
+update_freq: ''
 date_issued: ''
 date_modified: ''
 organization: Tallinna Linnavalitsus

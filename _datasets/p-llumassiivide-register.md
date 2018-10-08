@@ -19,8 +19,9 @@ resources:
     url: 'http://kls.pria.ee/geoserver/pria_avalik/ows'
     format: wfs
 license: 'http://creativecommons.org/licenses/by/3.0/'
-date_issued: 13/05/2015
-date_modified: 13/05/2015
+update_freq: ''
+date_issued: 2015/05/13
+date_modified: 2015/05/13
 organization: Põllumajanduse Registrite ja Informatsiooni Amet
 maintainer_name: Kadri Pärnpuu
 maintainer_email: Kadri.Parnpuu@pria.ee

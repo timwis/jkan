@@ -23,8 +23,9 @@ resources:
     url: 'https://msa.sm.ee/img/image/MSA_avaandmete_metadata_kirjeldus.xls'
     format: XLS
 license: 'http://creativecommons.org/licenses/by/3.0/'
-date_issued: 26/02/2015
-date_modified: 26/02/2015
+update_freq: ''
+date_issued: 2015/02/26
+date_modified: 2015/02/26
 organization: Terviseamet
 maintainer_name: Kadri Tõnnisson
 maintainer_email: kadri.tonnisson@terviseamet.ee

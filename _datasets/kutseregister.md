@@ -13,8 +13,9 @@ resources:
     url: 'https://www.kutsekoda.ee/et/kutseregister/tutvustus'
     format: HTML
 license: 'http://creativecommons.org/licenses/by/3.0/'
-date_issued: 17/04/2018
-date_modified: 17/04/2018
+update_freq: ''
+date_issued: 2018/04/17
+date_modified: 2018/04/17
 organization: Haridus- ja Teadusministeerium
 maintainer_name: Sihtasutus Kutsekoda
 maintainer_email: kutsekoda@kutsekoda.ee

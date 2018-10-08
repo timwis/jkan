@@ -9,7 +9,8 @@ resources:
   - url: 'http://www.tallinn.ee/teenused#valdkond_12'
     format: XML
     name: 'Teenuste kirjeldused - ettevõtlus, kaubandus ja reklaam'
-licence: ''
+license: ''
+update_freq: ''
 date_issued: ''
 date_modified: ''
 organization: Tallinna Linnavalitsus

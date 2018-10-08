@@ -10,8 +10,9 @@ resources:
     url: 'http://avalik.amphora.ee/aegviiduvv/index.aspx?org=363&unit=-1'
     format: html
 license: 'http://creativecommons.org/licenses/by/3.0/'
-date_issued: 26/03/2015
-date_modified: 26/03/2015
+update_freq: 'http://purl.org/linked-data/sdmx/2009/code#freq-A'
+date_issued: 2015/03/26
+date_modified: 2015/03/26
 organization: Aegviidu Vallavalitsus
 maintainer_name: Lilja Piibeleht-Tarassov
 maintainer_email: lilja@aegviidu.ee

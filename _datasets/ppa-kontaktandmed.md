@@ -10,8 +10,9 @@ resources:
     url: 'https://www.politsei.ee/dotAsset/495376.csv'
     format: CSV
 license: 'http://creativecommons.org/licenses/by/3.0/'
-date_issued: 08/01/2016
-date_modified: 08/01/2016
+update_freq: ''
+date_issued: 2016/01/08
+date_modified: 2016/01/08
 organization: Politsei- ja Piirivalveamet
 maintainer_name: Ants Hinno
 maintainer_email: ants.hinno@politsei.ee

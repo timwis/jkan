@@ -9,7 +9,8 @@ resources:
   - url: 'http://www.tallinn.ee/teenused?action=avaandmed'
     format: XML
     name: Tallinna teenused
-licence: ''
+license: ''
+update_freq: ''
 date_issued: ''
 date_modified: ''
 organization: Tallinna Linnavalitsus

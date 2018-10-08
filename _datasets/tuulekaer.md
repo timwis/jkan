@@ -13,8 +13,9 @@ resources:
     url: 'http://www.pma.agri.ee/index.php?id=104&sub=331&sub2=479'
     format: HTML
 license: 'http://creativecommons.org/licenses/by/3.0/'
-date_issued: 12/07/2017
-date_modified: 12/07/2017
+update_freq: ''
+date_issued: 2017/07/12
+date_modified: 2017/07/12
 organization: Maaeluministeerium
 maintainer_name: Enno Veikesaar
 maintainer_email: enno.veikesaar@agri.ee

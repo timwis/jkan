@@ -22,8 +22,9 @@ resources:
     url: 'http://mveeb.sm.ee/od/od_teenused.xml'
     format: XML
 license: 'http://creativecommons.org/licenses/by/3.0/'
-date_issued: 19/03/2015
-date_modified: 19/03/2015
+update_freq: ''
+date_issued: 2015/03/19
+date_modified: 2015/03/19
 organization: Terviseamet
 maintainer_name: Maie Otsmann
 maintainer_email: maie.otsmann@terviseamet.ee
