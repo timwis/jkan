@@ -8,7 +8,7 @@ category:
 resources:
   - name: Väljavõtted kutseregistrist
     url: 'https://www.kutsekoda.ee/et/kutseregister/statistika'
-    format: HTML
+    format: HTML, XLS
   - name: Kutseregistri avalik otsing
     url: 'https://www.kutsekoda.ee/et/kutseregister/tutvustus'
     format: HTML

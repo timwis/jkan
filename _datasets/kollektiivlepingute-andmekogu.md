@@ -8,9 +8,6 @@ department: ''
 category:
   - Tööhõive
 resources:
-  - name: Metadata
-    url: 'https://opendata.riik.ee/dataset/8a76d1ef-112f-4a68-b50e-3b2b3f16bb5c/resource/83051c82-1d34-4bd5-a26d-789586ee3e15/download/avaandmedxmllepingud'
-    format: XML
   - name: Lepingu staatused
     url: 'http://klak.sm.ee/avaandmed?xml=lepingu_staatused'
     format: XML
