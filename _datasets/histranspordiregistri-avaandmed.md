@@ -15,6 +15,9 @@ resources:
   - name: GTFS andmevahetusformaadi kirjeldus
     url: 'https://developers.google.com/transit/gtfs/reference/'
     format: HTML
+  - name: Andmehulk
+    url: 'http://www.peatus.ee/gtfs/'
+    format: ZIP/GTFS/TXT
 license: 'http://opendatacommons.org/licenses/by/'
 date_issued: 29/05/2018
 date_modified: 29/05/2018
