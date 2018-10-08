@@ -1,6 +1,6 @@
 ---
 schema: default
-title: Riigi Teatajas avaldatud õigusaktid
+title: Riigi Teatajas avaldatud õigusaktid alates 2010. aastast koos räsiväärtustega
 notes: Õigusaktid
 department: ''
 category:
