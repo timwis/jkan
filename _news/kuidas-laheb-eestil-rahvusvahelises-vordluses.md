@@ -9,6 +9,6 @@ tags:
   - OKFN
   - ODB
   - Avaandmete kasutamise edendamine
-submitted: Toots
-author: Maarja
+submitted: 2018/06/12
+author: Maarja Toots
 ---

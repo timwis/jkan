@@ -114,3 +114,5 @@ news_fields:
    # form_template: form/textarea.html
   - field_name: preview_image
     label: Image URL
+  - field_name: submitted
+    label: Kuupäev

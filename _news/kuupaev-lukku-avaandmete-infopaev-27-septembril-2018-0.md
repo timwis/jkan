@@ -5,6 +5,6 @@ tags:
   - infopäev
   - avaandmed
   - Avaandmete kasutamise edendamine
-submitted: Toots
-author: Maarja
+submitted: 2018/06/11
+author: Maarja Toots
 ---

@@ -48,6 +48,6 @@ tags:
   - andmeajakirjandus
   - Eesti
   - tervis
-submitted: 27.04.2018
+submitted: 2018/04/07
 author: Annegrete
 ---

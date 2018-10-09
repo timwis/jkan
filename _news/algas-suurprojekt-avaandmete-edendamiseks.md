@@ -10,6 +10,6 @@ text: >
 
   <p>MTÜ <a href="https://ee.okfn.org/et/" rel="nofollow">Open Knowledge Estonia</a> (OK-EE) on avalikes huvides tegutsev vabatahtlik ühendus, mis seisab info ja andmete vaba kättesaadavuse ja teadmusühiskonna arengu eest, koondades avatud teadmuse edendamisest huvitatud kogukondi ning viies ellu teemakohaseid algatusi ja projekte. OK-EE kuulub rahvusvahelisse Open Knowledge võrgustikku.</p>
 tags: []
-submitted: 07.06.2018
+submitted: 2018/06/07
 author: admin
 ---
