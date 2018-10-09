@@ -90,15 +90,11 @@ layout: default
         </tr>
         <tr>
           <th>Lisatud Portaali (YYYY-MM-DD)</th>
-          <td>
-            <p property="dct:created" content="{{ page.date_issued }}" datatype='xs:date'> {{ page.date_issued }}</p>
-          </td>
+          <td property="dct:created" content="{{ page.date_issued }}" datatype='xs:date'> {{ page.date_issued }}</td>
         </tr>
         <tr>
           <th>Viimati muudetud (YYYY-MM-DD)</th>
-          <td>
-            <p property="dct:modified" content="{{ page.date_modified }}" datatype='xs:date'> {{ page.date_modified }}</p>
-          </td>
+          <td property="dct:modified" content="{{ page.date_modified }}" datatype='xs:date'> {{ page.date_modified }}</td>
         </tr>
         {% for field in dataset_fields %}
           {% unless dataset_system_fields contains field.field_name %}
