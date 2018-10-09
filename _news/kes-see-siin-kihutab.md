@@ -9,6 +9,7 @@ tags:
   - Eesti
   - liiklusjärelevalve
   - andmeajakirjandus
+preview: "<p><strong>Selle postitusega saab hoo sisse sari “Avaandmed ja andmeajakirjandus</strong><strong>”. Sarja eesmärgiks on uurida lähemalt avaandmeid ja tuua näiteid, mida saab neist välja lugeda. Üldiselt kasutan avaandmeid <a href=\"https://github.com/okestonia/opendata-issue-tracker/issues\">OKEE Githubist</a>, kuhu Sina saad lisada nii avaandmete soove kui ka olemasolevaid allikaid."
 submitted: 2018/03/18
 author: Annegrete
 ---

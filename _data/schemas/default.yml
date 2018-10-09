@@ -111,6 +111,8 @@ news_fields:
     label: Author
   - field_name: text
     label: Text
+  - field_name: preview
+    label: Preview
    # form_template: form/textarea.html
   - field_name: preview_image
     label: Image URL

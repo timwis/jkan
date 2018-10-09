@@ -5,6 +5,7 @@ tags:
   - infopäev
   - avaandmed
   - Avaandmete kasutamise edendamine
+preview: <p>Mis on avaandmed ja mis on nende praktiline väärtus?\_Mille poolest erinevad avaandmed ja avalikud andmed? Kas kõik avaliku sektori andmed on avaandmed? Aga kas peaksid olema? Ja kuidas seostuvad selle kõigega veel\_isikuandmed?</p>
 submitted: 2018/06/11
 author: Maarja Toots
 ---
