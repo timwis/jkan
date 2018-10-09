@@ -4,7 +4,7 @@ layout: default
 {% include breadcrumbs.html parent="Datasets" %}
 {% assign schema = page.schema | default: site.schema %}
 {% assign dataset_fields = site.data.schemas[schema].dataset_fields %}
-{% assign dataset_system_fields = "title|organization|notes|license|update_freq|date_issued" | split: "|" %}
+{% assign dataset_system_fields = "title|organization|notes|license|update_freq|date_issued|date_modified" | split: "|" %}
 {% assign resource_fields = site.data.schemas[schema].resource_fields %}
 {% assign resource_system_fields = "name|url|format|description" | split: "|" %}
 
@@ -91,7 +91,13 @@ layout: default
         <tr>
           <th>Lisatud Portaali (YYYY-MM-DD)</th>
           <td>
-            <p property="dct:created" content="{{ site.data.date_issued }}" datatype='xs:date'> {{ site.data.date_issued }}</p>
+            <p property="dct:created" content="{{ page.date_issued }}" datatype='xs:date'> {{ page.date_issued }}</p>
+          </td>
+        </tr>
+        <tr>
+          <th>Viimati muudetud (YYYY-MM-DD)</th>
+          <td>
+            <p property="dct:modified" content="{{ page.date_modified }}" datatype='xs:date'> {{ page.date_modified }}</p>
           </td>
         </tr>
         {% for field in dataset_fields %}
