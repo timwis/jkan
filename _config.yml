@@ -57,16 +57,17 @@ defaults:
       type: organizations
     values:
       layout: organization
+  - scope:
+      path: ""
+      type: news
+    values:
+      layout: news
 #  - scope:
 #      path: ""
 #      type: applications
 #      values:
 #      layout: default
-#  - scope:
-#      path: ""
-#      type: news
-#    values:
-#      layout: default 
+
 
 # Markdown settings
 markdown: kramdown

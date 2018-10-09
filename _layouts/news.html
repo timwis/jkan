@@ -2,11 +2,14 @@
 layout: default
 ---
 {% include breadcrumbs.html parent="Blogi"  %}
+{% assign schema = page.schema | default: site.schema %}
 
 <h2>{{ page.news_title }}</h2>
 <div>
   <p class="text-muted">Lisanud {{ news.author }} {{ news.submitted }}</p>
-  <div class="text_control">{{ news.preview }}</p></div>
+  <div class="text_control">{{ news.text }}</p></div>
 </div>
-  <p><a href="{{ news.url }}"> Loe lisa </a></p>
-  <h3 class="media-heading"><a href="{{ site.baseurl }}{{ news.url }}">Loe lisa</a></h3>
+  <div>
+    <p> test </p>
+    <p><a href="{{ news.url }}"> Loe lisa </a></p>
+</div>
