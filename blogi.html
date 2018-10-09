@@ -1,0 +1,22 @@
+---
+title: Blogi
+layout: default
+permalink: /blogi/
+---
+
+{% include breadcrumbs.html %}
+
+
+<h1>Blogi</h1>
+<div>
+    {% assign sortnews = site.blogi | sort:"submitted" | reverse %}
+    {% for blogi in sortnews %}
+
+        <h3>{{ blogi.news_title }}</h3>
+        <p class="text-muted">Lisanud {{ blogi.author }} {{ blogi.submitted }}</p>
+        <div class="text_control">{{ blogi.preview }}</p></div>
+        <p><a href="{{ news.url }}"> Loe lisa </a></p>
+    </div>
+</div>
+
+{% endfor %}

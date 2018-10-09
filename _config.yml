@@ -61,7 +61,7 @@ defaults:
       path: ""
       type: news
     values:
-      layout: news
+      layout: article
 #  - scope:
 #      path: ""
 #      type: applications
