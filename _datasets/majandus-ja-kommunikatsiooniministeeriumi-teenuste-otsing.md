@@ -1,7 +1,7 @@
 ---
 schema: default
-title: Majandus- ja Kommunikatsiooniministeeriumi teenuste otsing
-notes: Siin lehel saad erinevate tunnuste abil otsida Majandus- ja Kommunikatsiooniministeeriumi haldusala teenuseid.
+title: Riigi teenused
+notes: Erinevate ministeeriumite haldusalade osutatavad teenused. Teenused on klassifitseeritud, seotud neid osutavate organisatsioonidega ning osutamise juriidilise alusega. Andmekseem sisaldab ka võimalust edastada teenuse osutamist puudutavat statistikat
 department: ''
 category:
   - Riigiteenused
@@ -17,8 +17,8 @@ update_freq: ''
 date_issued: 2015/08/27
 date_modified: 2015/08/27
 organization: Majandus -ja Kommunikatsiooniministeerium
-maintainer_name: Risto Hinno
-maintainer_email: Risto.Hinno@mkm.ee
+maintainer_name: MKM 
+maintainer_email: info@mkm.ee
 maintainer_phone: ''
 legacy_url: 'https://opendata.riik.ee/en/dataset/majandus-ja-kommunikatsiooniministeeriumi-teenuste-otsing'
 ---

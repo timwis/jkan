@@ -7,19 +7,19 @@ category:
   - Kultuur
 resources:
   - name: Ajalooarhiiv (apeEAD XML vormingus)
-    url: 'http://opendata.ra.ee/portal/files/archives/EAA.zip'
+    url: 'http://opendata.ra.ee/files/archives/EAA.zip'
     format: xml / zip
   - name: Riigiarhiiv (apeEAD XML vormingus)
-    url: 'http://opendata.ra.ee/portal/files/archives/ERA.zip'
+    url: 'http://opendata.ra.ee/files/archives/ERA.zip'
     format: xml / zip
   - name: Filmiarhiiv (apeEAD XML vormingus)
-    url: 'http://opendata.ra.ee/portal/files/archives/EFA.zip'
+    url: 'http://opendata.ra.ee/files/archives/EFA.zip'
     format: xml / zip
   - name: Maa-arhiivid  (apeEAD XML vormingus)
-    url: 'http://opendata.ra.ee/portal/files/archives/MA.zip'
+    url: 'http://opendata.ra.ee/files/archives/MA.zip'
     format: xml / zip
   - name: Tallinna Linnaarhiiv (apeEAD XML vormingus)
-    url: 'http://opendata.ra.ee/portal/files/archives/TLA.zip'
+    url: 'http://opendata.ra.ee/files/archives/TLA.zip'
     format: xml / zip
   - name: Rahvusarhiivi avaandmete portaal
     url: 'http://opendata.ra.ee'

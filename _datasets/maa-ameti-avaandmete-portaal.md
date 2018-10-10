@@ -8,7 +8,7 @@ category:
 resources:
   - name: Maa-ameti avaandmete portaal
     url: 'http://geoportaal.maaamet.ee/est/Andmete-tellimine/Avaandmed-p487.html'
-    format: veebileht
+    format: HTML
 license: 'http://creativecommons.org/licenses/by/3.0/'
 update_freq: ''
 date_issued: 2015/02/26

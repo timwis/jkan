@@ -17,8 +17,8 @@ update_freq: ''
 date_issued: 2016/11/28
 date_modified: 2016/11/28
 organization: Riigi Infosüsteemi Amet
-maintainer_name: Andres Kütt
-maintainer_email: andres.kutt@ria.ee
-maintainer_phone: '+3725297159'
+maintainer_name: RIA
+maintainer_email: ria@ria.ee
+maintainer_phone: 
 legacy_url: 'https://opendata.riik.ee/en/dataset/riha-brief'
 ---

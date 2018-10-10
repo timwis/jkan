@@ -1,6 +1,6 @@
 ---
 schema: default
-title: Sotsiaalteenuste ja -toetuste andmeregister (STAR)
+TItle: Sotsiaalteenuste ja -toetuste andmeregister (STAR)
 notes: 'Siin on avaldatud sotsiaalteenuste ja -toetuste andmeregistri (STAR) järgmised andmed: maakond, haldusasutus, riiklikult kehtestatud toimetulekutoetuse parameetrid, toimetulekutoetuse maksmiseks kehtestatud eluasemekulude piirmäärad omavalitsustes, riiklikult kehtestatud vajaduspõhise peretoetuse parameetrid, parameetri kehtivuse algus, parameetri kehtivuse lõpp, parameetri väärtus, parameetri mõõtühik.'
 department: ''
 category:

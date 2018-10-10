@@ -6,22 +6,22 @@ department: ''
 category:
   - Põllumajandus, kalandus, metsandus
 resources:
-  - name: 30.01.2018 Teenus vesiviljelusettevõtete andmete vaatamiseks
+  - name: Teenus vesiviljelusettevõtete andmete vaatamiseks
     url: 'https://ariel.pria.ee/vesiviljelus/'
     format: HTML
-  - name: 30.01.2018 Teenus hobuslaste andmete vaatamiseks ja allalaadimiseks
+  - name: Teenus hobuslaste andmete vaatamiseks ja allalaadimiseks
     url: 'http://ariel.pria.ee/hobu/'
     format: 'xls, html'
-  - name: 30.01.2018 Teenus kitsede andmete vaatamiseks
+  - name: Teenus kitsede andmete vaatamiseks
     url: 'https://ariel.pria.ee/lr-avalik/KitseAndmed'
     format: HTML
-  - name: 30.01.2018 Teenus lammaste andmete vaatamiseks
+  - name: Teenus lammaste andmete vaatamiseks
     url: 'https://ariel.pria.ee/lr-avalik/LambaAndmed'
     format: HTML
-  - name: 30.01.2018 Teenus veiste andmete vaatamiseks
+  - name: Teenus veiste andmete vaatamiseks
     url: 'https://ariel.pria.ee/lr-avalik/VeiseAndmed'
     format: HTML
-  - name: '30.01.2018 Teenus veiste, lammaste ja kitsede andmete allalaadimiseks'
+  - name: Teenus veiste, lammaste ja kitsede andmete allalaadimiseks
     url: 'https://ariel.pria.ee/lr-avalik/LoomaAndmedXml'
     format: XML
   - name: Täiendav info PRIA kodulehel
