@@ -1,7 +1,7 @@
 ---
 schema: default
 title: Proviisorite ja farmatseutide riiklik register
-notes: Proviisorite ja farmatseutide riikliku registri avaandmed.
+notes: Proviisorite ja farmatseutide riikliku registri avaandmed. Sisaldab infot nii isikute kui nende kutse ning töökohtade kohta. 
 department: ''
 category:
   - Tervis

@@ -13,9 +13,9 @@ resources:
     url: 'http://opendata.mkm.ee/nmrr/ettevotted_schema.xml'
     format: XML
 license: 'http://creativecommons.org/licenses/by/3.0/'
-update_freq: ''
+update_freq: 'igakuiselt'
 date_issued: 2018/05/28
-date_modified: 2018/05/28
+date_modified: 2018/10/01
 organization: Majandus -ja Kommunikatsiooniministeerium
 maintainer_name: Kristjan Kaiklem
 maintainer_email: kristjan.kaiklem@mkm.ee
