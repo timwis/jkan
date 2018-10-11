@@ -1,14 +1,18 @@
 ---
-title: Organizations
+title: Teabevaldajad
 layout: default
-permalink: /organizations/
+permalink: /publishers/
 ---
 {% include breadcrumbs.html %}
+
+<h1>Teabevaldajad</h1>
+<br>
 
 <a href="{{ site.baseurl }}/add-organization/" class="btn btn-default pull-right admin-only" data-hook="add-organization-btn"><i class="fa fa-plus"></i> Add Organization</a>
 
 {% for organization in site.organizations %}
   {% assign dataset_count = site.datasets | where:"organization", organization.title | size %}
+      {% if dataset_count > 0 %}
   <div class="media">
     <div class="media-left">
       {% if organization.logo and organization.logo != empty %}
@@ -18,9 +22,11 @@ permalink: /organizations/
       {% endif %}
     </div>
     <div class="media-body">
-      <h4 class="media-heading"><a href="{{ site.baseurl }}{{ organization.url }}">{{ organization.title }}</a></h4>
-      <p>{{ organization.description }}</p>
-      <p><a href="{{ site.baseurl }}/datasets/?organization={{ organization.title | slugify }}">{{ dataset_count }} datasets</a></p>
+      <h3 class="media-heading"><a href="{{ site.baseurl }}{{ organization.url }}">{{ organization.title }}</a></h3>
+
+      <p style="text-align: justify;">{{ organization.description }}</p>
+      <p><a href="{{ site.baseurl }}/datasets/?organization={{ organization.title | slugify }}"><span class="badge">{{ dataset_count }}</span> andmehulgad</a></p>
+      {% endif %}
     </div>
   </div>
 {% endfor %}

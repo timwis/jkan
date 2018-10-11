@@ -4,3 +4,6 @@ _site
 _config.dev.yml
 node_modules
 *.map
+vendor
+.cache
+settings.env

@@ -1,0 +1,72 @@
+---
+title: Rakendused
+layout: default
+permalink: /apps/
+---
+{% include breadcrumbs.html %}
+
+<h1>Rakendused</h1>
+<br>
+
+<div style="
+    display: grid;
+    grid-template-columns: repeat( auto-fit, minmax(300px, 1fr) );
+    grid-gap: 20px;
+">
+    
+    {% assign sortapps = site.applications | sort:"submitted" | reverse %}
+    {% for application in sortapps %}
+
+    <div
+        class="panel panel-default"
+        style="
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        "
+    >
+        <div class="panel-body">
+            <a href="{{ application.app_url }}">
+                <div style="
+                    height: 180px;
+                    background-image: url({{ application.app_preview }});
+                    background-size: cover;
+                "></div>
+                <h3>{{ application.app_name }}</h3>
+            </a>
+            <p style="text-align: justify; overflow-wrap: break-word;">{{ application.app_description }}</p>
+        </div>
+        <div class="panel-footer">
+            {{ application.developed_by }} / {{ application.submitted }}
+        </div>
+    </div>
+{% endfor %}
+
+</div>
+
+{% comment %}
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>Application</th>
+            <th>Developer</th>
+            <th>Description</th>
+            <th>Submitted Date</th>
+            <th>Preview Image</th> <!-- This needs to be done better -->
+        </tr>
+    </thead>
+    <tbody>
+    {% for application in site.applications %}
+    <tr>
+        <td>{{ application.app_name }}</td>
+        <td>{{ application.developed_by }}  </td>
+        <td>{{ application.app_description }}</td>
+        <td>{{ application.submitted }}</td>
+        <td> <img src="{{ application.app_preview }}" height="150" width="450"></a></td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+{% endcomment %}
+
+    

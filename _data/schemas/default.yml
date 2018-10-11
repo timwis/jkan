@@ -4,29 +4,40 @@ dataset_fields:
   - field_name: title
     label: Title
     datajson: title
+  - field_name: update_freq
+    label: Uuendussagedus
+  - field_name: date_issued
+    label: Lisatud Portaali (YYYY-MM-DD)
+    datajson: issued
+  - field_name: date_modified
+    label: Viimati muudetud (YYYY-MM-DD)
+    datajson: modified
   - field_name: organization
-    label: Organization
+    label: Teabevaldaja
     form_template: form/organization.html
     datajson: publisher.name
   - field_name: notes
-    label: Description
+    label: Kirjeldus
     form_template: form/textarea.html
     datajson: description
   - field_name: license
-    label: License
+    label: Kasutuslitsents
     form_template: form/license.html
     datajson: license
   - field_name: category
-    label: Category
+    label: Peamine teema
     form_template: form/category.html
     display_template: display/category.html
     datajson: category
-  - field_name: maintainer
-    label: Maintainer
+  - field_name: maintainer_name
+    label: Kontakt nimi
     datajson: contactPoint.fn
   - field_name: maintainer_email
-    label: Maintainer Email
+    label: Kontakt Email
     datajson: contactPoint.hasEmail
+  - field_name: maintainer_phone
+    label: Kontakt telefon
+
 
 resource_fields:
   - field_name: name
@@ -49,10 +60,20 @@ resource_fields:
       - kmz
       - shp
       - xml
+      - xlsx
+      - xsd
+      - txt
+      - zip
+      - pdf
+      - rdf
 
 organization_fields:
   - field_name: title
     label: Title
+  - field_name: maintainer_name
+    label: Kontakt nimi
+  - field_name: maintainer_email
+    label: Kontakt Email
   - field_name: description
     label: Description
   - field_name: logo
@@ -68,3 +89,32 @@ category_fields:
   - field_name: featured
     label: Featured on Homepage
     form_template: form/checkbox.html
+
+application_fields:
+  - field_name: app_name
+    label: Application
+  - field_name: developed_by
+    label: Developer
+  - field_name: app_description
+    label: Description
+  - field_name: submitted
+    label: Submitted Date
+  - field_name: app_url
+    label: App URL
+  - field_name: app_preview
+    label: Preview Image
+
+news_fields:
+  - field_name: news_title
+    label: Title
+  - field_name: author
+    label: Author
+  - field_name: text
+    label: Text
+  - field_name: preview
+    label: Preview
+   # form_template: form/textarea.html
+  - field_name: preview_image
+    label: Image URL
+  - field_name: submitted
+    label: Kuupäev
