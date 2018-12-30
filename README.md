@@ -19,3 +19,25 @@ For configuration details, see the [wiki](https://github.com/timwis/jkan/wiki)
 
 ## Development
 Please see the [Architecture](https://github.com/timwis/jkan/wiki/Architecture) page in the wiki.
+
+For short, 1st install all dependencies:
+
+```bash
+gem install bundler
+bundle install
+npm install # Optional, for JS
+```
+
+2nd start local development:
+
+```bash
+bundle exec jekyll serve --incremental
+```
+
+or start building a dist version:
+
+```bash
+npx parcel build scripts/src/index.js --out-file scripts/dist --no-source-maps # Optional, for JS
+bundle exec jekyll build
+# Built site is available at _site
+```
