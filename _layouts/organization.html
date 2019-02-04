@@ -4,10 +4,10 @@ layout: default
 {% include breadcrumbs.html parent="Organizations" %}
 
 <div data-component="view-switcher">
-  <div class="row" data-hook="view" data-view="display">
+  <div class="row d-flex" data-hook="view" data-view="display">
     {% if page.logo and page.logo != empty %}
     <div class="col-sm-3">
-      <a href="{{ page.logo }}" class="thumbnail"><img src="{{ page.logo }}" alt="{{ page.title }} logo"></a>
+      <a href="{{ page.logo }}" class="thumbnail"><img class="img-thumbnail rounded mx-auto d-block" src="{{ page.logo }}" alt="{{ page.title }} logo"></a>
     </div>
     <div class="col-sm-9">
     {% else %}
@@ -34,4 +34,5 @@ layout: default
       <a href="{{ site.baseurl }}{{ page.url }}" class="btn btn-default pull-right">Cancel</a>
     </div>
   </div>
+</div>
 </div>

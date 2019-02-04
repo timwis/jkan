@@ -12,24 +12,26 @@ layout: default
 {% capture organization_url %}{{ site.baseurl }}/datasets/?organization={{ organization.title | slugify }}{% endcapture %}
 
 <div data-component="view-switcher">
-  <div class="row" data-component="dataset-display" data-hook="view" data-view="display" typeof="dcat:Dataset" resource="{{ page.url }}">
-    {% if organization %}
+  <div class="row d-flex" data-component="dataset-display" data-hook="view" data-view="display" typeof="dcat:Dataset" resource="{{ page.url }}">
+      {% if organization %}
       <div class="col-sm-3" property="dct:publisher" resource="{{ organization_url }}">
-        <div class="panel panel-default">
-            <div class="panel-heading">
-              {% if organization.logo and organization.logo != empty %}
-              <a href="{{ site.baseurl }}/datasets/?organization={{ organization.title | slugify }}" class="thumbnail"><img src="{{ organization.logo }}" alt="{{ organization.title }} logo"></a>
-              {% endif %}
-            </div>
-            <div class="panel-body">
-              <h3>
-                <a href="{{ organization_url }}" about="{{ organization_url }}" property="foaf:homepage">
-                  <span property="foaf:name">{{ organization.title }}</span>
-                </a>
-              </h3>
-              {{ organization.description }}
-            </div>
-          </div>
+        <div class="card mb-3">
+          <div class="card-img-top">
+            {% if organization.logo and organization.logo != empty %}
+            <a href="{{ site.baseurl }}/datasets/?organization={{ organization.title | slugify }}"><img src="{{ organization.logo }}" alt="{{ organization.title }} logo" class="img-thumbnail rounded mx-auto d-block"></a>
+            {% endif %}
+                      </div>
+                      <div class="card-header">
+                        <h3 style="word-wrap: break-word">
+                          <a href="{{ organization_url }}" about="{{ organization_url }}" property="foaf:homepage">
+                            <span property="foaf:name">{{ organization.title }}</span>
+                          </a>
+                        </h3>
+                          </div>
+                          <div class="card-body">
+                        {{ organization.description }}
+                      </div>
+                    </div>
         </div>
     <div class="col-sm-9">
     {% else %}
@@ -39,14 +41,14 @@ layout: default
         <span property="dct:title">{{ page.title }}</span>
         <a href="?view=edit" class="pull-right btn btn-default admin-only" data-hook="edit-dataset-btn">Edit</a>
       </h1>
-      <p property="dct:description">{{ page.notes }}</p>
+      <p property="dct:description" style="text-align: justify; overflow-wrap: break-word;">{{ page.notes }}</p>
 
       <h2>Resources</h2>
       <ul>
         {% for resource in page.resources %}
         <li data-hook="resource-item" property='dcat:distribution' typeof='dcat:Distribution'>
           <a href="{{ resource.url }}" property='dcat:accessURL'><span property="dct:title">{{ resource.name }}</span></a>
-          {% if resource.format %}<span class="label label-default" property='dcat:mediaType'>{{ resource.format}}</span>{% endif %}
+          {% if resource.format %}<span class="badge badge-secondary" property='dcat:mediaType'>{{ resource.format}}</span>{% endif %}
           <a href="#" class="show-resource-details" data-hook="show-resource-details">(Details)</a>
           {% if resource.description %}<div class="resource-description">{{ resource.description }}</div>{% endif %}
           <table class="table table-striped table-condensed resource-details" data-hook="resource-details">

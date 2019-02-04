@@ -1,41 +1,33 @@
-<nav class="navbar navbar-default" data-component="navigation">
+<nav class="navbar navbar-expand-sm mb-4 navbar-light bg-light" data-component="navigation">
   <div class="container">
-
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="{{ site.baseurl }}/">{{ site.title }}</a>
-    </div>
-
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
+    <a class="navbar-brand" href="{{ site.baseurl }}/">{{ site.title }}</a>
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+  <span class="navbar-toggler-icon">Toggle navigation</span>
+</button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav">
         {% for link in site.navigation %}
           {% if page.url contains link.url %}
-            <li class="active"><a href="{{ site.baseurl }}{{ link.url }}">{{ link.title }} <span class="sr-only">(current)</span></a></li>
+          <li class="nav-item active"><a class="nav-link" href="{{ site.baseurl }}{{ link.url }}">{{ link.title }} <span class="sr-only">(current)</span></a></li>
           {% else %}
-            <li><a href="{{ site.baseurl }}{{ link.url }}">{{ link.title }}</a></li>
+          <li class="nav-item"><a class="nav-link" href="{{ site.baseurl }}{{ link.url }}">{{ link.title }}</a></li>
           {% endif %}
         {% endfor %}
       </ul>
-
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#" data-hook="login-link">Login</a></li>
-        <li class="dropdown hidden" data-hook="user-dropdown">
-          <a href="#" class="dropdown-toggle" data-hook="user-dropdown-link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item"><a class="nav-link" href="#" data-hook="login-link">Login</a></li>
+        <li class="nav-item dropdown d-none" data-hook="user-dropdown">
+          <a href="#" class="nav-link dropdown-toggle" data-hook="user-dropdown-link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
             <span class="user-issue" data-hook="user-issue"><i class="fa fa-exclamation-circle"></i></span>
             <span data-hook="user-name">User</span>
             <span class="caret"></span>
           </a>
-          <ul class="dropdown-menu">
-            <li class="admin-only" data-hook="admin-link-list-item"><a href="{{ site.baseurl }}/admin/">Administration</a></li>
-            <li><a href="#" data-hook="logout-link">Logout</a></li>
           </ul>
-        </li>
-      </ul>
+          <ul class="dropdown-menu">
+            <li class="admin-only" data-hook="admin-link-list-item"><a class="dropdown-item" href="{{ site.baseurl }}/admin/">Administration</a></li>
+            <li><a class="dropdown-item" href="#" data-hook="logout-link">Logout</a></li>
+          </ul>
+
     </div>
 
   </div>
