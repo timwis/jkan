@@ -1,4 +1,4 @@
-<div class="well" data-hook="item">
+<div class="card card-body bg-light mb-3" data-hook="item">
   <fieldset>
     {% for field in category_fields %}
       {% assign template = field.form_template | default: "form/text.html" %}

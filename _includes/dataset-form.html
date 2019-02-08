@@ -31,7 +31,7 @@
     {% endfor %}
     </div>
 
-    <button type="button" class="btn btn-default" data-hook="add-item-btn" title="Add resource"><i class="fa fa-plus"></i> Add Resource</button>
+    <button type="button" class="btn btn-outline-secondary" data-hook="add-item-btn" title="Add resource"><i class="fa fa-plus"></i> Add Resource</button>
 
     <script type="text/template" data-hook="item-template">
     {% include dataset-form-resource.html %}
@@ -58,4 +58,5 @@
       <i class="fa fa-trash"></i> Delete dataset
     </button>
   {% endif %}
+  <a href="{{ site.baseurl }}{{ page.url }}" class="btn btn-default pull-right">Cancel</a>
 </form>

@@ -85,16 +85,16 @@ dataset {
   color: #000;
 }
 
-.theme-gallery .panel {
+.theme-gallery .card {
   display: inline-block;
   max-width: 250px;
   text-align: center;
 }
 
-.theme-gallery .panel img {
+.theme-gallery .card img {
   width: 100%;
 }
 
-.theme-gallery .panel-primary {
+.theme-gallery .card-primary {
   border-width: 5px;
 }
