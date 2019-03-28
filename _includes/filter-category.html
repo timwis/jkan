@@ -1,0 +1,17 @@
+{% assign sizes = '' | split: "" %}
+{% for category in include.categories %}
+  {% assign c = site.datasets | where:"category", category | size %}
+  {% assign sizes = sizes | push: c %}
+{% endfor %}
+{% assign sorted_sizes = sizes | sort | reverse | uniq %}
+{% for s in sorted_sizes %}
+  {% for category in include.categories %}
+    {% assign c = sizes[forloop.index0] %}
+    {% if c == s %}
+      <span class="list-group-item">
+        <span class="list-group-item-truncate">{{ category }}</span>
+        <span class="badge">{{ s }}</span>
+      </span>
+    {% endif %}
+  {% endfor %}
+{% endfor %}
