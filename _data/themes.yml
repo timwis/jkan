@@ -22,12 +22,6 @@
 - name: Lumen
   logo: /img/themes/lumen.png
   src: https://maxcdn.bootstrapcdn.com/bootswatch/4.2.1/lumen/bootstrap.min.css
-- name: Paper
-  logo: /img/themes/paper.png
-  src: https://maxcdn.bootstrapcdn.com/bootswatch/4.2.1/paper/bootstrap.min.css
-- name: Readable
-  logo: /img/themes/readable.png
-  src: https://maxcdn.bootstrapcdn.com/bootswatch/4.2.1/readable/bootstrap.min.css
 - name: Sandstone
   logo: /img/themes/sandstone.png
   src: https://maxcdn.bootstrapcdn.com/bootswatch/4.2.1/sandstone/bootstrap.min.css
