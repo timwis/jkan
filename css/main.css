@@ -79,6 +79,7 @@ dataset {
 
 .homepage-categories .thumbnail img {
   height: 80px;
+  margin: auto;
 }
 
 .homepage-categories a {
