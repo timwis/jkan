@@ -2,14 +2,14 @@
 layout: default
 ---
 {% include breadcrumbs.html parent="Organizations" %}
-
+<div class="container">
 <div data-component="view-switcher">
-  <div class="row d-flex" data-hook="view" data-view="display">
+  <div class="row" data-hook="view" data-view="display">
     {% if page.logo and page.logo != empty %}
-    <div class="col-sm-3">
+    <div class="col-sm-3" style = "float: left;">
       <a href="{{ page.logo }}" class="thumbnail"><img class="img-thumbnail rounded mx-auto d-block" src="{{ page.logo }}" alt="{{ page.title }} logo"></a>
     </div>
-    <div class="col-sm-9">
+    <div class="col-sm-9" style = "float: right;" >
     {% else %}
     <div class="col-sm-12">
     {% endif %}
@@ -26,13 +26,11 @@ layout: default
     </div>
   </div>
 
-  <div class="row d-flex" data-hook="view" data-view="edit">
-    <div class="col-sm-8 offset-sm-2">
-      {% include organization-form.html organization=page %}
-    </div>
-    <div class="col-sm-2">
-      <a href="{{ site.baseurl }}{{ page.url }}" class="btn btn-outline-secondary float-right">Cancel</a>
-    </div>
+  <div class="row" data-hook="view" data-view="edit">
+  <div class="col-sm-8 offset-sm-2">
+    {% include organization-form.html organization=page %}
   </div>
+</div>
+</div>
 </div>
 </div>

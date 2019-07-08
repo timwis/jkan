@@ -10,11 +10,11 @@ layout: default
 
 {% assign organization = site.organizations | where:"title",page.organization | first %}
 {% capture organization_url %}{{ site.baseurl }}/datasets/?organization={{ organization.title | slugify }}{% endcapture %}
-<div class="container">
+  <div class="container">
 <div data-component="view-switcher">
-  <div class="row d-flex" data-component="dataset-display" data-hook="view" data-view="display" typeof="dcat:Dataset" resource="{{ page.url }}">
+  <div class="row" data-component="dataset-display" data-hook="view" data-view="display" typeof="dcat:Dataset" resource="{{ page.url }}">
       {% if organization %}
-      <div class="col-sm-3" property="dct:publisher" resource="{{ organization_url }}">
+      <div class="col-sm-3" style = "float: left;" property="dct:publisher" resource="{{ organization_url }}">
         <div class="card mb-3">
           <div class="card-img-top">
             {% if organization.logo and organization.logo != empty %}
@@ -33,7 +33,7 @@ layout: default
                       </div>
                     </div>
         </div>
-    <div class="col-sm-9">
+    <div class="col-sm-9" style = "float: right;">
     {% else %}
     <div class="col-sm-12">
     {% endif %}
@@ -105,12 +105,9 @@ layout: default
   </div>
 
 
-  <div class="row d-flex" data-hook="view" data-view="edit">
+  <div class="row" data-hook="view" data-view="edit">
   <div class="col-sm-8 offset-sm-2">
     {% include dataset-form.html dataset=page %}
-  </div>
-  <div class="col-sm-2">
-    <a href="{{ site.baseurl }}{{ page.url }}" class="btn btn-outline-dark float-right">Cancel</a>
   </div>
 </div>
 </div>
