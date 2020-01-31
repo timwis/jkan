@@ -2,36 +2,39 @@
 layout: default
 ---
 {% include breadcrumbs.html parent="Organizations" %}
-
+<div class="container">
 <div data-component="view-switcher">
-  <div class="row" data-hook="view" data-view="display">
-    {% if page.logo and page.logo != empty %}
-    <div class="col-sm-3">
-      <a href="{{ page.logo }}" class="thumbnail"><img src="{{ page.logo }}" alt="{{ page.title }} logo"></a>
-    </div>
-    <div class="col-sm-9">
-    {% else %}
-    <div class="col-sm-12">
-    {% endif %}
-      <h1>
-        {{ page.title }}
-        <a href="?view=edit" class="pull-right btn btn-default admin-only">Edit</a>
-      </h1>
-      <p>{{ page.description }}</p>
-      <div data-component="datasets-list" data-organization="{{ page.title | slugify }}">
-        <h3 class="datasets-count" data-hook="datasets-count"></h3>
-        <input type="text" data-hook="search-query" placeholder="Search..." class="form-control">
-        <div data-hook="datasets-items"></div>
+  <div data-hook="view" data-view="display">
+    <div class="row">
+      {% if page.logo and page.logo != empty %}
+      <div class="col-sm-3" style = "float: left;">
+        <a href="{{ page.logo }}" class="thumbnail"><img class="img-thumbnail rounded mx-auto d-block" src="{{ page.logo }}" alt="{{ page.title }} logo"></a>
+      </div>
+      <div class="col-sm-9" style = "float: right;" >
+      {% else %}
+      <div class="col-sm-12">
+      {% endif %}
+        <h1>
+          {{ page.title }}
+          <a href="?view=edit" class="float-right btn btn-outline-secondary admin-only">Edit</a>
+        </h1>
+        <p>{{ page.description }}</p>
+        <div data-component="datasets-list" data-organization="{{ page.title | slugify }}">
+          <h3 class="datasets-count" data-hook="datasets-count"></h3>
+          <input type="text" data-hook="search-query" placeholder="Search..." class="form-control mb-3">
+          <div data-hook="datasets-items"></div>
+        </div>
       </div>
     </div>
   </div>
 
-  <div class="row" data-hook="view" data-view="edit">
-    <div class="col-sm-8 col-sm-offset-2">
-      {% include organization-form.html organization=page %}
-    </div>
-    <div class="col-sm-2">
-      <a href="{{ site.baseurl }}{{ page.url }}" class="btn btn-default pull-right">Cancel</a>
+  <div data-hook="view" data-view="edit">
+    <div class="row">
+      <div class="col-sm-8 offset-sm-2">
+        {% include organization-form.html organization=page %}
+      </div>
     </div>
   </div>
+</div>
+</div>
 </div>

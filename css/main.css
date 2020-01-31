@@ -70,7 +70,7 @@ dataset {
 }
 
 .homepage-categories .thumbnail {
-  display: inline-block;
+  display: inline-grid;
   min-width: 120px;
   text-align: center;
   border: none;
@@ -79,22 +79,23 @@ dataset {
 
 .homepage-categories .thumbnail img {
   height: 80px;
+  margin: auto;
 }
 
 .homepage-categories a {
   color: #000;
 }
 
-.theme-gallery .panel {
+.theme-gallery .card {
   display: inline-block;
   max-width: 250px;
   text-align: center;
 }
 
-.theme-gallery .panel img {
+.theme-gallery .card img {
   width: 100%;
 }
 
-.theme-gallery .panel-primary {
+.theme-gallery .card-primary {
   border-width: 5px;
 }
