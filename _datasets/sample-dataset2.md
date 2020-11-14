@@ -16,6 +16,6 @@ resources:
 license: 'https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/'
 category:
   - Education
-maintainer: Sek 
+maintainer: SSSS 
 maintainer_email: tim@timwis.com
 ---
