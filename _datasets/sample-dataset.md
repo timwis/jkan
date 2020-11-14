@@ -19,6 +19,8 @@ category:
 maintainer: Sek 
 maintainer_email: tim@timwis.com
 ---
+
+---
 schema: default
 title: Sample dataset
 organization: Sample Department
@@ -38,3 +40,4 @@ category:
   - Education
 maintainer: Sek 2
 maintainer_email: tim@timwis.com
+---
