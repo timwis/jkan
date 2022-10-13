@@ -1,0 +1,13 @@
+---
+services:
+  jekyll:
+    image: jekyll/jekyll:3.8
+    environment:
+      - JEKYLL_ENV=development
+      - LANG=C.UTF-8
+    command: jekyll serve --watch --incremental --host 0.0.0.0
+    ports:
+        - '4000:4000'
+    volumes:
+        - .:/srv/jekyll:cached
+        - ./vendor/bundle:/usr/local/bundle:cached
