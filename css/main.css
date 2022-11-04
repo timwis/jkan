@@ -99,3 +99,7 @@ dataset {
 .theme-gallery .card-primary {
   border-width: 5px;
 }
+
+.view-code-link {
+  margin: 1em;
+}
