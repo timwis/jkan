@@ -1,0 +1,70 @@
+backend:
+  name: git-gateway
+  branch: gh-pages
+
+local_backend: true
+
+media_folder: "img/uploads"
+
+collections:
+  - name: dataset
+    label: Dataset
+    folder: _datasets
+    create: true
+    fields:
+      - label: Title
+        name: title
+        widget: string
+
+      - label: Organization
+        name: organization
+        widget: relation
+        collection: organization
+        value_field: "title"
+        search_fields:
+          - title
+
+      - label: Description
+        name: notes
+        widget: text
+
+      - label: Resources
+        name: resources
+        widget: list
+        fields:
+          - label: Resource Name
+            name: name
+            widget: string
+          - label: URL
+            name: url
+            widget: string
+          - label: Format
+            name: format
+            widget: select
+            options:
+              - api
+              - csv
+              - json
+              - geojson
+              - html
+              - kml
+              - kmz
+              - shp
+              - xml
+
+  - name: organization
+    label: Organization
+    folder: _organizations
+    create: true
+    fields:
+      - label: Title
+        name: title
+        widget: string
+
+      - label: Description
+        name: description
+        widget: text
+
+      - label: Logo
+        name: logo
+        widget: string
