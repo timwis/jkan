@@ -72,3 +72,30 @@ collections:
       - label: Logo
         name: logo
         widget: string
+
+  - name: settings
+    label: Settings
+    delete: false
+    editor:
+      preview: false
+    files:
+      - name: config
+        label: Site settings
+        file: _config.yml
+        fields:
+          - label: Site Title
+            name: title
+            widget: string
+
+          - label: Site Greeting
+            name: greeting
+            description: Displayed on the homepage
+            widget: string
+
+          - label: Site Description
+            name: description
+            widget: text
+
+          - label: Base URL
+            name: baseurl
+            widget: string
