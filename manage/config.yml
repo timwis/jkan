@@ -11,6 +11,10 @@ collections:
     label: Dataset
     folder: _datasets
     create: true
+    summary: "{{title}} ({{organization}})"
+    view_groups:
+      - label: Organization
+        field: organization
     fields:
       - label: Title
         name: title
