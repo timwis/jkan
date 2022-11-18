@@ -71,7 +71,9 @@ collections:
 
       - label: Logo
         name: logo
-        widget: string
+        widget: image
+        allow_multiple: false
+        media_folder: /img/organizations
 
   - name: settings
     label: Settings

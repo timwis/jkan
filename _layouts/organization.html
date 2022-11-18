@@ -8,7 +8,7 @@ layout: default
     <div class="row">
       {% if page.logo and page.logo != empty %}
       <div class="col-sm-3" style = "float: left;">
-        <a href="{{ page.logo }}" class="thumbnail"><img class="img-thumbnail rounded mx-auto d-block" src="{{ page.logo }}" alt="{{ page.title }} logo"></a>
+        <a href="{{ page.logo | relative_url }}" class="thumbnail"><img class="img-thumbnail rounded mx-auto d-block" src="{{ page.logo | relative_url }}" alt="{{ page.title }} logo"></a>
       </div>
       <div class="col-sm-9" style = "float: right;" >
       {% else %}
