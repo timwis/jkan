@@ -1,3 +1,5 @@
+---
+---
 <!doctype html>
 <html>
 
@@ -10,7 +12,22 @@
 
 <body>
   <!-- Include the script that builds the page and powers Netlify CMS -->
+  <script type="text/javascript">window.CMS_MANUAL_INIT = true</script>
   <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
+  <script type="text/javascript">
+    const { CMS, initCMS: init } = window
+
+    init({
+      config: {
+        backend: {
+          repo: {{ site.github.repository_nwo | jsonify }},
+          branch: {{ site.github.source.branch | jsonify }}
+        },
+        local_backend: {% if jekyll.environment == "production" %}false{% else %}true{% endif %},
+        site_url: {{ "" | absolute_url | jsonify }}
+      }
+    })
+  </script>
 </body>
 
 </html>

@@ -1,8 +1,8 @@
-backend:
-  name: git-gateway
-  branch: gh-pages
+# Note that several config options are provided by JavaScript
+# in index.html. Those options are merged into these options.
 
-local_backend: true
+backend:
+  name: github
 
 media_folder: "img/uploads"
 
@@ -12,6 +12,7 @@ collections:
     folder: _datasets
     create: true
     summary: "{{title}} ({{organization}})"
+    preview_path: "datasets/{{slug}}"
     view_groups:
       - label: Organization
         field: organization
@@ -60,6 +61,7 @@ collections:
     label: Organization
     folder: _organizations
     create: true
+    preview_path: "organizations/{{slug}}"
     fields:
       - label: Title
         name: title
