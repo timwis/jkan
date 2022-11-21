@@ -23,6 +23,7 @@ collections:
 
       - label: Organization
         name: organization
+        required: false
         widget: relation
         collection: organization
         value_field: "title"
@@ -31,6 +32,7 @@ collections:
 
       - label: Description
         name: notes
+        required: false
         widget: text
 
       - label: Resources
@@ -45,6 +47,7 @@ collections:
             widget: string
           - label: Format
             name: format
+            required: false
             widget: select
             options:
               - api
@@ -69,10 +72,12 @@ collections:
 
       - label: Description
         name: description
+        required: false
         widget: text
 
       - label: Logo
         name: logo
+        required: false
         widget: image
         allow_multiple: false
         media_folder: /img/organizations
