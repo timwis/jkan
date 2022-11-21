@@ -43,7 +43,7 @@ layout: default
       {% endif %}
         <h1>
           <span property="dct:title">{{ page.title }}</span>
-          <a href="?view=edit" class="pull-right btn btn-outline-secondary admin-only" data-hook="edit-dataset-btn">Edit</a>
+          <a href="{{ "/manage" | relative_url }}#/collections/dataset/entries/{{ page.slug }}" class="pull-right btn btn-outline-secondary" data-hook="edit-dataset-btn">Edit</a>
         </h1>
         <p property="dct:description" style="text-align: justify; overflow-wrap: break-word;">{{ page.notes }}</p>
 
