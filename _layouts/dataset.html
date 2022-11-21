@@ -79,11 +79,12 @@ layout: default
         <h2>Additional Info</h2>
         <table class="table table-striped dataset-details">
           {% if page.license and page.license != empty %}
+            {% assign license = site.data.licenses.items | where:"url",page.license | first %}
             <tr>
               <th>License</th>
               <td>
                 <a property="dct:license" resource="{{ page.license }}" href="{{ page.license }}">
-                  {{ site.data.licenses[page.license] }}
+                  {{ license.name }}
                 </a>
               </td>
             </tr>
