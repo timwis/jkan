@@ -60,6 +60,37 @@ collections:
               - shp
               - xml
 
+      - label: License
+        name: license
+        required: false
+        hint: Not sure what license to use? See [licenses.opendefinition.org](https://licenses.opendefinition.org/)
+        widget: relation
+        collection: settings
+        file: licenses
+        value_field: "items.*.url"
+        search_fields: ["items.*.name"]
+        display_fields: ["items.*.name"]
+
+      - label: Category
+        name: category
+        required: false
+        widget: relation
+        multiple: true
+        collection: settings
+        file: categories
+        value_field: "items.*.name"
+        search_fields: ["items.*.name"]
+
+      - label: Maintainer
+        name: maintainer
+        required: false
+        widget: string
+
+      - label: Maintainer Email
+        name: maintainer_email
+        required: false
+        widget: string
+
   - name: organization
     label: Organization
     folder: _organizations
