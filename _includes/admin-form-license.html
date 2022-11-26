@@ -1,9 +1,0 @@
-<div class="card card-body bg-light mb-3" data-hook="item">
-  <fieldset>
-    {% assign name = license[1] %}
-    {% include form/text.html field_label='License Name' field_name='licenses[][license_name]' value=name %}
-    {% assign url = license[0] %}
-    {% include form/text.html field_label='License URL' field_name='licenses[][license_url]' value=url %}
-  </fieldset>
-  <button type="button" class="btn btn-danger btn-sm" data-hook="remove-item-btn"><i class="fa fa-minus"></i> Remove</button>
-</div>
