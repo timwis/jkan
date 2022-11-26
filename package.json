@@ -5,9 +5,8 @@
   "main": "scripts/src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack-dev-server --progress --colors",
-    "watch": "NODE_ENV=development webpack -d -w",
-    "build": "webpack -p"
+    "watch": "webpack --mode=development --watch",
+    "build": "webpack"
   },
   "repository": {
     "type": "git",
@@ -25,9 +24,9 @@
     "@babel/preset-react": "^7.0.0",
     "babel-loader": "^8.0.6",
     "babel-polyfill": "^6.7.4",
-    "webpack": "^4.35.2",
-    "webpack-cli": "^3.3.5",
-    "webpack-dev-server": "^3.7.2"
+    "webpack": "^5.74.0",
+    "webpack-cli": "^4.10.0",
+    "webpack-dev-server": "^4.11.1"
   },
   "dependencies": {
     "ampersand-state": "^5.0.3",
