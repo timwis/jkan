@@ -5,8 +5,7 @@
   "main": "scripts/src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack-dev-server --progress --colors",
-    "watch": "NODE_ENV=development webpack -d -w",
+    "watch": "webpack --mode=development --watch",
     "build": "webpack"
   },
   "repository": {
