@@ -1,7 +1,16 @@
 {% assign sizes = '' | split: "" %}
-{% for category in include.categories %}
-  {% assign c = site.datasets | where:"category", category | size %}
-  {% assign sizes = sizes | push: c %}
+{% for targetcategory in include.categories %}
+  {% assign total = 0 %}
+  {% for ds in site.datasets %}
+    {% if ds.category.first %}
+      {% if ds.category contains targetcategory %}
+        {% assign total = total | plus: 1 %}
+      {% endif %}
+    {% elsif ds.category == targetcategory %}
+      {% assign total = total | plus: 1 %}
+    {% endif %}
+  {% endfor %}
+  {% assign sizes = sizes | push: total %}
 {% endfor %}
 {% assign sorted_sizes = sizes | sort | reverse | uniq %}
 {% for s in sorted_sizes %}
