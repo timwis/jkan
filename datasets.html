@@ -11,10 +11,16 @@ permalink: /datasets/
 
     <h3>Categories</h3>
     <div class="list-group" data-component="categories-filter" data-show="5">
-      {% assign categories = site.datasets | map: 'category' | uniq %}
-      {% assign first_set = categories | slice: 0, 5 %}
-      {% assign other_categories = categories | slice: 5 %}
-      {% include filter-category.html categories=first_set %}
+
+      {% assign categories = '' | split: "" %}
+      {% for ds in site.datasets %}
+        {% if ds.category.first %}
+          {% assign categories = categories | concat: ds.category | uniq %}
+        {% else %}
+          {% assign categories = categories | push: ds.category %}
+        {% endif %}
+      {% endfor %}
+      {% include filter-category.html cats=categories %}
 
       <div class="js-hidden">
         {% include filter-category.html categories=other_categories %}
