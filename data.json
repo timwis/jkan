@@ -22,6 +22,11 @@
     {% assign f_category = dataset_fields | where: "datajson", "category" | first %}
     {% assign category = dataset[f_category[field_name]] %}
 
+    {% unless category.first %}
+      {% assign basearray = '' | split: '' %}
+      {% assign category = basearray | push: dataset.category %}
+    {% endunless %}
+
     {% assign f_contact_point_fn = dataset_fields | where: "datajson", "contactPoint.fn" | first %}
     {% assign contact_point_fn = dataset[f_contact_point_fn[field_name]] %}
 

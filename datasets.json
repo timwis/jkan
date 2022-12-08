@@ -1,11 +1,17 @@
 ---
 ---
 [{% for dataset in site.datasets %}
+  {% if dataset.category.first %}
+    {% assign category = dataset.category %}
+  {% else %}
+    {% assign basearray = '' | split: '' %}
+    {% assign category = basearray | push: dataset.category %}
+  {% endif %}
   {
     "title": {{ dataset.title | jsonify }},
     "organization": {{ dataset.organization | jsonify }}{% if dataset.notes != "" %},
     "notes": {{ dataset.notes | jsonify }}{% endif %}{% if dataset.category != "" %},
-    "category": {{ dataset.category | jsonify }}{% endif %},
+    "category": {{ category | jsonify }}{% endif %},
     "url": "{{ site.baseurl }}{{ dataset.url }}"
   }{% unless forloop.last %},{% endunless %}{% endfor %}
 ]
