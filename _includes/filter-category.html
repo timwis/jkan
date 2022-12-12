@@ -1,26 +1,17 @@
 {% assign sizes = '' | split: "" %}
-{% for targetcategory in include.categories %}
+{% for cat in include.cats %}
   {% assign total = 0 %}
   {% for ds in site.datasets %}
-    {% if ds.category.first %}
-      {% if ds.category contains targetcategory %}
-        {% assign total = total | plus: 1 %}
-      {% endif %}
-    {% elsif ds.category == targetcategory %}
+    {% if ds.category contains cat %}
       {% assign total = total | plus: 1 %}
     {% endif %}
   {% endfor %}
   {% assign sizes = sizes | push: total %}
 {% endfor %}
-{% assign sorted_sizes = sizes | sort | reverse | uniq %}
-{% for s in sorted_sizes %}
-  {% for category in include.categories %}
-    {% assign c = sizes[forloop.index0] %}
-    {% if c == s %}
-      <span class="list-group-item">
-        <span class="list-group-item-truncate">{{ category }}</span>
-        <span class="badge">{{ s }}</span>
-      </span>
-    {% endif %}
-  {% endfor %}
+{% for si in sizes %}
+  <span class="list-group-item">
+    <span class="list-group-item-truncate">{{ include.cats[forloop.index0] }}</span>
+    <span class="badge">{{ si }}</span>
+  </span>
 {% endfor %}
+
