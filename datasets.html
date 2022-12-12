@@ -20,6 +20,7 @@ permalink: /datasets/
           {% assign categories = categories | push: ds.category %}
         {% endif %}
       {% endfor %}
+      {% assign categories = categories | uniq %}
       {% include filter-category.html cats=categories %}
 
       <div class="js-hidden">
