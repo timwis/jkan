@@ -35,9 +35,7 @@ permalink: /datasets/
 
     <h3>Organizations</h3>
     <div class="list-group" data-component="organizations-filter" data-show="15">
-      {% assign first_set = site.organizations | slice: 0, 15 %}
-      {% assign other_orgs = site.organizations | slice: 15 %}
-      {% include filter-organization.html organizations=first_set %}
+      {% include filter-organization.html organizations=site.organizations %}
 
       <div class="js-hidden">
         {% include filter-organization.html organizations=other_orgs %}
