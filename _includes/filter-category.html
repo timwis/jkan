@@ -1,17 +1,7 @@
-{% assign sizes = '' | split: "" %}
-{% for cat in include.cats %}
-  {% assign total = 0 %}
-  {% for ds in site.datasets %}
-    {% if ds.category contains cat %}
-      {% assign total = total | plus: 1 %}
-    {% endif %}
-  {% endfor %}
-  {% assign sizes = sizes | push: total %}
-{% endfor %}
-{% for si in sizes %}
-  <span class="list-group-item">
-    <span class="list-group-item-truncate">{{ include.cats[forloop.index0] }}</span>
-    <span class="badge">{{ si }}</span>
-  </span>
+{% for cat in site.categories %}
+<a href="{{ site.baseurl }}{{ cat.url }}" class="list-group-item">
+  <span class="list-group-item-truncate">{{ cat.title }}</span>
+  <span class="badge badge-primary badge-pill">{{ cat.datasetcount }}</span>
+</a>
 {% endfor %}
 

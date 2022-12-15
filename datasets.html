@@ -11,40 +11,14 @@ permalink: /datasets/
 
     <h3>Categories</h3>
     <div class="list-group" data-component="categories-filter" data-show="5">
-
-      {% assign categories = '' | split: "" %}
-      {% for ds in site.datasets %}
-        {% if ds.category.first %}
-          {% assign categories = categories | concat: ds.category | uniq %}
-        {% else %}
-          {% assign categories = categories | push: ds.category %}
-        {% endif %}
-      {% endfor %}
-      {% assign categories = categories | uniq %}
-      {% include filter-category.html cats=categories %}
-
-      <div class="js-hidden">
-        {% include filter-category.html categories=other_categories %}
-      </div>
-      {% if other_categories.size > 0 %}
-      <div class="js-shown">
-        <a href="#" class="list-group-item">Show {{ other_categories.size }} more...</a>
-      </div>
-      {% endif %}
+      {% include filter-category.html %}
+      
     </div>
 
     <h3>Organizations</h3>
     <div class="list-group" data-component="organizations-filter" data-show="15">
       {% include filter-organization.html organizations=site.organizations %}
 
-      <div class="js-hidden">
-        {% include filter-organization.html organizations=other_orgs %}
-      </div>
-      {% if other_orgs.size > 0 %}
-      <div class="js-shown">
-        <a href="#" class="list-group-item">Show {{ other_orgs.size }} more...</a>
-      </div>
-      {% endif %}
     </div>
   </div>
   <div class="col-sm-8" data-component="datasets-list">

@@ -8,8 +8,8 @@ logo: /img/jkan.png
 jkan_theme: Default
 
 # Authentication
-github_client_id: 
-gatekeeper_host: 
+github_client_id:
+gatekeeper_host:
 
 # Dataset schema
 schema: default
@@ -20,6 +20,8 @@ navigation:
     url: /datasets/
   - title: Organizations
     url: /organizations/
+  - title: Categories
+    url: /categories/
 
 # Collections
 collections:
@@ -29,9 +31,17 @@ collections:
   organizations:
     output: true
     permalink: /organizations/:path/
+  categories:
+    output: true
+    permalink: /categories/:path/
 
 # Collections (cont'd)
 defaults:
+  - scope:
+      path: ""
+      type: categories
+    values:
+      layout: category
   - scope:
       path: ""
       type: datasets
