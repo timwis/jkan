@@ -38,7 +38,7 @@ layout: default
         <div data-component="datasets-list" data-category="{{ page.title | slugify }}">
           <h3 class="datasets-count" data-hook="datasets-count">{{ datasets_count }}
             {% if datasets_count == 1 %}dataset{% else %}datasets{% endif %}</h3>
-          <input type="text" data-hook="search-query" placeholder="Search..." class="form-control mb-3">
+          <!-- <input type="text" data-hook="search-query" placeholder="Search..." class="form-control mb-3"> -->
           <div data-hook="datasets-items">
             {% for dataset in datasets %}
              <dataset>
