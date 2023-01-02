@@ -9,8 +9,10 @@
     {% assign c = sizes[forloop.index0] %}
     {% if c == s %}
       <span class="list-group-item">
-        <span class="list-group-item-truncate">{{ category }}</span>
-        <span class="badge">{{ s }}</span>
+        <li class="d-flex justify-content-between align-items-center">
+          {{ category }}
+          <span class="badge badge-primary badge-pill">{{ s }}</span>
+        </li>
       </span>
     {% endif %}
   {% endfor %}

@@ -3,15 +3,15 @@ layout: default
 ---
 
 <div class="jumbotron">
-  <h1>{{ site.greeting }}</h1>
-  <p>
-    {{ site.description }}
+  <h1 class="display-4">{{ site.greeting }}</h1>
+  <p class="lead">
+      {{ site.description }}
   </p>
-  <p><a class="btn btn-primary btn-lg" href="{{ site.baseurl }}/datasets" role="button">Start browsing</a></p>
+<hr class="my-4">
+ <p><a class="btn btn-primary btn-lg" href="{{ site.baseurl }}/datasets" role="button">Start browsing</a></p>
 </div>
 
 <h3>Browse by Category</h3>
-
 <div class="homepage-categories">
 {% for category in site.data.categories %}
   {% if category.featured == true %}
