@@ -16,7 +16,7 @@ layout: default
       {% endif %}
         <h1>
           {{ page.title }}
-          <a href="{{ "/manage" | relative_url }}#/collections/organization/entries/{{ page.slug }}" class="float-right btn btn-outline-secondary">Edit</a>
+          <a href="{{ "/editor" | relative_url }}#/collections/organization/entries/{{ page.slug }}" class="float-right btn btn-outline-secondary">Edit</a>
         </h1>
         <p>{{ page.description }}</p>
         <div data-component="datasets-list" data-organization="{{ page.title | slugify }}">
