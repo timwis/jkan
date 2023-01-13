@@ -21,22 +21,8 @@ dataset {
   font-size: 90%;
 }
 
-.select2 {
-  margin-bottom: 10px;
-}
-
 .datasets-count {
   display: inline-block;
-}
-
-.add-dataset-btn {
-  margin-top: 15px;
-}
-
-/* Hidden from guests */
-.user-issue,
-.admin-only {
-  display: none;
 }
 
 .resource-details,
@@ -48,22 +34,12 @@ dataset {
   font-size: 80%;
 }
 
-.user-issue {
-  color: red;
-}
-
-[data-component~=view-switcher] [data-hook~=view] {
-  display: none;
-}
-
-.homepage-categories,
-.theme-gallery {
+.homepage-categories {
   text-align: justify;
 }
 
 /* allows last line of categories to be justify aligned */
-.homepage-categories:after,
-.theme-gallery:after {
+.homepage-categories:after {
   display: inline-block;
   width: 100%;
   content: '';
@@ -84,20 +60,6 @@ dataset {
 
 .homepage-categories a {
   color: #000;
-}
-
-.theme-gallery .card {
-  display: inline-block;
-  max-width: 250px;
-  text-align: center;
-}
-
-.theme-gallery .card img {
-  width: 100%;
-}
-
-.theme-gallery .card-primary {
-  border-width: 5px;
 }
 
 .view-code-link {

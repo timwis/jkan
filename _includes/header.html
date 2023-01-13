@@ -15,20 +15,6 @@
           {% endif %}
         {% endfor %}
       </ul>
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item"><a class="nav-link" href="#" data-hook="login-link">Login</a></li>
-        <li class="nav-item dropdown d-none" data-hook="user-dropdown">
-          <a href="#" class="nav-link dropdown-toggle" data-hook="user-dropdown-link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-            <span class="user-issue" data-hook="user-issue"><i class="fa fa-exclamation-circle"></i></span>
-            <span data-hook="user-name">User</span>
-            <span class="caret"></span>
-          </a>
-          </ul>
-      <div class = "dropdown-menu">
-            <a class="dropdown-item admin-only" data-hook="admin-link-list-item"" href="{{ site.baseurl }}/admin/">Administration</a>
-            <a class="dropdown-item" href="#" data-hook="logout-link">Logout</a>
-      </div>
-
     </div>
 
   </div>
