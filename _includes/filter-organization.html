@@ -1,19 +1,8 @@
-{% assign sizes = '' | split: "" %}
 {% for org in include.organizations %}
-  {% assign c = site.datasets | where:"organization", org.title | size %}
-  {% assign sizes = sizes | push: c %}
-{% endfor %}
-{% assign sorted_sizes = sizes | sort | reverse | uniq %}
-{% for s in sorted_sizes %}
-  {% for org in include.organizations %}
-    {% assign c = sizes[forloop.index0] %}
-    {% if c == s %}
-      <a href="{{ site.baseurl }}{{ org.url }}" class="list-group-item">
-        <li class="d-flex justify-content-between align-items-center">
-          {{ org.title }}
-          <span class="badge badge-primary badge-pill">{{ s }}</span>
-        </li>
-      </a>
-    {% endif %}
-  {% endfor %}
+<a href="{{ site.baseurl }}{{ org.url }}" class="list-group-item">
+  <li class="d-flex justify-content-between align-items-center">
+    {{ org.name }}
+    <span class="badge badge-primary badge-pill">{{ org.size }}</span>
+  </li>
+</a>
 {% endfor %}
