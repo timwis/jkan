@@ -44,7 +44,7 @@
 
   <script>
   var settings = {
-    BASE_URL: {{ site.baseurl | jsonify }},
+    BASE_URL: {{ site.baseurl | jsonify }} || "",
     PAGE_URL: {{ page.url | jsonify }},
     REPO_BRANCH: {% if site.github.is_user_page %}"master"{% else %}"gh-pages"{% endif %},
     REPO_OWNER: {{ site.github.owner_name | jsonify }},
