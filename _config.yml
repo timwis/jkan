@@ -85,3 +85,4 @@ exclude:
   - webpack.config.js
   - README.md
   - LICENSE
+  - netlify
