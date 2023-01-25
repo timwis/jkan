@@ -1,6 +1,7 @@
 [build]
   command = "jekyll build --config _config.yml,_config_override.yml"
   publish = "_site"
+  environment = { JEKYLL_ENV = "production" }
 
 [[plugins]]
   package = "/netlify/plugins/netlify-jekyll-metadata"

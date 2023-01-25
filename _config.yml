@@ -86,3 +86,4 @@ exclude:
   - README.md
   - LICENSE
   - netlify
+  - netlify.toml
