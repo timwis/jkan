@@ -7,7 +7,7 @@ export const onPreBuild = async function () {
   const repoNameWithOwner = repoUrl.pathname.replace(/^\/+/, '')
   const branch = process.env.BRANCH
   
-  const fileName = '_config_override.yml'
   const fileContents = `repository: ${repoNameWithOwner}\nurl: ${siteUrl}\nbranch: ${branch}\nbaseurl: ""`
+  const fileName = '_config.ci.yml'
   return fs.promises.writeFile(fileName, fileContents)
 }
