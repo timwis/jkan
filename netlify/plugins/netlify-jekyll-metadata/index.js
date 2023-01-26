@@ -1,5 +1,4 @@
 import fs from 'node:fs'
-import url from 'node:url'
 
 export const onPreBuild = async function () {
   const siteUrl = process.env.URL
@@ -7,7 +6,12 @@ export const onPreBuild = async function () {
   const repoNameWithOwner = repoUrl.pathname.replace(/^\/+/, '')
   const branch = process.env.BRANCH
   
-  const fileContents = `repository: ${repoNameWithOwner}\nurl: ${siteUrl}\nbranch: ${branch}\nbaseurl: ""`
+  const fileContents = `
+repository: ${repoNameWithOwner}
+url: ${siteUrl}
+branch: ${branch}
+baseurl: ""
+`
   const fileName = '_config.ci.yml'
-  return fs.promises.writeFile(fileName, fileContents)
+  return fs.promises.writeFile(fileName, fileContents.trim())
 }
