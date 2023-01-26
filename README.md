@@ -17,7 +17,7 @@ Before you start, make sure you have a [GitHub][github-signup] account and a [Ne
 
 1. Create your own copy of JKAN by clicking [fork][jkan-fork]
 2. [Create a new site][netlify-new-site] on Netlify. Click the **GitHub** button, then select your JKAN copy from the list.
-3. Netlify will pre-fill the basic site settings for you, but make sure the **Build command** is set to `jekyll build` then click **Deploy site.**
+3. Netlify will pre-fill the basic site settings for you. Click **Deploy site.**
 
 Netlify will then deploy your site, and generate a random URL for it, e.g. `https://genuine-tapioca-7d69fa.netlify.app`. You can change the URL or add a custom domain in the Netlify settings.
 
