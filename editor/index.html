@@ -21,7 +21,7 @@
       config: {
         backend: {
           repo: {{ site.github.repository_nwo | jsonify }},
-          branch: {{ site.github.source.branch | jsonify }}
+          branch: {{ site.branch | default: site.github.source.branch | jsonify }}
         },
         local_backend: {% if jekyll.environment == "production" %}false{% else %}true{% endif %},
         site_url: {{ "" | absolute_url | jsonify }}
