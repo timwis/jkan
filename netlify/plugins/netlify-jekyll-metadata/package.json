@@ -1,0 +1,6 @@
+{
+  "name": "netlify-jekyll-metadata",
+  "description": "Netlify Build Plugin to populate a Jekyll site with the metadata normally provided by the github-metadata gem",
+  "type": "module",
+  "exports": "./index.js"
+}

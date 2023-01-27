@@ -6,17 +6,38 @@ basic purpose of providing links to download data really isn't that complicated.
 that allows a small, resource-strapped government agency to stand-up an open data portal by simply
 [clicking the fork button](https://help.github.com/articles/fork-a-repo/).
 
-Please note this is still a work in progress! Check out the [issues](https://github.com/timwis/jkan/issues) to help
-out or give feedback.
-
 [Demo site](https://demo.jkan.io)
 
 ## Installation Options
+We recommend running JKAN on Netlify, but you can also run it on GitHub Pages,
+Vercel, or any other static website host.
 
-1. See [Get Started](https://jkan.io/#get-started) on [jkan.io](https://jkan.io) for an installation wizard,
-2. follow the [manual installation](https://github.com/timwis/jkan/wiki/Manual-Installation) instructions yourself.
-3. Do a manual fork and do not install gatekeeper at all (login bits won't work, but Heroku is no longer free)
+### Running on Netlify
+Before you start, make sure you have a [GitHub][github-signup] account and a [Netlify][netlify-signup] account. JKAN runs fine on the free tier of both.
 
+1. Create your own copy of JKAN by clicking [fork][jkan-fork]
+2. [Create a new site][netlify-new-site] on Netlify. Click the **GitHub** button, then select your JKAN copy from the list.
+3. Netlify will pre-fill the basic site settings for you. Click **Deploy site.**
+
+Netlify will then deploy your site, and generate a random URL for it, e.g. `https://genuine-tapioca-7d69fa.netlify.app`. You can change the URL or add a custom domain in the Netlify settings.
+
+If you're happy to build your JKAN site by editing YAML files directly, you're finished! If you'd like to use JKAN's Editing UI, you'll need a couple more steps. In order to let your site's users sign in with their GitHub account, you'll need to register an OAuth application with GitHub, and then give Netlify those application credentials.
+
+4. In a new browser tab, [register an OAuth application][github-new-oauth] on GitHub
+
+> - Application name: Whatever your site will be called (e.g. JKAN)
+> - Homepage URL: The URL of your site, e.g. `https://genuine-tapioca-7d69fa.netlify.app` or your custom domain
+> - Application description: Whatever you like - users will see this when they sign in to your JKAN site
+> - Authorization callback URL: `https://api.netlify.com/auth/done` (Note: it won't work if this one is wrong)
+
+5. On the next page, take note of the **Client ID**, as you'll need that in a moment.
+6. Under the **Client secrets** header, click **Generate a new client secret**. You'll need this in a moment as well, but be careful where you copy and paste it because it should be _treated like a password_.
+7. Back in your Netlify browser tab, go to your **Site settings**, then select **Access control**, then **OAuth**.
+8. Click **Install provider**, select `GitHub` as the Provider, and copy your **Client ID** and **Client Secret** from your GitHub browser tab, then click Install.
+
+You should now be able to sign in to your JKAN site's Editor UI by going to `/editor`, e.g. `https://genuine-tapioca-7d69fa.netlify.app/editor` and signing in with your GitHub account.
+
+## Configuration
 For configuration details, see the [wiki](https://github.com/timwis/jkan/wiki)
 
 ## Development
@@ -42,3 +63,9 @@ jkan-jekyll-1  |   Server running... press ctrl-c to stop.
 Then connect to http://0.0.0.0:4000/jkan/ via a web browser.
 
 Read more about the [Architecture](https://github.com/timwis/jkan/wiki/Architecture) on the Wiki.
+
+[github-signup]: https://github.com/signup
+[netlify-signup]: https://app.netlify.com/signup
+[netlify-new-site]: https://app.netlify.com/start
+[jkan-fork]: https://github.com/timwis/jkan/fork
+[github-new-oauth]: https://github.com/settings/applications/new
