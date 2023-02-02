@@ -2,22 +2,9 @@
 layout: default
 ---
 {% include breadcrumbs.html parent="categories" %}
-{% assign datasets = '' | split: "" %}
-{% for ds in site.datasets %}
-    {% if ds.category.first %}
-      {% if ds.category contains page.name %}
-        {% assign datasets = datasets | push: ds %}
-        {% continue %}
-      {% endif %}
-    {% else %}
-      {% assign cat = ds.category %}
-      {% if cat == page.name %}
-        {% assign datasets = datasets | push: ds %}
-      {% endif %}
-    {% endif %}
-{% endfor %}
-
+{% assign datasets = site.datasets | where: "category", page.name %}
 {% assign datasets_count = datasets | size %}
+
 <div class="container">
 <div data-component="view-switcher">
   <div data-hook="view" data-view="display" style="display:block">
