@@ -12,7 +12,7 @@ permalink: /categories/
     <div class="mr-3">
       {% if category.logo and category.logo != empty %}
         <a href="{{ site.baseurl }}{{ category.url }}" class="category-thumbnail">
-          <img class="media-object" src="{{ category.logo }}" alt="{{ category.title }}">
+          <img class="media-object" src="{{ category.logo | relative_url }}" alt="{{ category.title }}">
         </a>
       {% endif %}
     </div>
