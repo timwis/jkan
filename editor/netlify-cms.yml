@@ -113,6 +113,35 @@ collections:
         allow_multiple: false
         media_folder: /img/organizations
 
+  - name: categories
+    label: Categories
+    folder: _categories
+    description: Dataset categories
+    create: true
+    preview_path: "categories/{{slug}}"
+    identifier_field: name
+    fields:
+      - label: Name
+        name: name
+        widget: string
+
+      - label: Logo
+        name: logo
+        required: false
+        widget: image
+        allow_multiple: false
+        media_folder: /img/categories
+
+      - label: Logo Credit
+        name: logo_credit
+        required: false
+        widget: string
+
+      - label: Featured on Homepage
+        name: featured
+        widget: boolean
+        required: false
+
   - name: settings
     label: Settings
     delete: false
@@ -158,33 +187,3 @@ collections:
                 name: url
                 required: false
                 widget: string
-
-      - name: categories
-        label: Categories
-        file: _data/categories.yml
-        description: Dataset categories
-        fields:
-          - name: items
-            label: Categories
-            label_singular: Category
-            widget: list
-            fields:
-              - label: Name
-                name: name
-                widget: string
-
-              - label: Logo
-                name: logo
-                required: false
-                widget: image
-                allow_multiple: false
-                media_folder: /img/categories
-
-              - label: Logo Credit
-                name: logo_credit
-                required: false
-                widget: string
-
-              - label: Featured on Homepage
-                name: featured
-                widget: boolean
