@@ -13,7 +13,7 @@ layout: default
 
 <h3>Browse by Category</h3>
 <div class="homepage-categories">
-{% for category in site.categories %}
+{% for category in site.dataset_categories %}
   {% if category.featured == true %}
     {% capture logo_alt %}{{ category.name }}{% if category.logo_credit and category.logo_credit != empty %} logo by {{ category.logo_credit }}{% endif %}{% endcapture %}
     <a href="{{ site.baseurl }}/categories/{{ category.name | slugify }}" class="thumbnail" title="{{ logo_alt }}">

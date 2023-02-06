@@ -30,7 +30,7 @@ collections:
   organizations:
     output: true
     permalink: /organizations/:path/
-  categories:
+  dataset_categories:
     output: true
     permalink: /categories/:path/
 
@@ -38,7 +38,7 @@ collections:
 defaults:
   - scope:
       path: ""
-      type: categories
+      type: dataset_categories
     values:
       layout: category
   - scope:

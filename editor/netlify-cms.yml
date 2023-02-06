@@ -7,8 +7,9 @@ backend:
 media_folder: "img/uploads"
 
 collections:
-  - name: dataset
-    label: Dataset
+  - name: datasets
+    label: Datasets
+    label_singular: Dataset
     folder: _datasets
     create: true
     summary: "{{title}} ({{organization}})"
@@ -25,7 +26,7 @@ collections:
         name: organization
         required: false
         widget: relation
-        collection: organization
+        collection: organizations
         value_field: "title"
         search_fields:
           - title
@@ -75,11 +76,11 @@ collections:
         name: category
         required: false
         widget: relation
+        collection: categories
         multiple: true
-        collection: settings
-        file: categories
-        value_field: "items.*.name"
-        search_fields: ["items.*.name"]
+        value_field: "name"
+        search_fields:
+          - name
 
       - label: Maintainer
         name: maintainer
@@ -91,8 +92,9 @@ collections:
         required: false
         widget: string
 
-  - name: organization
-    label: Organization
+  - name: organizations
+    label: Organizations
+    label_singular: Organization
     folder: _organizations
     create: true
     preview_path: "organizations/{{slug}}"
@@ -115,7 +117,8 @@ collections:
 
   - name: categories
     label: Categories
-    folder: _categories
+    label_singular: Category
+    folder: _dataset_categories
     description: Dataset categories
     create: true
     preview_path: "categories/{{slug}}"
