@@ -1,4 +1,5 @@
-.organization-thumbnail img {
+.organization-thumbnail img,
+.category-thumbnail img {
   width: 64px;
 }
 

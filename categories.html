@@ -1,0 +1,26 @@
+---
+title: Categories
+layout: default
+permalink: /categories/
+---
+{% include breadcrumbs.html %}
+
+<a href="{{ site.baseurl }}/add-category/" class="btn btn-outline-secondary float-right admin-only" data-hook="add-category-btn"><i class="fa fa-plus"></i> Add category</a>
+
+{% for category in site.dataset_categories %}
+  {% assign dataset_count = site.datasets | where:"category", category.name | size %}
+  <div class="media">
+    <div class="mr-3">
+      {% if category.logo and category.logo != empty %}
+        <a href="{{ site.baseurl }}{{ category.url }}" class="category-thumbnail">
+          <img class="media-object" src="{{ category.logo | relative_url }}" alt="{{ category.title }}">
+        </a>
+      {% endif %}
+    </div>
+    <div class="media-body">
+      <h4 class="media-heading"><a href="{{ site.baseurl }}{{ category.url }}">{{ category.title }}</a></h4>
+      <p style="text-align: justify;">{{ category.description }}</p>
+      <p><a href="{{ site.baseurl }}/categories/{{ category.title | slugify }}"><span class="badge badge-primary badge-pill">{{ dataset_count }}</span> datasets</a></p>
+    </div>
+  </div>
+{% endfor %}
