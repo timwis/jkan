@@ -6,6 +6,10 @@ input[data-hook=search-query] {
   display: block;
 }
 
+.js .js-hidden { display: none; }
+.js-shown { display: none; }
+.js .js-shown { display: block; }
+
 .organization-thumbnail img,
 .category-thumbnail img {
   width: 64px;
