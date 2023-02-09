@@ -5,3 +5,4 @@ _config.dev.yml
 node_modules
 *.map
 _config.ci.yml
+.parcel-cache

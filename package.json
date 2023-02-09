@@ -2,11 +2,10 @@
   "name": "es6-boilerplate",
   "version": "1.0.0",
   "description": "Front-end project boilerplate with es6 build tools. Includes babel, webpack, and npm scripts.",
-  "main": "scripts/src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "watch": "webpack --mode=development --watch",
-    "build": "webpack"
+    "watch": "parcel watch scripts/src/index.js --dist-dir _site/scripts/dist",
+    "build": "parcel build scripts/src/index.js --dist-dir scripts/dist"
   },
   "repository": {
     "type": "git",
@@ -19,14 +18,7 @@
   },
   "homepage": "https://github.com/timwis/es6-boilerplate#readme",
   "devDependencies": {
-    "@babel/core": "^7.5.0",
-    "@babel/preset-env": "^7.5.0",
-    "@babel/preset-react": "^7.0.0",
-    "babel-loader": "^8.0.6",
-    "babel-polyfill": "^6.7.4",
-    "webpack": "^5.74.0",
-    "webpack-cli": "^4.10.0",
-    "webpack-dev-server": "^4.11.1"
+    "parcel": "^2.8.3"
   },
   "dependencies": {
     "bootstrap": "^4.3.1",
