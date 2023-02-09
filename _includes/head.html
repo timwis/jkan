@@ -43,6 +43,8 @@
   {% endif %}
 
   <script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/, 'js');
+
   var settings = {
     BASE_URL: {{ site.baseurl | jsonify }} || "",
     PAGE_URL: {{ page.url | jsonify }},
