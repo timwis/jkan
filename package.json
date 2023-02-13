@@ -1,22 +1,16 @@
 {
-  "name": "es6-boilerplate",
-  "version": "1.0.0",
-  "description": "Front-end project boilerplate with es6 build tools. Includes babel, webpack, and npm scripts.",
+  "name": "jkan",
+  "description": "A lightweight, backend-free open data portal, powered by Jekyll",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "watch": "parcel watch scripts/src/index.js --dist-dir _site/scripts/dist",
     "build": "parcel build scripts/src/index.js --dist-dir scripts/dist"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/timwis/es6-boilerplate.git"
-  },
-  "author": "timwis <tim@timwis.com>",
   "license": "MIT",
+  "private": true,
   "bugs": {
-    "url": "https://github.com/timwis/es6-boilerplate/issues"
+    "url": "https://github.com/timwis/jkan/issues"
   },
-  "homepage": "https://github.com/timwis/es6-boilerplate#readme",
+  "homepage": "https://github.com/timwis/jkan",
   "devDependencies": {
     "parcel": "^2.8.3"
   },
