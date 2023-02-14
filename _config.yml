@@ -97,3 +97,4 @@ exclude:
   - LICENSE
   - netlify
   - netlify.toml
+  - .parcel-cache

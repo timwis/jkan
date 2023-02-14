@@ -11,6 +11,13 @@ import {queryByComponent} from './util'
 
 const params = $.deparam(window.location.search.substr(1))
 
+// Helper function to ensure datasets.json is only fetched once per page
+let datasetsCache
+function getDatasets () {
+  datasetsCache = datasetsCache || $.getJSON(`${settings.BASE_URL}/datasets.json`)
+  return datasetsCache
+}
+
 // Check for these components on the page and initialize them
 const components = [
   {tag: 'dataset-display', class: DatasetDisplay},
@@ -31,11 +38,4 @@ for (let component of components) {
       els.each((index, el) => new component.class({el: $(el), params})) // eslint-disable-line
     }
   }
-}
-
-// Helper function to ensure datasets.json is only fetched once per page
-let datasetsCache
-function getDatasets () {
-  datasetsCache = datasetsCache || $.getJSON(`${settings.BASE_URL}/datasets.json`)
-  return datasetsCache
 }
