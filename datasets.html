@@ -4,19 +4,49 @@ layout: default
 permalink: /datasets/
 ---
 {% include breadcrumbs.html %}
+{% assign datasets_count = site.datasets | size %}
 
 <div class="row">
   <div class="col-sm-4">
-
     <h3>Categories</h3>
-    <div class="list-group" data-component="categories-filter" data-show="5"></div>
+    <div class="list-group js-shown" data-component="categories-filter" data-show="5"></div>
+    <div class="list-group js-hidden">
+      {% for category in site.dataset_categories %}
+      {% assign count = site.datasets | where: "category", category.name | size %}
+      <a href="{{ site.baseurl }}{{ category.url }}" class="list-group-item">
+        <li class="d-flex justify-content-between align-items-center">
+          {{ category.name }}
+          <span class="badge badge-primary badge-pill">{{ count }}</span>
+        </li>
+      </a>
+      {% endfor %}
+    </div>
 
     <h3>Organizations</h3>
-    <div class="list-group" data-component="organizations-filter" data-show="15"></div>
+    <div class="list-group js-shown" data-component="organizations-filter" data-show="15"></div>
+    <div class="list-group js-hidden">
+      {% for organization in site.organizations %}
+      {% assign count = site.datasets | where: "organization", organization.title | size %}
+      <a href="{{ site.baseurl}}{{ organization.url }}" class="list-group-item">
+        <li class="d-flex justify-content-between align-items-center">
+          {{ organization.title }}
+          <span class="badge badge-primary badge-pill">{{ count }}</span>
+        </li>
+      </a>
+      {% endfor %}
+    </div>
   </div>
   <div class="col-sm-8" data-component="datasets-list">
-    <h3 class="datasets-count" data-hook="datasets-count"></h3>
+    <h3 class="datasets-count" data-hook="datasets-count">{{ datasets_count }}
+      {% if datasets_count == 1 %}dataset{% else %}datasets{% endif %}</h3>
     <input type="text" data-hook="search-query" placeholder="Search..." class="form-control mb-3">
-    <div data-hook="datasets-items"></div>
+    <div data-hook="datasets-items">
+      {% for dataset in site.datasets %}
+      <dataset>
+        <h3><a href="{{ site.baseurl }}{{ dataset.url }}">{{ dataset.title }}</a></h3>
+        {{ dataset.notes }}
+      </dataset>
+      {% endfor %}
+    </div>
   </div>
 </div>
