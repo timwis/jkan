@@ -25,7 +25,7 @@ export default class {
 
     // Filter datasets and render in items container
     const paramFilters = pick(opts.params, ['organization', 'category'])
-    const attributeFilters = pick(opts.el.data(), ['organization', 'category'])
+    const attributeFilters = pick(opts.el.dataset, ['organization', 'category'])
     const filters = createDatasetFilters(defaults(paramFilters, attributeFilters))
     const filteredDatasets = filter(opts.datasets, filters)
     const datasetsMarkup = filteredDatasets.map(TmplDatasetItem)
@@ -38,7 +38,7 @@ export default class {
 
     // Search datasets listener
     const searchFunction = this._createSearchFunction(filteredDatasets)
-    elements.searchQuery.on('keyup', (e) => {
+    elements.searchQuery.forEach((el) => el.addEventListener('keyup', (e) => {
       const query = e.currentTarget.value
 
       // Datasets
@@ -49,7 +49,7 @@ export default class {
       // Dataset count
       const resultsCountMarkup = results.length + ' datasets'
       setContent(elements.datasetsCount, resultsCountMarkup)
-    })
+    }))
   }
 
   // Returns a function that can be used to search an array of datasets

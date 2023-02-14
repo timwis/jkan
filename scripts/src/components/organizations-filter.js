@@ -1,8 +1,7 @@
-import $ from 'jquery'
 import {chain, pick, omit, filter, defaults} from 'lodash'
 
 import TmplListGroupItem from '../templates/list-group-item'
-import {setContent, slugify, createDatasetFilters, collapseListGroup} from '../util'
+import {setContent, slugify, createDatasetFilters, collapseListGroup, param} from '../util'
 
 export default class {
   constructor (opts) {
@@ -23,7 +22,7 @@ export default class {
         const itemParams = selected ? omit(params, 'organization') : defaults({organization: orgSlug}, params)
         return {
           title: organization,
-          url: '?' + $.param(itemParams),
+          url: '?' + param(itemParams),
           count: filteredDatasets.length,
           unfilteredCount: datasetsInOrg.length,
           selected: selected
