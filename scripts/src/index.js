@@ -1,6 +1,6 @@
 /* global settings */
 import deparam from 'jquery-deparam'
-import 'bootstrap/js/dist/collapse'
+import 'bootstrap.native/dist/bootstrap-native-v4'
 
 import DatasetsList from './components/datasets-list'
 import CategoriesFilter from './components/categories-filter'
