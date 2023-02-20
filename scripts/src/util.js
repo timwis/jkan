@@ -1,15 +1,17 @@
-import $ from 'jquery'
-
 export function queryByHook (hook, container) {
-  return $(`[data-hook~=${hook}]`, container)
+  const context = container || document
+  return Array.from(context.querySelectorAll(`[data-hook~=${hook}]`))
 }
 
 export function queryByComponent (component, container) {
-  return $(`[data-component~=${component}]`, container)
+  const context = container || document
+  return Array.from(context.querySelectorAll(`[data-component~=${component}]`))
 }
 
 export function setContent (container, content) {
-  return container.empty().append(content)
+  const containerList = ensureArray(container)
+  const contentString = Array.isArray(content) ? content.join('\n') : content
+  containerList.forEach((container) => container.innerHTML = contentString)
 }
 
 // Meant to mimic Jekyll's slugify function
@@ -37,20 +39,52 @@ export function createDatasetFilters (filters) {
 
 // Collapses a bootstrap list-group to only show a few items by default
 // Number of items to show can be specified in [data-show] attribute or passed as param
-export function collapseListGroup (container, show) {
-  if (!show) show = container.data('show') || 5
+export function collapseListGroup (container, numToShow) {
+  if (!numToShow) numToShow = +container.dataset.show || 5
 
-  const itemsToHide = $('.list-group-item:gt(' + (show - 1) + '):not(.active)', container)
+  const hideFromIndex = numToShow + 1
+  const itemsToHideQuery = `.list-group-item:nth-of-type(n+${hideFromIndex}):not(.active)`
+  const itemsToHide = Array.from(container.querySelectorAll(itemsToHideQuery))
+
   if (itemsToHide.length) {
-    itemsToHide.hide()
+    hide(itemsToHide)
 
-    const showMoreButton = $('<a href="#" class="list-group-item">Show ' + itemsToHide.length + ' more...</a>')
-    showMoreButton.on('click', function (e) {
-      itemsToHide.show()
-      $(this).off('click')
-      $(this).remove()
-      e.preventDefault()
-    })
-    container.append(showMoreButton)
+    const showMoreButton = createShowMoreButton(itemsToHide)
+    container.appendChild(showMoreButton)
   }
+}
+
+export function param (obj) {
+  const params = new URLSearchParams(obj)
+  return params.toString()
+}
+
+export function hide (els) {
+  ensureArray(els).forEach((el) => el.classList.add('hidden'))
+}
+
+export function show (els) {
+  ensureArray(els).forEach((el) => el.classList.remove('hidden'))
+}
+
+export function toggleVisibility (els) {
+  ensureArray(els).forEach((el) => el.classList.toggle('hidden'))
+}
+
+function ensureArray (item) {
+  return Array.isArray(item) ? item : [item]
+}
+
+function createShowMoreButton (hiddenItems) {
+  const el = document.createElement('a')
+  el.classList.add('list-group-item')
+  el.setAttribute('href', '#')
+  el.textContent = `Show ${hiddenItems.length} more...`
+  el.addEventListener('click', function (event) {
+    show(hiddenItems)
+    this.remove()
+    event.preventDefault()
+  }, {once: true})
+
+  return el
 }

@@ -15,8 +15,7 @@
     "parcel": "^2.8.3"
   },
   "dependencies": {
-    "bootstrap": "^4.3.1",
-    "jquery": "^3.4.1",
+    "bootstrap.native": "~4.1.0",
     "jquery-deparam": "^0.5.3",
     "lodash": "^4.17.11"
   }

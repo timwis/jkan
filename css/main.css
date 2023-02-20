@@ -38,11 +38,6 @@ dataset {
   display: inline-block;
 }
 
-.resource-details,
-.show-resource-details {
-  display: none;
-}
-
 .show-resource-details {
   font-size: 80%;
 }
@@ -78,3 +73,5 @@ dataset {
 .view-code-link {
   margin: 1em;
 }
+
+.hidden { display: none; }
