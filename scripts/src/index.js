@@ -1,4 +1,5 @@
 /* global settings */
+import 'core-js/actual'
 import $ from 'jquery'
 import 'jquery-deparam'
 import 'bootstrap/js/dist/collapse'
