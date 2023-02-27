@@ -8,13 +8,9 @@ that allows a small, resource-strapped government agency to stand-up an open dat
 
 [Demo site](https://demo.jkan.io)
 
-## Installation
-See [installation docs](docs/installation.md) or [upgrading](docs/upgrading.md) for moving between versions.
-
-## Configuration
-For configuration details, see the [wiki](https://github.com/timwis/jkan/wiki)
-
-## Development
-See [running locally](docs/running-locally.md) and [architecture](docs/architecture.md)
-
-Read more about the [Architecture](https://github.com/timwis/jkan/wiki/Architecture) on the Wiki.
+## Documentation
+* [Installation](docs/installation.md)
+* [Upgrading](docs/upgrading.md)
+* [Schema customization](docs/schema-customization.md)
+* [Running locally](docs/running-locally.md)
+* [Architecture](docs/architecture.md)
