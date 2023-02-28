@@ -19,9 +19,7 @@ JKAN is a [Jekyll](http://jekyllrb.com/) site that uses JavaScript for enhanced 
 |   ├── addons
 |   └── display
 ├── _layouts
-├── _organizations
-└── editor
-|   └── netlify-cms.yml
+└── _organizations
 ```
 
 | File / Directory | Description |
@@ -36,7 +34,6 @@ JKAN is a [Jekyll](http://jekyllrb.com/) site that uses JavaScript for enhanced 
 | `_includes` | HTML partials that are included in layouts. `display` is used by [schema files](/docs/configuration.md) |
 | `_layouts` | Page templates |
 | `_organizations` | A directory of `.md` files containing organization information in YAML front-matter |
-| `editor/netlify-cms.yml` | Configuration file for Netlify CMS Editor UI |
 
 ## JavaScript
 
@@ -79,7 +76,7 @@ By convention, elements within a component's HTML markup that need to be referen
 
 [Netlify CMS](https://netlifycms.org) (formerly Netlify CMS) is a headless content management system for static sites. JKAN used to have its own built-in editing UI, but now we use Netlify. There are only two files involved in configuring Netlify CMS, and they're both in the `editor` directory:
 ```
-scripts/src
+editor
 ├── index.html
 └── netlify-cms.yml
 ```
