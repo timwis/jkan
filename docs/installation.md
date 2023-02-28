@@ -51,7 +51,7 @@ If you're happy to build your JKAN site by editing YAML files directly, you're f
 8. The other two boxes are not relevant, but they're required to have a value, so enter any value into them, such as what you had for breakfast this morning, then click **Deploy**.
 9. Once your server is deployed, click on the image preview of the site to navigate to it, and make a note of the URL.
 10. Back in the tab with your [GitHub OAuth application][github-oauth-list], edit your app and change the `Authorization callback URL` to your vercel app URL.
-11. In your JKAN repository, edit the file `editor/netlify-cms.yml` to add `base_url: <your vercel app url>` under the `backend` section:
+11. In your JKAN repository, edit the file `editor/decap-cms.yml` to add `base_url: <your vercel app url>` under the `backend` section:
 
 ```yaml
 backend:
@@ -70,7 +70,7 @@ You should now be able to sign in to your JKAN site's Editor UI by going to `/ed
 [jkan-fork]: https://github.com/timwis/jkan/fork
 [github-new-oauth]: https://github.com/settings/applications/new
 [github-oauth-list]: https://github.com/settings/developers
-[oauth-server-list]: https://www.netlifycms.org/docs/external-oauth-clients/
+[oauth-server-list]: https://decapcms.org/docs/external-oauth-clients/
 [oauth-server]: https://github.com/ublabs/netlify-cms-oauth
 [oauth-server-fork]: https://github.com/ublabs/netlify-cms-oauth/fork
 
