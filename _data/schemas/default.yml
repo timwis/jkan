@@ -6,19 +6,15 @@ dataset_fields:
     datajson: title
   - field_name: organization
     label: Organization
-    form_template: form/organization.html
     datajson: publisher.name
   - field_name: notes
     label: Description
-    form_template: form/textarea.html
     datajson: description
   - field_name: license
     label: License
-    form_template: form/license.html
     datajson: license
   - field_name: category
     label: Category
-    form_template: form/category.html
     display_template: display/category.html
     datajson: category
   - field_name: maintainer
@@ -38,7 +34,6 @@ resource_fields:
   - field_name: format
     label: Format
     datajson: distribution.format
-    form_template: form/dropdown.html
     values:
       - api
       - csv
@@ -67,4 +62,3 @@ category_fields:
     label: Logo Credit
   - field_name: featured
     label: Featured on Homepage
-    form_template: form/checkbox.html
