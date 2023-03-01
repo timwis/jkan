@@ -98,3 +98,4 @@ exclude:
   - netlify
   - netlify.toml
   - .parcel-cache
+  - docs
