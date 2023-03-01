@@ -19,7 +19,9 @@ JKAN is a [Jekyll](http://jekyllrb.com/) site that uses JavaScript for enhanced 
 |   ├── addons
 |   └── display
 ├── _layouts
-└── _organizations
+├── _organizations
+├── editor
+└── scripts
 ```
 
 | File / Directory | Description |
@@ -34,6 +36,8 @@ JKAN is a [Jekyll](http://jekyllrb.com/) site that uses JavaScript for enhanced 
 | `_includes` | HTML partials that are included in layouts. `display` is used by [schema files](/docs/configuration.md) |
 | `_layouts` | Page templates |
 | `_organizations` | A directory of `.md` files containing organization information in YAML front-matter |
+| `editor` | Configuration for the Editor UI, described below |
+| `scripts` | JavaScript files, described below |
 
 ## JavaScript
 
