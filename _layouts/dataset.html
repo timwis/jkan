@@ -18,7 +18,7 @@ layout: default
           <div class="card mb-3">
             <div class="card-img-top">
               {% if organization.logo and organization.logo != empty %}
-              <a href="{{ site.baseurl }}/datasets/?organization={{ organization.title | slugify }}"><img src="{{ organization.logo | relative_url }}" alt="{{ organization.title }} logo" class="img-thumbnail rounded mx-auto d-block"></a>
+              <a href="{{ organization_url }}"><img src="{{ organization.logo | relative_url }}" alt="{{ organization.title }} logo" class="img-thumbnail rounded mx-auto d-block"></a>
               {% endif %}
                         </div>
                         <div class="card-header">
@@ -42,7 +42,7 @@ layout: default
       {% endif %}
         <h1>
           <span property="dct:title">{{ page.title }}</span>
-          <a href="{{ "/editor" | relative_url }}#/collections/dataset/entries/{{ page.slug }}" class="pull-right btn btn-outline-secondary" data-hook="edit-dataset-btn">Edit</a>
+          <a href="{{ "/editor" | relative_url }}/#/collections/datasets/entries/{{ page.slug }}" class="pull-right btn btn-outline-secondary" data-hook="edit-dataset-btn">Edit</a>
         </h1>
         <p property="dct:description" style="text-align: justify; overflow-wrap: break-word;">{{ page.notes }}</p>
 
