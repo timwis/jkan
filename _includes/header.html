@@ -9,7 +9,7 @@
       <ul class="navbar-nav">
         {% for link in site.navigation %}
           {% if page.url contains link.url %}
-          <li class="nav-item active"><a class="nav-link" href="{{ site.baseurl }}{{ link.url }}">{{ link.title }} <span class="sr-only">(current)</span></a></li>
+          <li class="nav-item"><a class="nav-link active" href="{{ site.baseurl }}{{ link.url }}" aria-current="page">{{ link.title }}</a></li>
           {% else %}
           <li class="nav-item"><a class="nav-link" href="{{ site.baseurl }}{{ link.url }}">{{ link.title }}</a></li>
           {% endif %}
