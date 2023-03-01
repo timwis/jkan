@@ -5,6 +5,18 @@
     "watch": "parcel watch scripts/src/index.js --dist-dir _site/scripts/dist",
     "build": "parcel build scripts/src/index.js --dist-dir scripts/dist"
   },
+  "targets": {
+    "modern": {
+      "engines": {
+        "browsers": "defaults"
+      }
+    },
+    "legacy": {
+      "engines": {
+        "browsers": "ie 11"
+      }
+    }
+  },
   "license": "MIT",
   "private": true,
   "bugs": {
@@ -12,7 +24,9 @@
   },
   "homepage": "https://github.com/timwis/jkan",
   "devDependencies": {
-    "parcel": "^2.8.3"
+    "core-js": "^3.29.0",
+    "parcel": "^2.8.3",
+    "process": "^0.11.10"
   },
   "dependencies": {
     "bootstrap": "^4.3.1",
