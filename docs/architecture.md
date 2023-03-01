@@ -1,6 +1,6 @@
 # Architecture
 
-JKAN is a [Jekyll](http://jekyllrb.com/) site that uses JavaScript for enhanced functionality. It also uses [Netlify CMS](https://netlifycms.org) to provide an editor UI.
+JKAN is a [Jekyll](http://jekyllrb.com/) site that uses JavaScript for enhanced functionality. It also uses [Decap CMS](https://decapcms.org) to provide an editor UI.
 
 ## Jekyll
 
@@ -72,20 +72,20 @@ By convention, elements within a component's HTML markup that need to be referen
 ```
 `util.js` provides a helper function for querying by hook, `queryByHook`, which takes the hook as its first parameter and, optionally, an element to limit the search within as its second parameter (such as the component's `el`). This helper function also lets an element be of more than one component (ie. `data-component="foo bar"`).
 
-## Netlify CMS
+## Decap CMS
 
-[Netlify CMS](https://netlifycms.org) (formerly Netlify CMS) is a headless content management system for static sites. JKAN used to have its own built-in editing UI, but now we use Netlify. There are only two files involved in configuring Netlify CMS, and they're both in the `editor` directory:
+[Decap CMS](https://decapcms.org) (formerly Decap CMS) is a headless content management system for static sites. JKAN used to have its own built-in editing UI, but now we use Decap. There are only two files involved in configuring Decap CMS, and they're both in the `editor` directory:
 ```
 editor
 ├── index.html
-└── netlify-cms.yml
+└── decap-cms.yml
 ```
 
 | File / Directory | Description |
 |----|----|
-| `index.html` | Single-page Application which primarily just loads Netlify CMS and passes it `netlify-cms.yml`, but it also has a bit of config on it, itself. |
-| `netlify-cms.yml` | Configuration file for Netlify CMS |
+| `index.html` | Single-page Application which primarily just loads Decap CMS and passes it `decap-cms.yml`, but it also has a bit of config on it, itself. |
+| `decap-cms.yml` | Configuration file for Decap CMS |
 
-`index.html` has a bit of config on it - namely just passing variables from Jekyll to Netlify CMS. This is because Jekyll and Netlify CMS both use `{{ }}` for template interpolation, so it's tricky to pass these in the yaml file.
+`index.html` has a bit of config on it - namely just passing variables from Jekyll to Decap CMS. This is because Jekyll and Decap CMS both use `{{ }}` for template interpolation, so it's tricky to pass these in the yaml file.
 
-Also note there is some redundancy between the schema definitions in `netlify-cms.yml` and those in `data/schemas/default.yml`, so be sure to keep those in sync.
+Also note there is some redundancy between the schema definitions in `decap-cms.yml` and those in `data/schemas/default.yml`, so be sure to keep those in sync.

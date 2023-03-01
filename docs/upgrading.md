@@ -12,7 +12,7 @@ If there are no conflicting changes in your fork, you'll be able to merge the pu
 
 ## v1.x to v2.0
 - If you use the editing UI
-  - You'll need to switch to the new editing UI, powered by Netlify CMS. You don't need to host your JKAN site on Netlify to do so. Follow the [installation](installation) instructions to setup the OAuth integration.
+  - You'll need to switch to the new editing UI, powered by Decap CMS. You don't need to host your JKAN site on Netlify to do so. Follow the [installation](installation) instructions to setup the OAuth integration.
 - If you have custom categories
   - You'll need to convert `_data/categories.yml` into a collection (a directory of files) in the `_dataset_categories` directory. See the [sample categories](/_dataset_categories) for the format. You should delete `_data/categories.yml` afterwards.
 - If you have custom licenses
