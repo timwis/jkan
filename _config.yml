@@ -7,10 +7,6 @@ repository: timwis/jkan
 # Site theme
 jkan_theme: Default
 
-# Authentication
-github_client_id: 
-gatekeeper_host: 
-
 # Dataset schema
 schema: default
 
