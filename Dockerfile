@@ -1,5 +1,12 @@
 FROM ruby:3.1-bullseye
 
+ENV NODE_MAJOR_VERSION 18
+
+RUN curl --silent --show-error --location --retry 5 --retry-connrefuse --retry-delay 4 https://deb.nodesource.com/setup_${NODE_MAJOR_VERSION}.x | bash - \
+  && apt-get update \
+  && apt-get install -y --quiet --no-install-recommends \
+  nodejs
+
 ENV GEM_HOME=/usr/gem
 ENV PATH="$GEM_HOME/bin/:$PATH" 
 
