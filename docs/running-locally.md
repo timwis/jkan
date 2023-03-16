@@ -59,7 +59,8 @@ npm run build
 
 The built JavaScript is placed in the `scripts/dist` directory and is committed to source control (this part's easy to forget).
 
-If you're running JKAN inside docker, you should just be able to prefix these commands with `bundle exec jekyll`, e.g. `bundle exec jekyll npm run build`.
+If you're running JKAN inside docker, you should just be able to prefix these commands with `docker compose exec jekyll`, e.g. `docker compose exec jekyll npm install`.
+
 
 [docker-install]: https://www.docker.com/get-started/
 [jekyll-serve-flags]: https://jekyllrb.com/docs/configuration/options/#serve-command-options
