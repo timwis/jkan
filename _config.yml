@@ -85,14 +85,16 @@ opengraph:
 
 # Exclude these files from the build
 exclude:
+  - CONTRIBUTING.md
+  - Dockerfile
+  - docker-compose.yml
   - Gemfile
   - Gemfile.lock
   - vendor
-  - .travis.yml
   - node_modules
   - scripts/src
   - package.json
-  - webpack.config.js
+  - package-lock.json
   - README.md
   - LICENSE
   - netlify
