@@ -18,7 +18,7 @@ permalink: /organizations/
     <div class="media-body">
       <h4 class="media-heading"><a href="{{ site.baseurl }}{{ organization.url }}">{{ organization.title }}</a></h4>
       <p style="text-align: justify;">{{ organization.description }}</p>
-      <p><a href="{{ site.baseurl }}/datasets/?organization={{ organization.title | slugify }}"><span class="badge badge-primary badge-pill">{{ dataset_count }}</span> datasets</a></p>
+      <p><a href="{{ site.baseurl }}/datasets/?organization={{ organization.title | slugify }}"><span class="badge bg-primary rounded-pill">{{ dataset_count }}</span> datasets</a></p>
     </div>
   </div>
 {% endfor %}
