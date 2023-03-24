@@ -2,13 +2,12 @@
 layout: default
 ---
 
-<div class="jumbotron">
-  <h1 class="display-4">{{ site.greeting }}</h1>
-  <p class="lead">
-      {{ site.description }}
-  </p>
-<hr class="my-4">
- <p><a class="btn btn-primary btn-lg" href="{{ site.baseurl }}/datasets" role="button">Start browsing</a></p>
+<div class="p-5 mb-4 bg-light rounded-3">
+  <div class="container-fluid py-5">
+    <h1 class="display-5">{{ site.greeting }}</h1>
+    <p class="col-md-8 fs-4">{{ site.description }}</p>
+    <a href="{{ "/datasets" | relative_url }}" class="btn btn-primary btn-lg" role="button">Start browsing</a>
+  </div>
 </div>
 
 <h3>Browse by Category</h3>
