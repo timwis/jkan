@@ -2,12 +2,13 @@
 layout: default
 ---
 
-<div class="p-5 mb-4 bg-light rounded-3">
-  <div class="container-fluid py-5">
+<div class="container d-flex flex-row p-5 mb-4 bg-light rounded-3 justify-content-between">
+  <div class="col-lg-6 justify-content-center">
     <h1 class="display-5">{{ site.greeting }}</h1>
-    <p class="col-md-8 fs-4">{{ site.description }}</p>
+    <p class="col-md-8 fs-4 mb-4">{{ site.description }}</p>
     <a href="{{ "/datasets" | relative_url }}" class="btn btn-primary btn-lg" role="button">Start browsing</a>
   </div>
+  <img alt="Example homepage hero image" class="d-none d-md-block img-responsive rounded-circle" src="{{ site.baseurl }} {{ site.hero_image }}" style="max-height: 300px" />
 </div>
 
 <h3>Browse by Category</h3>
