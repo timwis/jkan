@@ -2,6 +2,7 @@ title: JKAN
 greeting: Welcome to JKAN
 description: A lightweight, backend-free open data portal, powered by Jekyll.
 logo: /img/jkan.png
+hero_image: /img/homepage-hero.jpg
 
 # Site theme
 jkan_theme: Default
