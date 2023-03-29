@@ -6,7 +6,7 @@ layout: default
   <div class="col-lg-6 justify-content-center">
     <h1 class="display-5">{{ site.greeting }}</h1>
     <p class="col-md-8 fs-4 mb-4">{{ site.description }}</p>
-    <a href="{{ "/datasets" | relative_url }}" class="btn btn-primary btn-lg" role="button">Start browsing</a>
+    <a href="{{ "/datasets" | relative_url }}" class="btn btn-primary btn-lg" role="button">Browse all datasets</a>
   </div>
   <img alt="Example homepage hero image" class="d-none d-md-block img-responsive rounded-circle" src="{{ site.baseurl }} {{ site.hero_image }}" style="max-height: 300px" />
 </div>
@@ -16,9 +16,9 @@ layout: default
 {% for category in site.dataset_categories %}
   {% if category.featured == true %}
     {% capture logo_alt %}{{ category.name }}{% if category.logo_credit and category.logo_credit != empty %} logo by {{ category.logo_credit }}{% endif %}{% endcapture %}
-    <a href="{{ site.baseurl }}/categories/{{ category.name | slugify }}" class="thumbnail" title="{{ logo_alt }}">
+    <a class="card border thumbnail hover-overlay" href="{{ site.baseurl }}/categories/{{ category.name | slugify }}" title="{{ logo_alt }}">
       {% if category.logo and category.logo != empty %}
-        <img src="{{ site.baseurl }}{{ category.logo }}" alt="{{ logo_alt }}">
+        <img class="card-img-top" src="{{ site.baseurl }}{{ category.logo }}" alt="{{ logo_alt }}">
       {% endif %}
       {{ category.name }}
     </a>
