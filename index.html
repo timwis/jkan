@@ -12,11 +12,11 @@ layout: default
 </div>
 
 <h3>Browse by Category</h3>
-<div class="homepage-categories">
+<div class="card-grid">
 {% for category in site.dataset_categories %}
   {% if category.featured == true %}
     {% capture logo_alt %}{{ category.name }}{% if category.logo_credit and category.logo_credit != empty %} logo by {{ category.logo_credit }}{% endif %}{% endcapture %}
-    <a class="card border thumbnail hover-overlay" href="{{ site.baseurl }}/categories/{{ category.name | slugify }}" title="{{ logo_alt }}">
+    <a class="card border card-grid-item hover-overlay" href="{{ site.baseurl }}/categories/{{ category.name | slugify }}" title="{{ logo_alt }}">
       {% if category.logo and category.logo != empty %}
         <img class="card-img-top" src="{{ site.baseurl }}{{ category.logo }}" alt="{{ logo_alt }}">
       {% endif %}
