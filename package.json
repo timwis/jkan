@@ -1,45 +1,37 @@
 {
-  "name": "es6-boilerplate",
-  "version": "1.0.0",
-  "description": "Front-end project boilerplate with es6 build tools. Includes babel, webpack, and npm scripts.",
-  "main": "scripts/src/index.js",
+  "name": "jkan",
+  "description": "A lightweight, backend-free open data portal, powered by Jekyll",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "watch": "webpack --mode=development --watch",
-    "build": "webpack"
+    "watch": "parcel watch scripts/src/index.js --dist-dir _site/scripts/dist",
+    "build": "parcel build scripts/src/index.js --dist-dir scripts/dist"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/timwis/es6-boilerplate.git"
+  "targets": {
+    "modern": {
+      "engines": {
+        "browsers": "defaults"
+      }
+    },
+    "legacy": {
+      "engines": {
+        "browsers": "ie 11"
+      }
+    }
   },
-  "author": "timwis <tim@timwis.com>",
   "license": "MIT",
+  "private": true,
   "bugs": {
-    "url": "https://github.com/timwis/es6-boilerplate/issues"
+    "url": "https://github.com/timwis/jkan/issues"
   },
-  "homepage": "https://github.com/timwis/es6-boilerplate#readme",
+  "homepage": "https://github.com/timwis/jkan",
   "devDependencies": {
-    "@babel/core": "^7.5.0",
-    "@babel/preset-env": "^7.5.0",
-    "@babel/preset-react": "^7.0.0",
-    "babel-loader": "^8.0.6",
-    "babel-polyfill": "^6.7.4",
-    "webpack": "^5.74.0",
-    "webpack-cli": "^4.10.0",
-    "webpack-dev-server": "^4.11.1"
+    "core-js": "^3.29.0",
+    "parcel": "^2.8.3",
+    "process": "^0.11.10"
   },
   "dependencies": {
-    "ampersand-state": "^5.0.3",
-    "bootstrap": "^4.3.1",
-    "github-api": "^3.2.2",
+    "bootstrap": "^5.0.2",
     "jquery": "^3.4.1",
     "jquery-deparam": "^0.5.3",
-    "jquery-serializejson": "^2.9.0",
-    "js-cookie": "^2.2.0",
-    "js-yaml": "^3.13.1",
-    "lodash": "^4.17.11",
-    "notie": "github:timwis/notie#string-types",
-    "popper.js": "^1.15.0",
-    "select2": "^4.0.7"
+    "lodash": "^4.17.11"
   }
 }

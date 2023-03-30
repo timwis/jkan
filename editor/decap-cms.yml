@@ -1,0 +1,192 @@
+# Note that several config options are provided by JavaScript
+# in index.html. Those options are merged into these options.
+
+backend:
+  name: github
+
+media_folder: "img/uploads"
+
+collections:
+  - name: datasets
+    label: Datasets
+    label_singular: Dataset
+    folder: _datasets
+    create: true
+    summary: "{{title}} ({{organization}})"
+    preview_path: "datasets/{{slug}}"
+    view_groups:
+      - label: Organization
+        field: organization
+    fields:
+      - label: Title
+        name: title
+        widget: string
+
+      - label: Organization
+        name: organization
+        required: false
+        widget: relation
+        collection: organizations
+        value_field: "title"
+        search_fields:
+          - title
+
+      - label: Description
+        name: notes
+        required: false
+        widget: text
+
+      - label: Resources
+        name: resources
+        widget: list
+        fields:
+          - label: Resource Name
+            name: name
+            widget: string
+          - label: URL
+            name: url
+            widget: string
+          - label: Format
+            name: format
+            required: false
+            widget: select
+            options:
+              - api
+              - csv
+              - json
+              - geojson
+              - html
+              - kml
+              - kmz
+              - shp
+              - xml
+
+      - label: License
+        name: license
+        required: false
+        hint: Not sure what license to use? See [licenses.opendefinition.org](https://licenses.opendefinition.org/)
+        widget: relation
+        collection: settings
+        file: licenses
+        value_field: "items.*.url"
+        search_fields: ["items.*.name"]
+        display_fields: ["items.*.name"]
+
+      - label: Category
+        name: category
+        required: false
+        widget: relation
+        collection: categories
+        multiple: true
+        value_field: "name"
+        search_fields:
+          - name
+
+      - label: Maintainer
+        name: maintainer
+        required: false
+        widget: string
+
+      - label: Maintainer Email
+        name: maintainer_email
+        required: false
+        widget: string
+
+  - name: organizations
+    label: Organizations
+    label_singular: Organization
+    folder: _organizations
+    create: true
+    preview_path: "organizations/{{slug}}"
+    fields:
+      - label: Title
+        name: title
+        widget: string
+
+      - label: Description
+        name: description
+        required: false
+        widget: text
+
+      - label: Logo
+        name: logo
+        required: false
+        widget: image
+        allow_multiple: false
+        media_folder: /img/organizations
+
+  - name: categories
+    label: Categories
+    label_singular: Category
+    folder: _dataset_categories
+    description: Dataset categories
+    create: true
+    preview_path: "categories/{{slug}}"
+    identifier_field: name
+    fields:
+      - label: Name
+        name: name
+        widget: string
+
+      - label: Logo
+        name: logo
+        required: false
+        widget: image
+        allow_multiple: false
+        media_folder: /img/categories
+
+      - label: Logo Credit
+        name: logo_credit
+        required: false
+        widget: string
+
+      - label: Featured on Homepage
+        name: featured
+        widget: boolean
+        required: false
+
+  - name: settings
+    label: Settings
+    delete: false
+    editor:
+      preview: false
+    files:
+      - name: config
+        label: Site settings
+        file: _config.yml
+        fields:
+          - label: Site Title
+            name: title
+            widget: string
+
+          - label: Site Greeting
+            name: greeting
+            description: Displayed on the homepage
+            widget: string
+
+          - label: Site Description
+            name: description
+            widget: text
+
+          - label: Base URL
+            name: baseurl
+            widget: string
+              
+      - name: licenses
+        label: Licenses
+        description: Dataset licenses
+        file: _data/licenses.yml
+        fields:
+          - label: Licenses
+            name: items
+            label_singular: License
+            widget: list
+            fields: 
+              - label: Name
+                name: name
+                widget: string
+
+              - label: URL
+                name: url
+                required: false
+                widget: string

@@ -6,16 +6,9 @@
   <title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}</title>
   <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
 
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-  {% assign theme_name = site.jkan_theme | default: 'Default' %}
-  {% assign theme = site.data.themes | where:'name', theme_name | first %}
-  {% if theme and theme.src and theme.src != empty %}
-    <link rel="stylesheet" href="{{ theme.src }}">
-  {% endif %}
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.2/css/select2.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/notie/3.0.0/notie.min.css">
   <link rel="stylesheet" href="{{ site.baseurl }}/css/main.css">
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
 
@@ -45,14 +38,14 @@
   {% endif %}
 
   <script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/, 'js');
+
   var settings = {
-    BASE_URL: {{ site.baseurl | jsonify }},
+    BASE_URL: {{ site.baseurl | jsonify }} || "",
     PAGE_URL: {{ page.url | jsonify }},
     REPO_BRANCH: {% if site.github.is_user_page %}"master"{% else %}"gh-pages"{% endif %},
     REPO_OWNER: {{ site.github.owner_name | jsonify }},
-    REPO_NAME: {{ site.github.project_title | jsonify }},
-    GITHUB_CLIENT_ID: {{ site.github_client_id | jsonify }},
-    GATEKEEPER_HOST: {{ site.gatekeeper_host | jsonify }}
+    REPO_NAME: {{ site.github.project_title | jsonify }}
   }
   </script>
 </head>

@@ -1,0 +1,24 @@
+---
+title: Categories
+layout: default
+permalink: /categories/
+---
+{% include breadcrumbs.html %}
+
+{% for category in site.dataset_categories %}
+  {% assign dataset_count = site.datasets | where:"category", category.name | size %}
+  <div class="d-flex">
+    <div class="flex-shrink-0">
+      {% if category.logo and category.logo != empty %}
+        <a href="{{ site.baseurl }}{{ category.url }}" class="category-thumbnail">
+          <img src="{{ category.logo | relative_url }}" alt="{{ category.title }}">
+        </a>
+      {% endif %}
+    </div>
+    <div class="flex-grow-1 ms-3">
+      <h4><a href="{{ site.baseurl }}{{ category.url }}">{{ category.title }}</a></h4>
+      <p style="text-align: justify;">{{ category.description }}</p>
+      <p><a href="{{ site.baseurl }}/categories/{{ category.title | slugify }}"><span class="badge bg-primary rounded-pill">{{ dataset_count }}</span> datasets</a></p>
+    </div>
+  </div>
+{% endfor %}

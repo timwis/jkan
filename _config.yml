@@ -1,15 +1,11 @@
 title: JKAN
 greeting: Welcome to JKAN
 description: A lightweight, backend-free open data portal, powered by Jekyll.
-baseurl: /jkan
 logo: /img/jkan.png
+hero_image: /img/homepage-hero.jpg
 
 # Site theme
 jkan_theme: Default
-
-# Authentication
-github_client_id: 
-gatekeeper_host: 
 
 # Dataset schema
 schema: default
@@ -20,6 +16,8 @@ navigation:
     url: /datasets/
   - title: Organizations
     url: /organizations/
+  - title: Categories
+    url: /categories/
 
 # Collections
 collections:
@@ -29,9 +27,17 @@ collections:
   organizations:
     output: true
     permalink: /organizations/:path/
+  dataset_categories:
+    output: true
+    permalink: /categories/:path/
 
 # Collections (cont'd)
 defaults:
+  - scope:
+      path: ""
+      type: dataset_categories
+    values:
+      layout: category
   - scope:
       path: ""
       type: datasets
@@ -76,13 +82,19 @@ opengraph:
 
 # Exclude these files from the build
 exclude:
+  - CONTRIBUTING.md
+  - Dockerfile
+  - docker-compose.yml
   - Gemfile
   - Gemfile.lock
   - vendor
-  - .travis.yml
   - node_modules
   - scripts/src
   - package.json
-  - webpack.config.js
+  - package-lock.json
   - README.md
   - LICENSE
+  - netlify
+  - netlify.toml
+  - .parcel-cache
+  - docs

@@ -9,17 +9,16 @@ layout: default
 {% assign resource_system_fields = "name|url|format|description" | split: "|" %}
 
 {% assign organization = site.organizations | where:"title",page.organization | first %}
-{% capture organization_url %}{{ site.baseurl }}/datasets/?organization={{ organization.title | slugify }}{% endcapture %}
+{% capture organization_url %}{{ site.baseurl }}{{ organization.url }}{% endcapture %}
   <div class="container">
-<div data-component="view-switcher">
-  <div data-component="dataset-display" data-hook="view" data-view="display" typeof="dcat:Dataset" resource="{{ page.url }}">
+  <div data-component="dataset-display" typeof="dcat:Dataset" resource="{{ page.url }}">
     <div class="row">
         {% if organization %}
         <div class="col-md-3" property="dct:publisher" resource="{{ organization_url }}">
           <div class="card mb-3">
             <div class="card-img-top">
               {% if organization.logo and organization.logo != empty %}
-              <a href="{{ site.baseurl }}/datasets/?organization={{ organization.title | slugify }}"><img src="{{ organization.logo }}" alt="{{ organization.title }} logo" class="img-thumbnail rounded mx-auto d-block"></a>
+              <a href="{{ organization_url }}"><img src="{{ organization.logo | relative_url }}" alt="{{ organization.title }} logo" class="img-thumbnail rounded mx-auto d-block"></a>
               {% endif %}
                         </div>
                         <div class="card-header">
@@ -43,7 +42,7 @@ layout: default
       {% endif %}
         <h1>
           <span property="dct:title">{{ page.title }}</span>
-          <a href="?view=edit" class="pull-right btn btn-outline-secondary admin-only" data-hook="edit-dataset-btn">Edit</a>
+          <a href="{{ "/editor" | relative_url }}/#/collections/datasets/entries/{{ page.slug }}" class="pull-right btn btn-outline-secondary" data-hook="edit-dataset-btn">Edit</a>
         </h1>
         <p property="dct:description" style="text-align: justify; overflow-wrap: break-word;">{{ page.notes }}</p>
 
@@ -52,7 +51,7 @@ layout: default
           {% for resource in page.resources %}
           <li data-hook="resource-item" property='dcat:distribution' typeof='dcat:Distribution'>
             <a href="{{ resource.url }}" property='dcat:accessURL'><span property="dct:title">{{ resource.name }}</span></a>
-            {% if resource.format %}<span class="badge badge-secondary" property='dcat:mediaType'>{{ resource.format}}</span>{% endif %}
+            {% if resource.format %}<span class="badge bg-secondary" property='dcat:mediaType'>{{ resource.format}}</span>{% endif %}
             <a href="#" class="show-resource-details" data-hook="show-resource-details">(Details)</a>
             {% if resource.description %}<div class="resource-description">{{ resource.description }}</div>{% endif %}
             <table class="table table-striped table-condensed resource-details" data-hook="resource-details">
@@ -79,11 +78,12 @@ layout: default
         <h2>Additional Info</h2>
         <table class="table table-striped dataset-details">
           {% if page.license and page.license != empty %}
+            {% assign license = site.data.licenses.items | where:"url",page.license | first %}
             <tr>
               <th>License</th>
               <td>
                 <a property="dct:license" resource="{{ page.license }}" href="{{ page.license }}">
-                  {{ site.data.licenses[page.license] }}
+                  {{ license.name }}
                 </a>
               </td>
             </tr>
@@ -108,14 +108,5 @@ layout: default
       </div>
     </div>
   </div>
-
-  <div data-hook="view" data-view="edit">
-    <div class="row">
-      <div class="col-sm-8 offset-sm-2">
-        {% include dataset-form.html dataset=page %}
-      </div>
-    </div>
-  </div>
-</div>
 </div>
 </div>

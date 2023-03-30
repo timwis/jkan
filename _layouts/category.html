@@ -1,0 +1,42 @@
+---
+layout: default
+---
+{% include breadcrumbs.html parent="Categories" %}
+{% assign datasets = site.datasets | where: "category", page.name %}
+{% assign datasets_count = datasets | size %}
+
+<div class="container">
+  <div class="row">
+    {% if page.logo and page.logo != empty %}
+    <div class="col-sm-3">
+      <a href="{{ page.logo | relative_url }}" class="thumbnail"><img class="img-thumbnail rounded mx-auto d-block" src="{{ page.logo | relative_url }}" alt="{{ page.title }} logo"></a>
+    </div>
+    <div class="col-sm-9">
+    {% else %}
+    <div class="col-sm-12">
+    {% endif %}
+      <h1>
+        {{ page.name }}
+        <a href="{{ "/editor" | relative_url }}/#/collections/categories/entries/{{ page.slug }}" class="float-end btn btn-outline-secondary admin-only">Edit</a>
+      </h1>
+      <p>{{ page.description }}</p>
+      <div data-component="datasets-list" data-category="{{ page.name | slugify }}">
+        <h3 class="datasets-count" data-hook="datasets-count">{{ datasets_count }}
+          {% if datasets_count == 1 %}dataset{% else %}datasets{% endif %}</h3>
+        <input type="text" data-hook="search-query" placeholder="Search..." class="form-control mb-3">
+        <div data-hook="datasets-items">
+          {% for dataset in datasets %}
+           <dataset>
+             <h3><a href="{{ site.baseurl }}{{ dataset.url }}">{{ dataset.title }}</a></h3>
+             {{ dataset.notes }}
+             
+           </dataset>
+          {% endfor %}
+         </div>
+      </div>
+    </div>
+    <div class="view-code-link">
+      <a href="{% github_edit_link %}"  target="_blank"><i class="fa fa-code"></i> Open in GitHub</a>
+    </div>
+  </div>
+</div>

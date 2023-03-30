@@ -1,5 +1,4 @@
 import $ from 'jquery'
-import {isEmpty} from 'lodash'
 
 export function queryByHook (hook, container) {
   return $(`[data-hook~=${hook}]`, container)
@@ -13,12 +12,6 @@ export function setContent (container, content) {
   return container.empty().append(content)
 }
 
-export function setParams (params) {
-  let newUrl = window.location.href.split('?')[0]
-  if (!isEmpty(params)) newUrl += '?' + $.param(params)
-  window.history.replaceState(null, null, newUrl)
-}
-
 // Meant to mimic Jekyll's slugify function
 // https://github.com/jekyll/jekyll/blob/master/lib/jekyll/utils.rb#L142
 export function slugify (text) {
@@ -27,7 +20,6 @@ export function slugify (text) {
     .replace(/\-\-+/g, '-')         // Replace multiple - with single -
     .replace(/^\-|\-$/i, '')        // Remove leading/trailing hyphen
 }
-
 
 // Given an object of filters to use, returns a function to be used by _.filter()
 export function createDatasetFilters (filters) {
@@ -61,18 +53,4 @@ export function collapseListGroup (container, show) {
     })
     container.append(showMoreButton)
   }
-}
-
-// Applies a basic regex replace on a YAML string for each property in a data object
-export function updateYamlString (yamlString, updateObject) {
-  for (let key in updateObject) {
-    const regex = new RegExp(`^( *${key}: +?).*`, 'm')
-    const match = yamlString.match(regex)
-    if (match) {
-      yamlString = yamlString.replace(regex, match[1] + updateObject[key])
-    } else {
-      yamlString += `\n${key}: ${updateObject[key]}`
-    }
-  }
-  return yamlString
 }

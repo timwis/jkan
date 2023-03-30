@@ -1,11 +1,25 @@
-.organization-thumbnail img {
+input[data-hook=search-query] {
+  display: none;
+}
+
+.js input[data-hook=search-query] {
+  display: block;
+}
+
+.js .js-hidden { display: none; }
+.js-shown { display: none; }
+.js .js-shown { display: block; }
+
+.organization-thumbnail img,
+.category-thumbnail img {
   width: 64px;
 }
 
 dataset {
   display: block;
   border-bottom: 1px #d6d6d6 solid;
-  padding-bottom: 20px;
+  padding-bottom: 10px;
+  padding-top: 10px;
 }
 
 .list-group-item-truncate {
@@ -21,22 +35,8 @@ dataset {
   font-size: 90%;
 }
 
-.select2 {
-  margin-bottom: 10px;
-}
-
 .datasets-count {
   display: inline-block;
-}
-
-.add-dataset-btn {
-  margin-top: 15px;
-}
-
-/* Hidden from guests */
-.user-issue,
-.admin-only {
-  display: none;
 }
 
 .resource-details,
@@ -48,33 +48,25 @@ dataset {
   font-size: 80%;
 }
 
-.user-issue {
-  color: red;
-}
-
-[data-component~=view-switcher] [data-hook~=view] {
-  display: none;
-}
-
-.homepage-categories,
-.theme-gallery {
+.homepage-categories {
   text-align: justify;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  grid-gap: 1rem;
+  grid-auto-flow: dense;
 }
 
-/* allows last line of categories to be justify aligned */
-.homepage-categories:after,
-.theme-gallery:after {
-  display: inline-block;
-  width: 100%;
-  content: '';
+.homepage-categories .thumbnail:hover {
+  background-color: #abccfb;
 }
 
 .homepage-categories .thumbnail {
-  display: inline-grid;
-  min-width: 120px;
+  min-width: 150px;
   text-align: center;
   border: none;
   padding: 10px;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
 }
 
 .homepage-categories .thumbnail img {
@@ -86,20 +78,12 @@ dataset {
   color: #000;
 }
 
-.theme-gallery .card {
-  display: inline-block;
-  max-width: 250px;
-  text-align: center;
-}
-
-.theme-gallery .card img {
-  width: 100%;
-}
-
-.theme-gallery .card-primary {
-  border-width: 5px;
-}
-
 .view-code-link {
   margin: 1em;
+}
+
+.breadcrumb {
+  background-color: #e9ecef;
+  padding: .75rem 1rem;
+  border-radius: .25rem;
 }
