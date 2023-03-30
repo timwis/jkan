@@ -50,21 +50,23 @@ dataset {
 
 .homepage-categories {
   text-align: justify;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  grid-gap: 1rem;
+  grid-auto-flow: dense;
 }
 
-/* allows last line of categories to be justify aligned */
-.homepage-categories:after {
-  display: inline-block;
-  width: 100%;
-  content: '';
+.homepage-categories .thumbnail:hover {
+  background-color: #abccfb;
 }
 
 .homepage-categories .thumbnail {
-  display: inline-grid;
-  min-width: 120px;
+  min-width: 150px;
   text-align: center;
   border: none;
   padding: 10px;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
 }
 
 .homepage-categories .thumbnail img {
