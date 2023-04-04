@@ -5,20 +5,18 @@ permalink: /categories/
 ---
 {% include breadcrumbs.html %}
 
-{% for category in site.dataset_categories %}
-  {% assign dataset_count = site.datasets | where:"category", category.name | size %}
-  <div class="d-flex">
-    <div class="flex-shrink-0">
+<div class="card-grid">
+  {% for category in site.dataset_categories %}
+    {% assign dataset_count = site.datasets | where:"category", category.name | size %}
+    {% capture logo_alt %}{{ category.name }}{% if category.logo_credit and category.logo_credit != empty %} logo by {{ category.logo_credit }}{% endif %}{% endcapture %}
+    <a class="card border card-grid-item hover-overlay" href="{{ site.baseurl }}/categories/{{ category.name | slugify }}" title="{{ logo_alt }}">
+      <div class="d-flex flex-row justify-content-end">
+        <span class="badge bg-primary rounded-pill me-1">{{ dataset_count }}</span>
+      </div>
       {% if category.logo and category.logo != empty %}
-        <a href="{{ site.baseurl }}{{ category.url }}" class="category-thumbnail">
-          <img src="{{ category.logo | relative_url }}" alt="{{ category.title }}">
-        </a>
+        <img class="card-img-top" src="{{ site.baseurl }}{{ category.logo }}" alt="{{ logo_alt }}">
       {% endif %}
-    </div>
-    <div class="flex-grow-1 ms-3">
-      <h4><a href="{{ site.baseurl }}{{ category.url }}">{{ category.title }}</a></h4>
-      <p style="text-align: justify;">{{ category.description }}</p>
-      <p><a href="{{ site.baseurl }}/categories/{{ category.title | slugify }}"><span class="badge bg-primary rounded-pill">{{ dataset_count }}</span> datasets</a></p>
-    </div>
-  </div>
-{% endfor %}
+      {{ category.name }}
+    </a>
+  {% endfor %}
+</div>

@@ -48,7 +48,7 @@ dataset {
   font-size: 80%;
 }
 
-.homepage-categories {
+.card-grid {
   text-align: justify;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
@@ -56,11 +56,16 @@ dataset {
   grid-auto-flow: dense;
 }
 
-.homepage-categories .thumbnail:hover {
+.card-grid-organizations {
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(auto-fill, minmax(150px, 1fr));
+}
+
+.card-grid .card-grid-item:hover {
   background-color: #abccfb;
 }
 
-.homepage-categories .thumbnail {
+.card-grid .card-grid-item {
   min-width: 150px;
   text-align: center;
   border: none;
@@ -69,12 +74,12 @@ dataset {
   transition: all 0.3s ease-in-out;
 }
 
-.homepage-categories .thumbnail img {
+.card-grid .card-grid-item img {
   height: 80px;
   margin: auto;
 }
 
-.homepage-categories a {
+.card-grid a {
   color: #000;
 }
 
