@@ -1,4 +1,4 @@
-FROM ruby:3.1-bullseye
+FROM ruby:3.2-bullseye
 
 ENV NODE_MAJOR_VERSION 18
 
@@ -10,7 +10,7 @@ RUN curl --silent --show-error --location --retry 5 --retry-connrefuse --retry-d
 ENV GEM_HOME=/usr/gem
 ENV PATH="$GEM_HOME/bin/:$PATH" 
 
-RUN gem install bundler -v '2.4.3'
+RUN gem install bundler -v '2.4.12'
 # throw errors if Gemfile has been modified since Gemfile.lock
 RUN bundle config --global frozen 1
 
