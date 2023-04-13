@@ -80,6 +80,11 @@ twittercard:
 opengraph:
   enabled: true
 
+# Plugins
+plugins:
+  - "jekyll-github-metadata"
+
+
 # Exclude these files from the build
 exclude:
   - CONTRIBUTING.md
