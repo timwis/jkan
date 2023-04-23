@@ -83,6 +83,9 @@ opengraph:
 # Plugins
 plugins:
   - "jekyll-github-metadata"
+  - "jekyll-relative-links"
+  - "jekyll-paginate-v2"
+  - "jekyll-titles-from-headings"
 
 
 # Exclude these files from the build
