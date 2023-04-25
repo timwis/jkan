@@ -29,7 +29,7 @@ layout: default
                           </h3>
                             </div>
                             <div class="card-body">
-                          {{ organization.description }}
+                          {{ organization.description | markdownify }}
                         </div>
                         <div class="view-code-link">
                           <a href="{{site.github.repository_url}}/blob/main/{{page.path}}?plain=1"  target="_blank"><i class="fa fa-code"></i> Open in GitHub</a>
@@ -44,7 +44,7 @@ layout: default
           <span property="dct:title">{{ page.title }}</span>
           <a href="{{ "/editor" | relative_url }}/#/collections/datasets/entries/{{ page.slug }}" class="pull-right btn btn-outline-secondary" data-hook="edit-dataset-btn">Edit</a>
         </h1>
-        <p property="dct:description" style="text-align: justify; overflow-wrap: break-word;">{{ page.notes }}</p>
+        <p property="dct:description" style="text-align: justify; overflow-wrap: break-word;">{{ page.notes | markdownify }}</p>
 
         <h2>Resources</h2>
         <ul>

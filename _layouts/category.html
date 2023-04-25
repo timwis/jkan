@@ -17,7 +17,6 @@ layout: default
     {% endif %}
       <h1>
         {{ page.name }}
-        <a href="{{ "/editor" | relative_url }}/#/collections/categories/entries/{{ page.slug }}" class="float-end btn btn-outline-secondary admin-only">Edit</a>
       </h1>
       <p>{{ page.description }}</p>
       <div data-component="datasets-list" data-category="{{ page.name | slugify }}">
@@ -28,7 +27,7 @@ layout: default
           {% for dataset in datasets %}
            <dataset>
              <h3><a href="{{ site.baseurl }}{{ dataset.url }}">{{ dataset.title }}</a></h3>
-             {{ dataset.notes }}
+             {{ dataset.notes | markdownify }}
              
            </dataset>
           {% endfor %}
