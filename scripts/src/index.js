@@ -1,7 +1,6 @@
 /* global settings */
 import 'core-js/actual'
 import $ from 'jquery'
-import 'jquery-deparam'
 import 'bootstrap/js/dist/collapse'
 
 import DatasetsList from './components/datasets-list'
@@ -10,7 +9,11 @@ import OrganizationsFilter from './components/organizations-filter'
 import DatasetDisplay from './components/dataset-display'
 import {queryByComponent} from './util'
 
-const params = $.deparam(window.location.search.substr(1))
+const urlSearchParams = new URLSearchParams(window.location.search)
+const params = {}
+urlSearchParams.forEach((value, key) => {
+  params[key] = value
+})
 
 // Helper function to ensure datasets.json is only fetched once per page
 let datasetsCache
