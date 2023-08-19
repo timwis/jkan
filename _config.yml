@@ -3,6 +3,7 @@ greeting: Welcome to JKAN
 description: A lightweight, backend-free open data portal, powered by Jekyll.
 logo: /img/jkan.png
 hero_image: /img/homepage-hero.jpg
+strict_front_matter: true
 
 # Site theme
 jkan_theme: Default
@@ -86,7 +87,6 @@ plugins:
   - "jekyll-relative-links"
   - "jekyll-paginate-v2"
   - "jekyll-titles-from-headings"
-
 
 # Exclude these files from the build
 exclude:

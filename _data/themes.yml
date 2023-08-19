@@ -1,6 +1,6 @@
 - name: Default
   logo: /img/themes/default.png
-  src: ''
+  src: ""
 - name: Cerulean
   logo: /img/themes/cerulean.png
   src: https://stackpath.bootstrapcdn.com/bootswatch/4.2.1/cerulean/bootstrap.min.css

@@ -171,7 +171,7 @@ collections:
           - label: Base URL
             name: baseurl
             widget: string
-              
+
       - name: licenses
         label: Licenses
         description: Dataset licenses
@@ -181,7 +181,7 @@ collections:
             name: items
             label_singular: License
             widget: list
-            fields: 
+            fields:
               - label: Name
                 name: name
                 widget: string
