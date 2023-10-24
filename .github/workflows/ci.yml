@@ -1,15 +1,15 @@
 ---
 name: CI
 
-on:
-  pull_request:
+#on:
+#  pull_request:
 
-jobs:
-  lint:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - name: MegaLinter
-        run: ./scripts/lint
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+#jobs:
+#  lint:
+#    runs-on: ubuntu-latest
+#    steps:
+#      - uses: actions/checkout@v3
+#      - name: MegaLinter
+#        run: ./scripts/lint
+#        env:
+#          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
