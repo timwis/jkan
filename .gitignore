@@ -7,3 +7,4 @@ node_modules
 _config.ci.yml
 .parcel-cache
 vendor
+*.DS_STORE

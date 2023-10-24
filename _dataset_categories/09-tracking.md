@@ -1,6 +1,6 @@
 ---
 name: 09-tracking
-logo: "/img/categories/parks-recreation.svg"
-logo_credit: Pipe Rosas Licht from the Noun Project
+logo: "/img/categories/09-tracking.svg"
+logo_credit: Created by loviana from Noun Project
 featured: true
 ---
