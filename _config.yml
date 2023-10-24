@@ -19,6 +19,8 @@ navigation:
     url: /organizations/
   - title: Categories
     url: /categories/
+  - title: Projects
+    url: /projects/
 
 # Collections
 collections:
@@ -31,9 +33,17 @@ collections:
   dataset_categories:
     output: true
     permalink: /categories/:path/
+  dataset_projects:
+    output: true
+    permalink: /projects/:path/
 
 # Collections (cont'd)
 defaults:
+  - scope:
+      path: ""
+      type: dataset_projects
+    values:
+      layout: project
   - scope:
       path: ""
       type: dataset_categories
