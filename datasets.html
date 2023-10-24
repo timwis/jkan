@@ -20,6 +20,18 @@ permalink: /datasets/
       {% endfor %}
     </div>
     <br/>
+    <h3>Projects</h3>
+    <div class="list-group js-shown" data-component="projects-filter" data-show="5"></div>
+    <div class="list-group js-hidden">
+      {% for project in site.dataset_projects %}
+      {% assign count = site.datasets | where: "project", project.name | size %}
+      <a href="{{ site.baseurl }}{{ project.url }}" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+        {{ project.name }}
+        <span class="badge bg-primary rounded-pill">{{ count }}</span>
+      </a>
+      {% endfor %}
+    </div>
+    <br/>
     <h3>Organizations</h3>
     <div class="list-group js-shown" data-component="organizations-filter" data-show="15"></div>
     <div class="list-group js-hidden">
