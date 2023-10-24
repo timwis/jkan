@@ -1,0 +1,19 @@
+---
+title: Projects
+layout: default
+permalink: /projects/
+---
+{% include breadcrumbs.html %}
+
+<div class="card-grid">
+  {% for project in site.dataset_projects %}
+    {% assign dataset_count = site.datasets | where:"project", project | size %}
+    {% capture logo_alt %}{{ project.name }}{% endcapture %}
+    <a class="card border card-grid-item hover-overlay" href="{{ site.baseurl }}/projects/{{ project.name | slugify }}" title="{{ logo_alt }}">
+      <div class="d-flex flex-row justify-content-end">
+        <span class="badge bg-primary rounded-pill me-1">{{ dataset_count }}</span>
+      </div>
+      {{ project.name }}
+    </a>
+  {% endfor %}
+</div>
