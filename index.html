@@ -25,3 +25,15 @@ layout: default
   {% endif %}
 {% endfor %}
 </div>
+
+<h3>Browse by Project</h3>
+<div class="card-grid">
+{% for project in site.dataset_projects %}
+  {% if project.featured == true %}
+    {% capture logo_alt %}{{ project.name }}{% endcapture %}
+    <a class="card border card-grid-item hover-overlay" href="{{ site.baseurl }}/projects/{{ project.name | slugify }}" title="{{ logo_alt }}">
+      {{ project.name }}
+    </a>
+  {% endif %}
+{% endfor %}
+</div>
