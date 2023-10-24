@@ -2,7 +2,7 @@
   <th>{{ include.field.label }}</th>
   <td>
     {% if include.value.size %}
-      {% for category in include.value %}
+      {% for project in include.value %}
         <a href="{{ site.baseurl }}/projects/{{ project | slugify }}">{{ project }}</a>{% unless forloop.last %}, {% endunless %}
       {% endfor %}
     {% else %}
