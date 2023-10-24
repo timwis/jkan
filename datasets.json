@@ -5,7 +5,8 @@
     "title": {{ dataset.title | jsonify }},
     "organization": {{ dataset.organization | jsonify }}{% if dataset.notes != "" %},
     "notes": {{ dataset.notes | jsonify }}{% endif %}{% if dataset.category != "" %},
-    "category": {{ dataset.category | jsonify }}{% endif %},
+    "category": {{ dataset.category | jsonify }}{% endif %}{% if dataset.project != "" %},
+    "project": {{ dataset.project | jsonify }}{% endif %},
     "url": "{{ site.baseurl }}{{ dataset.url }}"
   }{% unless forloop.last %},{% endunless %}{% endfor %}
 ]
