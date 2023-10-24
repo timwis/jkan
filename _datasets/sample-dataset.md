@@ -18,4 +18,6 @@ category:
   - Education
 maintainer: Tim Wisniewski
 maintainer_email: tim@timwis.com
+project:
+  - My Kedro Project
 ---
