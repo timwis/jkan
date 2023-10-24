@@ -22,6 +22,9 @@
     {% assign f_category = dataset_fields | where: "datajson", "category" | first %}
     {% assign category = dataset[f_category[field_name]] %}
 
+    {% assign f_project = dataset_fields | where: "datajson", "project" | first %}
+    {% assign project = dataset[f_project[field_name]] %}
+
     {% assign f_contact_point_fn = dataset_fields | where: "datajson", "contactPoint.fn" | first %}
     {% assign contact_point_fn = dataset[f_contact_point_fn[field_name]] %}
 
@@ -39,7 +42,8 @@
         "name": {{ publisher_name | jsonify }}
       }{% endif %}{% if description %},
       "description": {{ description | jsonify }}{% endif %}{% if category %},
-      "category": {{ category | jsonify }}{% endif %}{% if contact_point_fn or contact_point_has_email %},
+      "category": {{ category | jsonify }}{% endif %}{% if project %},
+      "project": {{ project | jsonify}}{% endif %}{% if contact_point_fn or contact_point_has_email %},
       "contactPoint": {
         "fn": {{ contact_point_fn | jsonify }}{% if contact_point_has_email %},
         "hasEmail": {{ contact_point_has_email | jsonify }}{% endif %}
