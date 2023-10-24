@@ -1,5 +1,5 @@
 ---
-name: 06_models
+name: 06-models
 logo: "/img/categories/environment.svg"
 featured: true
 ---

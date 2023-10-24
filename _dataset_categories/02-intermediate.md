@@ -1,5 +1,5 @@
 ---
-name: 02_intermediate
+name: 02-intermediate
 logo: "/img/categories/budget-finance.svg"
 featured: true
 ---

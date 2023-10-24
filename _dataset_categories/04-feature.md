@@ -1,5 +1,5 @@
 ---
-name: 04_feature
+name: 04-feature
 logo: "/img/categories/education.svg"
 featured: true
 ---
