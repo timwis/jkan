@@ -27,6 +27,9 @@ dataset_fields:
     label: Project
     display_template: display/project.html
     datajson: project
+  - field_name: preview
+    label: Data Preview
+    datajson: preview
 
 resource_fields:
   - field_name: name
