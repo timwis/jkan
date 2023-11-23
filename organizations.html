@@ -21,7 +21,7 @@ permalink: /organizations/
         {% endif %}
         <div class="ms-3">
           <h4 style="text-align: start;">{{ organization.title }}</h4>
-          <p style="text-align: justify;">{{ organization.description }}</p>
+          <p style="text-align: justify;">{{ organization.description | markdownify }}</p>
         </div>
       </div>
     </a>

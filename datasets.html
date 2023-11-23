@@ -40,7 +40,7 @@ permalink: /datasets/
       {% for dataset in site.datasets %}
       <dataset>
         <h3><a href="{{ site.baseurl }}{{ dataset.url }}">{{ dataset.title }}</a></h3>
-        {{ dataset.notes }}
+        {{ dataset.notes | markdownify }}
       </dataset>
       {% endfor %}
     </div>
