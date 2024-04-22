@@ -5,6 +5,8 @@ layout: default
 {% assign datasets = site.datasets | where: "category", page.name %}
 {% assign datasets_count = datasets | size %}
 
+<script type="module" src="{{ site.baseurl }}/scripts/dist/index.js"></script>
+
 <div class="container">
   <div class="row">
     {% if page.logo and page.logo != empty %}
