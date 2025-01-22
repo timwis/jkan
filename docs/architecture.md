@@ -29,7 +29,7 @@ JKAN is a [Jekyll](http://jekyllrb.com/) site that uses JavaScript for enhanced 
 | `_config.yml` | [Jekyll config file](http://jekyllrb.com/docs/configuration/) |
 | `data.json` | Generates a [project open data](https://project-open-data.cio.gov/v1.1/schema/)-compliant `data.json` file that can be used to harvest the JKAN site into other data catalogs. |
 | `datasets.json` | Generates a list of datasets used to populate the `datasets-list` component (as seen on the `/datasets/` page). |
-| `_data/schemas` | [Schema definition files](/docs/configuration.md), which list the fields each dataset, category, and organization should have. |
+| `_data/schemas` | Schema definition files which list the fields each dataset, category, and organization should have. |
 | `_data/licenses.yml` | A list of licenses that datasets can be associated with |
 | `_datasets` | A directory of `.md` files containing dataset information in YAML front-matter |
 | `_dataset_categories` | A directory of `.md` files containing dataset categories in YAML front-matter |
@@ -65,7 +65,7 @@ For example, if there is a `<div data-component="navigation">` on the page, `com
 
 A component is just an [ES6 class](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes). They typically have a `constructor` method so they can use the variables they are passed. They can extend other components, but they don't have to.
 
-By convention, elements within a component's HTML markup that need to be referenced by JavaScript are designated using a `data-hook` attribute, an idea [borrowed from ampersand.js](https://ampersandjs.com/learn/data-hook-attribute/) that helps keep styling and JavaScript concerns separate. For example, the `datasets-list` component looks for 3 elements within it: a place to put the count of datasets, a search box, and the place to list the dataset items themselves.
+By convention, elements within a component's HTML markup that need to be referenced by JavaScript are designated using a `data-hook` attribute, an idea [borrowed from ampersand.js](https://web.archive.org/web/20220808092409/https://ampersandjs.com/learn/data-hook-attribute/) that helps keep styling and JavaScript concerns separate. For example, the `datasets-list` component looks for 3 elements within it: a place to put the count of datasets, a search box, and the place to list the dataset items themselves.
 
 ```html
 <div data-component="datasets-list">
@@ -78,7 +78,7 @@ By convention, elements within a component's HTML markup that need to be referen
 
 ## Decap CMS
 
-[Decap CMS](https://decapcms.org) (formerly Decap CMS) is a headless content management system for static sites. JKAN used to have its own built-in editing UI, but now we use Decap. There are only two files involved in configuring Decap CMS, and they're both in the `editor` directory:
+[Decap CMS](https://decapcms.org) is a headless content management system for static sites. JKAN used to have its own built-in editing UI, but now we use Decap. There are only two files involved in configuring Decap CMS, and they're both in the `editor` directory:
 ```
 editor
 ├── index.html

@@ -1,4 +1,4 @@
-FROM ruby:3.2-bookworm
+FROM ruby:3.3-bookworm
 
 RUN apt-get update \
  && apt-get install -y --quiet --no-install-recommends \
@@ -7,7 +7,7 @@ RUN apt-get update \
 ENV GEM_HOME=/usr/gem
 ENV PATH="$GEM_HOME/bin/:$PATH" 
 
-RUN gem install bundler -v '2.4.12'
+RUN gem install bundler -v '2.6.3'
 # throw errors if Gemfile has been modified since Gemfile.lock
 RUN bundle config --global frozen 1
 
