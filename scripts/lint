@@ -6,23 +6,23 @@ APPLY_FIXES=none
 VALIDATE_ALL_CODEBASE=true
 
 while [[ $# -gt 0 ]]; do
-	case "$1" in
-	-f | --fix)
-		APPLY_FIXES=true
-		;;
-	-c | --changes-only)
-		VALIDATE_ALL_CODEBASE=false
-		;;
-	*)
-		echo "Unknown option: $1"
-		echo "$USAGE"
-		exit 1
-		;;
-	esac
-	shift
+    case "$1" in
+    -f | --fix)
+        APPLY_FIXES=all
+        ;;
+    -c | --changes-only)
+        VALIDATE_ALL_CODEBASE=false
+        ;;
+    *)
+        echo "Unknown option: $1"
+        echo "$USAGE"
+        exit 1
+        ;;
+    esac
+    shift
 done
 
 docker run --rm \
-	-e APPLY_FIXES=$APPLY_FIXES \
-	-e VALIDATE_ALL_CODEBASE=$VALIDATE_ALL_CODEBASE \
-	-v "$PWD":/tmp/lint oxsecurity/megalinter-python
+    -e APPLY_FIXES=$APPLY_FIXES \
+    -e VALIDATE_ALL_CODEBASE=$VALIDATE_ALL_CODEBASE \
+    -v "$PWD":/tmp/lint oxsecurity/megalinter-python

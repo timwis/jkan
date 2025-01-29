@@ -18,6 +18,7 @@
         "Phila",
         "ublabs",
         "customised",
-        "customise"
+        "customise",
+	"shfmt"
     ]
 }
