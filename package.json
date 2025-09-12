@@ -19,12 +19,12 @@
   },
   "homepage": "https://github.com/timwis/jkan",
   "devDependencies": {
-    "core-js": "^3.29.0",
-    "parcel": "^2.8.3",
+    "core-js": "^3.45.1",
+    "parcel": "^2.15.4",
     "process": "^0.11.10"
   },
   "dependencies": {
-    "bootstrap": "^5.3.3",
+    "bootstrap": "^5.3.8",
     "jquery": "^3.7.1",
     "lodash": "^4.17.21"
   }
