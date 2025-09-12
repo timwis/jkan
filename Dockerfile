@@ -1,19 +1,10 @@
-FROM ruby:3.3-bookworm
+FROM ruby:3.4-trixie
 
 RUN apt-get update \
  && apt-get install -y --quiet --no-install-recommends \
- nodejs npm
-
-ENV GEM_HOME=/usr/gem
-ENV PATH="$GEM_HOME/bin/:$PATH" 
-
-RUN gem install bundler -v '2.6.3'
-# throw errors if Gemfile has been modified since Gemfile.lock
-RUN bundle config --global frozen 1
+ npm jekyll ruby-jekyll-github-metadata ruby-jekyll-relative-links ruby-jekyll-paginate-v2 ruby-jekyll-titles-from-headings
 
 WORKDIR /srv/jekyll
-COPY Gemfile Gemfile.lock ./
-RUN bundle install
 
 # Add so gh-pages can detect git remotes
 RUN git config --global --add safe.directory /srv/jekyll
