@@ -26,6 +26,6 @@
   "dependencies": {
     "bootstrap": "^5.3.8",
     "jquery": "^3.7.1",
-    "lodash": "^4.17.21"
+    "lodash": "^4.17.23"
   }
 }
