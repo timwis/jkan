@@ -6,7 +6,7 @@ dataset_fields:
     datajson: title
   - field_name: organization
     label: Organization
-    datajson: publisher.name
+    datajson: organization
   - field_name: notes
     label: Description
     datajson: description
