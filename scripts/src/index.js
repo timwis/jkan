@@ -1,7 +1,6 @@
 /* global settings */
 import 'core-js/actual'
 import $ from 'jquery'
-import 'bootstrap/js/dist/collapse'
 
 import DatasetsList from './components/datasets-list'
 import CategoriesFilter from './components/categories-filter'
