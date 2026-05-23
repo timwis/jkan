@@ -2,14 +2,13 @@ import $ from 'jquery'
 import {chain, pick, omit, filter, defaults} from 'lodash'
 
 import TmplListGroupItem from '../templates/list-group-item'
-import {setContent, slugify, createDatasetFilters, collapseListGroup} from '../util'
+import {setContent, slugify, createDatasetFilters} from '../util'
 
 export default class {
   constructor (opts) {
     const categories = this._categoriesWithCount(opts.datasets, opts.params)
     const categoriesMarkup = categories.map(TmplListGroupItem)
     setContent(opts.el, categoriesMarkup)
-    collapseListGroup(opts.el)
   }
 
   // Given an array of datasets, returns an array of their categories with counts

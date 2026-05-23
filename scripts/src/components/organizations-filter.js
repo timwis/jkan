@@ -2,14 +2,13 @@ import $ from 'jquery'
 import {chain, pick, omit, filter, defaults} from 'lodash'
 
 import TmplListGroupItem from '../templates/list-group-item'
-import {setContent, slugify, createDatasetFilters, collapseListGroup} from '../util'
+import {setContent, slugify, createDatasetFilters} from '../util'
 
 export default class {
   constructor (opts) {
     const organizations = this._organizationsWithCount(opts.datasets, opts.params)
     const organizationsMarkup = organizations.map(TmplListGroupItem)
     setContent(opts.el, organizationsMarkup)
-    collapseListGroup(opts.el)
   }
 
   _organizationsWithCount (datasets, params) {
