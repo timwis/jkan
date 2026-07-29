@@ -5,3 +5,5 @@ gem "jekyll-github-metadata"
 gem "jekyll-paginate-v2"
 gem "jekyll-relative-links"
 gem "jekyll-titles-from-headings"
+gem 'jekyll-sitemap'
+
