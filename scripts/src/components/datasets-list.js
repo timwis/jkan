@@ -10,8 +10,6 @@
  *   data-organization="sample-department"
  *   data-category="education"
  */
-import {pick, defaults, filter} from 'lodash'
-
 import TmplDatasetItem from '../templates/dataset-item'
 import {queryByHook, setContent, createDatasetFilters} from '../util'
 
@@ -24,10 +22,11 @@ export default class {
     }
 
     // Filter datasets and render in items container
-    const paramFilters = pick(opts.params, ['organization', 'category'])
-    const attributeFilters = pick(opts.el.data(), ['organization', 'category'])
-    const filters = createDatasetFilters(defaults(paramFilters, attributeFilters))
-    const filteredDatasets = filter(opts.datasets, filters)
+    const filters = createDatasetFilters({
+      organization: opts.params.organization ?? opts.el.data().organization,
+      category: opts.params.category ?? opts.el.data().category
+    })
+    const filteredDatasets = opts.datasets.filter(filters)
     const datasetsMarkup = filteredDatasets.map(TmplDatasetItem)
     setContent(elements.datasetsItems, datasetsMarkup)
 
@@ -58,7 +57,7 @@ export default class {
     const keys = ['title', 'notes']
     return function (query) {
       const lowerCaseQuery = query.toLowerCase()
-      return filter(datasets, function (dataset) {
+      return datasets.filter(function (dataset) {
         return keys.reduce(function (previousValue, key) {
           return previousValue || (dataset[key] && dataset[key].toLowerCase().indexOf(lowerCaseQuery) !== -1)
         }, false)
