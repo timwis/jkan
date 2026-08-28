@@ -21,7 +21,18 @@ export function slugify (text) {
     .replace(/^\-|\-$/i, '')        // Remove leading/trailing hyphen
 }
 
-// Given an object of filters to use, returns a function to be used by _.filter()
+// Groups an array by a given key or iteratee function
+export function groupBy (items, iteratee) {
+  const keyFn = typeof iteratee === 'function' ? iteratee : (item) => item[iteratee]
+  return items.reduce((result, item) => {
+    const key = keyFn(item)
+    result[key] = result[key] || []
+    result[key].push(item)
+    return result
+  }, {})
+}
+
+// Given an object of filters to use, returns a function to be used by filter()
 export function createDatasetFilters (filters) {
   return function (dataset) {
     const conditions = []
