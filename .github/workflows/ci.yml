@@ -8,9 +8,9 @@ jobs:
   lint:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
       - name: MegaLinter
-        uses: oxsecurity/megalinter-python@v10
+        uses: oxsecurity/megalinter/flavors/python@v10.1.0
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 #      - name: MegaLinter
