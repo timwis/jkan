@@ -10,6 +10,10 @@ jobs:
     steps:
       - uses: actions/checkout@v6
       - name: MegaLinter
-        run: ./scripts/lint -c
+        uses: oxsecurity/megalinter-python@v10
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+#      - name: MegaLinter
+#        run: ./scripts/lint -c
+#        env:
+#          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
